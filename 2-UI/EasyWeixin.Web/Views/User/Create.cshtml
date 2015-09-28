@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model EasyWeixin.Web.Models.UserViewModel
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">用户管理</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">用户管理</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">用户创建</li>
+                </ul>
+            </div>
+        </div>
+
+        @{ using (Html.BeginForm("Create", "User"))
+           {
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="content-widgets gray">
+                        <div class="widget-head bondi-blue">
+                            <h3>用户创建</h3>
+                        </div>
+                        <div class="widget-container">
+                            <div class="form-container grid-form form-background">
+                                <!-- our error container -->
+                                <div class="control-group">
+                                    <label class="control-label">用户名称</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.User_Name, new { @placeholder = "输入用户名称", @class = "span7" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">用户邮箱</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Email, new { @placeholder = "输入邮箱名称", @class = "span7" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">用户密码</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Password, new { @placeholder = "输入用户密码", @class = "span7" })
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">选择角色</label>
+                                    <div class="controls">
+                                        @{
+
+                                           var list = (List<EasyWeixin.Model.Role>)ViewData["SelectList"];
+                                             for (int i = 0; i < list.Count; i++)
+                                             {
+
+                                            <label class="checkbox inline">
+                                                <input type="checkbox" value="@list[i].RoleName.ToString()" name="roles" />@list[i].RoleChineseName</label>
+                                             }
+                                        }
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-extend">提交</button>
+                                    @Html.ActionLink("返回列表", "Index", new { }, new { @class = "btn btn-extend" })
+                                </div>
+                                <div class="error-container">
+                                    <h4></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           }
+        }
+    </div>
+</div>

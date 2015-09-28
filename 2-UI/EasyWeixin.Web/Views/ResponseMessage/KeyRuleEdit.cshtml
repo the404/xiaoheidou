@@ -1,0 +1,234 @@
+﻿@model EasyWeixin.Model.ResponseKeyRule
+<input type="hidden" value="@Model.ResponseKeyRuleID" name="ResponseKeyRuleID" />
+@{ var a_collapse = "#collapse" + Model.ResponseKeyRuleID;
+   var id_collapse = "collapse" + Model.ResponseKeyRuleID;
+}
+<div class="accordion-heading" style="background: #005580">
+    <a href="@a_collapse" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle collapsed">规则 @ViewData["keyindex"] : @Model.RuleName</a>
+    <div>
+
+        @{ var contentNum = 0;
+           var fileNum = 0;
+           var imagetextNum = 0;
+           if (Model.ResponseMessages != null)
+           {
+               contentNum = Model.ResponseMessages.Where(o => o.ButtonType == 0).ToList().Count;
+
+               fileNum = Model.ResponseMessages.Where(o => o.ButtonType == 1 || o.ButtonType == 2 || o.ButtonType == 3).ToList().Count;
+
+               imagetextNum = Model.ResponseMessages.Where(o => o.ButtonType == 4).ToList().Count;
+           }
+           var Sum = contentNum + fileNum + imagetextNum;
+        }
+
+        <div class="navbar" style="margin-bottom: 0px">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                        <ul class="nav">
+                            <li><a href="#" class="btn-link active">关键字：  @Sum 条 （@contentNum 条文字，@fileNum 个文件，@imagetextNum 条图文 ）</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+            </div>
+            <!-- /navbar-inner -->
+        </div>
+    </div>
+</div>
+<div class="accordion-body collapse" id="@id_collapse" style="height:auto;">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets">
+                    <div class="widget-container">
+                        <div class="control-group">
+                            <div class="controls">
+                                输入规则名称:
+                                <input id="RuleName" name="RuleName"  type="text"  value="@Model.RuleName" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="content-widgets">
+                    <div>
+                        <div class="widget-header-block">
+                            <h4 class="widget-header">关键字</h4>
+                        </div>
+                        <div class="content-box">
+                            <div class="tab-widget">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" style="height: 300px">
+                                        <table class="table responsive table-bordered table-striped key-table">
+                                            <tbody>
+                                                @{
+                                                    foreach (var item in Model.ResponseKeys)
+                                                    {
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" />
+                                                            <input type="hidden" value="@item.ResponseKeyID"  name="ResponseKeyID" />
+                                                        </td>
+                                                        <td>@item.Key</td>
+                                                        <td><a href="javascript:void(0)" class="button-key-edit">编辑</a>
+                                                        </td>
+                                                        <td><a href="javascript:void(0)" class="button-key-match">是否匹配</a>
+                                                       <input type="checkbox"  class="input-key-match" @(item.IsFullMatch==0?"":"checked='checked'") />
+                                                             </td>
+                                                    </tr>
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="navbar" style="margin-bottom: 0px">
+                                        <div class="navbar-inner">
+                                            <div class="container">
+
+                                                <div class="nav-collapse collapse navbar-responsive-collapse">
+                                                    <ul class="nav">
+                                                        <li><button href="javascript:viod(0)" class="btn button-key-del" style="padding: 5px 10px 5px">删除选中</button></li>
+                                                        <li class="divider-vertical"></li>
+                                                    </ul>
+                                                    <ul class="nav pull-right">
+                                                        <li><button href="javascript:viod(0)" class="btn button-key-add" style="padding: 5px 10px 5px">添加关键字</button></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- /.nav-collapse -->
+                                            </div>
+                                        </div>
+                                        <!-- /navbar-inner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span8">
+                <div class="content-widgets">
+                    <div>
+                        <div class="widget-header-block">
+                            <h4 class="widget-header">回复</h4>
+                        </div>
+                        <div class="content-box">
+                            <div class="tab-widget">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" style="height: 300px">
+                                        <table class="table responsive table-bordered table-striped response-table">
+                                            <tbody>
+                                                @{
+                                                    foreach (var item in Model.ResponseMessages)
+                                                    {
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" />
+                                                            <input type="hidden" value="@item.ResponseMessageID"  name="ResponseMessageID" />
+                                                            <input type="hidden"  value="@item.ButtonType" name="ButtonType" />
+                                                        </td>
+
+                                                            @if (item.ButtonType == 0)
+                                                            { <td>
+                                                                @item.Content    </td>
+                                                            }
+                                                            @if (item.ButtonType == 1 && item.ResponseMusic != null)
+                                                            { <td>
+                                                                <audio controls='controls' autoplay='autoplay' loop='loop' width="400" height="300">
+                                                                    <source src='@item.ResponseMusic.MusicUrl' type='audio/mp3' />
+                                                                </audio>    </td>
+                                                            }
+                                                            @if (item.ButtonType == 2 && item.ResponseImage != null)
+                                                            { <td>
+                                                                <img src="@item.ResponseImage.ImageUrl" alt="img" style="height: 300px;">    </td>
+                                                            }
+                                                            @if (item.ButtonType == 3 && item.ResponseVideo != null)
+                                                            { <td>
+                                                                <video width="400" height="300" controls="controls">
+                                                                    <source src="@item.ResponseVideo.VideoUrl" type="video/mp4" />
+                                                                </video>    </td>
+                                                            }
+                                                            @if (item.ButtonType == 4 && item.ResponseImageText != null)
+                                                            {
+
+                                                                                        <td style="height: 100px; width: 180px">
+                                                                                            <img src="@item.ResponseImageText.PicUrl" style="height: 100px;width: 180px" />
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input type="hidden"  value="@item.ResponseImageTextID" name="ResponseImageTextID" />
+                                                                                            @item.ResponseImageText.ImageTextName </td>
+                                                                                        <td>
+                                                                                            @item.ResponseImageText.AddTime
+                                                                                        </td>
+                                                            }
+                                                    </tr>
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="navbar" style="margin-bottom: 0px">
+                                        <div class="navbar-inner">
+                                            <div class="container">
+                                                <div class="nav-collapse collapse navbar-responsive-collapse">
+                                                    <ul class="nav">
+                                                        <li><button href="javascript:void(0)" class="btn button-response-del" style="padding: 5px 10px 5px">删除选中</button></li>
+                                                        <li class="divider-vertical"></li>
+                                                    </ul>
+                                                    <ul class="nav pull-right message-type-button">
+                                                        <li><button href="javascript:void(0)" class="btn message-text" style="padding: 5px 10px 5px">文字</button></li>
+                                                       @* <li class="divider-vertical"></li>
+                                                        <li><a href="javascript:void(0)" class="btn-link active message-music">语音</a></li>*@
+                                                      @*  <li class="divider-vertical"></li>
+                                                        <li><a href="javascript:void(0)" class="btn-link active message-image">图片</a></li>*@
+                                                     @*   <li class="divider-vertical"></li>
+                                                        <li><a href="javascript:void(0)" class="btn-link active message-video">视频</a></li>*@
+                                                        <li class="divider-vertical"></li>
+                                                        <li><button href="javascript:void(0)" class="btn message-imagetext" style="padding: 5px 10px 5px">图文</button></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- /.nav-collapse -->
+                                            </div>
+                                        </div>
+                                        <!-- /navbar-inner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar" style="margin-bottom: 15px">
+            <div class="navbar-inner">
+                <div class="container">
+
+                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                        <ul class="nav pull-right">
+                            <li><a href="#" class="btn-link active"></a></li>
+
+                            <li><button href="javascript:void(0)" class="btn button-save" style="padding: 5px 10px 5px">保存</button></li>
+
+                            <li><a href="#" class="btn-link active"></a></li>
+
+                            <li><button href="javascript:void(0)" class="btn button-del" style="padding: 5px 10px 5px">删除</button></li>
+
+                            <li><a href="#" class="btn-link active"></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+            </div>
+            <!-- /navbar-inner -->
+        </div>
+    </div>
+</div>

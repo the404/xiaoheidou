@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷微信,上海欢乐谷游玩攻略,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>游玩攻略|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div class="playTips" style="height:136px;">
+        	<div class="playImgBox">
+            	<img src="../Images/play.png" alt="" />
+            </div>
+            <div class="playTipsText">
+            	<h3>上海欢乐谷游玩秘笈，助您开启欢乐之门</h3>
+                <p>温馨、刺激、浪漫……，上海欢乐谷为您量身制作出三条游玩秘笈，让您轻松开启欢乐之门！</p>
+            </div>
+        </div>
+        <div class="playBox">
+        	<div class="playTop playTop05">
+            	<span class="cheats05">秘籍1</span>
+                <h3>线路的选择</h3>
+            </div>
+            <div class="playText">
+            	<p><span style="color:#fe0000;">合家欢乐之旅：妙趣横生 共享欢乐</span><br />跳跳蛙跳得真高，弹跳袋鼠蹦得好远； 欢乐飞艇漂亮威风，城堡影剧院神秘有趣……爸爸妈妈跟着孩子重返天真烂漫的童年，而孩子们的童年又充满了多姿多彩的欢乐回忆。上海欢乐谷，让越来越多的小朋友找到属于自己的童趣家园。</p>
+            	<p><span style="color:#fe0000;">推荐路线：</span>旋转木马——欢乐碰碰车——四维影院——肯配古塔——蚂蚁城堡——水蛙战舰——弹跳袋鼠——蚁兵战车——迷你漂流——泡泡大战——欢乐飞艇——跳跳蛙——转转杯——疯狂精灵——蚂蚁运输队——虫虫跳伞队——浪花飞舞——北极探险——城堡影剧院——魔幻剧场——骑警训练营——神奇草帽——暴风之旅——游船</p>
+                <p style="margin-top:5px;"><span style="color:#0085c0;">青春挑战之旅：巅峰游乐 畅享激情</span><br />年轻，就是要挑战！年轻，就是要疯狂！来上海欢乐谷，百余项巅峰游乐项目唤醒你的激情，一口气玩转这些"勇敢者的游戏"，压力烦恼瞬间都被那些高速跌落、弹射、垂直俯冲……甩得荡然无存，剩的就是那一番畅快淋漓！</p>
+                <p><span style="color:#0085c0;">推荐路线：</span>飞行影院——天地双雄——欢乐风火轮——梦幻陀螺——谷木游龙——异度空间——大摆锤——能量风暴——绝顶雄风——峡谷漂流——蓝月飞车——矿山历险——激流勇进——完美风暴</p>
+                <p style="margin-top:5px;"><span style="color:#00b050;">浪漫情侣之旅：甜蜜温馨 幸福浪漫</span><br />十里洋场，花样年华；旋转木马，甜蜜相拥；谷木游龙，紧握双手……甜蜜因为快乐，相拥因为心动！</p>
+                <p><span style="color:#00b050;">推荐路线：</span>飞行影院——欢乐对对碰——旋转木马——摇摆伞——天地双雄——谷木游龙——大摆锤——上海滩——四维影院——绝顶雄风——飞旋驼峰——峡谷漂流——蓝月飞车——水洼战舰——金银岛——矿山历险——激流勇进——完美风暴——暴风之旅</p>
+            </div>
+        </div>
+        <!--<div class="playBox">
+        	<div class="playTop playTop01">
+            	<span class="cheats01">秘籍1</span>
+                <h3>欢乐的心态</h3>
+            </div>
+            <div class="playText">
+            	<p>既然走进了欢乐谷，就应该忘掉所有的烦恼和不快，以一颗平常之心、宽容之情，演绎自己的欢乐历程，探索欢乐的真谛。欢乐在那里？ 欢乐就在当下的体悟，在花红草绿中，在人们的笑脸上，在梦幻般的景观中，在刺激的尖叫里，在经典的传说和故事中，在优美的旋律和时尚的 节拍下。欢乐就在您的心里！不管遇到什么不快，永远以笑脸面对你我他！这就是欢乐的密码！</p>
+            </div>
+        </div>-->
+        <div class="playBox">
+        	<div class="playTop playTop03">
+            	<span class="cheats03">秘籍2</span>
+                <h3>特色餐饮★购物</h3>
+            </div>
+            <div class="playText">
+            	<p><span style="color:#fe0000;">美味餐饮：</span>欢乐谷餐饮除接待旅游团餐之外，还有各种快餐与小吃。亚瑟宫，飓风湾餐厅，小丑鱼餐厅……游客可品尝到各种经典大餐及美味小食，同时肯德基、东方既白、必胜客等餐饮入驻，选择多多，欢乐多多！</p>
+                <p style="margin-top:5px;"><span style="color:#0085c0;">欢乐购物：</span>商品丰富的欢乐商场、惟妙惟肖的手绘馆、带你进入见证奇迹的魔术教室……还有典雅别致的流动售货车，随时为游客提供服务。</p>
+            </div>
+        </div>
+        <div class="playBox">
+        	<div class="playTop playTop04">
+            	<span class="cheats04">秘籍3</span>
+                <h3>特色观赏</h3>
+            </div>
+            <div class="playText">
+            	<p><span style="color:#fe0000;">《新上海滩风云》大型影视特技表演</span><br />演出地点： 上海滩影视特技表演场<br />大型影视特技实景表演，再现龙争虎斗的旧上海，逼真影视特效，享受互动娱乐体验！</p>
+                <p style="margin-top:5px;"><span style="color:#0085c0;">《满江红》大型实景马战表演</span><br />演出地点： 香格里马战场<br />大型马战影视实景史诗，震撼马战实景表演，再现岳家军白马奔腾、英勇善战的恢弘场景。</p>
+                <p style="margin-top:5px;"><span style="color:#00b050;">《欢乐之旅》大型多媒体服饰歌舞秀</span><br />演出地点：亚瑟宫剧场<br />大型多媒体服饰歌舞秀《欢乐之旅》，惊艳的服饰、炫酷的视听、梦幻的色彩以及独特的歌舞表演融合在一起，感官震撼，绝美演出！</p>
+                <p style="margin-top:5px;"><span style="color:#fe0000;">《奇幻之门》大型原创魔术剧</span><br />演出地点：亚瑟宫剧场<br />大型魔术剧是一场融合杂技、滑稽、舞蹈、魔术等多种艺术元素的大型原创魔术剧。</p>
+                <p style="margin-top:5px;"><span style="color:#0085c0;">海狮表演</span><br />演出地点：欢乐海洋<br />极具观赏性的零距离海狮互动表演。憨态可掬的海狮配合教练上演一场精彩纷呈的表演，接皮球、倒立、鼓掌，空中飞跃，无所不能！同时，透明的舞台可以让你近距离观赏海狮在水下自由自在的游来游去。当然，还可以和它合影留念哦！</p>
+                <p style="margin-top:5px;"><span style="color:#00b050;">系列零距离互动表演</span><br />盛大的欢乐大巡游，叹为观止的极限花式扣篮秀，卡通玩偶在人群中频频互动，幽默的风格、滑稽的表演，幽默欢乐的滑稽表演秀……全天数十场表演精彩纷呈，参与其中，乐在其中！</p>
+            </div>
+        </div>
+        <!--<div class="playBox">
+        	<div class="playTop playTop03">
+            	<span class="cheats03">秘籍2</span>
+                <h3>省钱的技巧</h3>
+            </div>
+            <div class="playText">
+            	<p>多次前来游玩的朋友可以选择购买年卡，全年不限次玩转欢乐谷，随到随玩，潇洒自由。</p>
+            </div>
+        </div>
+        <div class="playBox">
+        	<div class="playTop playTop02">
+            	<span class="cheats02">秘籍3</span>
+                <h3>时间的把握</h3>
+            </div>
+            <div class="playText">
+            	<p>怎样才能在有限的时间里体验更多的欢乐？根据您不同的喜好，我们建议：</p>
+                <p>1、喜欢设备的朋友，可以选择周一至周五游玩，这几天排队的人相对较少，可以在最短的时间内更多地体验自己喜爱的游乐设备。</p>
+                <p>2、喜欢看人文景观和艺术表演的朋友，建议选择周六或周日游园。这样，人以你为景，你以人为景，其乐融融！</p>
+                <p>3、喜欢大型活动的朋友，可以选择节假日，特别是黄金周进入欢乐谷。这里可以找到属于大众的狂欢盛景！</p>
+            </div>
+        </div>
+        <div class="playBox">
+        	<div class="playTop playTop04">
+            	<span class="cheats04">秘籍4</span>
+                <h3>项目的组合</h3>
+            </div>
+            <div class="playText">
+            	<p>主题公园不是游乐园！在上海欢乐谷，除了 50 多项先进的娱乐设备外，每天还有 20 余场超炫的各类表演，如室内大型马戏表演、室外影视特效表演、大型马战实景史诗表演，花车巡游等。因此，建议您将脚步稍作停留，放松身心，感受这神秘梦幻的文化魅力吧！</p>
+            </div>
+        </div>-->
+        
+        <!--<div class="playBox">
+        	<div class="playTop playTop06">
+            	<span class="cheats06">秘籍6</span>
+                <h3>角色的融入</h3>
+            </div>
+            <div class="playText">
+            	<p>从美国的迪斯尼乐园，到法国的阿斯泰里克斯公园，再到韩国的爱宝乐园，上海华侨城秉承集团"优质生活的创想家"的品牌理念，在繁华的都市上再次构建强大的娱乐开心地。上海欢乐谷是一座制造欢乐的时空机器，将国际最新的娱乐方式、生态理念与高新娱乐科技手段相结合，并与上海时尚的休闲方式融为一体。以"动感、时尚、梦幻、欢乐"的体验魅力满足着人们不同层面的需求，激发人们心中的欢乐。</p>
+            </div>
+        </div>-->
+        <p class="hint">没有更多了</p>
+        <div class="rich_media_tool">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

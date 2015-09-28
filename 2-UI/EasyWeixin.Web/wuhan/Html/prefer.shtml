@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,武汉欢乐谷,武汉欢乐谷微信,武汉欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='武汉欢乐谷是华侨城集团新一代大型主题乐园，武汉欢乐谷占地约35万平方米，预计2012年5月开园迎宾，其由梦想大道、卡通工厂、欢乐时光、极速世界、渔光岛、羽落天堂、飓风湾、欢乐江城等八大主题区域组成，全新设置了 100多项娱乐体验项目，包括30多项游乐体验设备、40多处生态人文景观、10多台文化演艺精品和20多项主题娱乐游戏，精彩诠释多元欢乐。木翼双龙—亚洲首座双龙木质过山车。极速飞车—全球最高最快弹射过山车武汉欢乐谷。摩天塔—120米全球最高观光塔。蒙地卡罗赛道—中国弯道最多的巷道式矿山车。,ipow,互动力' />
+<title>优惠信息|武汉欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+<body>
+	<!--//页面头部-->
+	<!--#include file="/wuhan/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">    
+        <div id="content">
+        	
+            <div class="preferBox">
+            	<a href="javascript:;">
+                    <div class="preferTop">
+                        <img src="../Images/prefer01.jpg" />
+                        <h2>2014国庆节年卡办理优惠</h2>
+                        <span></span>
+                    </div>
+                    <ul class="preferIntro">
+                        <li>现场办理单人行年卡享受438元（约八折）惠； 现场办理亲子卡享受499元（六八折）优惠...</li>
+                    </ul>
+                    <div class="line"></div>
+                    <div class="point"></div>
+                    <div class="pointL"></div>
+                    <div class="pointR"></div>
+                </a>
+            </div>
+            
+            <div class="preferBox">
+            	<a href="javascript:;">
+                    <div class="preferTop">
+                        <img src="../Images/prefer01.jpg" />
+                        <h2>2014国庆节年卡办理优惠</h2>
+                        <span></span>
+                    </div>
+                    <ul class="preferIntro">
+                        <li>现场办理单人行年卡享受438元（约八折）惠； 现场办理亲子卡享受499元（六八折）优惠...</li>
+                    </ul>
+                    <div class="line"></div>
+                    <div class="point"></div>
+                    <div class="pointL"></div>
+                    <div class="pointR"></div>
+                </a>
+            </div>
+            <div class="preferBox">
+            	<a href="javascript:;">
+                    <div class="preferTop">
+                        <img src="../Images/prefer01.jpg" />
+                        <h2>2014国庆节年卡办理优惠</h2>
+                        <span></span>
+                    </div>
+                    <ul class="preferIntro">
+                        <li>现场办理单人行年卡享受438元（约八折）惠； 现场办理亲子卡享受499元（六八折）优惠...</li>
+                    </ul>
+                    <div class="line"></div>
+                    <div class="point"></div>
+                    <div class="pointL"></div>
+                    <div class="pointR"></div>
+                </a>
+            </div>
+            <p class="hint">没有更多了</p>
+        </div>
+    </section>
+    <!--//版权信息-->
+	<!--#include file="/wuhan/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

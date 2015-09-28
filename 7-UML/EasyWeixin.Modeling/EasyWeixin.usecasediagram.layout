@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.125, 8.5" name="EasyWeixin">
+  <useCaseModelRootMoniker Id="2d2f516b-cbde-47a0-b42a-d223fb41f38b" />
+  <nestedChildShapes>
+    <actorShape Id="1511bc2f-8250-420b-a4c1-d0f4a02e6d2e" absoluteBounds="2.375, 1.25, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="c3198ba0-2a27-4120-9939-414abbf92f5c" LastKnownName="微信用户" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="9fb48f29-0d6e-4961-8461-8d4d40428a35" absoluteBounds="2.25, 4.875, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="87fa1983-55b1-4f6a-a4ac-1b70883d8357" LastKnownName="景区管理员" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="9bd9b130-147b-4c2d-b309-2dd4feab1245" absoluteBounds="2.375, 6.75, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="606916e2-de3a-4217-8469-d6606c626073" LastKnownName="互动力管理员" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="cc5ab017-7461-40a0-b172-8f26e4b52c58" absoluteBounds="4.375, 0.5, 3, 2.75" customColor="White">
+      <subsystemMoniker Id="7a89df66-93f1-461d-8392-25d8a3dbf543" LastKnownName="微信APP" />
+      <nestedChildShapes>
+        <useCaseShape Id="fdd3ccea-9887-4522-a868-6be80974388c" absoluteBounds="5.25, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="8da4fd9b-dcee-4bd3-aa45-75c67f871bf0" LastKnownName="发送消息" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="77aba03d-63fe-4361-a335-1a6869bf727c" absoluteBounds="5.25, 2.375, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="640dfe82-122b-423c-b9cb-5442e4bc449d" LastKnownName="自定义菜单" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(2.875 : 1.48); (5.25627968404165 : 1.28949762527667)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="5e866833-1f53-44c1-b957-4bfcbef27992" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="1511bc2f-8250-420b-a4c1-d0f4a02e6d2e" />
+        <useCaseShapeMoniker Id="fdd3ccea-9887-4522-a868-6be80974388c" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(2.875 : 1.60233794936968); (5.25885004986418 : 2.57817125220128)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="26f4c807-b9a8-4939-97d2-7f8d35645191" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="1511bc2f-8250-420b-a4c1-d0f4a02e6d2e" />
+        <useCaseShapeMoniker Id="77aba03d-63fe-4361-a335-1a6869bf727c" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="f765e130-cad3-40bb-b2c3-d17230cbf59a" absoluteBounds="4.125, 4.25, 3.5, 3.5" customColor="Silver">
+      <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+      <nestedChildShapes>
+        <useCaseShape Id="72277d35-2cd8-4c8e-87e9-be28ad9596f8" absoluteBounds="5.375, 4.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="d7fe6bcd-0456-4a08-abb6-e9f4f970578b" LastKnownName="消息推送" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="529f2e7f-f5bf-46da-b3a1-60dc7c205e50" absoluteBounds="4.25, 5.625, 1, 0.5" customColor="Red" heightOffset="0">
+          <useCaseMoniker Id="84944b7d-ba04-4cdd-8574-1bb7132b8f9d" LastKnownName="统计报表" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="03c2553b-10d2-4e15-b4c3-c03b624800f6" absoluteBounds="6.5, 4.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="51a6ac6b-07b5-4609-a087-628011fb71f1" LastKnownName="关键字自动回复" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="88b0f461-5290-41fc-aaf5-460da67aeff9" absoluteBounds="6.5, 5.625, 1, 0.5" customColor="Red" heightOffset="0">
+          <useCaseMoniker Id="4b7706e2-8764-4ae9-8aa3-ffad20846336" LastKnownName="微信会员管理" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="e59ee5fd-7efe-4784-aef8-b472af1a9ee1" absoluteBounds="4.25, 4.875, 1, 0.5" customColor="Red" heightOffset="0">
+          <useCaseMoniker Id="6cbdad72-d2fa-4243-8513-35d7b28251af" LastKnownName="自定义菜单" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="fb07ae4c-e9b6-4873-a56d-9b1f4c3eb0c7" absoluteBounds="4.25, 6.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="7dc58912-54c0-409f-8666-5e5f217768fc" LastKnownName="菜单权限设置" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="7c51e163-a807-4ab5-bfcf-45edf68d089a" absoluteBounds="5.375, 6.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="1e4e7588-319e-4043-a05c-f2d809ce5c5e" LastKnownName="账户管理" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="c320c357-11ed-449d-b601-0206212a6d4b" absoluteBounds="6.5, 6.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="10ed6937-6395-4474-9214-9edc71153934" LastKnownName="功能扩展设置" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="efbe3596-0868-4d1f-a3ff-265b285af8ce" absoluteBounds="5.375, 5.625, 1, 0.5" customColor="Red" heightOffset="0">
+          <useCaseMoniker Id="2e73cd98-d52f-464a-bf76-95d981851c22" LastKnownName="活动管理" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(2.75 : 5.18981481481481); (4.125 : 5.5462962962963)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="805a5527-0341-4050-ab53-a6835d0c03af" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="9fb48f29-0d6e-4961-8461-8d4d40428a35" />
+        <SubsystemShapeMoniker Id="f765e130-cad3-40bb-b2c3-d17230cbf59a" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(2.875 : 6.99830251012751); (4.125 : 6.98981506076504)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="0bb4e824-9a4a-468f-b082-f6d6be430f64" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="9bd9b130-147b-4c2d-b309-2dd4feab1245" />
+        <SubsystemShapeMoniker Id="f765e130-cad3-40bb-b2c3-d17230cbf59a" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseDependencyConnector edgePoints="[(6.09860679774998 : 6.09860679774998); (6.77639320225002 : 6.77639320225002)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <dependencyMoniker Id="7beb3fc6-4e84-434f-97ae-91d3eb62efa0" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="efbe3596-0868-4d1f-a3ff-265b285af8ce" />
+        <useCaseShapeMoniker Id="c320c357-11ed-449d-b601-0206212a6d4b" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <SubsystemShape Id="82a7f563-3c4e-4f61-bee6-2f1af124dc68" absoluteBounds="8.625, 4.25, 3, 1.5" customColor="Silver">
+      <subsystemMoniker Id="ce64240d-ac99-4cbd-9886-7def69636f12" LastKnownName="微信接口" />
+      <nestedChildShapes>
+        <useCaseShape Id="905aed4a-ae1c-4ca5-9114-0f466f38dad7" absoluteBounds="9.625, 4.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="9c641116-233a-410c-9987-0e6a27518a37" LastKnownName="统一接口" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(8.625 : 5.35294117647059); (7.625 : 5.58823529411765)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="c9c74362-569f-4f76-90ec-131d4ae794b1" />
+      <relativeChildShapes />
+      <nodes>
+        <SubsystemShapeMoniker Id="82a7f563-3c4e-4f61-bee6-2f1af124dc68" />
+        <SubsystemShapeMoniker Id="f765e130-cad3-40bb-b2c3-d17230cbf59a" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="401d2a30-6482-4556-a8b9-7736a857ce2f" absoluteBounds="8.5, 0.5, 3.375, 2.5" customColor="White">
+      <subsystemMoniker Id="fdc20f7b-033d-48d3-8ee5-637152d9008f" LastKnownName="微信API" />
+      <nestedChildShapes>
+        <useCaseShape Id="5fb4cf1a-82fe-42e1-b751-09f4a6cc9ce6" absoluteBounds="8.875, 1.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="6bae8fc3-e14a-47d1-bc93-c3cc7a542718" LastKnownName="接收API" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="040a8b86-4f80-40fa-b200-ffe390a7e8be" absoluteBounds="10.5, 1.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="7dd56546-6e9b-47dd-a6db-54d857ea7d21" LastKnownName="发送API" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(7.625 : 4.27536231884058); (8.91911764705882 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="950361f9-2bc1-4863-9061-895c9f1783c9" />
+      <relativeChildShapes />
+      <nodes>
+        <SubsystemShapeMoniker Id="f765e130-cad3-40bb-b2c3-d17230cbf59a" />
+        <SubsystemShapeMoniker Id="401d2a30-6482-4556-a8b9-7736a857ce2f" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(10.1394230769231 : 4.25); (10.1634615384615 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="be845eb3-4a6e-46b4-988d-7078e2821261" />
+      <relativeChildShapes />
+      <nodes>
+        <SubsystemShapeMoniker Id="82a7f563-3c4e-4f61-bee6-2f1af124dc68" />
+        <SubsystemShapeMoniker Id="401d2a30-6482-4556-a8b9-7736a857ce2f" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(6.23776806912514 : 1.30495978243664); (8.5 : 1.55985915492958)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="a9a70abd-7834-41b1-9dc1-5f80fb04ad92" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="fdd3ccea-9887-4522-a868-6be80974388c" />
+        <SubsystemShapeMoniker Id="401d2a30-6482-4556-a8b9-7736a857ce2f" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(6.2151364652771 : 2.53328295050874); (8.5 : 2.08274647887324)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="a0d965b1-8266-4b64-8d78-cb8f18c0d383" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="77aba03d-63fe-4361-a335-1a6869bf727c" />
+        <SubsystemShapeMoniker Id="401d2a30-6482-4556-a8b9-7736a857ce2f" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

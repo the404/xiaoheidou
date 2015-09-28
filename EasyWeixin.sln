@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Test", "1 - Test", "{437A5300-8E91-4573-A1FB-D0C4ED12F4E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - UI", "2 - UI", "{45FFE5B5-D726-40D9-B632-D1E913CAB6A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Business", "3 - Business", "{CA07A682-0526-454B-A365-59B0DF2A45BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Core", "4 - Core", "{8DF3A164-9661-470D-B60C-4D4395A9AA26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Weixin", "5 - Weixin", "{16424CB4-762D-4780-A7A1-73C750618D05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin", "6-Weixin\EasyWeixin\EasyWeixin.csproj", "{7DDB382C-7D2B-4DDF-AB63-C75B94EBEB43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin.Core", "6-Weixin\EasyWeixin.Core\EasyWeixin.Core.csproj", "{8382A12F-7E5B-40D1-9B01-5D2F3C763B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin.MvcExtension", "6-Weixin\EasyWeixin.MvcExtension\EasyWeixin.MvcExtension.csproj", "{A4AC2670-261A-4649-AB4A-219AFE05745B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin.Data", "4-Core\EasyWeixin.Data\EasyWeixin.Data.csproj", "{2105827A-12D6-421B-B79A-BA4C5CFF41CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin.Model", "4-Core\EasyWeixin.Model\EasyWeixin.Model.csproj", "{0B12D6CC-67BA-4105-BC6A-9851A422B810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin.Web.Models", "3-Business\EasyWeixin.Web.Models\EasyWeixin.Web.Models.csproj", "{BFCA46CA-ED75-4265-AE5B-8EEEAF7FE3E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin.Web.Framework", "3-Business\EasyWeixin.Web.Framework\EasyWeixin.Web.Framework.csproj", "{6F87474D-B678-43F5-9D3A-5753D160F887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin.Web", "2-UI\EasyWeixin.Web\EasyWeixin.Web.csproj", "{EC5B449F-6F6D-43A3-8951-25D084BFF6A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin.Test", "1-Test\EasyWeixin.Test\EasyWeixin.Test.csproj", "{54387F2E-2351-4744-A832-384460F4C5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeixin.Web.Tests", "1-Test\EasyWeixin.Web.Tests\EasyWeixin.Web.Tests.csproj", "{24111D15-0FC5-45D0-8C9B-8B6483773398}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{18FAEDE1-4903-4048-A5A3-EED98328F2CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DDB382C-7D2B-4DDF-AB63-C75B94EBEB43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDB382C-7D2B-4DDF-AB63-C75B94EBEB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDB382C-7D2B-4DDF-AB63-C75B94EBEB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDB382C-7D2B-4DDF-AB63-C75B94EBEB43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8382A12F-7E5B-40D1-9B01-5D2F3C763B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8382A12F-7E5B-40D1-9B01-5D2F3C763B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8382A12F-7E5B-40D1-9B01-5D2F3C763B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8382A12F-7E5B-40D1-9B01-5D2F3C763B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4AC2670-261A-4649-AB4A-219AFE05745B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4AC2670-261A-4649-AB4A-219AFE05745B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4AC2670-261A-4649-AB4A-219AFE05745B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4AC2670-261A-4649-AB4A-219AFE05745B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2105827A-12D6-421B-B79A-BA4C5CFF41CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2105827A-12D6-421B-B79A-BA4C5CFF41CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2105827A-12D6-421B-B79A-BA4C5CFF41CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2105827A-12D6-421B-B79A-BA4C5CFF41CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B12D6CC-67BA-4105-BC6A-9851A422B810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B12D6CC-67BA-4105-BC6A-9851A422B810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B12D6CC-67BA-4105-BC6A-9851A422B810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B12D6CC-67BA-4105-BC6A-9851A422B810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFCA46CA-ED75-4265-AE5B-8EEEAF7FE3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCA46CA-ED75-4265-AE5B-8EEEAF7FE3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCA46CA-ED75-4265-AE5B-8EEEAF7FE3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCA46CA-ED75-4265-AE5B-8EEEAF7FE3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F87474D-B678-43F5-9D3A-5753D160F887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F87474D-B678-43F5-9D3A-5753D160F887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F87474D-B678-43F5-9D3A-5753D160F887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F87474D-B678-43F5-9D3A-5753D160F887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5B449F-6F6D-43A3-8951-25D084BFF6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5B449F-6F6D-43A3-8951-25D084BFF6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5B449F-6F6D-43A3-8951-25D084BFF6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5B449F-6F6D-43A3-8951-25D084BFF6A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54387F2E-2351-4744-A832-384460F4C5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54387F2E-2351-4744-A832-384460F4C5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54387F2E-2351-4744-A832-384460F4C5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54387F2E-2351-4744-A832-384460F4C5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24111D15-0FC5-45D0-8C9B-8B6483773398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24111D15-0FC5-45D0-8C9B-8B6483773398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24111D15-0FC5-45D0-8C9B-8B6483773398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24111D15-0FC5-45D0-8C9B-8B6483773398}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54387F2E-2351-4744-A832-384460F4C5CF} = {437A5300-8E91-4573-A1FB-D0C4ED12F4E9}
+		{24111D15-0FC5-45D0-8C9B-8B6483773398} = {437A5300-8E91-4573-A1FB-D0C4ED12F4E9}
+		{EC5B449F-6F6D-43A3-8951-25D084BFF6A2} = {45FFE5B5-D726-40D9-B632-D1E913CAB6A8}
+		{BFCA46CA-ED75-4265-AE5B-8EEEAF7FE3E9} = {CA07A682-0526-454B-A365-59B0DF2A45BA}
+		{6F87474D-B678-43F5-9D3A-5753D160F887} = {CA07A682-0526-454B-A365-59B0DF2A45BA}
+		{2105827A-12D6-421B-B79A-BA4C5CFF41CB} = {8DF3A164-9661-470D-B60C-4D4395A9AA26}
+		{0B12D6CC-67BA-4105-BC6A-9851A422B810} = {8DF3A164-9661-470D-B60C-4D4395A9AA26}
+		{7DDB382C-7D2B-4DDF-AB63-C75B94EBEB43} = {16424CB4-762D-4780-A7A1-73C750618D05}
+		{8382A12F-7E5B-40D1-9B01-5D2F3C763B87} = {16424CB4-762D-4780-A7A1-73C750618D05}
+		{A4AC2670-261A-4649-AB4A-219AFE05745B} = {16424CB4-762D-4780-A7A1-73C750618D05}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

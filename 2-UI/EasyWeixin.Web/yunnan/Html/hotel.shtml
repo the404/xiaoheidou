@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="华侨城,云南华侨城,云南华侨城微信,华侨城微信,云南华侨城官方微信,云南华侨城微信公众平台,云南度假旅游景区,温泉水公园,云南铁路主题旅游,艺术文化乐园,生态花谷旅游,湿地自然景观,度假高端首选,生态旅游小镇,休闲度假胜地,主题公园,运动休闲度假,温泉泡浴,水上乐园,异国文化旅游,互动力,ipow;" />
+<meta name="description" content='云南华侨城一个融旅游、观光、娱乐、度假为一体的高标准的国际化旅游度假胜地。云南旅游的高端首选，引领昆明乃至云南旅游产业从观光旅游型向休闲度假型转变。一个国际化的休闲度假胜地，包括滇越铁路主题旅游、生态旅游小镇、体育公园、国际会议中心、顶级温泉SPA、温泉水公园、生态湿地及森林休闲公园等旅游项目；同时涵盖康体运动休闲区、滨水休闲度假区、山谷生态旅游区、主题文化与艺术旅游区四大分区；' />
+<title>群樱荟酒店|云南华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+    <div class="introBox">
+    	<img src="../Images/img/hotel01.jpg" alt="" />
+        <p>群樱荟坐落于体育公园核心地带，由曾荣膺全球最佳设计图、2008年度最佳会所室内设计企业的美国MAI公司精心设计。项目由会所、酒店、公寓三大部分组成。</p>
+        <p>群樱荟公寓有着无可比拟的景观资源，南侧直面阳宗海碧波蓝天，四周则是永久绿地和森林环绕，西面的花谷苍峦历历在目，于满目苍翠之间领悟山水的妙趣。独具匠心的超低密度三层建筑形态，毗邻群樱荟会所，居住空间幽静私密，交通、餐饮、娱乐设施便捷。在阳宗海之滨，于静逸之中品位时光的美好。</p> 
+        <p>群樱荟公寓分套房和标间两大类型产品，面积区间为50-120㎡，主力户型为标间，价格区间为70-100万元/套。公寓采用五星级酒店标准精装，深圳华侨城洲际大酒店、北京万豪酒店、三亚丽思卡尔顿酒店等五星酒店御用家具供应商量身定制精品家私，国际一线品牌卫浴设备，享受拎包入住的无虞之旅。</p>
+        <ul class="cantact">
+        	<li>群樱荟会所咨询热线：0871-68389222</li>
+            <li>温泉水公园咨询热线：0871-68389333</li>
+            <li>地产置业咨询热线：0871-68389666</li>
+        </ul>
+    </div>
+     <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+</section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+ <!--//版权信息-->
+<!--#include file="/yunnan/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

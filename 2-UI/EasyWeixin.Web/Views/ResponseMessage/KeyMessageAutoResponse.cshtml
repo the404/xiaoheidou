@@ -1,0 +1,554 @@
+﻿@{
+    ViewBag.Title = "KeyMessageAutoResponse";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")"  type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript" ></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".add-keyrule").click(function () {
+            if (!$("#collapse0").length) {
+                $.post("/ResponseMessage/KeyRuleAdd", function (data) {
+                    $(".keyRuleAccordion").prepend(data);
+                });
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //添加关键字
+        $(".keyRuleAccordion").on("click", ".button-key-add", function () {
+            //$(".key-table")
+            var button = $(this);
+            var title = "编辑关键字";
+            art.dialog.open('/ResponseMessage/DialogKeyName', {
+                title: title,
+                width: '300px',
+                height: '120px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var key = d.document.getElementById('key').value;
+
+                    var html = "<tr><td><input type='checkbox' /></td><td>" + key + "</td><td><a href='javascript:void(0)' class='button-key-edit'>编辑</a></td><td><a href='javascript:void(0)' class='button-key-match'>是否匹配</a><input type='checkbox'  class='input-key-match' checked='checked' /></td></tr>";
+                    button.parents(".content-box").find(".key-table").append(html);
+
+                },
+                cancel: true
+            });
+        });
+        //编辑关键字
+        $(".keyRuleAccordion").on("click", ".button-key-edit", function () {
+            var title = "编辑关键字";
+            var button = $(this);
+            var index = $(this).parent().parent().index();
+            var Key = $(this).parent().parent().find("td:eq(1)").html();
+            art.dialog.open('/ResponseMessage/DialogKeyName?Key=' + Key, {
+                title: title,
+                width: '300px',
+                height: '120px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    Key = d.document.getElementById('key').value;
+                    button.parents(".content-box").find(".key-table tr:eq(" + index + ") td:eq(1)").html(Key);
+
+                },
+                cancel: true
+            });
+        });
+        //删除关键字
+        $(".keyRuleAccordion").on("click", ".button-key-del", function () {
+            $(this).parents(".content-box").find(".key-table tr").has("input:checked.chkResponseKey").remove();
+        });
+        $(".keyRuleAccordion").on("click", "ul.message-type-button .message-text", function () {
+            if ($(this).parents(".accordion-group").find(".response-table").find("[name=ButtonType]").length) {
+                alert("文字只能添加一条，且图文和文字不能混合添加！！！");
+                return false;
+            }
+
+            var button = $(this);
+            var title = "添加文字";
+            art.dialog.open('/ResponseMessage/DialogContent', {
+                title: title,
+                width: '650px',
+                height: '300px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var Content = d.document.getElementById('Content').value;
+                    var html = "<tr><td><input type='checkbox' /><input type='hidden'  value='0' name='ButtonType' /></td><td>" + Content + "</td></tr>";
+                    button.parents(".content-box").find(".response-table").append(html);
+                },
+                cancel: true
+            });
+
+        })
+        $(".keyRuleAccordion").on("click", "ul.message-type-button .message-music", function () {
+            var button = $(this);
+            var title = "语音列表";
+            art.dialog.open('/ResponseMusic/DialogSelectList', {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var Url = d.document.getElementById('ResponseMusicUrl').value;
+                    var id = d.document.getElementById('ResponseMusicID').value;
+                    var html = "<tr><td><input type='checkbox' /><input type='hidden'  value='1' name='ButtonType' /> <input type='hidden' name='ResponseMusicID' value=" + id + " /></td><td><audio controls='controls' autoplay='autoplay' loop='loop'>";
+                    html += "<source src=" + Url + " type='audio/mp3' /></audio></td></tr>";
+                    button.parents(".content-box").find(".response-table").append(html);
+                },
+                cancel: true
+            });
+
+        })
+        $(".keyRuleAccordion").on("click", "ul.message-type-button .message-image", function () {
+            var button = $(this);
+            var title = "图片列表";
+            art.dialog.open('/ResponseImage/DialogSelectList', {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var src = d.document.getElementById('ResponseImageSrc').value;
+                    var id = d.document.getElementById('ResponseImageID').value;
+                    var html = "<tr><td><input type='checkbox' /><input type='hidden'  value='2' name='ButtonType' /> <input type='hidden' name='ResponseImageID'  value=" + id + " /></td><td> <img src=" + src + " alt='img' style='height: 300px;'></td></tr>";
+                    button.parents(".content-box").find(".response-table").append(html);
+
+                },
+                cancel: true
+            });
+        })
+        $(".keyRuleAccordion").on("click", "ul.message-type-button .message-video", function () {
+
+            var button = $(this);
+            var title = "视频列表";
+            art.dialog.open('/ResponseVideo/DialogSelectList', {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var Url = d.document.getElementById('ResponseVideoUrl').value;
+                    var id = d.document.getElementById('ResponseVideoID').value;
+                    var html = "<tr><td><input type='checkbox' /><input type='hidden'  value='3' name='ButtonType' /> <input type='hidden' name='ResponseVideoID'  value=" + id + " /></td><td><video width='400' height='300' controls='controls'><source src='movie.ogg' type='video/mp4' /></video></td></tr>";
+                    button.parents(".content-box").find(".response-table").append(html);
+
+                },
+                cancel: true
+            });
+        })
+        $(".keyRuleAccordion").on("click", "ul.message-type-button .message-imagetext", function () {
+            if ($(this).parents(".accordion-group").find(".response-table").find("[name=ButtonType][value!=4]").length) {
+                alert("文字和图文不能混合添加！！！");
+                return false;
+            }
+            var button = $(this);
+            var title = "图文列表";
+            art.dialog.open('/ResponseImageText/DialogSelectList', {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    $("#ResponseImageTextName").val($(this).parent().parent().find(".ImageTextName").html());
+                    var ResponseImageData = d.document.getElementById('ResponseImageData').value;
+                    var datas = eval(ResponseImageData);
+                    var html = "";
+                    for (var i = 0; i < datas.length; i++) {
+                        html += "<tr><td><input type='checkbox' /><input type='hidden'  value='4' name='ButtonType' /> <input type='hidden' name='ResponseImageTextID'  value=" + datas[i].ResponseImageTextID + " /></td> <td style='height: 100px; width: 180px'><img src='" + datas[i].ResponseImagePicUrl + "' style='height: 100px;width: 180px' /></td><td>" + datas[i].ResponseImageTextName + "</td> <td>" + datas[i].ResponseImageAddTime + "</td></tr>";
+
+                    }
+                    button.parents(".content-box").find(".response-table").append(html);
+
+                },
+                cancel: true
+            });
+
+        })
+
+        //删除回复
+        $(".keyRuleAccordion").on("click", ".button-response-del", function () {
+            $(this).parents(".content-box").find(".response-table tr").has("input:checked").remove();
+        });
+        //提交数据
+        $(".keyRuleAccordion").on("click", ".button-save", function () {
+
+            var keyindex = parseInt($(".keyRuleAccordion .accordion-group").length) - parseInt($(this).parents(".accordion-group").index());
+
+            var container = $(this).parents(".accordion-group");
+            //key
+            var ResponseKeys = [];
+            container.find(".key-table tr").each(function () {
+                var IsFullMatch = 0;
+                if ($(this).find(".input-key-match").prop("checked")) {
+                    IsFullMatch = 1;
+                }
+                var Key = { Key: $(this).find("td:eq(1)").html(), ResponseKeyID: $(this).find("input[name=keyid]").val(), IsFullMatch: IsFullMatch };
+                ResponseKeys.splice(ResponseKeys.length, 0, Key);
+
+            })
+            //ResponseMessages
+            var ResponseMessages = [];
+            container.find(".response-table tr").each(function () {
+                var ButtonType = $(this).find("input[name=ButtonType]").val();
+                var Content, ResponseMusicID, ResponseImageID, ResponseImageTextID, ResponseVideoID, ResponseMessageID;
+                ResponseMessageID = $(this).find("[name=ResponseMessageID]").val();
+                if (ButtonType == "0") {
+                     Content = encodeURI($(this).find("td:eq(1)").html());
+
+                }
+                if (ButtonType == "1") {
+                    ResponseMusicID = $(this).find("[name=ResponseMusicID]").val();
+                }
+                if (ButtonType == "2") {
+                    ResponseImageID = $(this).find("[name=ResponseImageID]").val();
+                }
+                if (ButtonType == "3") {
+
+                    ResponseVideoID = $(this).find("[name=ResponseVideoID]").val();
+                }
+                if (ButtonType == "4") {
+                    ResponseImageTextID = $(this).find("[name=ResponseImageTextID]").val();
+                }
+                var ResponseMessage = { ButtonType: ButtonType, Content: Content, ResponseMusicID: ResponseMusicID, ResponseImageID: ResponseImageID, ResponseImageTextID: ResponseImageTextID, ResponseVideoID: ResponseVideoID, ResponseMessageID: ResponseMessageID }
+                ResponseMessages.splice(ResponseMessages.length, 0, ResponseMessage);
+
+            })
+            var ResponseKeyRuleID = container.find("[name=ResponseKeyRuleID]").val();
+            var RuleName = container.find("[name=RuleName]").val();
+            var form = { RuleName: RuleName, ResponseMessages:ResponseMessages, ResponseKeys: ResponseKeys, ResponseKeyRuleID: ResponseKeyRuleID }
+            if (RuleName == "") {
+                alert("规则名不能为空！");
+                return false;
+            }
+            if (ResponseKeys.length == 0) {
+                alert("至少添加一个关键字！");
+                return false;
+            }
+            if (ResponseMessages.length == 0) {
+                alert("至少添加一条输出信息！");
+                return false;
+            }
+            $.post("/ResponseMessage/KeyRuleEdit", { datas: JSON.stringify(form), keyindex: keyindex }, function (data) {
+                container.html(data);
+                alert("提交成功！");
+            });
+        });
+        $(".keyRuleAccordion").on("click", ".button-del", function () {
+            var container = $(this).parents(".accordion-group");
+            var ResponseKeyRuleID = container.find("[name=ResponseKeyRuleID]").val();
+            $.post("/ResponseMessage/KeyRuleDel", { ResponseKeyRuleID: ResponseKeyRuleID }, function () {
+                container.remove();
+            })
+        });
+    });
+</script>
+@model List<EasyWeixin.Model.ResponseKeyRule>
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">关键字回复管理</h3>
+                    <ul class="top-right-toolbar">
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">信息回复管理</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">关键字回复设置 </li>
+                </ul>
+            </div>
+            <div class="navbar" style="margin-bottom: 0px">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <div class="nav-collapse collapse navbar-responsive-collapse">
+                            <ul class="nav">
+                                <li><a href="#" class="btn-link active">关键词自动回复 公众平台如何设置关键词自动回复？</a></li>
+                            </ul>
+                            <ul class="nav pull-right">
+                                <li>
+                                    <button href="javascript:viod(0)" class="btn add-keyrule" style="padding: 5px 10px 5px">添加规则</button></li>
+                                <li><a href="#" class="btn-link active"></a></li>
+                                <li><a href="#" class="btn-link active"></a></li>
+                                <li><a href="#" class="btn-link active"></a></li>
+                            </ul>
+                        </div>
+                        <!-- /.nav-collapse -->
+                    </div>
+                </div>
+                <!-- /navbar-inner -->
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12" id="keyRule">
+
+                <div class="accordion keyRuleAccordion" id="accordion2">
+                    @{ var i = Model.Count;}
+                    @foreach (var item in Model)
+                    {
+                        i--;
+                        <div class="accordion-group">
+                            @{ var a_collapse = "#collapse" + item.ResponseKeyRuleID;
+                               var id_collapse = "collapse" + item.ResponseKeyRuleID;
+
+                            }
+                            <input type="hidden" value="@item.ResponseKeyRuleID" name="ResponseKeyRuleID" />
+                            <div class="accordion-heading" style="background: #005580">
+                                <a href="@a_collapse" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle collapsed">规则 @(i + 1) : @item.RuleName</a>
+                                <div>
+
+                                    @{ var contentNum = 0;
+                                       var fileNum = 0;
+                                       var imagetextNum = 0;
+                                       if (item.ResponseMessages != null)
+                                       {
+                                           contentNum = item.ResponseMessages.Where(o => o.ButtonType == 0).ToList().Count;
+
+                                           fileNum = item.ResponseMessages.Where(o => o.ButtonType == 1 || o.ButtonType == 2 || o.ButtonType == 3).ToList().Count;
+
+                                           imagetextNum = item.ResponseMessages.Where(o => o.ButtonType == 4).ToList().Count;
+                                       }
+                                       var Sum = contentNum + fileNum + imagetextNum;
+                                    }
+
+                                    <div class="navbar" style="margin-bottom: 0px">
+                                        <div class="navbar-inner">
+                                            <div class="container">
+                                                <div class="nav-collapse collapse navbar-responsive-collapse">
+                                                    <ul class="nav">
+                                                        <li><a href="#" class="btn-link active">关键字：  @Sum 条 （@contentNum 条文字，@fileNum 个文件，@imagetextNum 条图文 ）</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- /.nav-collapse -->
+                                            </div>
+                                        </div>
+                                        <!-- /navbar-inner -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-body collapse" id="@id_collapse" style="height: 0px;">
+                                <div class="container-fluid">
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                            <div class="content-widgets">
+                                                <div class="widget-container">
+                                                    <div class="control-group">
+                                                        <div class="controls">
+                                                            输入规则名称:
+                                                            <input id="RuleName" name="RuleName"  type="text"  value="@item.RuleName" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="row-fluid">
+                                        <div class="span4">
+                                            <div class="content-widgets">
+                                                <div>
+                                                    <div class="widget-header-block">
+                                                        <h4 class="widget-header" style="border-bottom: 0px solid #CCCCCC;">关键字:</h4>
+                                                    </div>
+                                                    <div class="content-box">
+                                                        <div class="tab-widget">
+                                                            <div class="tab-content">
+                                                                <div class="tab-pane active" style="height: 300px;border:1px solid #7C798F;">
+                                                                    <table class="table responsive table-bordered table-striped key-table">
+                                                                        <tbody>
+                                                                            @{
+                                       foreach (var Keysitem in item.ResponseKeys)
+                                       {
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <input class="chkResponseKey" type="checkbox" /><input name="keyid" type="hidden" value="@Keysitem.ResponseKeyID" />
+                                                                                    </td>
+                                                                                    <td>@Keysitem.Key</td>
+                                                                                    <td><a href="javascript:void(0)" class="button-key-edit">编辑</a>
+                                                                                    </td>
+                                                                                    <td><a href="javascript:void(0)">是否匹配</a><input type="checkbox"  class="input-key-match" @(Keysitem.IsFullMatch == 0 ? "" : "checked='checked'") />
+                                                                                    </td>
+                                                                                </tr>
+                                       }
+                                                                            }
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="navbar" style="margin-bottom: 0px">
+                                                                    <div class="navbar-inner">
+                                                                        <div class="container">
+
+                                                                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                                                                <ul class="nav">
+                                                                                    <li>
+                                                                                        <button href="javascript:viod(0)" class="btn button-key-del" style="padding: 5px 10px 5px">删除选中</button></li>
+                                                                                    <li class="divider-vertical"></li>
+                                                                                </ul>
+                                                                                <ul class="nav pull-right">
+                                                                                    <li>
+                                                                                        <button href="javascript:viod(0)" class="btn button-key-add" style="padding: 5px 10px 5px">添加关键字</button></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <!-- /.nav-collapse -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /navbar-inner -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="span8">
+                                            <div class="content-widgets">
+                                                <div>
+                                                    <div class="widget-header-block">
+                                                        <h4 class="widget-header" style="border-bottom: 0px solid #ccc;">回复:</h4>
+                                                    </div>
+                                                    <div class="content-box">
+                                                        <div class="tab-widget">
+                                                            <div class="tab-content" style="border:1px solid #7C798F;">
+                                                                <div class="tab-pane active" style="height: 300px;">
+                                                                    <table class="table responsive table-bordered table-striped response-table">
+                                                                        <tbody>
+                                                                            @{
+                                       foreach (var Messagesitem in item.ResponseMessages)
+                                       {
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <input type="checkbox" /><input type="hidden"  value="@Messagesitem.ButtonType" name="ButtonType" /><input type="hidden"  value="@Messagesitem.ResponseMessageID" name="ResponseMessageID" />
+                                                                                    </td>
+
+                                                                                    @if (Messagesitem.ButtonType == 0)
+                                                                                    {
+                                                                                        <td>
+                                                                                            @Messagesitem.Content </td>
+                                                                                    }
+                                                                                    @if (Messagesitem.ButtonType == 1)
+                                                                                    {  <td>
+                                                                                        <input type="hidden"  value="@Messagesitem.ResponseMusicID" name="ResponseMusicID" />
+                                                                                        <audio controls='controls' autoplay='autoplay' loop='loop' width="400" height="300">
+                                                                                            <source src='@Messagesitem.ResponseMusic.MusicUrl' type='audio/mp3' />
+                                                                                        </audio>
+                                                                                    </td>
+                                                                                    }
+                                                                                    @if (Messagesitem.ButtonType == 2)
+                                                                                    {
+                                                                                        <td>
+                                                                                            <input type="hidden"  value="@Messagesitem.ResponseImageID" name="ResponseImageID" />
+                                                                                            <img src="@Messagesitem.ResponseImage.ImageUrl" alt="img" style="height: 300px;">
+                                                                                        </td>
+                                                                                    }
+                                                                                    @if (Messagesitem.ButtonType == 3)
+                                                                                    {
+                                                                                        <td>
+                                                                                            <input type="hidden"  value="@Messagesitem.ResponseVideoID" name="ResponseVideoID" />
+                                                                                            <video width="400" height="300" controls="controls">
+                                                                                                <source src="@Messagesitem.ResponseVideo.VideoUrl" type="video/mp4" />
+                                                                                            </video>
+                                                                                        </td>
+                                                                                    }
+                                                                                    @if (Messagesitem.ButtonType == 4)
+                                                                                    {
+
+                                                                                        <td style="height: 100px; width: 180px">
+                                                                                            <img src="@Messagesitem.ResponseImageText.PicUrl" style="height: 100px;width: 180px" />
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input type="hidden"  value="@Messagesitem.ResponseImageTextID" name="ResponseImageTextID" />
+                                                                                            @Messagesitem.ResponseImageText.ImageTextName </td>
+                                                                                        <td>
+                                                                                            @Messagesitem.ResponseImageText.AddTime
+                                                                                        </td>
+                                                                                    }
+                                                                                </tr>
+                                       }
+                                                                            }
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="navbar" style="margin-bottom: 0px">
+                                                                    <div class="navbar-inner">
+                                                                        <div class="container">
+                                                                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                                                                <ul class="nav">
+                                                                                    <li>
+                                                                                        <button href="javascript:void(0)" style="padding: 5px 10px 5px 10px" class="btn button-response-del">删除选中</button></li>
+                                                                                    <li class="divider-vertical"></li>
+                                                                                </ul>
+                                                                                <ul class="nav pull-right message-type-button">
+                                                                                    <li>
+                                                                                        <button href="javascript:void(0)" class="btn message-text" style="padding: 5px 10px 5px 10px">文字</button></li>
+                                                                                    @*   <li class="divider-vertical"></li>
+                                                                                    <li><a href="javascript:void(0)" class="btn-link active message-music">语音</a></li>*@
+                                                                                    @*  <li class="divider-vertical"></li>
+                                                                                    <li><a href="javascript:void(0)" class="btn-link active message-image">图片</a></li>*@
+                                                                                    @*   <li class="divider-vertical"></li>
+                                                                                    <li><a href="javascript:void(0)" class="btn-link active message-video">视频</a></li>*@
+                                                                                    <li class="divider-vertical"></li>
+                                                                                    <li>
+                                                                                        <button href="javascript:void(0)" class="btn message-imagetext" style="padding: 5px 10px 5px 10px">图文</button></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <!-- /.nav-collapse -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /navbar-inner -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="navbar" style="margin-bottom: 15px">
+                                        <div class="navbar-inner">
+                                            <div class="container">
+
+                                                <div class="nav-collapse collapse navbar-responsive-collapse">
+                                                    <ul class="nav pull-right">
+                                                        <li><a href="javascript:void(0)" class="btn-link active"></a></li>
+
+                                                        <li>
+                                                            <button href="javascript:void(0)" class="btn button-save" style="padding: 5px 10px 5px 10px">保存</button></li>
+
+                                                        <li><a href="javascript:void(0)" class="btn-link active"></a></li>
+
+                                                        <li>
+                                                            <button href="javascript:void(0)" class="btn button-del" style="padding: 5px 10px 5px 10px">删除</button></li>
+
+                                                        <li><a href="javascript:void(0)" class="btn-link active"></a></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- /.nav-collapse -->
+                                            </div>
+                                        </div>
+                                        <!-- /navbar-inner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

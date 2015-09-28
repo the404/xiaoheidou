@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+@model List<EasyWeixin.Model.SnowUser>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <title>游戏排名|恶鬼快跑|天津欢乐谷</title>
+    <link href="~/css/index.css" rel="stylesheet" />
+</head>
+<body id="rank" style="background: url(../images/Activity/Ghost/rank_bg.jpg) repeat-y center top; background-size: 100% 100%;">
+    <div class="rankTitle"></div>
+    <ul id="rankList">
+        @if (Model != null)
+        {
+            for (int i = 0; i < Model.Count; i++)
+            {
+
+            <li>
+                <img src="../images/Activity/Ghost/userHead.png" /><span class="ranking">@Model[i].SnowUserName</span><span class="count">@(Model[i].Score.ToString() + "分")</span>
+            </li>
+            }
+        }
+        else
+        {
+            <li>暂无记录</li>
+        }
+    </ul>
+    <div id="transverse">
+    </div>
+    <a href="/ActivityGhost/GhostIndex?SnowID=@Request["SnowID"]" class="back"></a>
+</body>
+</html>

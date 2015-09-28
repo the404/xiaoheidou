@@ -1,0 +1,181 @@
+﻿@{
+    ViewBag.Title = "SnowUserList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using EasyWeixin.Core.MvcPager
+@model EasyWeixin.Core.MvcPager.PagedList<EasyWeixin.Model.SnowUser>
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="/js/bootstrap-colorpicker.js"></script>
+<script src="/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/js/date.js"></script>
+<script src="/js/daterangepicker.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".CheckAll").change(function () {
+            if ($(".CheckAll").prop("checked")) {
+                $(".CheckChild").prop("checked", true);
+            }
+            else {
+                $(".CheckChild").prop("checked", false);
+            }
+        });
+        $(".DeleteAll").click(function () {
+            var IDlist = "";
+            $(".CheckChild").each(function () {
+                if ($(this).prop("checked")) {
+                    IDlist += "|" + $(this).val();
+                }
+            });
+
+            $.post("/ScratchUser/DeleteAll", { IDlist: IDlist.substring(1) }, function (datas) {
+                location.href = location.href;
+            });
+        });
+        $(".btn-primary").click(function () {
+            window.location.href = "/Snow/SnowUserList?SnowID=@(Request["SnowID"])&pageid=1&dt1=" + $("#dt1").val() + "&dt2=" + $("#dt2").val();
+        });
+
+    });
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            pickTime: false
+        });
+    });
+
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            pickTime: false
+        });
+    });
+</script>
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">圣诞雪花+疯狂砸金蛋</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">圣诞雪花+疯狂砸金蛋</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li><a href="/Snow/SnowIndex">活动列表</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">数据列表 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets light-gray">
+                    <div class="widget-head bondi-blue">
+                        <h3>数据列表</h3>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-horizontal">
+                            <div class="control-group">
+                                @{ string dt1, dt2;
+                                    dt1 = Request["dt1"] != null ? Request["dt1"] : System.DateTime.Now.ToString("yyyy-MM-dd");
+                                    dt2 = Request["dt2"] != null ? Request["dt2"] : System.DateTime.Now.ToString("yyyy-MM-dd");
+                                }
+                                <div class="controls">
+                                    开始时间
+                                    <div id="datetimepicker1" class="input-append">
+                                        <input data-format="yyyy-MM-dd" type="text" value="@dt1" id="dt1"><span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar"></i></span>
+                                    </div>
+                                    结束时间
+                                    <div id="datetimepicker2" class="input-append">
+                                        <input data-format="yyyy-MM-dd" type="text" value="@dt2" id="dt2"><span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar"></i></span>
+                                    </div>
+                                    <a class="btn btn-primary" href="javascript:viod(0)"><i class="icon-upload-alt"></i>查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-container">
+                        <table class="table table-hover responsive">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input id="CheckAll" type="checkbox" class="CheckAll" />
+                                    </th>
+                                    <th>用户名称
+                                    </th>
+                                    <th>手机号
+                                    </th>
+                                    <th>分数
+                                    </th>
+                                    <th>中奖情况
+                                    </th>
+                                    <th>提交日期
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{foreach (var item in Model)
+                                  {
+                                      <tr>
+                                          <td>
+                                              <input type="checkbox" value="@item.ID" class="CheckChild" />
+                                          </td>
+                                          <td>
+                                              @item.SnowUserName
+                                          </td>
+                                          <td>
+                                              @item.SnowUserPhone
+                                          </td>
+                                          <td>
+                                              @item.Score
+                                          </td>
+                                          <td>
+                                              @{ var Award = "没中奖";
+                                                  if (item.IsAward == 1)
+                                                  {
+                                                      Award = "中奖";
+                                                  }
+                                                  else if (item.IsAward == 2)
+                                                  {
+                                                      Award = "中奖";
+                                                  }
+                                              }
+                                              @Award
+                                          </td>
+
+                                          <td>
+                                              @item.AddDate
+                                          </td>
+                                      </tr>
+                                  }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-horizontal">
+                            <div class="control-group">
+                                <div style="width: 50px; float: left; margin: 20px 0"><a href="javascript:void(0)" class="DeleteAll">删除选中</a></div>
+                                <div style="width: 500px; float: right">
+                                    @Html.Pager(Model, new PagerOptions { PageIndexParameterName = "pageid", CssClass = "pagination dataTables_paginate" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+           <div class="row-fluid ">
+            <div class="span12">
+                <ul class="breadcrumb">
+                    <li><a href="#">参与人数</a><span class="divider"> @ViewData["guesspeoplecount"] 人</span></li>
+                    <li><a href="#">提交数据</a><span class="divider"> @ViewData["guesscount"] 条</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

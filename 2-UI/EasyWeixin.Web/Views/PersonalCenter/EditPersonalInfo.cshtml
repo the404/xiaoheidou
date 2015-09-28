@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "EditPersonalInfo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model EasyWeixin.Web.Models.PersonalInfoViewModel
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">个人中心</h3>
+                    <ul class="top-right-toolbar"></ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">个人中心</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">个人信息更改</li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-horizontal">
+            @{ using (Html.BeginForm("EditPersonalInfo", "PersonalCenter"))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <input type="hidden" value="@Model.ID"  name="ID"/>
+                    <input type="hidden" value="@Model.UserId" name="UserId"/>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="content-widgets gray">
+                                <div class="widget-head bondi-blue">
+                                    <h3>个人信息更改</h3>
+                                </div>
+                                <div class="widget-container">
+                                    <div class="form-container grid-form form-background">
+                                        <!-- our error container -->
+                                        <div class="control-group">
+                                            <label class="control-label">用户名</label>
+                                            <div class="controls">
+                                                @Html.TextBoxFor(model => model.UserName, new { @placeholder = "输入用户名", @class = "span7" })                                              @Html.ValidationMessageFor(model => model.UserName, "", new { @style = "color:red" })
+                                                @Html.ValidationMessageFor(model => model.UserName, "", new { @style = "color:red" })
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">邮箱名称</label>
+                                            <div class="controls">
+                                                @Html.TextBoxFor(model => model.Email, new { @placeholder = "输入邮箱名称", @class = "span7" })
+                                                @Html.ValidationMessageFor(model => model.Email, "", new { @style = "color:red" })
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label">QQ号码</label>
+                                            <div class="controls">
+                                                @Html.TextBoxFor(model => model.QQ, new { @placeholder = "输入QQ号码", @class = "span7" })                                             @Html.ValidationMessageFor(model => model.QQ, "", new { @style = "color:red" })
+                                                @Html.ValidationMessageFor(model => model.QQ, "", new { @style = "color:red" })
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                            <label class="control-label">电话号码</label>
+                                            <div class="controls">
+                                                @Html.TextBoxFor(model => model.Phone, new { @placeholder = "输入电话号码", @class = "span7" })
+                                                @Html.ValidationMessageFor(model => model.Phone, "", new { @style = "color:red" })
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn btn-extend">提交</button>
+                                            <a style="color: red;">@ViewData["SuccessMessage"]</a>
+                                        </div>
+                                        <div class="error-container">
+                                            <h4></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+@model List<EasyWeixin.Model.SnowUser>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<title>游戏排名|水果切切切|苏州乐园</title>
+<link href="/Content/fruit/layout.css" type="text/css" rel="stylesheet" />
+</head>
+<body id="rank">
+	<div class="rankTitle">
+    	游戏得分排行榜
+    </div>
+    <ul id="rankList">
+        @if(Model!=null)
+        {
+    	   for (int i = 0; i < Model.Count; i++)
+              {
+                  if (i < 3)
+                  {
+                <li class="@("li" + i.ToString())"><span class="ranking">@(i + 1)</span><img src="/images/Activity/Fruit/userHead.jpg" />@Model[i].SnowUserName<span class="count">@(Model[i].Score.ToString() + "分")</span></li>
+                  }
+                  else
+                  {
+                <li><span class="ranking">@(i + 1)</span><img src="/images/Activity/Fruit/userHead.jpg" />@Model[i].SnowUserName<span class="count">@(Model[i].Score.ToString() + "分")</span></li>
+
+                  }
+              }
+        }
+        else
+        {
+            <li>暂无记录</li>
+        }
+    </ul>
+    <div id="transverse">
+    </div>
+</body>
+</html>

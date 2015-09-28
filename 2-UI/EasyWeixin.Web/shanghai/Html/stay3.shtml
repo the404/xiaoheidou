@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷微信,上海欢乐谷周边住宿,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>周边住宿|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="content02">
+        	<div class="navBox02">
+                <div class="quickNav02">
+                    <a href="/shanghai/Html/stay1.shtml" >五星级</a>
+                    <a href="/shanghai/Html/stay2.shtml" >四星级</a>
+                    <a class="active" href="/shanghai/Html/stay3.shtml" >三星级</a>
+                    <a href="/shanghai/Html/stay4.shtml" >经济型</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star4_02.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>维也纳国际酒店</h3>
+                        <div class="star">★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海松江区人民北路1515号</p>
+                    <p><span class="dhIcon"></span>021-37783888</p>
+                </div>
+                <div class="clear"></div>
+                <!--<div class="stayIntro">
+                	<h3>欢乐谷游客协议优惠：</h3>
+                    <p>欢乐谷游客凭当日门票或年卡至酒店前台订房可享受酒店会员优惠政策8.5折。</p>
+                </div>-->
+            </div>
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star4_03.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>大众国际会议中心</h3>
+                        <div class="star">★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海 松江区 佘天昆路1515号</p>
+                    <p><span class="dhIcon"></span>021-57795555</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star4_04.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>学苑宾馆</h3>
+                        <div class="star">★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>大学城的西北端</p>
+                    <p><span class="dhIcon"></span>021-37780808</p>
+                </div>
+                <div class="clear"></div>
+                <!--<div class="stayIntro">
+                	<h3>欢乐谷游客协议优惠：</h3>
+                    <p>凭欢乐谷门票享受优惠房价：288元/间晚(豪华双人间、豪华大床房) </p>
+                </div>-->
+            </div>
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star4_05.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>松江红楼戴斯酒店</h3>
+                        <div class="star">★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海松江区普照路1号</p>
+                    <p><span class="dhIcon"></span>021-37827777</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star3_01.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>兰笋山庄</h3>
+                        <div class="star">★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海松江区佘山镇外青松公路9269号</p>
+                    <p><span class="dhIcon"></span>021-57651170</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star3_02.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>佘山森林宾馆</h3>
+                        <div class="star">★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海松江区佘山塔弄口</p>
+                    <p><span class="dhIcon"></span>021-57651160</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--<div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star3_01.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>华庭加纳酒店</h3>
+                        <div class="star">★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海松江区新松江路1290号</p>
+                    <p><span class="dhIcon"></span>021-67799988</p>
+                </div>
+                <div class="clear"></div>
+            </div>-->
+            <p class="hint">没有更多了</p>
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span>9999</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">999</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>
+<script type="text/javascript">
+//底部点赞
+var oLike=document.getElementById("like");
+var oLikeIcon=oLike.getElementsByTagName("i")[0];
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_grey";
+	}
+</script>

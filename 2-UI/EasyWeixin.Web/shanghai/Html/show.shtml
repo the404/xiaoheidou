@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷精彩演艺,上海欢乐谷微信,旅游,主题公园,探险,时尚,动感,梦幻,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>精彩演艺|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"  ></script>
+<script src="../Js/ccjspack.js" type="text/javascript"  ></script>
+</head>
+
+<body>
+<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="scrollWrap">
+    		<div id="content01">
+                <ul id="scrollPic">
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/show02.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/show01.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/show05.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/show06.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/show07.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/show08.jpg" />
+                    </a>
+                </ul>
+                <ul id="scrollCon">
+                    <div id="scrollIcon">
+                    </div>
+                    <li style="display:block;" >
+                        <h2>《新上海滩风云》大型影视特技表演</h2>
+                        <p>演出地点： 上海滩影视特技表演场<br />以三十年代旧上海滩为背景，用影视特效、维亚、枪战等手段再现三十年代中共地下党人在上海滩与特务、黑帮，以及租界洋人周旋斗争的情景。游客在观赏的同时也可以参与其中，扮演其中的群众角色。</p>
+                    </li>
+                    <li >
+                        <h2>《满江红》大型实景马战表演</h2>
+                        <p>演出地点： 香格里马战场<br />表演以我国南宋时期爱国名将岳飞的事迹为背景，采用马战实景表演的形式。现场将有百匹骏马、百名骑士奔腾厮杀，并运用万箭齐发、水爆、火爆等影视手段，逼真再现岳家军英勇善战、不屈不挠的恢宏场景。令观众在体验娱乐，感受震撼中走进岳家军，共同领略中华文化的神奇魅力。</p>
+                    </li>
+                    <li >
+                        <h2>《奇幻之门》大型原创魔术剧</h2>
+                        <p>演出地点：亚瑟宫剧场<br />《奇幻之门》大型魔术剧是一场融合杂技、滑稽、舞蹈、魔术等多种艺术元素的大型原创魔术剧。</p>
+                    </li>
+                    <li >
+                        <h2>《欢乐之旅》大型多媒体服饰歌舞秀</h2>
+                        <p>演出地点：亚瑟宫剧场<br />大型多媒体服饰歌舞秀《欢乐之旅》，惊艳的服饰、炫酷的视听、梦幻的色彩以及独特的歌舞表演融合在一起，感官震撼，绝美演出！</p>
+                    </li>
+                    <li >
+                        <h2>海狮表演</h2>
+                        <p>演出地点：欢乐海洋<br />极具观赏性的零距离海狮互动表演。憨态可掬的海狮配合教练上演一场精彩纷呈的表演，接皮球、倒立、鼓掌，空中飞跃，无所不能！同时，透明的舞台可以让你近距离观赏海狮在水下自由自在的游来游去。当然，还可以和它合影留念哦！</p>
+                    </li>
+                    <li >
+                        <h2>系列零距离互动表演</h2>
+                        <p>盛大的欢乐大巡游，叹为观止的极限花式扣篮秀，卡通玩偶在人群中频频互动，幽默的风格、滑稽的表演，幽默欢乐的滑稽表演秀……全天数十场表演精彩纷呈，参与其中，乐在其中！</p>
+                    </li>
+                    <!--<li style="display:block;" >
+                        <h2>《满江红》</h2>
+                        <p>表演以我国南宋时期爱国名将岳飞的事迹为背景，采用马战实景表演的形式。现场将有百匹骏马、百名骑士奔腾厮杀，并运用万箭齐发、水爆、火爆等影视手段，逼真再现岳家军英勇善战、不屈不挠的恢宏场景。令观众在体验娱乐，感受震撼中走进岳家军，共同领略中华文化的神奇魅力。</p>
+                    </li>
+                    <li >
+                        <h2>《上海滩》</h2>
+                        <p>以三十年代旧上海滩为背景，用影视特效、维亚、枪战等手段再现三十年代中共地下党人在上海滩与特务、黑帮，以及租界洋人周旋斗争的情景。游客在观赏的同时也可以参与其中，扮演其中的群众角色。在体验、参与互动中得到娱乐满足。</p>
+                    </li>
+                    <li >
+                        <h2>主题花车巡游《欢乐大巡游》</h2>
+                        <p>七辆风格各异的彩车，与七大分区的整体风格遥相呼应，一辆欢乐谷总体主题彩车加主题方队，为游客奉献每天两场的流动欢乐巡游表演。</p>
+                    </li>
+                    <li >
+                        <h2>《欢乐之旅》</h2>
+                        <p>一台不可多得的服饰盛会，歌舞大餐。将五大洲的歌舞、服饰、民俗风情融为一体，运用舞台机械、大屏幕投影、水幕、T台走秀及不同的时空、不同场景的变换，再配以最新的现代灯光、音响，使得整台晚会五彩斑斓，光彩夺目。</p>
+                    </li>-->
+                    <div id="top" class="top top2"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="rich_media_tool" style="padding:10px 0 30px 0;">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+     </section>
+     <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+     <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息--> 
+</body>
+</html>
+<script src="../Js/iScroll.js" type="text/javascript" ></script>
+<script src="../Js/scrollBox.js" type="text/javascript"></script>
+<script src="../Js/focusPic.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){		
+        $("#top").click(function(){
+            var obottom=parseInt($("#scrollCon").css("bottom"));
+            if(obottom==-64){
+                $("#scrollCon").animate({bottom:0},700);
+                $("#top").addClass("top2");
+                }else{
+                    $("#scrollCon").animate({bottom:-64},700);
+                    $("#top").removeClass("top2");
+                    }
+            
+            })
+        });
+		
+
+</script>

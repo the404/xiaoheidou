@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    <meta charset="utf-8">
+    <meta name="author" content="chenyi">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title></title>
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+    <div id="result"></div>
+</head>
+<body>
+    <label id="test" />
+    <div id="lottery">
+        <div class="top-wrap">
+            <div class="tit-icon"></div>
+            <div class="money-icon"></div>
+            <div class="rocket-icon"></div>
+        </div>
+        <div class="lottery-tab">
+            <table border="0" cellpadding="0" cellspacing="2">
+                <tr>
+                    <td class="red tab-0 focus" style="width:25%;">100<br />积分</td>
+                    <td class="pink tab-1" style="width:25%;">一等奖</td>
+                    <td class="green tab-2" style="width:25%;">三等奖</td>
+                    <td class="pink tab-3" style="width:25%;">50<br />积分</td>
+                </tr>
+                <tr>
+                    <td class="pink tab-11" style="border-bottom:0;">50<br />积分</td>
+                    <td colspan="2" rowspan="2" style="background:#fbb647;">
+                        <img src="" alt="" id="scanImg" style="width:120px;height:120px">
+                    </td>
+                    <td class="green tab-4" style="border-bottom:0;">100<br />积分</td>
+                </tr>
+                <tr>
+                    <td class="red tab-10" style="border-bottom:0;">二等奖</td>
+                    <td class="pink tab-5" style="border-bottom:0;">二等奖</td>
+                </tr>
+                <tr>
+                    <td class="green tab-9">三等奖</td>
+                    <td class="red tab-8">50<br />积分</td>
+                    <td class="pink tab-7">三等奖</td>
+                    <td class="red tab-6">150<br />积分</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="award-wrap">
+        <div class="award-info">
+            恭喜中奖了！！
+        </div>
+    </div>
+</body>
+</html>
+<script src="Scripts/jquery-1.8.2.min.js"></script>
+<script src="Scripts/jquery.signalR-2.2.0.js"></script>
+<script src="signalr/hubs"></script>
+<script>
+    var url = 'http://wx.ipow.cn/activity/qrcode/GetQrCode/index?userGuid=00FC033C-1AF1-499F-AB33-5A7A38C703D7&callback=?';
+    var groupId, num;
+    var awardHub = $.connection.awardHub;
+    var $timer;
+    $.ajax({
+        url: url,
+        dataType: "jsonp",
+        success: function (data) {
+            console.log(data)
+            $('#scanImg').attr('src', data.Url);
+            groupId = data.GroupId;
+            num = data.Num;
+        }
+    }).done(function () {
+        jQuery.support.cors = true;
+        LinkSignalr();
+    });
+
+    awardHub.client.startAward = function (awardNum) {
+        startAward(awardNum);
+    };
+
+    awardHub.client.addErrorMessage = function (tip) {
+        alert(tip);
+    };
+
+    function LinkSignalr() {
+        $.connection.hub.qs = { "groupId": groupId };
+        $.connection.hub.logging = false;
+        $.connection.hub.start().done(function () {
+        });
+        $.connection.hub.error(function (error) {
+            document.location.reload();
+            console.log('SignalR error: ' + error)
+        });
+    };
+
+    var iNow = 0;                               //当前值
+    iCount = $(".lottery-tab td").length - 1, //中奖的总个数
+    iSpeed = 100,                           //速度
+    iCycle = 60,                            //至少步数
+    iStepNow = 0,                           //当前步
+    timer = null,                           //定时器
+    iKey = 0,                               //中奖值
+    bMove = true,                           //是否在抽奖
+    arrLottery = [];                        //中奖数组
+
+    for (var i = 0; i < iCount; i++) {
+        arrLottery.push($(".tab-" + i)[0]);// 排序数组
+    };
+    function startAward(num) {
+        if (bMove) {
+            iKey = num;
+            setClass();
+            bMove = false;
+        };
+        return false;
+    }
+    function setClass() {
+        iNow++;
+        iStepNow++;
+        if (iStepNow == iCycle + iKey) {
+            clearTimeout(timer);
+            iSpeed = 100;
+            iStepNow = 0;
+            setTimeout(function () {
+                bMove = true;
+                awardShow(iNow);
+                iNow = 0;
+
+                var url = "www.ipow.cn";
+                awardHub.server.sendMobile(url)
+                    .done(function () {
+                        console.log('Invocation of NewContosoChatMessage succeeded');
+                    })
+                    .fail(function (error) {
+                        console.log('Invocation of NewContosoChatMessage failed. Error: ' + error);
+                    });
+            }, 200);
+        } else {
+            if (iStepNow < iCycle + iKey - 10) {
+                iSpeed -= 10;       //加速
+            } else if (iStepNow > iCycle + iKey - 10) {
+                iSpeed += 70;       //减速
+                if (iSpeed > 500) {
+                    iSpeed = 500;   //结尾固定减速
+                };
+            };
+            if (iNow >= iCount) {
+                iNow = 0;           //超过还原值;
+            };
+            if (iSpeed < 40) {
+                iSpeed = 40;        //中间固定速度;
+            };
+            $(arrLottery).removeClass("focus");
+            $(arrLottery).eq(iNow).addClass("focus");
+            timer = setTimeout(setClass, iSpeed);
+        };
+    };
+
+    var awardText;
+    function awardShow(num) {
+        awardText = $(arrLottery).eq(num - 1).text();
+        $(".award-info").text(awardText);
+        $(".award-wrap").show();
+        $(".award-wrap").bind("click", function (e) {
+            $(this).hide();
+            return false;
+        });
+    };
+</script>

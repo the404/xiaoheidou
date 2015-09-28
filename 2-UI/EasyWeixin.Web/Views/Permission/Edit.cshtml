@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@*@model EasyWeixin.Model.Permission*@
+@model EasyWeixin.Web.Models.PermissionViewModel
+ <div class="main-wrapper">
+     <div class="container-fluid">
+			<div class="row-fluid ">
+				<div class="span12">
+					<div class="primary-head">
+						<h3 class="page-header">权限管理</h3>
+						<ul class="top-right-toolbar">
+							<li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+							</li>
+							<li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+							<li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+						</ul>
+					</div>
+					<ul class="breadcrumb">
+						<li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+						<li><a href="#">权限管理</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+						<li class="active">权限创建</li>
+					</ul>
+				</div>
+			</div>
+
+        @{ using (Html.BeginForm("Edit", "Permission"))
+           {
+                @Html.HiddenFor(model => model.PermissionId)
+                @Html.HiddenFor(model => model.PermissionUrl)
+                @Html.HiddenFor(model => model.IsOrder)
+                @Html.HiddenFor(model => model.IsMenu)
+               	<div class="row-fluid">
+				<div class="span12">
+					<div class="content-widgets gray">
+						<div class="widget-head bondi-blue">
+							<h3>编辑权限</h3>
+						</div>
+						<div class="widget-container">
+							<div class="form-container grid-form form-background">
+								<!-- our error container -->
+
+									<div class="control-group">
+										<label class="control-label">权限名称</label>
+										<div class="controls">
+                                              @Html.TextBoxFor(model => model.PermissionChineseName, new { @placeholder="输入权限名称",@class="span7" })    @Html.ValidationMessageFor(model => model.PermissionChineseName,"",new { @style="color:red" })
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">权限控制器名称</label>
+										<div class="controls">
+											  @Html.TextBoxFor(model => model.PermissionActionName, new { @placeholder="输入权限控制器名称",@class="span7" })
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">权限页面路径名称</label>
+										<div class="controls">
+											  @Html.TextBoxFor(model => model.PermissionName, new { @placeholder="输入权限页面路径名称",@class="span7" })  @Html.ValidationMessageFor(model => model.PermissionName, "",new { @style="color:red" })
+										</div>
+									</div>
+
+                                	<div class="control-group">
+										<label class="control-label">权限页面图片名称</label>
+										<div class="controls">
+											  @Html.TextBoxFor(model => model.PermissionImageName, new { @placeholder="输入权限页面路径名称",@class="span7" })
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">是否在菜单中显示</label>
+										<div class="controls">
+										 <label class="checkbox">
+										     <input type="checkbox" value="" /></label>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">排序</label>
+										<div class="controls">
+											<select class="span7">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+										</div>
+									</div>
+                                <div class="control-group">
+										<label class="control-label">权限描述</label>
+										<div class="controls">
+											  @Html.TextBoxFor(model => model.PermissionDesc, new { @placeholder="输入权限页面路径名称",@class="span7" })
+										</div>
+									</div>
+									<div class="form-actions">
+										<button type="submit" class="btn btn-extend">提交</button>
+                                        @Html.ActionLink("返回列表", "Index",new {}, new {@class="btn btn-extend" })
+									</div>
+								<div class="error-container">
+									<h4> </h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+        }
+     }
+</div></div>

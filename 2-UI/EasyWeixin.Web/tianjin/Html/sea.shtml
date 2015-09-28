@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>海洋之心|天津欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"  ></script>
+<script src="../Js/ccjspack.js" type="text/javascript"  ></script>
+</head>
+<body>
+<!--//页面头部-->
+	<!--#include file="/tianjin/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="scrollWrap">   
+        	<div id="content01">
+                <ul id="scrollPic">
+                	<a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaPic_01.jpg" alt="儿童翻江倒海" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaPic_02.jpg" alt="儿童迷你滑道" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaPic_03.jpg" alt="儿童竞速滑道" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaPic_04.jpg" alt="欢乐水屋" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaPic_05.jpg" alt="漩涡巨碗" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaPic_06.jpg" alt="疯狂海啸" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaPic_07.jpg" alt="蛇形穿越" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaPic_08.jpg" alt="蛇形滑道" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaPic_09.jpg" alt="极速鲨吻" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/seaPic_10.jpg" alt="棕榈海滩" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/seaPic_11.jpg" alt="懒人河" />
+                    </a>
+                </ul>
+                <ul id="scrollCon">
+                    <div id="scrollIcon">
+                    </div>
+                    <li style="display:block;" >
+                        <h2>儿童翻江倒海</h2>
+                        <p>专为儿童打造的高挑战滑道，让孩子们都能享受征服水上世界的乐趣，在专属的儿童天地里收获无限快乐！</p>
+                    </li>
+                    <li>
+                        <h2>儿童迷你滑道</h2>
+                        <p>色彩亮丽、五彩缤纷的迷你欢乐滑道专为儿童打造，酣畅淋漓地彻底感受亲水的无穷乐趣！</p>
+                    </li>
+                    <li>
+                        <h2>儿童竞速滑道</h2>
+                        <p>跟着水花一同从五彩滑道上滑落水底，劈波斩浪激起漫天水花，还等什么，小朋友们快来参加比赛吧。</p>
+                    </li>
+                    <li>
+                        <h2>欢乐水屋</h2>
+                        <p>让孩子们在色彩鲜艳的欢乐水屋，开始奇趣的水上探险之旅吧！蝴蝶滑梯、青龙滑梯、鳄鱼滑梯，让孩子们尽情嬉戏疯狂，还有丰富的互动游戏，激发您全身的欢乐细胞，带您体验全新的水上乐趣！</p>
+                    </li>
+                    <li>
+                        <h2>漩涡巨碗</h2>
+                        <p>漩涡巨碗，急弯滑道与“巨碗”的完美组合，在密封的滑道中，一场演绎极速与心跳的戏水大戏即将上演。一阵在急弯滑道中感受速度与旋转之后，刹那间掉进 一口巨碗，如同掉进深海漩涡。</p>
+                    </li>
+                    <li>
+                        <h2>疯狂海啸</h2>
+                        <p>海啸来了！巨大的垂直回旋滑道会把您从最低点带到最高点，然后在滑道中做自由回旋下落，落差达到15米，请您屏住呼吸，准备接受挑战吧。</p>
+                    </li>
+                    <li>
+                        <h2>蛇形穿越</h2>
+                        <p>随着巨蟒的节奏左右摇晃、上下颠簸，伴随360°急速回旋，穿越层层水的阻力，震撼惊叫声穿跃整个乐园，高刺激性、高娱乐性、高速度的三重水上体验等着您来挑战！</p>
+                    </li>
+                    <li>
+                        <h2>蛇形滑道</h2>
+                        <p>想在巨蟒的身躯上展开冒险的快感吗，那就极速下滑吧。滑行中途的几个螺旋，让滑行速度越来越快，并造成人体的连续失重感，犹如在水上裸体滑雪一样，比飞机上遇到乱流还要刺激，不信你就试试看！</p>
+                    </li>
+                    <li>
+                        <h2>极速鲨吻</h2>
+                        <p>亚洲首座穿越海底世界及室内外的水磁过山车。运用最新高科技专项打造，首创室内外穿越式互动游乐体验，创新设计贯穿陆地与水底。高速疾驰体验心跳旋律，带给您自由飞翔的畅快感受；潜入水底世界与大鲨鱼群一“吻”而过，体验惊险水族，零距离感受海洋缤纷，进行一场浪漫的历险奇遇。多重震憾欢乐，给您带来炫酷无比的新鲜刺激！</p>
+                    </li>
+                    <li>
+                        <h2>棕榈海滩</h2>
+                        <p>纯净洁白的细沙和透明闪亮的海域，1400平米造浪池，让您顷刻间身临阳光海岸。你可以在棕榈树下放一把躺椅，充分享受阳光，亦或者光着脚丫在海滩上漫步，听着海浪的声音……最后棕榄海滩形成一道浪漫梦幻，而又充满遐想的亮丽风景线。</p>
+                    </li>
+                    <li>
+                        <h2>懒人河</h2>
+                        <p>宽4米长261米的室内漂流河。坐上梦幻伐船，开阔水道清澈蜿蜒，两岸繁花绿丛，让您置身最自然生态的漂流景观。沿途穿越炫丽大型水族箱，近距离观赏美妙水底世界，创新动感影音特效，多重体验感受，带您探索峡谷、山林、涵洞、花海等缤纷景点，享受一段浪漫温馨的欢乐时光！</p>
+                    </li>
+                    <div id="top" class="top top2"></div>
+                </ul>
+            </div>
+        </div>
+     	<div class="rich_media_tool" style="padding:10px 0 30px 0;">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+     </section>
+      <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+     <!--//版权信息-->
+	<!--#include file="/tianjin/Include/foot.htm"-->
+    <!--End版权信息--> 
+</body>
+</html>
+<script src="../Js/iScroll.js" type="text/javascript" ></script>
+<script src="../Js/scrollBox.js" type="text/javascript"></script>
+<script src="../Js/focusPic.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){		
+        $("#top").click(function(){
+            var obottom=parseInt($("#scrollCon").css("bottom"));
+            if(obottom==-64){
+                $("#scrollCon").animate({bottom:0},700);
+                $("#top").addClass("top2");
+                }else{
+                    $("#scrollCon").animate({bottom:-64},700);
+                    $("#top").removeClass("top2");
+                    }
+            
+            })
+        })
+</script>

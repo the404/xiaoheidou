@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "GetLink";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EasyWeixin.Model.Snow
+<input id="Url" type="hidden" value="@(Model.GetURL)" />
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">水果切切切</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="/Fruit/FruitIndex">水果切切切</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">活动创建</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets gray">
+                    <div class="widget-head bondi-blue">
+                        <h3>活动创建</h3>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-container grid-form form-background">
+                            <!-- our error container -->
+                            <div class="control-group">
+                                <label class="control-label">长链接</label>
+                                <div class="controls longUrl">
+                                    @(Model.GetURL)
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">短链接</label>
+                                @using EasyWeixin.Web.Helpers
+                                @Html.GetShortUrlSina(Model.GetURL)
+                                <div class="controls shortUrl">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

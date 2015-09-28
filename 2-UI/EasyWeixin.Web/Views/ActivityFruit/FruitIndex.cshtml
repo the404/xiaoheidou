@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<title>水果切切切|苏州乐园</title>
+<link href="/Content/fruit/layout.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body id="index">
+	<div class="wrap" id="indexBg">
+        <h1 id="logo" alt="水果切切切|苏州乐园" ><img src="/images/Activity/Fruit/logo.png" /></h1>
+         <h2 class="openPark"></h2>
+        <ul class="btnList btn">
+            <li><a  href="/ActivityFruit/FruitGame?SnowID=@Request["SnowID"]" ></a></li>
+            <li><a id="a2" href="javascript:;"></a></li>
+            <li><a  href="/ActivityFruit/FruitRank?SnowID=@Request["SnowID"]" ></a></li>
+        </ul>
+        <div id="rule">
+             @{
+                 if (ViewData["SnowStatus"] == null)
+                 {
+        	<h2>游戏规则</h2>
+            <div class="info">
+                <p><span>游戏规则：</span><br />点击游戏开始，然后完善用户信息，就开始玩游戏，屏幕开始掉下水果，通过你切到的水果得分来计算你的排名，在点击水果的过程中，可能点出惊喜大礼噢。</p>
+               @* <p><span>奖品说明：</span><br />每周排行的前3名可获得苏州乐园指定日日夜场通玩名额，3~6名可获得苏州乐园指定日夜场通玩名额。</p>
+                <p><span>圣诞礼物：</span><br />苏州乐园纪念马克杯或指定日免费入园名额。</p>*@
+            </div>
+                 }
+                 else
+                 {
+                    @ViewData["SnowStatus"]
+                 }
+            }
+            <div id="ruleClose" class="btn"></div>
+        </div>
+    </div>
+    <div id="transverse"></div>
+</body>
+</html>
+<script type="text/javascript" src="/js/Activity/fruit/christmas.js"></script>
+<script>
+window.onload = function(){
+	//首页
+		var oIndexBg = document.getElementById("indexBg");
+		oIndexBg.style.height = document.documentElement.clientHeight-8+"px" ;
+		window.onresize = function(){
+			oIndexBg.style.height = document.documentElement.clientHeight-8+"px" ;
+		}
+		//弹框
+		var oBtn01 = document.getElementById("a2");
+		var oBtn02 = document.getElementById("ruleClose");
+		var oRule = document.getElementById("rule");
+
+		oBtn01.onclick = function(){
+			startMove( oRule , { top : 40 , opacity : 100});
+		}
+		oBtn02.onclick = function(){
+			startMove( oRule , { top : -400 , opacity : 0});
+		}
+}
+</script>

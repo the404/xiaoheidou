@@ -1,0 +1,145 @@
+/*
+ * Author		:蔡应
+ * Time			:2014年9月11日11:25:42
+ * Abstract		:北京欢乐谷游戏css样式表
+ */
+
+/*Reset*/
+body ,html ,div ,p ,table ,ul ,ol ,li ,dl ,dt ,dd ,h1 ,h2 ,h3 ,h4 ,h5 ,h6 { margin:0; padding:0;}
+ul ,ol ,li ,dl ,dt ,dd { list-style:none; }
+img ,a { border:none; }
+a { text-decoration:none; }
+
+/*base*/
+body,html { width:100%; height:100%; }
+body { font:normal 16px/24px "宋体","微软雅黑",Arail ; color:#8a8a8a; background:#000;  }
+.left{ float:left; display:inline;}
+.right{ float:right; display:inline;}
+.clear { width:0; height:0; font-size:0; line-height:0; clear:both; overflow:hidden; }
+.bgSpirit01 { background-image:url(/Images/spirit_01.png); background-repeat:no-repeat; background-size:43px auto; }
+.red { color:#f00!important; }
+.hidden { overflow:hidden; }
+
+/*横屏提醒*/
+#transverse {  position:absolute; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba( 0 , 0 , 0 , 0.8) url(/Images/transvers.png) no-repeat center center; background-size:50% auto; }
+@media all and (orientation : landscape) {  
+	#transverse { display:block; }
+}  
+
+@media all and (orientation : portrait){  
+	#transverse { display:none; }
+} 
+
+
+/*开始页*/
+#index { background:#000 url(../images/indexBg.jpg) no-repeat center top ; background-size:100% auto;  }
+#logo { display:block; width:78%; margin:0 auto; height:auto;  
+	-webkit-animation: 'aniLogo' 0.8s ease infinite;
+}
+@-webkit-keyframes 'aniLogo'{
+	0% { -webkit-transform:translate(0px , 5px); }
+	10% { -webkit-transform:translate(5px , 0px); }
+	20% { -webkit-transform:translate(0px , -5px); }
+	30% { -webkit-transform:translate(-5px , 0px); }
+	40% { -webkit-transform:translate(0px , 5px); }
+	50% { -webkit-transform:translate(5px , 5px); }
+	60% { -webkit-transform:translate(5px , 0px); }
+	70% { -webkit-transform:translate(0px , -5px); }
+	80% { -webkit-transform:translate(-5px , 0px); }
+	90% { -webkit-transform:translate(0px , 5px); }
+	100% { -webkit-transform:translate(0px , 0px); }
+}
+
+.mainMenu { margin-left:12%;  width:173px; height:227px; padding-top:18px; background:url(../images/menu01.png) no-repeat ; background-size:100% auto;  }
+.mainMenu a { display:block; width:173px; height:38px; border-radius:20px; margin-bottom:13px; }
+
+
+/*游戏*/
+.wrap320 { position:relative; width:320px; margin:0 auto; }
+#gameWrap { position:relaitve; width:100%; height:100%; overflow:hidden;}
+#gameBox { position:absolute; width:400px; top:0px; left:-40px; }
+.gameTop { width:400px; height:213px; background:url(../images/gameTop.jpg) no-repeat center top; background-size:400px 100%;  }
+.count01 { float:left; position:relative; margin-left:50px; width:94px; height:60px; background:url(../images/countBg.png) no-repeat -10px 0px; background-size:320px auto;  }
+.count02 { float:right; position:relative; margin-right:50px; width:94px; height:60px; background:url(../images/countBg.png) no-repeat -222px 0px; background-size:320px auto;  }
+#angle{ position:absolute; top:-5px; left:34px; width:10px; height:40px;  background:url(../images/angle.png) no-repeat; background-size:100% auto; 
+	-webkit-transform-origin:center 5px;
+	-webkit-transform:rotate(90deg);
+}
+#wind { text-indent:25px; width:94px; height:60px; font:bold 1em/30px Arial; color:#fff;  background:url(../images/windR.png) no-repeat 53px 5px; background-size:20px auto; }
+#tip { position:absolute; top:30px; left:100px; width:162px; height:37px; background:url(../images/tips.png) no-repeat; background-size:162px auto; }
+.gameIn { width:400px; height:20000px; background:url(../images/gameIn.jpg) repeat-y center top; background-size:400px auto;  }
+#ant01 { position:absolute; top:73px; left:150px;  width:105px; height:140px; background:url(../images/ant01.png); background-size:100% auto; 
+	 -webkit-animation:'aniAnt01' 1.3s ease infinite ;
+}
+@-webkit-keyframes 'aniAnt01' {
+	0% { -webkit-transform:rotate(0deg); }
+	25% { -webkit-transform:rotate(10deg); }
+	75% { -webkit-transform:rotate(-10 deg); }
+	100% { -webkit-transform:rotate(0deg); }
+}
+
+
+#ant02 { display:block; opacity:0; filter:alpha(opacity=0); position:fixed; top:160px; left:118px; width:84px; height:92px; background:url(../images/ant02.png); background-size:100% auto;  }
+#blood {  display:block; position:absolute; top:43px; left:-9px; width:72px; height:57px; background:url(../images/blood.png) ; background-size:72px auto; 
+	-webkit-transform:scale( 0, 0);
+	-webkit-transition:all 0.3s ease;
+}
+#countNum { display:none; opacity:0; filter:alpha(opacity=0); position:fixed; top:20px; left:20px; width:200px; height:40px; font:bold 1em/40px "微软雅黑"; color:#fff; }
+#countNum em { padding:0 10px; color:yellow; font:bold 1.4em/40px Arial; }
+
+/*弹框*/
+#shadowBg { display:none; position:fixed; top:0px;left:0px; width:100%; height:100%; background:rgba(0 ,0 , 0 , 0.5) url(../images/share.png) no-repeat right top; background-size:100px auto; }
+#popupWrap { display:none; position:fixed; top:100px; left:50%; margin-left:-160px; width:320px; height:280px; overflow:hidden;  }
+#popup { position:absolute; top:0px; left:0px; width:1000px; }
+ 
+/*游戏结束*/
+#gameOver { float:left; position:relative; width:320px; height:280px; background:url(../images/gameOver.png) no-repeat; background-size:315px auto; font:normal 1em/30px "微软雅黑",Arial; color:#fff; }
+#gameOver p { padding-top:76px; text-align:center; }
+#gameOver em { color:#ffb400; font-size:1.2em; }
+#gameOver a { display:block; position:absolute; top:141px; left:81px; width:70px; height:26px; }
+#gameOver a:nth-of-type(2) { left:161px; }
+
+/*提交成绩*/
+#submit { float:left; position:relative; width:320px; height:280px; background:url(../images/submit.png) no-repeat; background-size:315px auto; font:normal 1em/30px "微软雅黑",Arial; color:#fff; }
+#submit .subInfo {position:absolute; top:81px; left:123px; width:112px; height:54px; }
+#submit input { display:block; width:112px; height:24px; border:none; text-indent:10px; font:normal 1em/24px "微软雅黑",Arial; color:#333;  }
+#submit input:nth-of-type(2) { margin-top:5px; }
+#submit em { color:#ffb400; font-size:1.2em; }
+#submit a { display:block; position:absolute; top:145px; left:123px; width:70px; height:26px; }
+#submit .close { position:absolute; top:20px; right:29px;  width:40px; height:40px;}
+
+/*提交成功*/
+#success { float:left; position:relative; width:320px; height:280px; background:url(../images/success.png) no-repeat; background-size:315px auto; font:normal 0.8em/24px "微软雅黑",Arial; color:#fff; }
+#success p { padding-top:76px; text-align:center; width:280px; margin:0 auto; }
+#success em { color:#ffb400; font-size:1.2em; }
+#success a { display:block; position:absolute; top:196px; left:81px; width:70px; height:26px; }
+#success a:nth-of-type(2) { left:161px; }
+
+        
+
+
+
+/*游戏排名*/
+#rank { width:100%; }
+#rank dt { height:40px; background:url(../images/rank.jpg) repeat-x ; background-size:67px auto; font:bold 1.4em/40px "微软雅黑"; color:#fff; text-align:center; }
+#rank dd { height:35px; border-bottom:1px solid #000; color:#666666; background:#2b292e; }
+#rank dd em { float:left; width:20%; font:bold 1.4em/35px Arial; text-indent:20px;}
+#rank dd span:nth-of-type(1) { float:left; width:20%; font:normal 1.2em/35px "微软雅黑"; }
+#rank dd span:nth-of-type(2) { float:right; width:40%; font:bold 1.4em/35px "微软雅黑",Arial; }
+#rank dd:nth-of-type(2n) { background:#37353a; }
+#rank dd:nth-of-type(1) { color:#ffb400; }
+#rank dd:nth-of-type(1) em { text-indent:-100px; background:url(../images/rank.jpg) no-repeat 0px -50px; background-size:67px auto; }
+#rank dd:nth-of-type(2) { color:#dddddd; }
+#rank dd:nth-of-type(2) em { text-indent:-100px; background:url(../images/rank.jpg) no-repeat 0px -93px; background-size:67px auto; }
+#rank dd:nth-of-type(3) { color:#c49a6d; }
+#rank dd:nth-of-type(3) em { text-indent:-100px; background:url(../images/rank.jpg) no-repeat 0px -136px; background-size:67px auto; }
+
+/*游戏说明*/
+#notes { width:100%; background:#2b292e; padding-bottom:50px; }
+#notes dt { height:40px; background:url(../images/rank.jpg) repeat-x ; background-size:67px auto; font:bold 1.4em/40px "微软雅黑"; color:#fff; text-align:center; }
+#notes dd { padding:10px; color:#ddd; font:normal 1em/30px "微软雅黑"; }
+#notes dd span { color:#ffb400; }
+#notes dd:last-of-type { color:#ff170c; }
+
+#backHome { display:block; position:fixed; bottom:10px; left:10px; width:50px; height:50px; background:url(../images/home.png) ; background-size:50px auto;}
+

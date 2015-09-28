@@ -1,0 +1,214 @@
+﻿@{
+    Layout = null;
+}
+@model List<EasyWeixin.Web.Models.AllAnswer>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>微调查|天津欢乐谷官方微信</title>
+    <link href="~/tianjin/Css/base.css" rel="stylesheet" />
+    <script src="~/tianjin/js/jquery.1.4.js"></script>
+</head>
+
+<body>
+    <!--//页面头部-->
+    @Html.Raw(File.ReadAllText(Server.MapPath("/tianjin/Include/head.htm")))
+    @if(Model.FirstOrDefault()!=null)
+    {
+        <input type="hidden" value="@Model.FirstOrDefault().UserId" id="uId" />
+    }
+    <!--End页面头部-->
+    <!--//页面内容-->
+    <section id="wrap">
+        <form method="post" action="succeed.shtml">
+            <div class="surveyTips">
+                <h3>尊敬的游客朋友：</h3>
+                <p>非常希望能花费您宝贵的1分钟时间参与我们的调查。您的宝贵意见将能促使我们提供更好的服务。你将有可能获得我们为你送出的惊喜哦！</p>
+            </div>
+            @{
+                //处理题目序列
+
+                string[] data = { "A", "B", "C", "D", "E", "F", "G", "H", "I","J","K","L","M","N" };
+            }
+            <div class="surveyWrap">
+
+                @if (Model.FirstOrDefault()!= null)
+                {
+
+                    int num = 0;
+                    for (int i = 0; i < Model.Count; i++)
+                    {
+                        if (num == 0)
+                        {
+
+                            if (Model[i].Type == 0)  //单选
+                            {
+
+                    <div class="surveyBox" topicid="1" optiontype="0" style="display: block;" questionId="@Model[i].SetQuestionID">
+                        <div class="topicNumBox">
+                            <label class="topicNumL">1</label>/<label class="topicNumR">@Model.Count()</label>
+                        </div>
+                        <h4>@Model[i].SetQuestionName（单选）</h4>
+                        <div class="clear"></div>
+                        <ul class="options">
+                            @for (int d = 0; d < data.Count(); d++)
+                            {
+                                for (int z = 0; z < Model[i].aList.Count; z++)
+                                {
+                                     <li>
+                                            <div class="option">
+                                                 @data[z]
+                                            </div>
+                                        <div class="optionText">@Model[i].aList[z].AnswerName</div>
+                                    </li>
+                                }
+                                break;
+                            }
+
+                            @*<li>
+                                <div class="option">B</div>
+                                <div class="optionText">一次</div>
+                            </li>
+                            <li>
+                                <div class="option">C</div>
+                                <div class="optionText">二次</div>
+                            </li>
+                            <li>
+                                <div class="option">D</div>
+                                <div class="optionText">三次以上</div>
+                            </li>*@
+                        </ul>
+                    </div>
+                            }
+                            else if (Model[i].Type == 1)  //多选
+                            {
+                    <div class="surveyBox" topicid="1" optiontype="1" style="display: block;" questionId="@Model[i].SetQuestionID">
+                        <div class="topicNumBox">
+                            <label class="topicNumL">1</label>/<label class="topicNumR">@Model.Count()</label>
+                        </div>
+                        <h4>@Model[i].SetQuestionName（多选）</h4>
+                        <div class="clear"></div>
+                        <ul class="options">
+                            @for (int d = 0; d < data.Count(); d++)
+                            {
+                                for (int z = 0; z < Model[i].aList.Count; z++)
+                                {
+                                    <li>
+                                            <div class="option">
+                                                 @data[z]
+                                    </div>
+                                        <div class="optionText">@Model[i].aList[z].AnswerName</div>
+                                    </li>
+                                }
+                                break;
+                            }
+                        </ul>
+                    </div>
+                            }
+                            else  //建议
+                            {
+                    <div class="surveyBox" topicid="1" style="display: block;" questionId="@Model[i].SetQuestionID">
+                        <div class="topicNumBox">
+                            <label class="topicNumL">1</label>/<label class="topicNumR">@Model.Count()</label>
+                        </div>
+                        <h4>@Model[i].SetQuestionName</h4>
+                        <div class="clear"></div>
+                        <textarea optiontype="text" class="suggest" name="suggest" placeholder="@Model[i].Answers"></textarea>
+                    </div>
+                            }
+                        }
+                        else
+                        {
+                            if (Model[i].Type == 0)  //单选
+                            {
+
+                    <div class="surveyBox" topicid="@(i+1)" optiontype="0" questionId="@Model[i].SetQuestionID">
+                        <div class="topicNumBox">
+                            <label class="topicNumL">@(i+1)</label>/<label class="topicNumR">@Model.Count()</label>
+                        </div>
+                        <h4>@Model[i].SetQuestionName（单选）</h4>
+                        <div class="clear"></div>
+                        <ul class="options">
+                             @for (int d = 0; d < data.Count(); d++)
+                            {
+                                for (int z = 0; z < Model[i].aList.Count; z++)
+                                {
+                                    <li>
+                                            <div class="option">
+                                                 @data[z]
+                                    </div>
+                                        <div class="optionText">@Model[i].aList[z].AnswerName</div>
+                                    </li>
+                                }
+                                break;
+                            }
+                        </ul>
+                    </div>
+                            }
+                            else if (Model[i].Type == 1)  //多选
+                            {
+                    <div class="surveyBox" topicid="@(i+1)" optiontype="1" questionId="@Model[i].SetQuestionID">
+                        <div class="topicNumBox">
+                            <label class="topicNumL">@(i+1)</label>/<label class="topicNumR">@Model.Count()</label>
+                        </div>
+                        <h4>@Model[i].SetQuestionName（多选）</h4>
+                        <div class="clear"></div>
+                        <ul class="options">
+                              @for (int d = 0; d < data.Count(); d++)
+                            {
+                                for (int z = 0; z < Model[i].aList.Count; z++)
+                                {
+                                    <li>
+                                            <div class="option">
+                                                 @data[z]
+                                    </div>
+                                        <div class="optionText">@Model[i].aList[z].AnswerName</div>
+                                    </li>
+                                }
+                                break;
+                            }
+                        </ul>
+                    </div>
+                            }
+                            else  //建议
+                            {
+                    <div class="surveyBox" topicid="@(i+1)" questionId="@Model[i].SetQuestionID">
+                        <div class="topicNumBox">
+                            <label class="topicNumL">@(i+1)</label>/<label class="topicNumR">@Model.Count()</label>
+                        </div>
+                        <h4>@Model[i].SetQuestionName</h4>
+                        <div class="clear"></div>
+                        <textarea optiontype="text" class="suggest" name="suggest" placeholder="@Model[i].Answers"></textarea>
+                    </div>
+                            }
+                        }
+                        num++;
+                    }
+                }
+            </div>
+            <div class="topicBtnBox">
+                <a class="preTopic" href="javascript:;">上一题</a>
+                <a class="nextTopic" href="javascript:;">下一题</a>
+                <input class="topicSub" style="display: none;" type="button" value="提交问卷">
+            </div>
+        </form>
+        <div class="rich_media_tool">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+    </section>
+     <div style="display:none; width:0; height:0; overflow:hidden; line-height:0px;">
+    <!--//版权信息-->
+    @Html.Raw(File.ReadAllText(Server.MapPath("/tianjin/Include/foot.htm")))
+    <!--End版权信息-->
+    </div>
+</body>
+</html>
+<script src="~/tianjin/js/surveySub.js"></script>

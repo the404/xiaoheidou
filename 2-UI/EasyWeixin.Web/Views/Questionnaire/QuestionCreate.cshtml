@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "问卷调查创建";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EasyWeixin.Web.Models.QuestionaireViewModel
+
+<link rel="stylesheet" href="/js/kindeditor-4.1.7/plugins/code/prettify.css" />
+<script charset="utf-8" src="/js/kindeditor-4.1.7/plugins/code/prettify.js"></script>
+<script charset="utf-8" src="/js/kindeditor-4.1.7/kindeditor.js"></script>
+<script charset="utf-8" src="/js/kindeditor-4.1.7/lang/zh_CN.js"></script>
+<link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")"  type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript" ></script>
+<script type="text/javascript" src="~/js/My97DatePicker/WdatePicker.js"></script>
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">调查问卷</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">调查问卷</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">活动创建</li>
+                </ul>
+            </div>
+        </div>
+
+        @{ using (Html.BeginForm("QuestionCreate", "Questionnaire"))
+           {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="content-widgets gray">
+                        <div class="widget-head bondi-blue">
+                            <h3>活动创建</h3>
+                        </div>
+                        <div class="widget-container">
+                            <div class="form-container grid-form form-background">
+                                <!-- our error container -->
+                                <div class="control-group">
+                                    <label class="control-label">标题</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.CName, new { @placeholder = "输入标题", @class = "span7" })   @Html.ValidationMessageFor(model => model.CName, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">开始时间</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.StartDate, new { @placeholder = "输入开始时间", @class = "span7", @onClick = "WdatePicker()" })   @Html.ValidationMessageFor(model => model.StartDate, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">结束时间</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.EndDate, new { @placeholder = "输入结束时间", @class = "span7", @onClick = "WdatePicker()" })   @Html.ValidationMessageFor(model => model.EndDate, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">说明</label>
+                                    <div class="controls">
+                                        @Html.TextAreaFor(model => model.Content, new { @style = "width: 700px; height: 200px;", @id = "Content", }) @Html.ValidationMessageFor(model => model.Content, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-extend">提交</button>
+                                    @Html.ActionLink("返回列表", "QuestionIndex", new { }, new { @class = "btn btn-extend" })
+                                </div>
+                                <div class="error-container">
+                                    <h4></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           }
+        }
+    </div>
+</div>

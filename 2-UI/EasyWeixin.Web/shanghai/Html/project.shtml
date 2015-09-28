@@ -1,0 +1,594 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>项目运行时间|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--//页面头部-->
+    <!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">    
+        <div id="content02">
+        	<div class="navBox03">
+                <div class="quickNav03">
+                    <a href="/shanghai/Html/time.shtml" >营业时间</a>
+                    <a href="/shanghai/Html/showTime.shtml" >演出时间</a>
+                    <a class="active" href="/shanghai/Html/project.shtml" >项目运行时间</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="opera_time"  >
+                <h2 style="font-size:14px; line-height:24px; margin:10px auto;">上海欢乐谷设备开放时间表（2015.3.6-4.30）</h2>   
+                <table cellpadding="0" cellspacing="0" border="medium" style="border-color:#ccc">
+                    <tr>
+                      <th>序号</th>
+                      <th>区域</th>
+                      <th>项目名称</th>
+                      <th>开放时间</th>
+                      <th>关闭时间</th>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td rowspan="8">欢乐时光</td>
+                      <td>谷木游龙</td>
+                      <td>10:30</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>天地双雄</td>
+                      <td>9:30</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>03</td>
+                      <td>欢乐对对碰</td>
+                      <td>9:10</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>04</td>
+                      <td>欢乐风火轮</td>
+                      <td>9:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>05</td>
+                      <td>梦幻陀螺</td>
+                      <td>9:10</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>06</td>
+                      <td>旋转木马</td>
+                      <td>9:10</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>07</td>
+                      <td>旋转摇摆伞</td>
+                      <td>10:30</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>08</td>
+                      <td>异度空间</td>
+                      <td>9:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>09</td>
+                      <td>阳光港</td>
+                      <td>飞行影院</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td rowspan="4">飓风湾</td>
+                      <td>激流勇进</td>
+                      <td>10:30</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>完美风暴</td>
+                      <td>10:00</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>神奇草帽</td>
+                      <td>9:30</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td>暴风之旅</td>
+                      <td>11:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td rowspan="5">金矿镇</td>
+                      <td>西部追忆</td>
+                      <td>10:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>15</td>
+                      <td>骑警训练营</td>
+                      <td>9:30</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>金银岛</td>
+                      <td>9:30</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>17</td>
+                      <td>矿山历险</td>
+                      <td>10:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>18</td>
+                      <td>魔幻剧场</td>
+                      <td>11:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>19</td>
+                      <td rowspan="18">欢乐海洋</td>
+                      <td>海星剧场</td>
+                      <td>10:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>20</td>
+                      <td>潜水袋鼠</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>21</td>
+                      <td>海岸蚁兵队</td>
+                      <td>10:30</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>22</td>
+                      <td>跳跳蛙</td>
+                      <td>11:00</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>23</td>
+                      <td>大洋历险</td>
+                      <td>10:30</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>24</td>
+                      <td>七彩漩涡</td>
+                      <td>9:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>25</td>
+                      <td>航海学校</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>26</td>
+                      <td>泡泡大战</td>
+                      <td>10:30</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>27</td>
+                      <td>海洋之星</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>28</td>
+                      <td>小小百慕达</td>
+                      <td>11:00</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>29</td>
+                      <td>浪花飞舞</td>
+                      <td>9:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>30</td>
+                      <td>疯狂精灵</td>
+                      <td>9:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>31</td>
+                      <td>珊瑚影院</td>
+                      <td>10:00</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>32</td>
+                      <td>北极探险</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>33</td>
+                      <td>水上飞艇</td>
+                      <td>10:30</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>34</td>
+                      <td>水母一家亲</td>
+                      <td>9:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>35</td>
+                      <td>小飞鱼</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>36</td>
+                      <td>海洋新干线</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>37</td>
+                      <td rowspan="5">香格里拉</td>
+                      <td>蓝月飞车</td>
+                      <td>10:30</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>38</td>
+                      <td>飞旋驼峰</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>39</td>
+                      <td>丛林抢险</td>
+                      <td>10:00</td>
+                      <td>16:00</td>
+                    </tr>
+                    <tr>
+                      <td>40</td>
+                      <td>肯配古塔</td>
+                      <td>11:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>41</td>
+                      <td>峡谷漂流</td>
+                      <td>11:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>42</td>
+                      <td rowspan="5">上海滩</td>
+                      <td>尖峰时刻</td>
+                      <td>11:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>43</td>
+                      <td>能量风暴</td>
+                      <td>9:30</td>
+                      <td>17:00</td>
+                    </tr>
+                    <tr>
+                      <td>44</td>
+                      <td>大摆锤</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>45</td>
+                      <td>绝顶雄风</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                    <tr>
+                      <td>46</td>
+                      <td>四维影院</td>
+                      <td>10:00</td>
+                      <td>16:30</td>
+                    </tr>
+                </table>
+                  
+                <!--<table cellpadding="0" cellspacing="0" border="medium" style="border-color:#ccc">
+                      <tr>
+                        <th width="25%">区域</th>
+                        <th width="25%">项目名称</th>
+                        <th width="25%">开放时间</th>
+                        <th width="25%">关闭时间</th>
+                      </tr>
+                      <tr >
+                        <td rowspan="8">欢乐时光</td>
+                        <td>谷木游龙</td>
+                        <td>10:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>天地双雄</td>
+                        <td>9:30</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr >
+                        <td>欢乐对对碰</td>
+                        <td>9:10</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>欢乐风火轮</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>梦幻陀螺</td>
+                        <td>9:30</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr >
+                        <td>旋转木马</td>
+                        <td>9:10</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr >
+                        <td>旋转摇摆伞</td>
+                        <td>9:30</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr >
+                        <td>异度空间</td>
+                        <td>10:30</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr >
+                        <td>阳光港</td>
+                        <td>飞行影院</td>
+                        <td>10:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="4">飓风湾</td>
+                        <td>激流勇进</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>完美风暴</td>
+                        <td>9:30</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr >
+                        <td>神奇草帽</td>
+                        <td>9:30</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr >
+                        <td>暴风之旅</td>
+                        <td colspan="2" >改造暂停</td>
+                      </tr>
+                      <tr >
+                        <td rowspan="5">金矿镇</td>
+                        <td>西部追忆</td>
+                        <td>11:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>骑警训练营</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>金银岛</td>
+                        <td>10:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>矿山历险</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>魔幻剧场</td>
+                        <td>11:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td rowspan="18">欢乐海洋</td>
+                        <td>潜水袋鼠&nbsp;&nbsp;</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>海岸蚁兵队</td>
+                        <td>10:30</td>
+                        <td>20:00</td>
+                      </tr>
+                      <tr >
+                        <td>跳跳蛙</td>
+                        <td>11:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>大洋历险</td>
+                        <td>10:30</td>
+                        <td>20:00</td>
+                      </tr>
+                      <tr >
+                        <td>七彩漩涡</td>
+                        <td>10:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>航海学校</td>
+                        <td>10:00</td>
+                        <td>20:00</td>
+                      </tr>
+                      <tr >
+                        <td>泡泡大战</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>海洋之星</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>小小百慕达</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>海星剧场</td>
+                        <td>11:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>浪花飞舞</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>疯狂精灵</td>
+                        <td>10:00</td>
+                        <td>20:00</td>
+                      </tr>
+                      <tr >
+                        <td>珊瑚影院</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>北极探险</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>水上飞艇</td>
+                        <td>10:30</td>
+                        <td>20:00</td>
+                      </tr>
+                      <tr >
+                        <td>水母一家亲</td>
+                        <td>10:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>小飞鱼</td>
+                        <td>10:30</td>
+                        <td>20:00</td>
+                      </tr>
+                      <tr >
+                        <td>海洋新干线</td>
+                        <td>10:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td rowspan="5">香格里拉</td>
+                        <td>蓝月飞车</td>
+                        <td>11:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>飞旋驼峰</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>丛林抢险</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>肯配古塔</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>峡谷漂流</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td rowspan="5">上海滩</td>
+                        <td>尖峰时刻</td>
+                        <td>10:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>能量风暴</td>
+                        <td>9:30</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>大摆锤</td>
+                        <td>10:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>绝顶雄风</td>
+                        <td>10:00</td>
+                        <td>17:00</td>
+                      </tr>
+                      <tr >
+                        <td>四维影院</td>
+                        <td>11:00</td>
+                        <td>17:00</td>
+                      </tr>
+                    </table>-->
+                                
+                <div class="beizhu">
+                    <p style="font-weight:bold;">温馨提示：</p>
+                    <p>为了您的安全，我们特别提醒您园内部分项目不适合高血压、心脏病患者、颈椎背部疾病患者、孕妇、酒醉者游玩；部分项目对参与游客的身高、腰围、体重等设有要求限制，有上述病情或症状者，请自行确认并选择其他适合项目，请游客自觉遵守。</p>
+                    <p style="font-weight:bold;">放映场次说明：</p>
+                    <p>四维影院：10:00/11:00/12:00/13:00/14:00/15:00/16:00/16:30</p>
+                    <p>珊瑚影院：10:00/11:00/12:00/13:00/14:00/15:00/16:00</p>
+                    <p>魔幻剧场：11:00/12:00/13:00/14:00/15:00/16:00/16:30</p>
+                    <p>海星剧场：10:30/11:30/12:30/13:30/14:30/15:30/16:00</p>
+                    <P style="font-weight:bold;">备注：</P>
+                    <p>1、如遇大风、雨、雪、五度以下低温天气、节假日、设备月、年检设备开放时间以现场公布为准</p>
+                    <p>2、设备关闭时间视客流量灵活安排，可适当推后关闭时间。</p>
+                    <p>3、如遇恶劣天气，室外设备停开，则室内魔幻剧场、四维影院、珊瑚影剧院循环放映。</p>
+                </div>
+            </div>
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                	<i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

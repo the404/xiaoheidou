@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷微信,上海欢乐谷价格查询,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>价格查询|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="content02">
+        	<div class="navBox">
+                <div class="quickNav">
+                    <a class="active" href="/shanghai/Html/ticket.shtml" >门票价格</a>
+                    <a href="/shanghai/Html/card.shtml" >年卡价格</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="ticketBox">
+            	<div class="ticketTop ticketTop01">
+                	<h3>全价票</h3>
+                    <p>￥<strong> 190 </strong>/人（原价200元/人）</p>
+                </div>
+                <div class="ticketInfo">
+                	<p>1、成人及身高1.5米以上（不含1.5米）儿童；</p>
+                    <p>2、65周岁以下（不含65周岁）长者。</p>
+                </div>
+                <div class="ticketLine"></div>
+                <span class="circleL"></span>
+                <span class="circleR"></span>
+            </div>
+            <div class="ticketBox">
+            	<div class="ticketTop ticketTop02">
+                	<h3>儿童长者票</h3>
+                    <p>￥<strong>110</strong>/人（原价120元/人）</p>
+                </div>
+                <div class="ticketInfo">
+                	<p>1、身高1.2米（不含1.2米）-1.5米（含1.5米）的儿童；</p>
+					<p>2、65（含65周岁）-69（含69周岁)周岁的长者（凭本人有效证件）。</p>
+                </div>
+                <div class="ticketLine"></div>
+                <span class="circleL"></span>
+                <span class="circleR"></span>
+            </div>
+            <div class="ticketBox">
+            	<div class="ticketTop ticketTop03">
+                	<h3>夜场门票</h3>
+                    <p>￥<strong>69</strong>/人（￥原价80元）</p>
+                </div>
+                <div class="ticketInfo">
+                	<p>1、1.2米（含1.2米）以上儿童、成人；</p>
+					<p>2、70周岁（不含70周岁）以下长者；</p>
+                    <p>3、适用于夜场开放期间；<br />注：夜场开放时间以园区公告为准。</p>
+                </div>
+                <div class="ticketLine"></div>
+                <span class="circleL"></span>
+                <span class="circleR"></span>
+            </div>
+            <div class="ticketBox">
+            	<div class="ticketTop ticketTop01">
+                	<h3>上海大学生票</h3>
+                    <p>￥<strong>160</strong>/人（原价200元）</p>
+                </div>
+                <div class="ticketInfo">
+                	<p>凭上海地区大学生证验证后入园。</p>
+                </div>
+                <div class="ticketLine"></div>
+                <span class="circleL"></span>
+                <span class="circleR"></span>
+            </div>
+            <div class="ticketBox">
+            	<div class="ticketTop ticketTop02">
+                	<h3>外地大学生票</h3>
+                    <p>￥<strong>120</strong>/人（原价200元）</p>
+                </div>
+                <div class="ticketInfo">
+                	<p>凭上海以外地区大学生证验证后入园。</p>
+                </div>
+                <div class="ticketLine"></div>
+                <span class="circleL"></span>
+                <span class="circleR"></span>
+            </div>
+            <!--<div class="ticketBox">
+            	<div class="ticketTop ticketTop01">
+                	<h3>残疾人优惠政策</h3>
+                    <p>￥<strong>180</strong>/人</p>
+                </div>
+                <div class="ticketInfo">
+                	<p>适用于残疾人士（凭本人有效残疾证件）。</p>
+                </div>
+                <div class="ticketLine"></div>
+                <span class="circleL"></span>
+                <span class="circleR"></span>
+            </div>
+            <div class="ticketBox">
+            	<div class="ticketTop ticketTop02">
+                	<h3>免票政策</h3>
+                    <p>&nbsp;&nbsp;<strong>免票</strong>&nbsp;&nbsp;</p>
+                </div>
+                <div class="ticketInfo">
+                	<p>1、1.2米（含1.2米）以下的儿童；</p>
+					<p>2、70周岁以上（含70周岁）的老人凭本人有效身份证件免费入园；</p>
+                </div>
+                <div class="ticketLine"></div>
+                <span class="circleL"></span>
+                <span class="circleR"></span>
+            </div>-->
+            <div class="tipBox">
+                <div class="spiritBtn">
+                	<h4>小贴士<span> / TIPS</span></h4>
+                </div>
+                <div class="text">
+                    <ul>
+                        <li><p>1、全园一票制</p></li>
+                        <li><p>2、游客每人限享受一种优惠政策，拥有享受多种折扣资格的，按最低折扣计算。</p></li>
+                        <li><p>3、针对特殊群体及特殊节日的优惠政策另行制定。</p></li>
+                        <li><p>4、散客门票的有效期以票面打印日期为准。</p></li>
+                        <li><p>5、退票须知：年卡及门票退票拨打4000691111客服热线电话办理退票手续。</p></li>
+                        <li><p>6、残疾人优惠：180元/人，适用于残疾人士（凭本人有效残疾证件）。</p></li>
+						<li><p>7、免票：适用于1.2米（含1.2米）以下的儿童；70周岁以上（含70周岁）的老人凭本人有效身份证件免费入园。</p></li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div class="hotline">
+            	<div class="phone">游客咨询电话：021-33552222<span></span></div>
+            </div>-->
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>
+<script type="text/javascript">
+//底部点赞
+var oLike=document.getElementById("like");
+var oLikeIcon=oLike.getElementsByTagName("i")[0];
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_grey";
+	}
+</script>

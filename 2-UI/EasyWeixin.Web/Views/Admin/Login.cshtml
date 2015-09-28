@@ -1,0 +1,101 @@
+﻿@{
+	Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta property="wb:webmaster" content="cce7ea6464320dec" />
+	<meta charset="utf-8">
+	<title>旅游小黑豆景区微信营销平台</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Admin Panel Template">
+	<meta name="author" content="Westilian: Kamrujaman Shohel">
+	<!-- styles -->
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<!--[if IE 7]>
+			<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+		<![endif]-->
+	<link href="/css/styles.css" rel="stylesheet">
+	<!--[if IE 7]>
+			<link rel="stylesheet" type="text/css" href="css/ie/ie7.css" />
+		<![endif]-->
+	<!--[if IE 8]>
+			<link rel="stylesheet" type="text/css" href="css/ie/ie8.css" />
+		<![endif]-->
+	<!--[if IE 9]>
+			<link rel="stylesheet" type="text/css" href="css/ie/ie9.css" />
+		<![endif]-->
+	<link href="/css/aristo-ui.css" rel="stylesheet">
+	<link href="/css/elfinder.css" rel="stylesheet">
+	@*<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>*@
+	<!--fav and touch icons -->
+	<link rel="shortcut icon" href="ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+	<!--============j avascript===========-->
+	<script src="/js/jquery.js"></script>
+	<script src="/js/jquery-ui-1.10.1.custom.min.js"></script>
+	<script src="/js/bootstrap.js"></script>
+</head>
+<body>  <script type="text/javascript">
+
+		//左侧手风琴 收缩
+		$(document).ready(function () {
+
+		});
+	</script>
+	<div class="layout">
+		<!-- Navbar================================================== -->
+		<div class="navbar navbar-inverse top-nav">
+			<div class="navbar-inner">
+				<div class="container">
+					<span class="home-link"><a href="@Url.Action("Index","Admin")" class="icon-home"></a></span><a class="brand" href="@Url.Action("Index","Admin")">
+						<img src="/images/logo-falgun.png" width="103" height="50" alt="Falgun"></a>
+					<div class="btn-toolbar pull-right notification-nav">
+						<div class="btn-group">
+							<div class="dropdown">
+								<a class="btn btn-notification"><i class="icon-reply"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		@model EasyWeixin.Web.Models.LoginModel
+		<div class="container">
+			<div class="form-signin">
+				@{using (Html.BeginForm( new { ReturnUrl = ViewBag.ReturnUrl }))
+				  {
+
+					@Html.AntiForgeryToken()
+					@Html.ValidationSummary(true)
+					<h3 class="form-signin-heading">后台登陆</h3>
+					<div class="controls input-icon">
+						<i class=" icon-user-md"></i>
+						@Html.TextBoxFor(m => m.UserName, new { @class = "input-block-level", @placeholder = "请输入用户名" })
+					</div>
+					<div class="controls input-icon">
+						<i class=" icon-key"></i>
+						@Html.TextBoxFor(m => m.Password, new { @class = "input-block-level", @placeholder = "请输入密码", @type = "password" })
+					</div>
+					<label class="checkbox">
+							@Html.CheckBoxFor(m => m.RememberMe)
+						记住我
+					</label>
+					<button type="submit" class="btn btn-inverse btn-block">登  陆</button>
+					<h4>是否忘记密码 ?</h4>
+					<p>
+						<a href="#">点击这里</a> 找回密码    <a href="@Url.Action("Register","Admin")">注册</a>
+					</p>}}
+				@*	<h5>Don't have an account yet ?</h5>
+			   <button class="btn btn-success btn-block" type="submit">Create Account</button>*@
+			</div>
+		</div>
+	</div>
+</body>
+</html>

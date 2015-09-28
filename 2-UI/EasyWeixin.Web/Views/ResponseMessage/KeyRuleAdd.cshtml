@@ -1,0 +1,169 @@
+﻿@model EasyWeixin.Model.ResponseKeyRule
+
+<div class="accordion-group">
+       <input type="hidden" value="0" name="ResponseKeyRuleID" />
+    <div class="accordion-heading">
+        <a href="#collapse0" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle" style="background: #ddd; color: inherit">
+
+            @{
+                var title = "";
+                if (Model != null)
+                {
+                    title = Model.RuleName;
+                }
+                else
+                {
+
+                    title = "添加新规则";
+                }
+                @title
+            }
+        </a>
+
+        <div class="navbar" style="margin-bottom: 0px">
+            <div class="navbar-inner">
+                <div class="container">
+
+                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+            </div>
+            <!-- /navbar-inner -->
+        </div>
+    </div>
+
+    <div class="accordion-body collapse" id="collapse0" style="height: auto;">
+         <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets">
+                    <div class="widget-container">
+                        <div class="control-group">
+                            <div class="controls">
+                                输入规则名称:
+                                <input id="RuleName" name="RuleName"  type="text"  value="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span4">
+                    <div class="content-widgets">
+                        <div>
+                            <div class="widget-header-block">
+                                <h4 class="widget-header">关键字</h4>
+                            </div>
+                            <div class="content-box">
+                                <div class="tab-widget">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" style="height: 300px">
+                                            <table class="table responsive table-bordered table-striped key-table">
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="navbar" style="margin-bottom: 0px">
+                                            <div class="navbar-inner">
+                                                <div class="container">
+
+                                                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                                                        <ul class="nav">
+                                                            <li><button href="javascript:viod(0)" class="btn button-key-del" style="padding: 5px 10px 5px">删除选中</button></li>
+                                                            <li class="divider-vertical"></li>
+                                                        </ul>
+                                                        <ul class="nav pull-right">
+                                                            <li><button href="javascript:viod(0)" class="btn button-key-add" style="padding: 5px 10px 5px">添加关键字</button></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /.nav-collapse -->
+                                                </div>
+                                            </div>
+                                            <!-- /navbar-inner -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span8">
+                    <div class="content-widgets">
+                        <div>
+                            <div class="widget-header-block">
+                                <h4 class="widget-header">回复</h4>
+                            </div>
+                            <div class="content-box">
+                                <div class="tab-widget">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" style="height: 300px">
+                                            <table class="table responsive table-bordered table-striped response-table">
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="navbar" style="margin-bottom: 0px">
+                                            <div class="navbar-inner">
+                                                <div class="container">
+                                                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                                                        <ul class="nav">
+                                                            <li><button href="javascript:void(0)" class="btn button-response-del" style="padding: 5px 10px 5px">删除选中</button></li>
+                                                            <li class="divider-vertical"></li>
+                                                        </ul>
+                                                        <ul class="nav pull-right message-type-button">
+                                                            <li><button href="javascript:void(0)" class="btn message-text" style="padding: 5px 10px 5px">文字</button></li>
+                                                        @* <li class="divider-vertical"></li>
+                                                            <li><a href="javascript:void(0)" class="btn-link active message-music">语音</a></li>*@
+                                                           @* <li class="divider-vertical"></li>
+                                                            <li><a href="javascript:void(0)" class="btn-link active message-image">图片</a></li>*@
+@*                                                            <li class="divider-vertical"></li>
+                                                            <li><a href="javascript:void(0)" class="btn-link active message-video">视频</a></li>*@
+                                                            <li class="divider-vertical"></li>
+                                                            <li><button href="javascript:void(0)" class="btn message-imagetext" style="padding: 5px 10px 5px">图文</button></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /.nav-collapse -->
+                                                </div>
+                                            </div>
+                                            <!-- /navbar-inner -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar" style="margin-bottom: 15px">
+                <div class="navbar-inner">
+                    <div class="container">
+
+                        <div class="nav-collapse collapse navbar-responsive-collapse">
+                            <ul class="nav pull-right">
+                                <li><a href="#" class="btn-link active"></a></li>
+
+                                <li><button href="javascript:void(0)" class="btn button-save" style="padding: 5px 10px 5px">保存</button></li>
+
+                                <li><a href="#" class="btn-link active"></a></li>
+
+                                <li><button href="javascript:void(0)" class="btn button-del" style="padding: 5px 10px 5px">删除</button></li>
+
+                                <li><a href="#" class="btn-link active"></a></li>
+                            </ul>
+                        </div>
+                        <!-- /.nav-collapse -->
+                    </div>
+                </div>
+                <!-- /navbar-inner -->
+            </div>
+        </div>
+    </div>
+</div>

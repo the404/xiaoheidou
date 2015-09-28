@@ -1,0 +1,19 @@
+﻿
+*{margin:0; padding:0;}
+ul ,li ,ol{list-style:none;}
+a{color:#000; font-weight:normal; text-decoration:none;}
+body ,html { width:100%; height:100%;}
+body{ font-family:"微软雅黑",Arial, Helvetica; font-weight: normal; text-shadow:none; position: relative;background:#4d4d4d;}
+
+.lottery-tab { width: 260px; height:260px;  border-radius: 5px;margin: 0 auto; overflow: hidden;}
+.lottery-tab table { width: 250px; height:250px; background:#fbb647;margin: 5px auto 0px auto; text-align: center; border-collapse:collapse;}
+.lottery-tab table td { padding: 5px; font: normal 14px "微软雅黑"; color: #ffff7e;}
+.lottery-tab table td.red { background: #c11720; }
+.lottery-tab table td.pink { background: #b00e57; }
+.lottery-tab table td.green { background: #518948; }
+.lottery-tab table td.focus { background: #ffff7e; color: #cb1573; }
+.start-btn { display: block; background-size:320px auto; width:105px; height: 105px; margin: 0 auto }
+
+
+.award-wrap { position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; display: block; background:rgba(19,18,127,0.5); z-index: 10; display: none;}
+.award-info {display: block; background-size:320px auto; width: 255px; height: 166px; position: absolute; top: 50%; left: 50%; margin: -80px 0 0 -127px; font: bold 1em/186px "微软雅黑"; color: #fff; text-align: center;}

@@ -1,0 +1,184 @@
+﻿@{
+    ViewBag.Title = "WheelIndex";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   @* <title>唱响好声音—狮山音乐节门票免费赚</title>*@
+     @*<title>幸运大转盘</title>*@
+    <title>大转盘</title>
+    <link href="/Content/Wheel/global.css" rel="stylesheet" type='text/css' />
+    <link href="/Content/Wheel/turntable.css" rel="stylesheet" type='text/css' />
+    <script type='text/javascript' src="/Scripts/jquery-1.7.2.min.js"></script>
+    <script type='text/javascript' src="/Scripts/easing.min.js"></script>
+    <script type='text/javascript' src="/Scripts/rotate.2.2.js"></script>
+    <script type='text/javascript'>
+        var turntable_obj = {
+            turntable_init: function () {
+                $('#startbtn').rotate({
+                    bind: {
+                        click: function () {
+                            var WheelID = $("#WheelID").val();
+                            var UserWexinID = $("#UserWexinID").val();
+                            $.post("/ActivityWheel/GetWheelitem", { WheelID: WheelID, UserWexinID: UserWexinID }, function (data) {
+                                if (data.message == undefined) {
+                                    var Max = data.MaxAngle;
+                                    var Min = data.MinAngle;
+                                    var range = GetRandomNum(Min, Max);
+                                    $('#startbtn').rotate({
+                                        duration: 6000,
+                                        angle: range,
+                                        animateTo: 5400 + range,
+                                        easing: $.easing.easeOutSine,
+                                        callback: function () {
+                                            if (data.WheelItemID > 0) {
+                                                win_alert(data.WheelItemName + 'SN码为：' + data.WheelCode, function () {
+                                                    $('#WinPrize').slideDown(500);
+                                                    $('#PrizeClass').html(data.WheelItemName);
+                                                    $('#SnNumber').html(data.WheelCode);
+                                                    $('#GetPrize input[name=MobilePhone]').focus();
+                                                });
+                                            } else {
+                                                win_alert("谢谢参与,请继续努力", function() {
+                                                });
+                                            }
+                                        }
+                                    });
+                                } else {
+                                    win_alert(data.message);
+                                    return false;
+                                }
+                            }, 'json');
+                        }
+                    }
+                });
+
+                var Phone = $('input[name=MobilePhone]');
+                $('#GetPrize').submit(function () { return false; });
+                $('#GetPrize input:submit').click(function () {
+                    if (Phone.val() == '') {
+                        win_alert('请填写手机号码！', function () { Phone.focus() });
+                        return false;
+                    }
+                    if (!(/^13\d{9}$/g.test(Phone.val()) || /^14[57]\d{8}$/g.test(Phone.val()) || /^15[0-35-9]\d{8}$/g.test(Phone.val()) || /^18\d{9}$/g.test(Phone.val()))) {
+                        win_alert("'" + Phone.val() + "'不是一个有效的手机号码！", function () { Phone.focus() });
+                        return false;
+                    }
+
+                    $(this).attr('disabled', true).val('提交中...');
+                    $.post('/ActivityWheel/WheelAdd', { WheelUserPhone: Phone.val() }, function (data) {
+
+                            win_alert(data.message, function () {
+                                location.href = location.href;
+                            });
+
+                        $('#GetPrize input:submit').attr('disabled', false).val('提交');
+                    }, 'json');
+                });
+            }
+        }
+        function GetRandomNum(Min, Max) {
+            var Range = Max - Min;
+            var Rand = Math.random();
+            var r = parseInt(Min) + parseInt(Math.round(Rand * Range));
+            return r;
+        }
+        function win_alert(tips, handle) {
+            $('body').prepend('<div id="global_win_alert"><div>' + tips + '</div><h1>确定</h1></div>');
+            $('#global_win_alert').css({
+                position: 'fixed',
+                left: $(window).width() / 2 - 125,
+                top: '30%',
+                background: '#fff',
+                border: '1px solid #ccc',
+                opacity: 0.95,
+                width: 250,
+                'z-index': 10000,
+                'border-radius': '8px'
+            }).children('div').css({
+                'text-align': 'center',
+                padding: '30px 10px',
+                'font-size': 16
+            }).siblings('h1').css({
+                height: 40,
+                'line-height': '40px',
+                'text-align': 'center',
+                'border-top': '1px solid #ddd',
+                'font-weight': 'bold',
+                'font-size': 20
+            });
+            $('#global_win_alert h1').click(function () {
+                //if (tips != "已经提交过相同的手机号，请重新填写！") {
+                    $('#global_win_alert').remove();
+               // }
+
+            });
+            if ($.isFunction(handle)) {
+                if (tips != "您提交的手机号码已经中过奖了!")
+                {
+                    $('#global_win_alert h1').click(handle);
+                }
+
+            }
+        }
+    </script>
+
+    <script language="javascript">$(document).ready(turntable_obj.turntable_init);</script>
+</head>
+@model EasyWeixin.Model.Wheel
+<body>
+    <input id="WheelID" type="hidden" value="@Request["WheelID"]" />
+    <input id="UserWexinID" type="hidden" value="@Request["UserWexinID"]" />
+    <div id="turntable">
+        <div id="WheelEvent">
+            <div class="demo">
+                <div id="disk"></div>
+                <div id="start">
+                    <img id="startbtn" src="/images/Activity/Wheel/wheel_arrow[1].png">
+                </div>
+            </div>
+            <div id="WinPrize" class="refer none">
+                <span>恭喜您抽中 <font id="PrizeClass"></font>（SN码：<font id="SnNumber"></font>），请输入您的手机号并记录SN码，作为领奖凭证！<font style="color:red;">逾期无效!!</font></span>
+                <div>
+                    <form id="GetPrize">
+                        <div class="input">
+                            <input type="input" name="MobilePhone" value="" class="form_input" pattern="[0-9]*" maxlength="11" />
+                        </div>
+
+                        <div class="input">
+                            <input type="submit" value="提交" class="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="turntable_success">提交成功！</div>
+            <div class="refer">
+                <span>兑换说明（<font color="#FF0000">亲，中奖后请务必输入您的手机号并记录SN码，否则无法领奖喔！</font>）</span>
+                <div>
+                    活动期间，中奖的亲们出示SN码及手机号即可现场进行登记并领取奖品
+                   @* @if (Model.WheelItems != null)
+                    {
+                        foreach (var item in Model.WheelItems)
+                        {
+                            //var html = item.WheelItemName + ":" + item.WheelItemAward + "。奖品数量：" + item.WheelItemScale + "";
+                            var html = item.WheelItemName + ":" + item.WheelItemAward;
+                        @html;<br />
+                        }
+                    }*@
+                </div>
+            </div>
+            <div class="refer">
+                <span>活动说明</span>
+                <div>@Html.Raw(Model.WheelDesc)</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

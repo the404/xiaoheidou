@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 14.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="代码生成/文本转换记录">
+  <MessageClass Name="Message" Label="消息" Option="显示提供相关信息的消息" />
+  <MessageClass Name="Warning" Label="警告" Option="显示警告" />
+  <MessageClass Name="Error" Label="错误" Option="显示错误" />
+  <MessageClass Name="Property" Label="属性" Option="显示元数据" />
+  <MessageClass Name="Diagnostic" Label="消息" Option="显示诊断消息" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="High" Text="已启动代码生成或文本转换。" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="Diagnostic" Text="名称 = ClassTemplate" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="Diagnostic" Text="覆盖 = True" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="Diagnostic" Text="ProjectPath = ..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="Diagnostic" Text="TemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="Medium" Text="EasyWeixin.Modeling 的文本模板绑定: “ClassTemplate”会将 ClassTemplate.t4 应用于: “EasyWeixin.Modeling::百度地图API”- (UseCase) " />
+  <Error Timestamp="2015-05-19T11:08:27" Importance="High" Text="“EasyWeixin.Modeling::百度地图API”- (UseCase) 的以下模板文件路径属性不存在: D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:27" Importance="Diagnostic" Text="“EasyWeixin.Modeling::百度地图API”- (UseCase): 没有生成任何文件，因为模板“ClassTemplate.t4”的“AppliesToElement”方法的计算结果为 false。" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="名称 = EnumTemplate" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="覆盖 = True" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="ProjectPath = ..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="TemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Medium" Text="EasyWeixin.Modeling 的文本模板绑定: “EnumTemplate”会将 EnumTemplate.t4 应用于: “EasyWeixin.Modeling::百度地图API”- (UseCase) " />
+  <Error Timestamp="2015-05-19T11:08:29" Importance="High" Text="“EasyWeixin.Modeling::百度地图API”- (UseCase) 的以下模板文件路径属性不存在: D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="“EasyWeixin.Modeling::百度地图API”- (UseCase): 没有生成任何文件，因为模板“EnumTemplate.t4”的“AppliesToElement”方法的计算结果为 false。" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="名称 = InterfaceTemplate" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="覆盖 = True" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="ProjectPath = ..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="TemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Medium" Text="EasyWeixin.Modeling 的文本模板绑定: “InterfaceTemplate”会将 InterfaceTemplate.t4 应用于: “EasyWeixin.Modeling::百度地图API”- (UseCase) " />
+  <Error Timestamp="2015-05-19T11:08:29" Importance="High" Text="“EasyWeixin.Modeling::百度地图API”- (UseCase) 的以下模板文件路径属性不存在: D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="“EasyWeixin.Modeling::百度地图API”- (UseCase): 没有生成任何文件，因为模板“InterfaceTemplate.t4”的“AppliesToElement”方法的计算结果为 false。" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="名称 = StructTemplate" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="覆盖 = True" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="ProjectPath = ..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="TemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Medium" Text="EasyWeixin.Modeling 的文本模板绑定: “StructTemplate”会将 StructTemplate.t4 应用于: “EasyWeixin.Modeling::百度地图API”- (UseCase) " />
+  <Error Timestamp="2015-05-19T11:08:29" Importance="High" Text="“EasyWeixin.Modeling::百度地图API”- (UseCase) 的以下模板文件路径属性不存在: D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="Diagnostic" Text="“EasyWeixin.Modeling::百度地图API”- (UseCase): 没有生成任何文件，因为模板“StructTemplate.t4”的“AppliesToElement”方法的计算结果为 false。" />
+  <Message Timestamp="2015-05-19T11:08:29" Importance="High" Text="代码生成完成。错误: 4。警告: 0。" />
+</Log>

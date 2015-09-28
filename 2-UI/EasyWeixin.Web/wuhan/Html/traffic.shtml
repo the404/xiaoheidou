@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,武汉欢乐谷,武汉欢乐谷微信,武汉欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='武汉欢乐谷是华侨城集团新一代大型主题乐园，武汉欢乐谷占地约35万平方米，预计2012年5月开园迎宾，其由梦想大道、卡通工厂、欢乐时光、极速世界、渔光岛、羽落天堂、飓风湾、欢乐江城等八大主题区域组成，全新设置了 100多项娱乐体验项目，包括30多项游乐体验设备、40多处生态人文景观、10多台文化演艺精品和20多项主题娱乐游戏，精彩诠释多元欢乐。木翼双龙—亚洲首座双龙木质过山车。极速飞车—全球最高最快弹射过山车武汉欢乐谷。摩天塔—120米全球最高观光塔。蒙地卡罗赛道—中国弯道最多的巷道式矿山车。,ipow,互动力' />
+<title>交通指南|武汉欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/wuhan/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div class="trafficBox">
+            <h4>选择你去武汉欢乐谷的交通方式</h4>
+            <div class="text">
+                <ul id="trafficNav">
+                    <li><a href="drive.shtml">自驾</a></li>
+                    <li><a href="bus.shtml">公交</a></li>
+                    <li><a href="walk.shtml">步行</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tipBox02">
+        	<div class="jtTitle">
+            	<h4>交通说明</h4>
+            </div>
+            <div class="TrafficTips">
+                <ul>
+                	<li style="border-top:none; margin-top:0px; padding-top:0px;">
+                    	<strong>自驾：</strong>
+                        <p>青山：<br />
+                           红钢城、工人村区域的车辆，可以经工业四路——友谊大道——杨春湖路——欢乐大道<br />
+                           钢花新村区域的车辆，经仁和路——欢乐大道。
+                        </p>
+                        <p>汉口：<br />
+                           最优线路：经二七长江大桥——二环线高架（水东段）——欢乐大道<br />
+                           建议尽量避开交通较为紧张的长江二桥——徐东大街——岳家嘴——欢乐大道
+                        </p>
+                        <p>武昌：<br />
+                           武昌老城区片区的车辆，建议走友谊大道——仁和路——欢乐大道尽量避开交通较为紧张的中南路——中北路——欢乐大道<br />
+                           街道口、水果湖片区的车辆，建议走水果湖隧道——梨园广场地下通道——欢乐大道</p>
+                        <p>东湖高新（光谷方向）：<br />
+                        	建议走三环线——武汉火车站——欢乐大道
+                        </p>
+                    </li>
+                    <li>
+                    	<strong>公交：</strong>
+                    	<p>前往欢乐谷的公交线路共有8条，其中始发6条、途径2条（在华侨城公交场站/欢乐大道欢乐谷站下车即可）：</p>
+                        <p>534路（常青花园——华侨城公交场站）<br />
+                           566路（中大长江紫都——华侨城公交场站）<br />
+                           545路（汉口复兴村——华侨城公交场站）<br />
+                           810路（华丽环保工业园——华侨城公交场站）<br />
+                           782路（红港三村——欢乐大道——中北路电车停车场）<br />
+                           108路（武汉火车站——欢乐大道——王家巷）<br />
+                           734路（和平大道地铁积玉桥站---华侨城公交场站）</p>
+                    </li>
+                    <li>
+                    	<strong>地铁：</strong>
+                    	<p>武汉地铁4号线仁和路站</p>
+						<p>路线一：<br />仁和路A出口，沿着仁和路往东，步行15分钟即到。</p>
+                        <p>路线二：<br />仁和路站B出口，乘545路到【华侨城公交场站】下车即到。</p>
+					</li>
+                </ul>
+            </div>
+        </div>
+         <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+    </section>
+     <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/wuhan/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

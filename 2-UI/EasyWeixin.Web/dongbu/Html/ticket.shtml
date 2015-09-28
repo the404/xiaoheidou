@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="东部华侨城,华侨城,华侨城微信,华侨城官方微信,华侨城微信公众平台,深圳,旅游,深圳旅游,深圳景区,深圳好玩的,深圳好吃的,互动力;" />
+<meta name="description" content="东部华侨城位于中国深圳大梅沙，占地近9平方公里，是由华侨城集团斥资35亿元精心打造的世界级度假旅游目的地，是由国家环境保护部和国家旅游局联合授予的首个“国家生态旅游示范区”。" />
+<title>票务信息|东部华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+	<ul class="ticketBox">
+        <li class="ticket_li01"><p class="borderR">大侠谷（元/人）</p><p>茶溪谷（元/人）</p></li>
+        <li class="ticket_li03"><p class="borderR">180元/位</p><p>160元/位</p></li>
+    </ul>
+    <ul class="ticketBox">
+        <li class="ticket_li01">大侠谷＋茶溪谷</li>
+        <li class="ticket_li02"><p class="borderR">一日游（元/人）</p><p>两日游（元/人）</p></li>
+        <li class="ticket_li03"><p class="borderR">260元/位</p><p>--</p></li>
+    </ul>
+    <ul class="ticketBox">
+        <li class="ticket_li01">茶溪谷+温泉（半日票）（元/人）</li>
+        <li class="ticket_li03">250元/位</li>
+    </ul>
+    <ul class="ticketBox">
+        <li class="ticket_li01">天禅</li>
+        <li class="ticket_li02"><p class="p2 borderR">普通票</p><p class="p2 borderR">VIP票</p><p class="p2">包厢-10人</p></li>
+        <li class="ticket_li03"><p class="p2 borderR">100元/位</p><p class="p2 borderR">150元/位</p><p class="p2">1000元/个</p></li>
+    </ul>
+     <ul class="ticketBox">
+        <li class="ticket_li01">天禅+茶溪谷（元/人）</li>
+        <li class="ticket_li03">230元/位</li>
+    </ul>
+    <div class="rich_media_tool">
+        <div class="meta_primary">阅读 <span id="rp">0</span></div>
+        <a class="meta_primary meta_praise" href="javascript:;" id="like">
+            <i class="icon_praise_gray"></i>
+            <span class="praise_num">0</span>
+        </a>
+    </div>
+</section>
+<!--//设备横屏提醒-->
+<section id="transverse"></section>
+<!--End设备横置提醒//-->
+<!--//版权信息-->
+<!--#include file="/dongbu/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>交通指南|天津欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/tianjin/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div class="trafficBox">
+            <h4>选择你去天津欢乐谷的交通方式</h4>
+            <div class="text">
+                <ul id="trafficNav">
+                    <li><a href="drive.shtml">自驾</a></li>
+                    <li><a href="bus.shtml">公交</a></li>
+                    <li><a href="walk.shtml">步行</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tipBox02">
+        	<div class="jtTitle">
+            	<h4>交通说明</h4>
+            </div>
+            <div class="TrafficTips">
+                <p>天津欢乐谷位于天津东丽湖度假区。距天津站直线距离 22.5公里 ，至天津空港开发区车行15分钟，至京津高速路入口车行10分钟。地理位置优越，交通便利。北京到天津欢乐谷只需一小时车程！</p>
+                <ul>
+                	<li><strong>位置：</strong>天津市东丽区东丽湖旅游度假区东丽之光大道天津华侨城实业有限公司欢乐谷分公司。</li>
+                    <li><strong>乘车线路<br />线路一：</strong>天津市区乘车：乘坐663路至欢乐谷东站、690路公交车至天津华侨城欢乐谷站，步行数分钟即到。乘坐地铁二号线到空港经济区站下车，换乘696路公交车至天津华侨城站下车，步行数分钟即到。</li>
+                    <li style="border:none;"><strong>线路二：</strong>天津滨海新区乘车：乘坐118路公交车至天津华侨城欢乐谷站，步行数分钟即到。乘坐津滨轻轨9号线在新立站下车,换乘690路公交车至天津华侨城欢乐谷站，步行数分钟即到。</li>
+                </ul>
+            </div>
+        </div>
+         <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+    </section>
+      <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/tianjin/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

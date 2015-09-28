@@ -1,0 +1,48 @@
+<footer id="footer">
+	泰州华侨城版权所有<a href="http://home.ipow.cn" title="一家面向旅游景区和旅游公司的互联网整合行销公司" target="_blank">[互动力 承建 运营]</a> 
+</footer>
+<script src="/Scripts/jquery-1.8.2.js"></script>
+<script>
+    //var oLike = document.getElementById("like");
+    //var oLikeIcon = oLike.getElementsByTagName("i")[0];
+    //oLike.onclick = function () {
+    //    oLikeIcon.className = "icon_praise_grey";
+    //}
+    $(document).ready(function () {
+        var oLike = document.getElementById("like");
+        var oLikeIcon = oLike.getElementsByTagName("i")[0];
+        var rUrl = window.parent.location.href;
+        $.post("/Home/AddReadCount", { rUrl: rUrl }, function (r) {
+            $("#rp").text(r.rCount);
+        });
+
+        $.post("/Home/GetZanCount", { rUrl: rUrl }, function (d) {
+            if (d.IsZan) {
+                oLikeIcon.className = "icon_praise_grey";
+                $(".praise_num").text(d.rCount);
+            }
+            else {
+                oLikeIcon.className = "icon_praise_gray";
+                $(".praise_num").text(d.rCount);
+            }
+
+        });
+
+        oLike.onclick = function () {
+            var at = "";
+            if (oLikeIcon.className == "icon_praise_gray") {
+                oLikeIcon.className = "icon_praise_grey";
+                at = "1";
+            }
+            else {
+                oLikeIcon.className = "icon_praise_gray";
+                at = "0";
+            }
+            $.post("/Home/AddOrDeleteZan", { rUrl: rUrl, act: at }, function (d) {
+                $(".praise_num").text(d.rCount);
+            });
+        }
+
+    });
+
+</script>

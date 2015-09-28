@@ -1,0 +1,165 @@
+﻿@{
+    ViewBag.Title = "CouponItemIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using EasyWeixin.Core.MvcPager
+@model List<EasyWeixin.Model.CouponItem>
+<link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")"  type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript" ></script>
+<script type="text/javascript">
+    //自定义编辑器
+    //设置图片可以上传
+    $(document).ready(function () {
+        $(".table").on("click", ".CouponItemEdit", function() {
+            var title = "刮刮乐子项编辑";
+            var ID = $(this).parent().find(".ID").val();
+            var CouponID = $(this).parent().find(".CouponID").val();
+            var tr = $(this).parent().parent();
+            art.dialog.open('/Coupon/CouponItemEdit?ID=' + ID + '&CouponID=' + CouponID, {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function() {
+                    var d = this.iframe.contentWindow;
+                    var CouponItemName = d.document.getElementById('CouponItemName').value;
+                    var CouponItemScale = d.document.getElementById('CouponItemScale').value;
+                    var CouponItemAward = d.document.getElementById('CouponItemAward').value;
+                    var CouponItemID = d.document.getElementById('CouponItemID').value;
+                    var CouponID = d.document.getElementById('CouponID').value;
+                    $.post('/Coupon/ScratchItemEdit', { CouponItemName: CouponItemName, CouponItemScale: CouponItemScale, CouponItemAward: CouponItemAward, CouponID: CouponID, CouponItemID: CouponItemID })
+                    tr.find("td:eq(0)").html(CouponItemName);
+                    tr.find("td:eq(1)").html(CouponItemScale);
+                    tr.find("td:eq(2)").html(CouponItemAward);
+                },
+                cancel: true
+            });
+
+        });
+        $(".CouponItemAdd").click(function () {
+            var title = "刮刮乐子项添加";
+            var table = $(".table tbody");
+            var ScratchID =@(Request["CouponID"])
+            art.dialog.open('/Coupon/CouponItemEdit?CouponID=' + CouponID, {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var CouponItemName = d.document.getElementById('CouponItemName').value;
+                    var CouponItemScale = d.document.getElementById('CouponItemScale').value;
+                    var CouponItemAward = d.document.getElementById('CouponItemAward').value;
+                    $.post('/Scratch/ScratchItemEdit', { CouponItemName: CouponItemName, CouponItemScale: CouponItemScale, CouponItemAward: CouponItemAward, CouponID: CouponID }, function (data) {
+                        var html = "<tr><td>" + data.CouponItemName + "</td><td>" + data.CouponItemScale + "</td>";
+                        html += "<td>" + data.CouponItemAward + "</td><td>" + ChangeDateFormat(data.AddDate) + "</td><td>";
+                        html += "<input type='hidden' value='" + data.ID + "'  class='ID' />"
+                        html += "<input type='hidden' value='" + data.CouponID + "'  class='CouponID' />";
+                        html += "<a href='javascript:void(0)' class='CouponItemEdit'>修改</a>";
+                        html += "<a href='/Coupon/CouponItemDelete/" + data.ID + "' class='CouponItemEdit'>删除</a>";
+                        html += "</td></tr>";
+                        table.append(html);
+                    });
+                },
+                cancel: true
+            });
+
+        })
+        function ChangeDateFormat(cellval) {
+            try {
+                var date = new Date(parseInt(cellval.replace("/Date(", "").replace(")/", ""), 10));
+                var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+                var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+                var hour = date.getHours();
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+                return date.getFullYear() + "/" + month + "/" + currentDate + " " + hour + ":" + minute + ":" + second;
+            } catch (e) {
+                return "";
+            }
+        }
+    });
+</script>
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">优惠劵</h3>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">优惠劵</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li><a href="/Coupon/CouponIndex">活动列表</a> <span class="divider"><i class="icon-angle-right"></i></span></li>
+                     <li class="active">子项设置</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets light-gray">
+                    <div class="widget-head bondi-blue">
+                        <h3>子项列表</h3>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-horizontal">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <a id="ScratchItemAdd" class="btn ScratchItemAdd" href="javascript:viod(0)"><i class="icon-upload-alt"></i>添加</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-container">
+                        <table class="table table-hover responsive">
+                            <thead>
+                                <tr>
+                                    <th>标题
+                                    </th>
+                                    <th>名额
+                                    </th>
+                                    <th>奖品
+                                    </th>
+                                    <th>添加时间
+                                    </th>
+                                    <th>编辑
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{foreach (var item in Model)
+                                  {
+                                    <tr>
+                                        <td>
+                                            @item.CouponItemName
+                                        </td>
+                                        <td>
+                                            @item.CouponItemScale
+                                        </td>
+                                        <td>
+                                            @item.CouponItemAward
+                                        </td>
+                                        <td>
+                                            @item.AddDate
+                                        </td>
+                                        <td>
+                                            <input type="hidden" value="@item.ID" class="ID" />
+                                            <input type="hidden" value="@item.CouponID"  class="CouponID" />
+                                            <a href="javascript:void(0)" class="CouponItemEdit">修改</a>
+                                            @Html.ActionLink("删除", "CouponItemDelete", new { id = item.ID })
+                                        </td>
+                                    </tr>
+                                  }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

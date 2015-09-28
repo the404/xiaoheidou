@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "CouponIndex";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>微信刮刮卡</title>
+    <link href="~/Content/mobile/jquery.mobile-1.3.1.css" rel="stylesheet" type='text/css' />
+    <link href="~/Content/Scratch/Scratch.css" rel="stylesheet" type='text/css' />
+    <script type='text/javascript' src="/Scripts/jquery-1.7.2.min.js"></script>
+    @*<script type='text/javascript' src='http://static.ptweixin.com/api/js/global.js?t=2013121801'></script>*@
+    <script type='text/javascript' src="/js/wScratchPad.js"></script>
+    <script type='text/javascript' src="/Scripts/jquery.mobile-1.3.1.js"></script>
+
+    <script type="text/javascript">
+        var Coupon_obj = {
+            Coupon_init: function () {
+
+                var UserWexinID = $("#UserWexinID").val();
+                var CouponID = $("#CouponID").val();
+                $.post("/ActivityCoupon/GetCouponitem", { CouponID: CouponID, UserWexinID: UserWexinID }, function (data) {
+                    alert()
+                    if (data.message == undefined) {
+                        var status = 'enable';
+                        var useragent = window.navigator.userAgent.toLowerCase();
+                        $('#prize').text(data.CouponItemName);
+
+                        /*this.clear();*/
+                        if (data.CouponItemID > 0) {
+                            status = 'disable';
+                            $('#get_prize').show();
+                            $('#PrizeClass').html(data.CouponItemName);
+                            $('#SnNumber').html(data.CouponCode);
+                        }
+                    } else {
+                        win_alert(data.message);
+                        return false;
+                    }
+                }, "json");
+
+                $('#get_prize input').click(function () {
+                    $('#WinPrize').slideDown(500);
+                    $('#WinPrize input[name=MobilePhone]').focus();
+                    $('#get_prize').hide();
+                });
+
+                var Phone = $('input[name=MobilePhone]');
+                $('#GetPrize').submit(function () { return false; });
+                $('#GetPrize input:submit').click(function () {
+                    if (Phone.val() == '') {
+                        win_alert('手机号不能为空！', function () { Phone.focus() });
+                        return false;
+                    }
+                    if (!(/^13\d{9}$/g.test(Phone.val()) || /^14[57]\d{8}$/g.test(Phone.val()) || /^15[0-35-9]\d{8}$/g.test(Phone.val()) || /^18\d{9}$/g.test(Phone.val()))) {
+                        win_alert("'" + Phone.val() + "'格式不对！", function () { Phone.focus() });
+                        return false;
+                    }
+
+                    $(this).attr('disabled', true).val('正在提交中！！！');
+                    $.post('/ActivityCoupon/CouponAdd', { CouponUserPhone: Phone.val() }, function (data) {
+                        win_alert(data.message, function () { location.href = location.href; });
+                    }, 'json');
+                });
+
+            }
+        }
+
+        function win_alert(tips, handle) {
+            $('body').prepend('<div id="global_win_alert"><div>' + tips + '</div><h1>确定</h1></div>');
+            $('#global_win_alert').css({
+                position: 'fixed',
+                left: $(window).width() / 2 - 125,
+                top: '30%',
+                background: '#fff',
+                border: '1px solid #ccc',
+                opacity: 0.95,
+                width: 250,
+                'z-index': 10000,
+                'border-radius': '8px'
+            }).children('div').css({
+                'text-align': 'center',
+                padding: '30px 10px',
+                'font-size': 16
+            }).siblings('h1').css({
+                height: 40,
+                'line-height': '40px',
+                'text-align': 'center',
+                'border-top': '1px solid #ddd',
+                'font-weight': 'bold',
+                'font-size': 20
+            });
+            $('#global_win_alert h1').click(function () {
+                $('#global_win_alert').remove();
+            });
+            if ($.isFunction(handle)) {
+                $('#global_win_alert h1').click(handle);
+            }
+        }
+    </script>
+    <script language="javascript">$(window).load(function () { Coupon_obj.Coupon_init() });</script>
+</head>
+@model EasyWeixin.Model.Coupon
+<body>
+
+    <input id="UserWexinID" type="hidden" value="@Request["UserWexinID"]" />
+    <input id="CouponID" type="hidden" value="@Request["CouponID"]" />
+
+    <div id="scratch">
+        <div id="WheelEvent">
+            <div class="cover">
+                <img src="/images/Activity/Scratch/scratch-bg[1].jpg" />
+                <div id="prize"></div>
+                <div id="scratchpad"></div>
+                <div id="get_prize" class="none">
+                    <input type="button" value="我要领奖" />
+                </div>
+            </div>
+
+            <div id="WinPrize" class="refer none">
+                <span>恭喜您抽中 <font id="PrizeClass">谢谢参与</font>（SN码：<font id="SnNumber"></font>），请输入您的手机号并记录SN码，作为领奖凭证！</span>
+                <div>
+                    <form id="GetPrize">
+                        <div class="input">
+                            <input type="tel" name="MobilePhone" value="" class="form_input" pattern="[0-9]*" maxlength="11" />
+                        </div>
+                        <div class="input">
+                            <input type="submit" value="提交" class="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="scratch_success">提交成功！</div>
+            <div class="refer">
+                <span>兑换说明（<font>亲，中奖后请务必输入您的手机号并记录SN码，否则无法领奖喔！</font>）</span>
+                <div>
+                    @if (Model.CouponItems != null)
+                    {
+                        foreach (var item in Model.CouponItems)
+                        {
+                            var html = item.CouponItemName + ":" + item.CouponItemAward + "。奖品数量：" + item.CouponItemScale + "";
+                        @html;<br />
+                        }
+                    }
+                </div>
+            </div>
+            <div class="refer">
+                <span>活动说明</span>
+                <div>@Model.CouponDesc</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

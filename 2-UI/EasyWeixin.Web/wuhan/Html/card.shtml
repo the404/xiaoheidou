@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,武汉欢乐谷,武汉欢乐谷微信,武汉欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='武汉欢乐谷是华侨城集团新一代大型主题乐园，武汉欢乐谷占地约35万平方米，预计2012年5月开园迎宾，其由梦想大道、卡通工厂、欢乐时光、极速世界、渔光岛、羽落天堂、飓风湾、欢乐江城等八大主题区域组成，全新设置了 100多项娱乐体验项目，包括30多项游乐体验设备、40多处生态人文景观、10多台文化演艺精品和20多项主题娱乐游戏，精彩诠释多元欢乐。木翼双龙—亚洲首座双龙木质过山车。极速飞车—全球最高最快弹射过山车武汉欢乐谷。摩天塔—120米全球最高观光塔。蒙地卡罗赛道—中国弯道最多的巷道式矿山车。,ipow,互动力' />
+<title>价格查询|武汉欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/wuhan/Include/head.htm"-->
+    <!--End页面头部-->
+    <section id="wrap">
+    	<div id="content02">
+        	<div class="navBox">
+                <div class="quickNav">
+                    <a href="/wuhan/Html/ticket.shtml" >门票价格</a>
+                    <a class="active" href="/wuhan/Html/card.shtml" >年卡价格</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card01.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>单人行年卡</h2>
+                        <p class="cardP1">￥<strong>598</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于身高1.4米以上（含1.4米）的儿童及成人。18周岁以下（不含18周岁）的儿童需在监护人签订承诺书的情况下办理。 </p>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card04.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>大学生年卡</h2>
+                        <p class="cardP1">￥<strong>398</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于一名中华人民共和国境内全日制统招大学本、专科生单独使用。<br />不适用研究生、自考类、成教类、网络教育类、继续教育类、港澳台三地大学生。办卡时须持本人有效学生证和身份证。</p>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card05.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>情侣年卡</h2>
+                        <p class="cardP1">￥<strong>999</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于一男一女两名成年人。需持有本人身份证办理。</p>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card03.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>合家欢年卡</h2>
+                        <p class="cardP1">￥<strong>1366</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于两名成人（一男一女）和一名身高1.1米（含1.1米）至1.4（不含1.4米）的儿童。儿童身高以办理时为准，没有身份证儿童需携带户口本。合家欢年卡使用时，不能让儿童单独凭卡入园，须成人陪同。 </p>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card02.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>亲子游年卡</h2>
+                        <p class="cardP1">￥<strong>798</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于一名成年人和一名身高在1.1米（含1.1米）--1.4米（不含1.4米）的儿童。</p>
+                </div>
+            </div>
+            <!--<div class="hotline">
+            	<div class="phone">年卡销售热线：027-88929999<span></span></div>
+            </div>-->
+            <p class="hint">没有更多了</p>
+              <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+        </div>
+    </section>
+      <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/wuhan/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

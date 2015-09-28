@@ -1,0 +1,173 @@
+﻿@{
+    ViewBag.Title = "ScratchUserList";
+    Layout = "~/Views/Shared/_ScratchLayout.cshtml";
+}
+@using EasyWeixin.Core.MvcPager
+@model EasyWeixin.Core.MvcPager.PagedList<EasyWeixin.Model.WeixinUserInActivity>
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="/js/bootstrap-colorpicker.js"></script>
+<script src="/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/js/date.js"></script>
+<script src="/js/daterangepicker.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".CheckAll").change(function () {
+            if ($(".CheckAll").prop("checked")) {
+                $(".CheckChild").prop("checked", true);
+            }
+            else {
+                $(".CheckChild").prop("checked", false);
+            }
+        });
+        $(".DeleteAll").click(function () {
+            var IDlist = "";
+            $(".CheckChild").each(function () {
+                if ($(this).prop("checked")) {
+                    IDlist += "|" + $(this).val();
+                }
+            });
+
+            $.post("/ScratchUser/DeleteAll", { IDlist: IDlist.substring(1) }, function (data) {
+
+                location.reload(true);
+            });
+        });
+        $(".btn-primary").click(function () {
+            window.location.href = "/Scratch/ScratchUserList?ScratchID=@(Request["ScratchID"])&pageid=1&dt1=" + $("#dt1").val() + "&dt2=" + $("#dt2").val();
+        });
+
+    });
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            pickTime: false
+        });
+    });
+
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            pickTime: false
+        });
+    });
+</script>
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">刮刮乐</h3>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="/Scratch/ScratchIndex">刮刮乐</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li><a href="/Scratch/ScratchIndex">活动列表</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">数据列表 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets light-gray">
+                    <div class="widget-head bondi-blue">
+                        <h3>数据列表</h3>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-horizontal">
+                            <div class="control-group">
+                                @{ string dt1, dt2;
+                                 dt1 = Request["dt1"] != null ? Request["dt1"] : System.DateTime.Now.AddDays(-7).ToString("yyyy-MM-dd");
+                                 dt2 = Request["dt2"] != null ? Request["dt2"] : System.DateTime.Now.ToString("yyyy-MM-dd");
+                                }
+                                <div class="controls">
+                                    开始时间
+                                    <div id="datetimepicker1" class="input-append">
+                                        <input data-format="yyyy-MM-dd" type="text" value="@dt1" id="dt1">
+                                        <span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar"></i></span>
+                                    </div>
+                                    结束时间
+                                    <div id="datetimepicker2" class="input-append">
+                                        <input data-format="yyyy-MM-dd" type="text" value="@dt2" id="dt2">
+                                        <span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar"></i></span>
+                                    </div>
+                                    <a class="btn btn-primary" href="javascript:viod(0)"><i class="icon-upload-alt"></i>查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-container">
+                        <table class="table table-hover responsive">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input id="CheckAll" type="checkbox" class="CheckAll" />
+                                    </th>
+                                    <th>
+                                        用户头像
+                                    </th>
+                                    <th>
+                                        用户昵称
+                                    </th>
+                                    <th>
+                                        用户省份
+                                    </th>
+                                    <th>
+                                        用户城市
+                                    </th>
+                                    <th>
+                                        参与活动次数
+                                    </th>
+                                    <th>
+                                        最后在线
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    foreach (var item in Model)
+                                    {
+                                        if (!string.IsNullOrWhiteSpace(item.WeixinUser.Openid))
+                                        {
+
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" value="@item.ID" class="CheckChild" />
+                                                </td>
+                                                <td>
+                                                    <img src="@item.WeixinUser.Headimgurl" width="30" height="30" alt="微信用户头像" />
+                                                </td>
+                                                <td>
+                                                    @item.WeixinUser.Nickname
+                                                </td>
+                                                <td>
+                                                    @item.WeixinUser.Province
+                                                </td>
+                                                <td>
+                                                    @item.WeixinUser.City
+                                                </td>
+                                                <td>
+                                                    @(item.SumCount+1)
+                                                </td>
+                                                <td>
+                                                    @item.UpdateDate.ToShortDateString()
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-horizontal">
+                            <div class="control-group">
+                                @*<div style="width: 50px; float: left; margin: 20px 0"><a href="javascript:void(0)" class="DeleteAll">删除选中</a></div>*@
+                                <div style="width: 500px; float: right">
+                                    @Html.Pager(Model, new PagerOptions { PageIndexParameterName = "pageid", CssClass = "pagination dataTables_paginate" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

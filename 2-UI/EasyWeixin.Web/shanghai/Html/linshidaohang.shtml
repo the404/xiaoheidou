@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<title>临时导航</title>
+<link href="../Css/base.css" rel="stylesheet" type="text/css" />
+</head>
+<style type="text/css">
+ul{ margin-top:15px; margin-left:10px;}
+ul li{ margin:2px 0px;}
+</style>
+<body>
+<div class="box">
+	<section id="wrap">
+        <ul class="ul01">
+            <li><a href="time.shtml" target="_blank">营业时间</a></li>
+            <li><a href="prefer.shtml" target="_blank">优惠信息</a></li>
+            <li><a href="activity.shtml" target="_blank">当前活动</a></li>
+            <li><a href="ticket.shtml" target="_blank">价格查询</a></li>
+            <li><a href="javascript:alert('外链！');" target="_blank">我要购票</a></li>
+        </ul>
+        <ul>
+            <li><a href="play.shtml" target="_blank">游玩攻略</a></li>
+            <li><a href="festival.shtml" target="_blank">全年节庆</a></li>
+            <li><a href="show.shtml" target="_blank">精彩演艺</a></li>
+            <li><a href="park.shtml" target="_blank">经典项目</a></li>
+            <li><a href="intro.shtml" target="_blank">园区概况</a></li>
+        </ul>
+         <ul>
+            <li><a href="javascript:alert('应该是外链！');" target="_blank">疯狂大转盘</a></li>
+            <li><a href="survey.shtml" target="_blank">微调查</a></li>
+            <li><a href="photoWall.shtml" target="_blank">照片墙</a></li>
+            <li><a href="traffic.shtml" target="_blank">交通指南</a></li>
+            <li><a href="stay1.shtml" target="_blank">周边住宿</a></li>
+        </ul>
+    </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B12D6CC-67BA-4105-BC6A-9851A422B810}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyWeixin.Model</RootNamespace>
+    <AssemblyName>EasyWeixin.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apworks, Version=2.5.4878.35266, Culture=neutral, PublicKeyToken=8dd847f02992a80e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Apworks.2.5.4878.35266\lib\net40\Apworks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation, Version=4.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.4.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc, Version=4.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.MVC4.4.0.0.1\lib\Net40\FluentValidation.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Act.cs" />
+    <Compile Include="Activity.cs" />
+    <Compile Include="Album.cs" />
+    <Compile Include="AlbumItem.cs" />
+    <Compile Include="AlbumItemItem.cs" />
+    <Compile Include="Button.cs" />
+    <Compile Include="CameraLog.cs" />
+    <Compile Include="CameraPhoto.cs" />
+    <Compile Include="Coupon.cs" />
+    <Compile Include="CouponItem.cs" />
+    <Compile Include="CouponLog.cs" />
+    <Compile Include="CouponUser.cs" />
+    <Compile Include="Fight.cs" />
+    <Compile Include="FightItem.cs" />
+    <Compile Include="FightLog.cs" />
+    <Compile Include="FightUser.cs" />
+    <Compile Include="FightUserItem.cs" />
+    <Compile Include="Guess.cs" />
+    <Compile Include="GuessUser.cs" />
+    <Compile Include="OfficialWeb.cs" />
+    <Compile Include="OfficialWebItem.cs" />
+    <Compile Include="OfficialWebItemItem.cs" />
+    <Compile Include="PayCustomer.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="PermissionsInRoles.cs" />
+    <Compile Include="PhotoWall.cs" />
+    <Compile Include="Praise.cs" />
+    <Compile Include="Prefer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QItemAnswer.cs" />
+    <Compile Include="QrCode.cs" />
+    <Compile Include="QuestionCategory.cs" />
+    <Compile Include="Read.cs" />
+    <Compile Include="RecordWUser.cs" />
+    <Compile Include="RelayRace\MainRace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RelayRace\SubRace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ResponseImage.cs" />
+    <Compile Include="ResponseImageText.cs" />
+    <Compile Include="ResponseKey.cs" />
+    <Compile Include="ResponseKeyRule.cs" />
+    <Compile Include="ResponseMessage.cs" />
+    <Compile Include="ResponseMusic.cs" />
+    <Compile Include="ResponseVideo.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="Scratch.cs" />
+    <Compile Include="ScratchItem.cs" />
+    <Compile Include="ScratchUser.cs" />
+    <Compile Include="SetQuestion.cs" />
+    <Compile Include="Snapshots\ButtonSnapshot.cs" />
+    <Compile Include="Snapshots\PermissionsInRolesSnapshot.cs" />
+    <Compile Include="Snapshots\PermissionSnapshot.cs" />
+    <Compile Include="Snapshots\ResponseImageSnapshot.cs" />
+    <Compile Include="Snapshots\ResponseImageTextSnapshot.cs" />
+    <Compile Include="Snapshots\ResponseKeySnapshot.cs" />
+    <Compile Include="Snapshots\ResponseMessageSnapshot.cs" />
+    <Compile Include="Snapshots\ResponseMusicSnapshot.cs" />
+    <Compile Include="Snapshots\ResponseVideoSnapshot.cs" />
+    <Compile Include="Snapshots\RoleSnapshot.cs" />
+    <Compile Include="Snapshots\SubButtonSnapshot.cs" />
+    <Compile Include="Snapshots\UserMembershipSnapshot.cs" />
+    <Compile Include="Snapshots\UserProfileSnapshot.cs" />
+    <Compile Include="Snow.cs" />
+    <Compile Include="SnowErrorLog.cs" />
+    <Compile Include="SnowItem.cs" />
+    <Compile Include="SnowLog.cs" />
+    <Compile Include="SnowUser.cs" />
+    <Compile Include="SubButton.cs" />
+    <Compile Include="UrlHelper.cs" />
+    <Compile Include="UserMembership.cs" />
+    <Compile Include="UserProfile.cs" />
+    <Compile Include="Vote.cs" />
+    <Compile Include="VoteUser.cs" />
+    <Compile Include="WeixinUser.cs" />
+    <Compile Include="WeixinUserInActivity.cs" />
+    <Compile Include="WeixinUserInUsers.cs" />
+    <Compile Include="Wheel.cs" />
+    <Compile Include="WheelItem.cs" />
+    <Compile Include="WheelLog.cs" />
+    <Compile Include="WheelUser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

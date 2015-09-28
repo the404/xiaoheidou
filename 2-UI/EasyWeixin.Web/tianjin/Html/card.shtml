@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>价格查询|天津欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/tianjin/Include/head.htm"-->
+    <!--End页面头部-->
+    <section id="wrap">
+    	<div id="content02">
+        	<div class="navBox">
+                <div class="quickNav">
+                    <a href="/tianjin/Html/ticket.shtml" >门票价格</a>
+                    <a class="active" href="/tianjin/Html/card.shtml" >年卡价格</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <a href="http://m.happyvalleytj.smartoct.com/wechat/index.html" class="buynow">立即预定</a>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card01.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>单人行年卡</h2>
+                        <p class="cardP1">￥<strong>550</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>一名1.5米（含1.5米）以上游客。</p>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card02.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>亲子游年卡</h2>
+                        <p class="cardP1">￥<strong>730</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>一名成人及一名1.2米（含1.2米）—1.5米（不含1.5米）儿童。</p>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card03.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>合家欢年卡</h2>
+                        <p class="cardP1">￥<strong>1100</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>两名成人（1男1女）及一名1.2米（含1.2米）—1.5米（不含1.5米）儿童。</p>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card04.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>情侣卡年卡</h2>
+                        <p class="cardP1">￥<strong>999</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>两名成人（18周岁以上一男一女）。</p>
+                </div>
+            </div>
+            <div class="hotline">
+            	<div class="phone">客服热线：022-84977666<span></span></div>
+            </div>
+        </div>
+        <div class="rich_media_tool">
+            <div class="meta_primary">阅读 <span id="rp"></span>0</div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/tianjin/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

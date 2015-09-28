@@ -1,0 +1,28 @@
+﻿namespace EasyWeixin.Entities.Request.Events
+{
+    public class RequestMessageEvent_Location : RequestMessageEventBase, IRequestMessageEventBase
+    {
+        /// <summary>
+        /// 事件类型
+        /// </summary>
+        public override Event Event
+        {
+            get { return Event.LOCATION; }
+        }
+
+        /// <summary>
+        /// 地理位置维度，事件类型为LOCATION的时存在
+        /// </summary>
+        public double Latitude { get; set; }
+
+        /// <summary>
+        /// 地理位置经度，事件类型为LOCATION的时存在
+        /// </summary>
+        public double Longitude { get; set; }
+
+        /// <summary>
+        /// 地理位置精度，事件类型为LOCATION的时存在
+        /// </summary>
+        public double Precision { get; set; }
+    }
+}

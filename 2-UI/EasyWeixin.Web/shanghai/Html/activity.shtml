@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷精彩活动,上海欢乐谷微信,旅游,主题公园,探险,时尚,动感,梦幻,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>当前活动|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap"> 
+    	<div id="content">
+        	<div class="activityBox">
+            	<a class="a1" href="javascript:;"><img src="../Images/activity01.jpg" alt="" /></a>
+                <h2>上海欢乐谷万圣欢乐节</h2>
+                <p>2014.10.10-11.16</p>
+                <a class="a2" href="javascript:;"></a>
+                <div class="hot"><strong>HOT</strong></div>
+            </div>
+            <div class="activityBox">
+            	<a class="a1" href="javascript:;"><img src="../Images/activity01.jpg" alt="" /></a>
+                <h2>上海欢乐谷万圣欢乐节</h2>
+                <p>2014.10.10-11.16</p>
+                <a class="a2" href="javascript:;"></a>
+                <div class="hot"><strong>HOT</strong></div>
+            </div>
+        	<p class="hint">没有更多了</p>
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span>9999</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">999</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>
+<script type="text/javascript">
+//底部点赞
+var oLike=document.getElementById("like");
+var oLikeIcon=oLike.getElementsByTagName("i")[0];
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_grey";
+	}
+</script>

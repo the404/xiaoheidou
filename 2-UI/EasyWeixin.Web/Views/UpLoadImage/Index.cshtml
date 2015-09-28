@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@model EasyWeixin.Web.Controllers.UpLoadImageModel
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>添加图片</title>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" href="/js/kindeditor-4.1.7/plugins/code/prettify.css" />
+    <script charset="utf-8" src="/js/kindeditor-4.1.7/plugins/code/prettify.js"></script>
+    <script charset="utf-8" src="/js/kindeditor-4.1.7/kindeditor.js"></script>
+    <script charset="utf-8" src="/js/kindeditor-4.1.7/lang/zh_CN.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Panel Template">
+    <meta name="author" content="Westilian: Kamrujaman Shohel">
+    <!-- styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/jquery.gritter.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link href="/css/tablecloth.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="~/js/jquery-1.9.1.min.js"></script>
+
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/jquery.sparkline.js"></script>
+    <script src="/js/bootstrap-fileupload.js"></script>
+    <script src="/js/jquery.metadata.js"></script>
+</head>
+<body>
+    <div>
+        @{ using (Html.BeginForm("UpLoadImage", "UpLoadImage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+           {
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="content-widgets gray">
+                        <div class="widget-container">
+                            <div class="form-container grid-form form-background">
+
+                                <div class="control-group">
+                                    <label>（图片大小限制：2M，360px*200px    支持格式：bmp, png, jpeg, jpg, gif）</label>
+                                    <div class="controls">
+                                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                                            <div class="fileupload-new thumbnail">
+                                                <img src="@Model.UpLoadImageSrc" alt="img" style="width:360px; height: 200px;" id="UpLoadImageSrc">
+                                            </div>
+                                            <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 400px; max-height: 350px; line-height: 20px;">
+                                            </div>
+                                            <div>
+                                                <span class="btn btn-file"><span class="fileupload-new">选择图片</span><span class="fileupload-exists">更改</span>
+                                                    <input name="fileName" type="file" />
+                                                </span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">移除</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="error">@Model.Message </label>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-extend">上传</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           }
+        }
+    </div>
+</body>
+</html>

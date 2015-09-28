@@ -1,0 +1,174 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <title>查看排行榜</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: #f3d082;
+        font-size: 0.8em;
+        line-height: 24px;
+        font-family: "微软雅黑";
+        color: #7a7a7a;
+        text-shadow: 1px 1px 1px #ddd;
+    }
+
+    .top {
+        background: url(/images/GuesseImages/bg.jpg) center top no-repeat;
+        background-size: 100% 52px;
+        height: 52px;
+        width: 100%;
+        position: relative;
+        font-family: "黑体";
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        padding-top: 16px;
+    }
+
+    .left {
+        font-size: 24px;
+        color: #2d383c;
+        float: left;
+    }
+
+    .number {
+        float: left;
+        color: #a85b25;
+        padding-top: 11px;
+        padding-right: 10px;
+    }
+
+    .name {
+        padding-top: 11px;
+        padding-left: 95px;
+    }
+
+    .imgs {
+        float: left;
+    }
+
+    .rigth {
+        float: right;
+        color: #2d383c;
+        font-size: 24px;
+        padding-top: 11px;
+    }
+
+    .foot {
+        background: url(images/GuesseImages/foot.jpg) center bottom no-repeat;
+        background-size: 100% 21px;
+        height: 21px;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .main_box {
+        border-bottom: 2px solid #9c7a64;
+        height: 60px;
+        margin: 15px 15px;
+    }
+
+    .back {
+        width: 200px;
+        height: 35px;
+        margin: 0 auto;
+    }
+
+        .back a {
+            background: url(/images/GuesseImages/tijiao.png) no-repeat;
+            width: 95px;
+            height: 35px;
+            line-height: 35px;
+            color: #fff;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            float: left;
+        }
+</style>
+<body>
+    @model List<EasyWeixin.Model.GuessUser>
+    <div class="top">排行榜</div>
+
+    <div class="main">
+        @{
+            for (int i = 0; i < Model.Count; i++)
+            {
+            <!--main_box-->
+            <div class="main_box">
+                <!--left-->
+                <div class="left">
+                    <div class="number">@(i + 1)</div>
+
+                    <div class="name">@Model[i].GuessUserName</div>
+                </div>
+                <!--left-->
+
+                <!-- right-->
+                <div class="rigth">
+                    <div class="ci">@(Model[i].GuessTimes)次</div>
+                </div>
+                <!-- right-->
+            </div>
+            <!--main_box-->
+            } }
+    </div>
+    <div class="back">
+        @* @{EasyWeixin.Web.Models.GuessNewsViewModel gn = Session["GuessNewsModel"] as EasyWeixin.Web.Models.GuessNewsViewModel;}*@
+        @*   <a href="/News/GuessNews?User_ID=@(gn.User_ID)&ImageTextID=@(gn.ImageTextID)&UserWexinID=@(gn.GuessUserWexinID)">继续游戏</a>*@
+        @{var User_ID = Request["User_ID"];
+          var ImageTextID = Request["ImageTextID"];
+          var UserWexinID = Request["UserWexinID"];
+        }
+        <a href="/News/GuessNews?User_ID=@(User_ID)&ImageTextID=@(ImageTextID)&UserWexinID=@(UserWexinID)">继续游戏</a>
+        <a href="javascript:viod(0)" id="more">查看更多</a>
+    </div>
+    <input id="User_ID" type="hidden" value="@(User_ID)" />
+    <input id="ImageTextID" type="hidden" value="@(ImageTextID)" />
+    <input id="UserWexinID" type="hidden" value="@(UserWexinID)" />
+    <div class="foot"></div>
+
+    <script src="~/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".back #more").click(function () {
+
+                var num = $(".main_box").length;
+                var index;
+                var User_ID = $("#User_ID").val();
+                var ImageTextID = $("#ImageTextID").val();
+                var UserWexinID = $("#UserWexinID").val();
+                if (num % 10 == 0) {
+                    index = num / 10;
+                    $.post("/News/LeaderBoardGetDatas", { ImageTextID: ImageTextID, User_ID: User_ID, UserWexinID: UserWexinID, pageid: index + 1 }, function (datas) {
+
+                        $.each(datas, function (i, item) {
+                            var html = "<div class='main_box'><div class='left'><div class='number'>" + (num + i + 1) + "</div>";
+                            html += "<div class='name'>" + item.GuessUserName + "</div></div><div class='rigth'><div class='ci'>" + item.GuessTimes + "次</div></div></div>"
+                            $(".main").append(html);
+                        });
+                    })
+                }
+                else {
+
+                }
+            });
+        });
+    </script>
+</body>
+</html>

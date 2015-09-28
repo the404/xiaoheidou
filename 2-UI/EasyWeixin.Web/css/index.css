@@ -1,0 +1,152 @@
+/*
+ * Author   :蔡应
+ * Time		:2013年11月28日10:09:16
+ * Abstract	:上海欢乐谷微信游戏——魔幻雪花
+ */
+
+/*Reset*/
+body,div,p,h1,h2,h3,h4,ul,li,ol { margin:0; padding:0; }
+ul , li { list-style:none; }
+a {text-decoration:none;}
+img { border:none; }
+body { font-size:1em; background:#1e1a1a ;  }
+.btn { background-image:url(../images/Activity/Ghost/icon_spirit.png) ; background-size:330px auto; background-repeat:no-repeat;  color:#fff;}
+.repeatBg{ background-image:url(../images/Activity/Ghost/bg_spirit.png) ; background-size:12px auto; background-repeat:repeat-x;}
+
+/*首页*/
+#index .wrap { position:relative; width:100%; height:410px; background:#1e1a1a url(../images/Activity/Ghost/bg.jpg) no-repeat top center; background-size: 100% auto; }
+#index .bg { display:block; position:absolute; top:0 ; left:0; z-index:-1;  width:100%; height:410px; }
+#logo {display:block; margin:0 auto; width:284px; height:auto; position: relative; top: -200px;-webkit-animation: 'aniLogo' 0.8s ease infinite;}
+@-webkit-keyframes 'aniLogo'{ 
+0% { -webkit-transform:translate(5px,0px); } 
+20% { -webkit-transform:translate(-5px,0px); } 
+40% { -webkit-transform:translate(5px,0px); } 
+60% { -webkit-transform:translate(-5px,0px); } 
+80% { -webkit-transform:translate(5px,0px); } 
+}
+#logo img { width:100%; height:auto; }
+#index .btnList { position:fixed; top:220px; left:48%; margin-left:-66px;  width:240px; height:192px; background-position:0px 0px; }
+#index .btnList li { height:64px; }
+#index .btnList li a{ display:block; height:64px; font:bold 1em/44px "微软雅黑"; color:#fff; }
+
+/*游戏规则*/
+  
+
+#rule { position:fixed; top:-400px; opacity:0; left:0; width:100%; height:auto; overflow:hidden; z-index:100;} 
+#rule img { width: 100%; height: auto;} 
+#rule p { margin-bottom:0px; color: #7d0000; font: normal 1em/1.6em "微软雅黑"; text-shadow:1px 1px 3px #fff; position: absolute; left: 35px;} 
+#rule p.p1 { padding-left:6px; width: 253px; top: 12%;} 
+#rule p.p2 { width: 284px; padding-left:6px;top: 54%;} 
+#rule_close { display:block; width:115px; height:40px; position: absolute; bottom: 5px; left:31%;}
+
+#transverse {  position:absolute; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba( 0 , 0 , 0 , 0.8) url(../images/Activity/Ghost/transvers.png) no-repeat center center; background-size:50% auto; }
+@media all and (max-width: 600px) {  
+	#transverse { display:none;}
+}  
+
+/*@media all and (orientation : portrait){  
+	#transverse { display:none; }
+}*/
+
+
+/*游戏*/
+#game { width:100%; overflow:hidden;height:370px; background:#1e1a1a  url(../images/Activity/Ghost/bg2.jpg) no-repeat center -30px; background-size:100% auto;}
+.gameInfo { position:relative; height:40px; }
+.gameInfo div { position:absolute; top:4px; height:38px; color:#fff; }
+#count { left:10px; padding-left:70px;padding-top:3px; width:60px;  background:url(../images/Activity/Ghost/icon_spirit.png) no-repeat 0px -281px; background-size:319px auto; color: #000000; font:bold 1.4em/34px "Arial";text-shadow:1px 1px 3px #000;}
+#time { right:10px; background:url(../images/Activity/Ghost/icon_spirit.png) no-repeat -134px -282px; background-size:319px auto; padding-left:40px; padding-top:3px; padding-right:10px;  color: #fff;font:normal 1.2em/34px "Arial";text-shadow:1px 1px 3px #09297f;}
+#pause { cursor:pointer; right:8px; width:35px; height:35px; background:url(../images/Activity/Ghost/icon_spirit.png) no-repeat -41px 0px; background-size:150px auto;  }
+#snowBox { position:relative; width:100%; overflow:hidden;height:370px;}
+#snowBox li { position:absolute; top:-100px;  background:url(../images/Activity/Ghost/fruit_01.png) no-repeat 0 0; background-size: 100% auto; text-align:center; color:#fff; font:bold 1em/20px "Arial"; }
+#snowBox li.li01 { background-image:url(../images/Activity/Ghost/fruit_01.png) ;}
+#snowBox li.li02 { background-image:url(../images/Activity/Ghost/fruit_02.png) ;}
+#snowBox li.li03 { background-image:url(../images/Activity/Ghost/fruit_03.png) ;}
+#snowBox li.li04 { background-image:url(../images/Activity/Ghost/fruit_04.png) ;}
+#snowBox li span { display:none;  position:absolute; width:100%; height:100%; background:url(../images/Activity/Ghost/knife.png) no-repeat center center; background-size:100% 100%;  }
+
+@-webkit-keyframes 'fontChange' {
+  0% {
+	opacity:1;
+  }
+  50% {
+	opacity:0.5; 
+  }
+  100% {
+	opacity:0;
+  }
+}
+#snowBox li.active { 
+	  -webkit-animation-name: 'fontChange'; /*动画名称*/
+	  -webkit-animation-duration: 1s;/*播放一次所持续时间*/
+	  -webkit-animation-timing-function: ease-in-out;/*动画播放频率*/
+	  -webkit-animation-iteration-count: 1;/*动画播放次涒为无限次*/
+	opacity:0;
+}
+@-webkit-keyframes 'dis' {
+  0% {
+	opacity:100;
+  }
+  50% {
+	opactiy:50; 
+  }
+  100% {
+	opacity:0;
+  }
+}
+#snowBox li.disImg { 
+	-webkit-animation-name: 'dis'; /*动画名称*/
+	  -webkit-animation-duration: 2s;/*播放一次所持续时间*/
+	  -webkit-animation-timing-function: ease-in-out;/*动画播放频率*/
+	  -webkit-animation-iteration-count: 1;/*动画播放次涒为无限次*/
+	opacity:0;
+	display:none;
+}
+
+
+#ruleClose { cursor:pointer; position:absolute; top:0px; left:2px; width:35px; height:35px; background:url(../images/Activity/Ghost/icon_spirit.png) no-repeat -150px -11px; background-size:202px auto; }
+
+#gameOver {  position:fixed; top:-400px; opacity:0; left:10%; width:80%; height:auto; overflow:hidden; background: url(../images/Activity/Ghost/gameOver_box.png) no-repeat center 0; background-size:100% auto;}
+#totalP { padding-top:43%; text-align:center; height:40px; font:bold 1.7em/36px "微软雅黑" ; color:#8a0303; text-shadow:1px 1px 3px #fff;}
+#gameOver p { padding-bottom:10px; text-align:center; height:16px; font:bold 0.8em/16px "微软雅黑" ; color:#c75a66; }
+.btnWrap { height:46px; width:80%; margin:20px auto 10px auto; }
+.btnWrap a { font:bold 0.7em/46px "微软雅黑"; color:#fff}
+#continue { display:block; float:left; width:80px; height:34px; text-align:center;background: url(../images/Activity/Ghost/icon_spirit.png) no-repeat 0px -137px; background-size: 248px auto;margin-right:20px;  }
+#submit { display:block; float:right; width:80px; height:34px; text-align:center;background: url(../images/Activity/Ghost/icon_spirit.png) no-repeat -86px -137px; background-size: 248px auto;margin-right:20px; text-align:left; text-indent:10px;}
+
+
+#submitInfo {  position:fixed; top:-400px; opacity:0; left:10%; width:80%; height:auto; overflow:hidden; background: url(../images/Activity/Ghost/user_box.png) no-repeat center 0; background-size:100% auto;}
+#yes{ display:block; float:left; width:80px; height:34px; text-align:center;background: url(../images/Activity/Ghost/icon_spirit.png) no-repeat 0px -137px; background-size: 248px auto;margin-right:20px; }
+#no {  display:block; float:right; width:80px; height:34px; text-align:center;background: url(../images/Activity/Ghost/icon_spirit.png) no-repeat -86px -137px; background-size: 248px auto;margin-right:20px; text-align:left; text-indent:10px;   }
+.userInfo {  padding-top:43%; height:43px; width:220px; margin:0 auto; font:normal 1em/30px "微软雅黑";  color:#666966;  }
+.userInfo input { color:#000000;width:85px; border:none; border-radius:4px; padding:2px 4px; box-shadow:inset 0px 0px 5px #212121;}
+.userInfo .user_Item { width:160px; margin:0 auto; overflow:hidden;color:#000000;}
+
+#giftBox {  position:fixed; top:-400px; opacity:0;  left:5%; width:90%; height:auto; overflow:hidden; background:#f3f3f3; border-radius:14px;  box-shadow:0 0 10px #000; border:solid 3px #935b1e;}
+#giftBox h2 { height:34px;background:url(../images/Activity/Ghost/titleBg02.jpg) no-repeat top center; background-size:auto 34px; font:bold 1.1em/34px "微软雅黑"; color:#fff; text-align:center; border-radius: 14px 14px 0px 0px;  }
+#giftBox p { padding-bottom:10px; text-align:center; height:16px; font:bold 0.8em/16px "微软雅黑" ; color:#c75d6a; }
+#giftBox img { display:block; margin: 10px auto; width:140px; height:auto; }
+#sure{ display:block; margin:10px auto;  width:100px; height:34px; text-align:center; background:url(../images/Activity/Ghost/icon_spirit.png) no-repeat -101px -209px; background-size:202px auto;   font:bold 1em/30px "微软雅黑"; color:#fff;   }
+
+
+/*排名*/
+.rankTitle { margin: 0 auto; width:100%; height:35px;  background:url(../images/Activity/Ghost/rank_head.jpg) no-repeat; background-size:100% auto; font:bold 1.2em/36px "微软雅黑"; color:#fff; text-align:center; overflow: hidden;}
+#rankList {  width:90%; overflow:hidden; background:url(../images/Activity/Ghost/rank_cont_bg.png) no-repeat center top; background-size:100% 100%; padding: 30px 0; margin: 0 auto; height: auto; min-height: 480px;}
+#rankList li { height:50px; color:#000000; font:normal 1em/36px "微软雅黑"; width: 80%; margin: 0 auto; background:url(../images/Activity/Ghost/rank_li_bottom.png) no-repeat center bottom;background-size:100% auto; overflow: hidden;}
+#rankList span { font:normal 1.2em/56px "微软雅黑"; display:block;  }
+#rankList span.ranking { float:left; width:80px; }
+#rankList span.count { float:right; width:80px; padding-right:10px; text-align: right;}
+#rankList li img { display:block; float:left;  width:50px; margin-top:3px; margin-right:8px;   height:auto; }
+#rankList li.li1 { color:#f39800; }
+#rankList li.li2 { color:#8fc31f; }
+#rankList li.li3 { color:#00b7ee; }
+ .wrap01{ background:#960000;  position:fixed; bottom:54px; height:20px; margin:0 auto; width:100%;   }
+ .wrap02{ background:#fff;  position:fixed; bottom:8px; margin:0 auto; width:100%;   }
+ .rankBtn { height:46px; width:220px; margin:0 auto;  }
+ .rankBtn a { display:block; margin-top:6px; float:left; width:100px; height:30px; text-align:center;  font:bold 1em/30px "微软雅黑"; }
+ .rankBtn a.a1 { background-position: 0px -49px;  margin-right:20px;  }
+ .rankBtn a.a2 { background-position: 0px -97px;  }
+.rankFix { position:fixed; bottom:0px; width:100%;  }
+
+
+.back { background:url(../images/Activity/Ghost/back.png) no-repeat center top; width: 55px; height: 55px; display: block; position: fixed; left: 20px; bottom: 10px; background-size:100% auto; }
+

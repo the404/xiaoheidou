@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>砸金蛋|云南华侨城,千万红包大派送|云南华侨城</title>
+<link href="css/layout.css" rel="stylesheet" />
+<script src="js/jquery.1.4.js" type="text/javascript"  ></script>
+<script src="js/ccjspack.js" type="text/javascript"  ></script>
+</head>
+<body id="index">
+<!--开始页-->
+<div class="bg index_bg wrap320" id="page_wrap">
+	<div id="logo" class="ele_bg">云南华侨城</div>
+	<h1 class="title ele_bg">云南华侨城,千万红包大派送,砸金蛋咯！</h1>
+	<ul class="egg_list" id="egg_list">
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<li><span></span></li>
+		<div class="clear"></div>
+		<div id="hammer" class="ele_bg"></div>
+	</ul>
+	<div class="notes_item">
+		<h4>奖品设置</h4>
+		<p>KFC汉堡、温泉水公园门票</p>
+	</div>
+	<div class="notes_item">
+		<h4>活动规则</h4>
+		<p>1. 成功完成在线支付后享有抽奖游戏机会；</p>
+		<p>2. 每个微信号只有一次抽奖机会；</p>
+		<p>3. 用户可选择一枚金蛋砸开，砸开后可看到是否中奖；</p>
+		<p>4. 中奖后请按提示输入手机号码，中奖信息将以验证码的形式发送至您的手机；</p>
+		<p>5. 兑奖时请出示验证信息，方能使用产品。</p>
+	</div>
+	<div class="height40"></div>
+</div>
+<!--开始页 End-->
+</body>
+</html>
+<script src="js/game.js" type="text/javascript" ></script>

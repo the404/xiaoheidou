@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="泰州华侨城,泰州华侨城微信,泰州华侨城微信公众平台,华侨城,江南旅游,江南度假,泰州,旅游,泰州旅游,泰州景区,泰州好玩的,泰州好吃的,长三角,中国湿地,长三角湿地,江南度假,长三角度假,长三角温泉,江南温泉,江苏温泉,泰州温泉,江苏度假酒店,泰州酒店,长三角养生,江苏拜佛,泰州佛寺,华东高尔夫,长三角高尔夫,泰州高尔夫,互动力." />
+<meta name="description" content='泰州华侨城是华侨城集团区外大型发展项目之一，总投资25亿元，占地3000多亩，坐落于国家5A级风景区——江苏省泰州市溱湖湿地公园西侧。泰州华侨城，在苏中大地，犹如一幅天地之间的水墨画，徐徐铺延在溱湖岸边。2010年4月28日，泰州华侨城在姜堰溱潼开业。这是'中国旅游第一品牌'的华侨城集团在第二轮全国布局的点睛之作，泰州华侨城的发力点则是打造“中国湿地生态温泉第一城”。' />
+<title>游玩攻略|泰州华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+    <div class="introBox">
+		<div class="playCon">
+			<h2 class="playTitle">More Than One欢乐无价套餐</h2>
+			<p>在泰州华侨城，定好了房间，可是两天时间根本不知道怎么玩！亲，您不用担心，我们为您考虑了更多，在店期间的行程我们为您考虑周到，每一次用餐，每一处景点，每一个细节，一切尽在掌握。更有FUN乐团欢乐大使全程陪同游玩，还不赶紧FUN下犹豫，欢乐养生从此开始！</p>
+			<h2 class="playTitle02">两天一晚</h2>
+			<p>单人价格：676元/位</p>
+			<p>套餐包含：温泉奥思廷高级客房、云海温泉畅泡、古寿圣寺祈福、湿地高尔夫练习场、万福园本帮菜系大餐、美味下午茶、京韵江南精致水乡特色晚餐（可升级至梅府家宴套餐）、环球美味中西式自助早餐、溱湘人家湘菜套餐、土特产品礼品一份 （绿壳蛋/黄桥烧饼任选）</p>
+			<ul>
+				<li>
+					<img src="../Images/img/ywgl_1.jpg" alt="游玩攻略" />
+				</li>
+				<li>
+					<img src="../Images/img/ywgl_2.jpg" alt="游玩攻略" />
+					<img src="../Images/img/ywgl_3.jpg" alt="游玩攻略" />
+				</li>
+				<li>
+					<img src="../Images/img/ywgl_4.jpg" alt="游玩攻略" />
+					<img src="../Images/img/ywgl_5.jpg" alt="游玩攻略" />
+				</li>
+			</ul>
+		</div>
+    </div>
+     <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+</section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+ <!--//版权信息-->
+<!--#include file="/taizhou/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

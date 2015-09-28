@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <title>疯狂砸金蛋|上海欢乐谷</title>
+    <link href="/Content/Snow/Egg_layout.css" type="text/css" rel="stylesheet" />
+</head>
+<body id="game">
+    <div style="display: none">
+        <input type="hidden" id="SnowID" value="@Request["SnowID"]" />
+        <input hidden="hidden" id="Datas" value="@ViewData["SnowDatas"]" />
+    </div>
+    <div class="gameInfo">
+        <div id="count">0</div>
+        <div id="time">00:30</div>
+        <!-- <div id="pause"></div>-->
+    </div>
+    <ul id="snowBox">
+    </ul>
+
+    <div id="gameOver">
+        <h2>HAPPY SNOW WHITE</h2>
+        <div id="totalP">52分</div>
+        <p>继续加油奥！</p>
+        <div class="btnWrap">
+            <a href="/ActivitySnow/SnowGame?SnowID=@Request["SnowID"]" id="continue">再玩一次</a>
+            <a id="submit" href="javascript:;">提交成绩</a>
+        </div>
+    </div>
+    <div id="submitInfo">
+        <h2>填写信息</h2>
+        <p>请完善以下内容，如您中奖以便工作人员联系您！</p>
+        <div class="userInfo">
+            姓名：<input type="text" id="UserName" /><br />
+            电话：<input type="text" id="Phone" />
+        </div>
+        <div class="btnWrap">
+            <a href="javascript:;" id="yes">确　定</a>
+            <a  href="/ActivitySnow/SnowIndex?SnowID=@Request["SnowID"]" id="no" >取　消</a>
+        </div>
+    </div>
+
+    <div id="giftBox">
+        <h2>恭喜您！获得礼品啦！</h2>
+        <img src="/images/Activity/Egg/gift.gif" />
+        <p>请在游戏结束后提交您的信息，以便工作人员联系您！</p>
+        <a href="javascript:;" id="sure">确　定</a>
+    </div>
+    <footer class="repeatBg"></footer>
+</body>
+</html>
+<script src="/Scripts/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    });
+</script>
+ <script src="/js/Activity/christmas_egg.js" type="text/javascript" ></script>

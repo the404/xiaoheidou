@@ -1,0 +1,724 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apworks.ObjectContainers.Unity</name>
+    </assembly>
+    <members>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement">
+            <summary>
+            Represents a configuration element that contains a behavior extension 
+            which enable the user to customize service or endpoint behaviors to include
+            the container to use when using the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior"/>.
+            </summary>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.ContainerConfigurationPropertyName">
+            <summary>
+            Name of the configuration attribute for the container name.
+            </summary>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.OperationContextEnabledPropertyName">
+            <summary>
+            Name of the configuration attribute for enabling the OperationContext lifetime manager.
+            </summary>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.InstanceContextEnabledPropertyName">
+            <summary>
+            Name of the configuration attribute for enabling the InstanceContext lifetime manager.
+            </summary>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.ServiceHostBaseEnabledPropertyName">
+            <summary>
+            Name of the configuration attribute for enabling the ServiceHostBase lifetime manager.
+            </summary>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.ContextChannelEnabledPropertyName">
+            <summary>
+            Name of the configuration attribute for enabling the IContextChannel lifetime manager.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.CreateBehavior">
+            <summary>
+            Creates a behavior extension based on the current configuration settings.
+            </summary>
+            <returns>
+            The behavior extension.
+            </returns>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.BehaviorType">
+            <summary>
+            Gets the type of behavior.
+            </summary>
+            <returns>
+            A <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior"/> type.
+            </returns>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.ContainerName">
+            <summary>
+            Gets or sets the container name in configuration to use when creating services.
+            </summary>
+            <value>The container name in configuration to use when creating services.</value>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.OperationContextEnabled">
+            <summary>
+            Gets or sets a value indicating whether <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextLifetimeManager"/> support is enabled. 
+            </summary>
+            <value>true to enable Unity lifetime manager support for the WCF OperationContext extension, otherwise, false.</value>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.InstanceContextEnabled">
+            <summary>
+            Gets or sets a value indicating whether <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextLifetimeManager"/> support is enabled. 
+            </summary>
+            <value>true to enable Unity lifetime manager support for the WCF InstanceContext extension, otherwise, false.</value>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.ServiceHostBaseEnabled">
+            <summary>
+            Gets or sets a value indicating whether <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseLifetimeManager"/> support is enabled. 
+            </summary>
+            <value>true to enable Unity lifetime manager support for the WCF ServiceHostBase extension, otherwise, false.</value>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityBehaviorExtensionElement.ContextChannelEnabled">
+            <summary>
+            Gets or sets a value indicating whether <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelLifetimeManager"/> support is enabled. 
+            </summary>
+            <value>true to enable Unity lifetime manager support for the WCF IContextChannel extension, otherwise, false.</value>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityCallContextInitializer">
+            <summary>
+            Initializes and cleans up thread-local storage for the thread that invokes user code to support the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelLifetimeManager"/>.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityCallContextInitializer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityCallContextInitializer"/> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityCallContextInitializer.AfterInvoke(System.Object)">
+            <summary>
+            Cleans up the thread that invoked the operation by removing the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelExtension"/>.
+            </summary>
+            <param name="correlationState">The correlation object returned from the BeforeInvoke method.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityCallContextInitializer.BeforeInvoke(System.ServiceModel.InstanceContext,System.ServiceModel.IClientChannel,System.ServiceModel.Channels.Message)">
+            <summary>
+            Initializes the operation thread by adding the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelExtension"/> to the WCF client channel.
+            </summary>
+            <param name="instanceContext">The service instance for the operation.</param>
+            <param name="channel">The client channel.</param>
+            <param name="message">The incoming message.</param>
+            <returns>A correlation object passed back as a parameter of the AfterInvoke method.</returns>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelExtension">
+            <summary>
+            Implements the lifetime manager storage for the <see cref="T:System.ServiceModel.IContextChannel"/> extension.
+            </summary>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfExtension`1">
+            <summary>
+            Base class for Unity WCF lifetime manager support.
+            </summary>
+            <typeparam name="T">IExtensibleObject on which to attach.</typeparam>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfExtension`1.instances">
+            <summary>
+            Backing store for relating keys to object instances for Unity.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfExtension`1.Attach(`0)">
+            <summary>
+            Enables an extension object to find out when it has been aggregated. Called when the extension is added to the IExtensibleObject.Extensions property.
+            </summary>
+            <param name="owner">The extensible object that aggregates this extension.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfExtension`1.Detach(`0)">
+            <summary>
+            Enables an object to find out when it is no longer aggregated. Called when an extension is removed from the IExtensibleObject.Extensions property.
+            </summary>
+            <param name="owner">The extensible object that aggregates this extension.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfExtension`1.RegisterInstance(System.Guid,System.Object)">
+            <summary>
+            Registers the given instance with the given key into the backing store.
+            </summary>
+            <param name="key">Key to associate with the object instance.</param>
+            <param name="value">Object instance to associate with the given key in the backing store.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfExtension`1.FindInstance(System.Guid)">
+            <summary>
+            Finds the object associated with the given key.
+            </summary>
+            <param name="key">Key used to find the associated object instance.</param>
+            <returns>The object instance associated with the supplied key.  If no instance is registered, null is returned.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfExtension`1.RemoveInstance(System.Guid)">
+            <summary>
+            Removes the given key from the backing store.  This method will also dispose of the associated object instance if it implements <see cref="T:System.IDisposable"/>.
+            </summary>
+            <param name="key">Key to remove from the backing store.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelExtension.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelExtension"/> class.
+            </summary>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelExtension.Current">
+            <summary>
+            Gets the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelExtension"/> for the current channel.
+            </summary>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelLifetimeManager">
+            <summary>
+            Unity lifetime manager to support <see cref="T:System.ServiceModel.IContextChannel"/>.
+            </summary>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfLifetimeManager`1">
+            <summary>
+            Abstract base class for Unity WCF lifetime support.
+            </summary>
+            <typeparam name="T">IExtensibleObject for which to register Unity lifetime manager support.</typeparam>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfLifetimeManager`1.key">
+            <summary>
+            Key for Unity to use for the associated object's instance.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfLifetimeManager`1.#ctor">
+            <summary>
+            Initializes a new instance of the UnityWcfLifetimeManager class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfLifetimeManager`1.GetValue">
+            <summary>
+            Gets the object instance for the given key from the currently registered extension.
+            </summary>
+            <returns>The object instance associated with the given key.  If no instance is registered, null is returned.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfLifetimeManager`1.RemoveValue">
+            <summary>
+            Removes the object instance for the given key from the currently registered extension.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfLifetimeManager`1.SetValue(System.Object)">
+            <summary>
+            Associates the supplied object instance with the given key in the currently registered extension.
+            </summary>
+            <param name="newValue">The object to register in the currently registered extension.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfLifetimeManager`1.FindExtension">
+            <summary>
+            Finds the currently registered UnityWcfExtension for this lifetime manager.
+            </summary>
+            <returns>Currently registered UnityWcfExtension of the given type, or null if no UnityWcfExtension is registered.</returns>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityWcfLifetimeManager`1.Extension">
+            <summary>
+            Gets the currently registered UnityWcfExtension for this lifetime manager.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelLifetimeManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelLifetimeManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityContextChannelLifetimeManager.FindExtension">
+            <summary>
+            Returns the appropriate extension for the current lifetime manager.
+            </summary>
+            <returns>The registered extension for the current lifetime manager, otherwise, null if the extension is not registered.</returns>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextExtension">
+            <summary>
+            Implements the lifetime manager storage for the <see cref="T:System.ServiceModel.InstanceContext"/> extension.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextExtension.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextExtension"/> class.
+            </summary>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextExtension.Current">
+            <summary>
+            Gets the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextExtension"/> for the current instance context.
+            </summary>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextInitializer">
+            <summary>
+            Modifies the creation of a <see cref="T:System.ServiceModel.InstanceContext"/> by adding an instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextExtension"/> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextInitializer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextInitializer"/> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextInitializer.Initialize(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Message)">
+            <summary>
+            Modifies the newly created <see cref="T:System.ServiceModel.InstanceContext"/> by adding an instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextExtension"/> class.
+            </summary>
+            <param name="instanceContext">The system-supplied instance context.</param>
+            <param name="message">The message that triggered the creation of the instance context.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextInitializer.InstanceContextClosing(System.Object,System.EventArgs)">
+            <summary>
+            Occurs when a communication object transitions into the closing state.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains no event data.</param>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextLifetimeManager">
+            <summary>
+            Unity lifetime manager to support <see cref="T:System.ServiceModel.InstanceContext"/>.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextLifetimeManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextLifetimeManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceContextLifetimeManager.FindExtension">
+            <summary>
+            Returns the appropriate extension for the current lifetime manager.
+            </summary>
+            <returns>The registered extension for the current lifetime manager, otherwise, null if the extension is not registered.</returns>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider">
+            <summary>
+            Declares methods that provide a service object or recycle a service object for a Windows Communication Foundation (WCF) service.
+            </summary>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider.UnityConfigurationSectionName">
+            <summary>
+            Configuration section name for Unity.
+            </summary>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider.container">
+            <summary>
+            Unity container.
+            </summary>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider.type">
+            <summary>
+            The <see cref="T:System.Type"/> to create.
+            </summary>
+        </member>
+        <member name="F:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider.containerName">
+            <summary>
+            Unity container name.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider"/> class with the <see cref="T:System.Type"/>
+            to create and the name of the container to use.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/> to create.</param>
+            <param name="containerName">The name of the container to use.</param>
+            <remarks>
+            If <paramref name="containerName"/> is null then the default configuration is used. If the Unity configuration section
+            is not found, the container will just try and resolve the type.
+            </remarks>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider.GetInstance(System.ServiceModel.InstanceContext)">
+            <summary>
+            Returns a service object given the specified <see cref="T:System.ServiceModel.InstanceContext"/> object.
+            </summary>
+            <param name="instanceContext">The current <see cref="T:System.ServiceModel.InstanceContext"/> object.</param>
+            <returns>
+            A user-defined service object.
+            </returns>
+            <remarks>
+            Uses the configured Unity container to resolve the service object.
+            </remarks>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider.GetInstance(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Message)">
+            <summary>
+            Returns a service object given the specified <see cref="T:System.ServiceModel.InstanceContext" /> object.
+            </summary>
+            <param name="instanceContext">The current <see cref="T:System.ServiceModel.InstanceContext" /> object.</param>
+            <param name="message">The message that triggered the creation of a service object.</param>
+            <returns>
+            The service object.
+            </returns>
+            <remarks>
+            Uses the configured Unity container to resolve the service object.
+            </remarks>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider.ReleaseInstance(System.ServiceModel.InstanceContext,System.Object)">
+            <summary>
+            Called when an <see cref="T:System.ServiceModel.InstanceContext" /> object recycles a service object.
+            </summary>
+            <param name="instanceContext">The service's instance context.</param>
+            <param name="instance">The service object to be recycled.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider.CreateUnityContainer(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Practices.Unity.UnityContainer"/> from configuration using the provided container name.
+            </summary>
+            <param name="containerName">Container name to configure.  If containerName is null or empty, the default container is configured.</param>
+            <returns>Created and configured <see cref="T:Microsoft.Practices.Unity.UnityContainer"/>.</returns>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextExtension">
+            <summary>
+            Implements the lifetime manager storage for the <see cref="T:System.ServiceModel.OperationContext"/> extension.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextExtension.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextExtension"/> class.
+            </summary>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextExtension.Current">
+            <summary>
+            Gets the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextExtension"/> for the current operation context.
+            </summary>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextLifetimeManager">
+            <summary>
+            Unity lifetime manager to support <see cref="T:System.ServiceModel.OperationContext"/>.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextLifetimeManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextLifetimeManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextLifetimeManager.FindExtension">
+            <summary>
+            Returns the appropriate extension for the current lifetime manager.
+            </summary>
+            <returns>The registered extension for the current lifetime manager, otherwise, null if the extension is not registered.</returns>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextMessageInspector">
+            <summary>
+            Adds and removes instances of <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextExtension"/> from the current operation context.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextMessageInspector.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextMessageInspector"/> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextMessageInspector.AfterReceiveRequest(System.ServiceModel.Channels.Message@,System.ServiceModel.IClientChannel,System.ServiceModel.InstanceContext)">
+            <summary>
+            Adds an instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextExtension"/> class to the current operation context after an inbound message has been received but before the message is dispatched to the intended operation.
+            </summary>
+            <param name="request">The request message.</param>
+            <param name="channel">The incoming channel.</param>
+            <param name="instanceContext">The current service instance.</param>
+            <returns>The object used to correlate state. This object is passed back in the BeforeSendReply method.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextMessageInspector.BeforeSendReply(System.ServiceModel.Channels.Message@,System.Object)">
+            <summary>
+            Removes the registered instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityOperationContextExtension"/> class from the current operation context after the operation has returned but before the reply message is sent.
+            </summary>
+            <param name="reply">The reply message. This value is null if the operation is one way.</param>
+            <param name="correlationState">The correlation object returned from the AfterReceiveRequest method.</param>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior">
+            <summary>
+            Configures the instance provider to use the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider"/> for service creation.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior"/> class. 
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Provides the ability to pass custom data to binding elements to support the contract implementation.
+            </summary>
+            <param name="serviceDescription">The service description of the service.</param>
+            <param name="serviceHostBase">The host of the service.</param>
+            <param name="endpoints">The service endpoints.</param>
+            <param name="bindingParameters">Custom objects to which binding elements have access.</param>
+            <remarks>Not used in this behavior.</remarks>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Provides the ability to change run-time property values or insert custom extension objects such as error handlers, message or parameter interceptors, security extensions, and other custom extension objects.
+            </summary>
+            <param name="serviceDescription">The service description.</param>
+            <param name="serviceHostBase">The host that is currently being built.</param>
+            <remarks>Updates the endpoints instance providers to use the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityInstanceProvider"/>.</remarks>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Provides the ability to inspect the service host and the service description to confirm that the service can run successfully.
+            </summary>
+            <param name="serviceDescription">The service description.</param>
+            <param name="serviceHostBase">The service host that is currently being constructed.</param>
+            <remarks>Not used in this behavior.</remarks>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.ServiceHostBaseClosing(System.Object,System.EventArgs)">
+            <summary>
+            Occurs when a communication object transitions into the closing state.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains no event data.</param>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.ContainerName">
+            <summary>
+            Gets or sets
+            </summary>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.OperationContextEnabled">
+            <summary>
+            Gets or sets a value indicating whether <see cref="T:System.ServiceModel.OperationContext"/> support is enabled.
+            </summary>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.InstanceContextEnabled">
+            <summary>
+            Gets or sets a value indicating whether <see cref="T:System.ServiceModel.InstanceContext"/> support is enabled.
+            </summary>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.ServiceHostBaseEnabled">
+            <summary>
+            Gets or sets a value indicating whether <see cref="T:System.ServiceModel.ServiceHostBase"/> support is enabled.
+            </summary>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceBehavior.ContextChannelEnabled">
+            <summary>
+            Gets or sets a value indicating whether <see cref="T:System.ServiceModel.IContextChannel"/> support is enabled.
+            </summary>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseExtension">
+            <summary>
+            Implements the lifetime manager storage for the <see cref="T:System.ServiceModel.ServiceHostBase"/> extension.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseExtension.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseExtension"/> class.
+            </summary>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseExtension.Current">
+            <summary>
+            Gets the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseExtension"/> for the current service host.
+            </summary>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseLifetimeManager">
+            <summary>
+            Unity lifetime manager to support <see cref="T:System.ServiceModel.ServiceHostBase"/>.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseLifetimeManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseLifetimeManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.LifetimeManagers.UnityServiceHostBaseLifetimeManager.FindExtension">
+            <summary>
+            Returns the appropriate extension for the current lifetime manager.
+            </summary>
+            <returns>The registered extension for the current lifetime manager, otherwise, null if the extension is not registered.</returns>
+        </member>
+        <member name="T:Apworks.Config.Fluent.UnityContainerFluentExtender">
+            <summary>
+            Represents the Extension Method provider which provides additional APIs
+            for using Unity container, based on the existing Apworks Fluent API routines.
+            </summary>
+        </member>
+        <member name="M:Apworks.Config.Fluent.UnityContainerFluentExtender.UsingUnityContainerWithDefaultSettings(Apworks.Config.Fluent.IApworksConfigurator,System.Boolean,System.String)">
+            <summary>
+            Configures the Apworks framework by using Unity as the object container and other settings by default.
+            </summary>
+            <param name="configurator">The <see cref="T:Apworks.Config.Fluent.IApworksConfigurator"/> instance to be extended.</param>
+            <param name="containerInitFromConfigFile">The <see cref="T:System.Boolean"/> value which indicates whether the container configuration should be read from the config file.</param>
+            <param name="containerConfigSectionName">The name of the section in the config file. This value must be specified when the <paramref name="containerInitFromConfigFile"/> parameter is set to true.</param>
+            <returns>The <see cref="T:Apworks.Config.Fluent.IObjectContainerConfigurator"/> instace.</returns>
+        </member>
+        <member name="M:Apworks.Config.Fluent.UnityContainerFluentExtender.UsingUnityContainer(Apworks.Config.Fluent.ISequenceGeneratorConfigurator,System.Boolean,System.String)">
+            <summary>
+            Configures the Apworks framework by using Unity as the object container.
+            </summary>
+            <param name="configurator">The <see cref="T:Apworks.Config.Fluent.ISequenceGeneratorConfigurator"/> instance to be extended.</param>
+            <param name="initFromConfigFile">The <see cref="T:System.Boolean"/> value which indicates whether the container configuration should be read from the config file.</param>
+            <param name="sectionName">The name of the section in the config file. This value must be specified when the <paramref name="initFromConfigFile"/> parameter is set to true.</param>
+            <returns>The <see cref="T:Apworks.Config.Fluent.IObjectContainerConfigurator"/> instace.</returns>
+        </member>
+        <member name="M:Apworks.Config.Fluent.UnityContainerFluentExtender.UsingUnityContainer(Apworks.Config.Fluent.IHandlerConfigurator,System.Boolean,System.String)">
+            <summary>
+            Configures the Apworks framework by using Unity as the object container.
+            </summary>
+            <param name="configurator">The <see cref="T:Apworks.Config.Fluent.IHandlerConfigurator"/> instance to be extended.</param>
+            <param name="initFromConfigFile">The <see cref="T:System.Boolean"/> value which indicates whether the container configuration should be read from the config file.</param>
+            <param name="sectionName">The name of the section in the config file. This value must be specified when the <paramref name="initFromConfigFile"/> parameter is set to true.</param>
+            <returns>The <see cref="T:Apworks.Config.Fluent.IObjectContainerConfigurator"/> instace.</returns>
+        </member>
+        <member name="M:Apworks.Config.Fluent.UnityContainerFluentExtender.UsingUnityContainer(Apworks.Config.Fluent.IExceptionHandlerConfigurator,System.Boolean,System.String)">
+            <summary>
+            Configures the Apworks framework by using Unity as the object container.
+            </summary>
+            <param name="configurator">The <see cref="T:Apworks.Config.Fluent.IExceptionHandlerConfigurator"/> instance to be extended.</param>
+            <param name="initFromConfigFile">The <see cref="T:System.Boolean"/> value which indicates whether the container configuration should be read from the config file.</param>
+            <param name="sectionName">The name of the section in the config file. This value must be specified when the <paramref name="initFromConfigFile"/> parameter is set to true.</param>
+            <returns>The <see cref="T:Apworks.Config.Fluent.IObjectContainerConfigurator"/> instace.</returns>
+        </member>
+        <member name="M:Apworks.Config.Fluent.UnityContainerFluentExtender.UsingUnityContainer(Apworks.Config.Fluent.IInterceptionConfigurator,System.Boolean,System.String)">
+            <summary>
+            Configures the Apworks framework by using Unity as the object container.
+            </summary>
+            <param name="configurator">The <see cref="T:Apworks.Config.Fluent.IInterceptionConfigurator"/> instance to be extended.</param>
+            <param name="initFromConfigFile">The <see cref="T:System.Boolean"/> value which indicates whether the container configuration should be read from the config file.</param>
+            <param name="sectionName">The name of the section in the config file. This value must be specified when the <paramref name="initFromConfigFile"/> parameter is set to true.</param>
+            <returns>The <see cref="T:Apworks.Config.Fluent.IObjectContainerConfigurator"/> instace.</returns>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.InstanceItems">
+            <summary>
+            Represents the holder of instance items which are managed by the <c>WcfPerRequestLifetimeManager</c>
+            lifetime manager.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.InstanceItems.Find(System.Object)">
+            <summary>
+            Finds an item by the given key.
+            </summary>
+            <param name="key">The key of the item.</param>
+            <returns>The instance of the item.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.InstanceItems.Set(System.Object,System.Object)">
+            <summary>
+            Sets an item with the given key.
+            </summary>
+            <param name="key">The key of the item.</param>
+            <param name="value">The instance of the item.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.InstanceItems.Remove(System.Object)">
+            <summary>
+            Removes the item with the given key.
+            </summary>
+            <param name="key">The key of the item to be removed.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.InstanceItems.Hook(System.ServiceModel.InstanceContext)">
+            <summary>
+            Hooks the Closed and Faulted events on the <see cref="T:System.ServiceModel.InstanceContext"/> object.
+            </summary>
+            <param name="instanceContext">The <see cref="T:System.ServiceModel.InstanceContext"/> object whose
+            Closed and Faulted events are hooked.</param>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.UnityObjectContainer">
+            <summary>
+            Represents the object container that utilizes the Microsoft Unity as
+            IoC/DI containers.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.UnityObjectContainer.#ctor">
+            <summary>
+            Initializes a new instance of <c>UnityObjectContainer</c> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.UnityObjectContainer.DoGetService(System.Type)">
+            <summary>
+            Gets the service object of the specified type.
+            </summary>
+            <param name="serviceType">An object that specifies the type of service object to get.</param>
+            <returns>A service object of type serviceType.-or- null if there is no service object
+            of type serviceType.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.UnityObjectContainer.DoGetService(System.Type,System.Object)">
+            <summary>
+            Gets the service object of the specified type, with overrided
+            arguments provided.
+            </summary>
+            <param name="serviceType">The type of the service to get.</param>
+            <param name="overridedArguments">The overrided arguments to be used when getting the service.</param>
+            <returns>The instance of the service object.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.UnityObjectContainer.DoResolveAll(System.Type)">
+            <summary>
+            Resolves all the objects from the specified type.
+            </summary>
+            <param name="serviceType">The type of the objects to be resolved.</param>
+            <returns>A <see cref="T:System.Array"/> object which contains all the objects resolved.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.UnityObjectContainer.InitializeFromConfigFile">
+            <summary>
+            Initializes the object container from the configuration file.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.UnityObjectContainer.InitializeFromConfigFile(System.String)">
+            <summary>
+            Initializes the object container from the configuration file, specifying
+            the name of the configuration section.
+            </summary>
+            <param name="configSectionName">The name of the configuration section.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.UnityObjectContainer.GetWrappedContainer``1">
+            <summary>
+            Gets the wrapped container instance.
+            </summary>
+            <typeparam name="T">The type of the wrapped container.</typeparam>
+            <returns>The instance of the wrapped container.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.UnityObjectContainer.Registered``1">
+            <summary>
+            Returns a <see cref="T:System.Boolean"/> value which indicates whether the given type
+            has been registered to the service locator.
+            </summary>
+            <typeparam name="T">The type to check.</typeparam>
+            <returns>True if the type has been registered, otherwise, false.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.UnityObjectContainer.Registered(System.Type)">
+            <summary>
+            Returns a <see cref="T:System.Boolean"/> value which indicates whether the given type
+            has been registered to the service locator.
+            </summary>
+            <param name="type">The type to check.</param>
+            <returns>True if the type has been registered, otherwise, false.</returns>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.ContainerExtension">
+            <summary>
+            Represents the WCF Service Instance extension of the <see cref="T:System.ServiceModel.InstanceContext"/> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.ContainerExtension.Attach(System.ServiceModel.OperationContext)">
+            <summary>
+            Enables an extension object to find out when it has been aggregated. Called
+            when the extension is added to the <see cref="P:System.ServiceModel.IExtensibleObject`1.Extensions"/>
+            property.
+            </summary>
+            <param name="owner">The extensible object that aggregates this extension.</param>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.ContainerExtension.Detach(System.ServiceModel.OperationContext)">
+            <summary>
+            Enables an object to find out when it is no longer aggregated. Called when
+            an extension is removed from the <see cref="P:System.ServiceModel.IExtensibleObject`1.Extensions"/>
+            property.
+            </summary>
+            <param name="owner">The extensible object that aggregates this extension.</param>
+        </member>
+        <member name="P:Apworks.ObjectContainers.Unity.ContainerExtension.Value">
+            <summary>
+            Gets or sets the value stored.
+            </summary>
+        </member>
+        <member name="T:Apworks.ObjectContainers.Unity.PerRequestLifetimeManager">
+            <summary>
+            Represents the lifetime manager which controls the lifetime of the instances based
+            on each WCF call.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.PerRequestLifetimeManager.#ctor">
+            <summary>
+            Initializes a new instance of <c>WcfPerRequestLifetimeManager</c> class.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.PerRequestLifetimeManager.GetValue">
+            <summary>
+            Retrieve a value from the backing store associated with this Lifetime policy.
+            </summary>
+            <returns>The object desired, or null if no such object is currently stored.</returns>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.PerRequestLifetimeManager.RemoveValue">
+            <summary>
+            Remove the given object from backing store.
+            </summary>
+        </member>
+        <member name="M:Apworks.ObjectContainers.Unity.PerRequestLifetimeManager.SetValue(System.Object)">
+            <summary>
+            Stores the given value into backing store for retrieval later.
+            </summary>
+            <param name="newValue">The object being stored.</param>
+        </member>
+    </members>
+</doc>

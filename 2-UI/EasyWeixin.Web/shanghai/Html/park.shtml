@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷景点介绍,上海欢乐谷微信,旅游,主题公园,探险,时尚,动感,梦幻,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>经典项目|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"  ></script>
+<script src="../Js/ccjspack.js" type="text/javascript"  ></script>
+</head>
+
+<body>
+<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="scrollWrap">
+    		<div id="content01">
+                <ul id="scrollPic">
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park01.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park02.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park03.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park04.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park05.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park06.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park07.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park08.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park09.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park10.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/park11.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy01.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy02.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy03.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy04.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy05.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy06.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy07.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy08.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy09.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy10.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy11.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/hlhy12.jpg" />
+                    </a>
+                </ul>
+                <ul id="scrollCon">
+                    <div id="scrollIcon">
+                    </div>
+                    <li style="display:block;" >
+                        <h2>谷木游龙</h2>
+                        <p>世界上最古老的过山车形式，以被誉为超级结构用材的美国南方松木为主材，沿湖堤搭建，带给游客超过10次的太空零重力感受，挑战生命不能承受之轻！带来1200米的呼啸之旅。</p>
+                    </li>
+                    <li >
+                        <h2>激流勇进</h2>
+                        <p>欢乐谷经典水上项目，可达26米之高，沿滑道快速俯冲，巨浪依势而起，享受畅快淋漓的勇者之旅。</p>
+                    </li>
+                    <li >
+                        <h2>矿山历险</h2>
+                        <p>飞速滑行，突然转向，又一次高速侧滑！以速度快、提升高、回转多闻名的巷道式矿山车，将带来历险般滑行体验。</p>
+                    </li>
+                    <li >
+                        <h2>天地双雄</h2>
+                        <p>一座塔由下而上高速弹射，另一座则由上而下急速降落。上下往复中，完美融合了弹射与坠落的两极体验。</p>
+                    </li>
+                    <li >
+                        <h2>蓝月飞车</h2>
+                        <p>30米高空俯冲，近100km/h，令人惊叹的的列车速度，带给你自由飞翔的美妙感受，体味开放式的刺激体验！</p>
+                    </li>
+                    <li >
+                        <h2>绝顶雄风</h2>
+                        <p>全球新一代无底板跌落式过山车，享有"过山车之王"的美誉，让你从60米高的顶峰垂直跌落！感受自由落体的神奇加速度！</p>
+                    </li>
+                    <li >
+                        <h2>完美风暴</h2>
+                        <p>两座翻滚的座舱，带来一波接一波的眩晕，与音乐喷泉水幕完美结合下在空中飞舞。瞬间提升、跌落、停止、翻滚，让你真正体会天旋地转的眩晕快感。</p>
+                    </li>
+                    <li >
+                        <h2>大摆锤</h2>
+                        <p>全面升级的海盗船，以110公里/小时，将你送达15层楼的高空，尽览水天一色的美丽风景。</p>
+                    </li>
+                    <li >
+                        <h2>金银岛</h2>
+                        <p>站在园区制高点，俯瞰整个全园美景，慢慢旋转中将佘山、月湖景色尽收眼底。</p>
+                    </li>
+                    <li >
+                        <h2>峡谷漂流</h2>
+                        <p>欢乐谷经典的水上游乐项目，带你穿越峡谷、假山、涵洞、林场、花海……进行一场浪漫的漂流奇遇记！</p>
+                    </li>
+                    <li >
+                        <h2>飞旋驼峰</h2>
+                        <p>过山车不会像它一样旋转，陀螺不会像它一样俯冲，一秒之内到达中心驼峰，带来难以置信的失重感受。</p>
+                    </li>
+                    <li >
+                        <h2>水上飞艇</h2>
+                        <p>——中国首座双环式贴水飞行器<br />置身船舱之中，飞行之旅随即开启。飞艇一会在天上飞舞，一会又从水面掠过，溅起欢快的水花，在不断地俯冲、旋转、追逐中体会飞行的感受。记得向擦身而过的小伙伴打声招呼哦！</p>
+                    </li>
+                    <li >
+                        <h2>海星剧场</h2>
+                        <p>——国内最先进多媒体互动剧场<br />走进国内最先进的多媒体互动剧场，调皮的大副、可爱的海龟船长，将带你搭乘"欢乐海航号"出航，一路经过喷发的火山，翻过千年冰山，跨越万丈深渊……最终克服重重困难，找到传说中的宝藏。在观影过程中，你还可以和影片中的主人翁一起对话、交流，快来享受科技互动的乐趣吧。 </p>
+                    </li>
+                    <li >
+                        <h2>小飞鱼</h2>
+                        <p>——国际经典旋转类亲子游乐项目<br />坐在小飞鱼的背上，随着项目的开动，小飞鱼开始在欢乐海洋的上空飞翔，在变速转动、高低起伏中欣赏周围的美景，无尽的趣味和愉悦也随之而来。 </p>
+                    </li>
+                    <li >
+                        <h2>航海学校</h2>
+                        <p>——世界最长轨道水战船<br />走进航海学校，登上仿古式水战船，便开始了紧张好玩的水上大战。在湍急的河流之中，水炮就是你的武器，在向别的小伙伴射击的同时，尽可能不被别人的水炮击中。拉上小伙伴，进行一场速度、智慧与胆量的碰撞吧。 </p>
+                    </li>
+                    <li >
+                        <h2>海岸蚁兵队</h2>
+                        <p>——中国最受欢迎儿童过山车<br />在座舱坐稳之后，海岸蚁兵队就把你送到欢乐海洋了。随着车体从轨道最高处滑下，可以感受到瞬间俯冲的快感。在这个过程不断地在轨道上回旋滑行，让紧张得心随即放松下来，去欣赏欢乐海洋美丽的风景。 </p>
+                    </li>
+                    <li >
+                        <h2>疯狂精灵</h2>
+                        <p>——中国最佳家庭类多维旋转项目<br />坐在高空自旋滑车，随着滑行开始旋转运动，俯冲的刺激，急转的快感，感受真实的天旋地转。</p>
+                    </li>
+                    <li >
+                        <h2>海洋奇幻馆</h2>
+                        <p>——中国首座全景式亲子互动体验馆<br />走进海洋奇幻馆，就像走进了美轮美奂的"海底世界"。最新4D"过山车模拟体验馆"、"亚洲首座室内空中多媒体互动环廊"等科技娱乐项目以及海洋新干线、珊瑚影剧院、水母一家亲、七彩漩涡等10余项国内外领先的家庭游乐项目错落有致的分布在场馆内，千姿百态的奇幻水母展示、系列高科技亲子互动娱乐项目，将整个海洋奇幻馆打造成一个集科技、游乐、互动、观赏为一体的亲子互动体验馆。</p>
+                    </li>
+                     <li >
+                        <h2>海洋之星</h2>
+                        <p>——最新6D“过山车模拟体验馆”<br />模拟过山车来了，你还不敢玩吗？坐在动感座椅之上，开始在真实场景与荧幕画影中穿越。奇妙的海洋生物、缤纷的珊瑚、曼妙的水草不断从眼前掠过，海底世界的神秘一览无余，如梦如幻、如痴如醉。起伏旋转的轨道让你真实的感受过山车的速度与失重。闪电、大风、水花等特效的完美结合，仿佛让你身临其境，尖叫不断，享受无穷的乐趣和刺激。</p>
+                    </li>
+                    <li >
+                        <h2>海洋环廊</h2>
+                        <p>——亚洲首座室内空中多媒体互动环廊<br />漫步在海洋环廊之上，整个场馆的美景尽收眼底。当然，这里还有系列先进的多媒体互动游乐项目。想象自己的海底朋友，在手触电子屏上设计出它的形象，用手轻轻的一划，它就奇迹般的出现在大屏幕上，自由自在的游来游去；凑近一旁的瞭望镜，将焦点集中在场馆内的小伙伴身上，然后就会发现他不停地穿梭在不同的“海底世界”……</p>
+                    </li>
+                    <li >
+                        <h2>海洋新干线</h2>
+                        <p>——悬挂式家庭观光项目<br />拉起身边的亲朋好友一起登上海洋新干线，让“海豚”、“帆船”带你穿梭于馆内外，色彩斑斓的空中步道、丰富的游乐设施、精彩的海狮表演、波光粼粼的湖泊、绿阴冉冉的树林、欢乐的人群尽收眼底，感受时尚与自然的完美结合，疲惫的身心也随之放松下来，然后全身心投入奇幻“海洋之旅”！</p>
+                    </li>
+                    <li >
+                        <h2>珊瑚影剧院</h2>
+                        <p>——经典3D影院<br />随着影片开始播映，突然看到闪电划过天空，风把头发都吹乱了，雨开始滴滴答答的落在身上……风、雨、光、电……逼真的效果让人惊叹不已。</p>
+                    </li>
+                    <li >
+                        <h2>北极探险</h2>
+                        <p>——经典乘骑互动游乐项目<br />探险游戏开始了，在前进途中，不断有"怪物"来袭，勇敢地拿起手中的红外枪射击，将它们全部击倒吧，说不定还会有意想不到惊喜呢！</p>
+                    </li>
+                    <div id="top" class="top top2"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="rich_media_tool" style="padding:10px 0 30px 0;">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+     </section>
+     <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+     <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息--> 
+</body>
+</html>
+<script src="../Js/iScroll.js" type="text/javascript" ></script>
+<script src="../Js/scrollBox.js" type="text/javascript"></script>
+<script src="../Js/focusPic.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){		
+        $("#top").click(function(){
+            var obottom=parseInt($("#scrollCon").css("bottom"));
+            if(obottom==-64){
+                $("#scrollCon").animate({bottom:0},700);
+                $("#top").addClass("top2");
+                }else{
+                    $("#scrollCon").animate({bottom:-64},700);
+                    $("#top").removeClass("top2");
+                    }
+            
+            })
+        });
+		
+//底部点赞
+var oLike=document.getElementById("like");
+var oLikeIcon=oLike.getElementsByTagName("i")[0];
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_grey";
+	}
+</script>

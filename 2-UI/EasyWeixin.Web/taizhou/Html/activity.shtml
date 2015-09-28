@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="泰州华侨城,华侨城,华侨城微信,华侨城官方微信,华侨城微信公众平台,江南旅游,江南度假,泰州,旅游,泰州旅游,泰州景区,泰州好玩的,泰州好吃的,长三角,中国湿地,长三角湿地,江南度假,长三角度假,长三角温泉,江南温泉,江苏温泉,泰州温泉,江苏度假酒店,泰州酒店,长三角养生,江苏拜佛,泰州佛寺,华东高尔夫,长三角高尔夫,泰州高尔夫,互动力;" />
+<meta name="description" content="泰州华侨城是华侨城集团区外大型发展项目之一，总投资25亿元，占地3000多亩，坐落于国家5A级风景区——江苏省泰州市溱湖湿地公园西侧。泰州华侨城，在苏中大地，犹如一幅天地之间的水墨画，徐徐铺延在溱湖岸边。2010年4月28日，泰州华侨城在姜堰溱潼开业。这是'中国旅游第一品牌'的华侨城集团在第二轮全国布局的点睛之作，泰州华侨城的发力点则是打造'中国湿地生态温泉第一城'。" />
+<title>精彩活动|泰州华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+    <div class="activityBox">
+        <div class="activityTop">
+            <h2>相约爱琴海 约惠女人节</h2>
+            <p>活动时间：2015年4月30日截止</p>
+            <a class="a1" href="javascript:;"></a>
+        </div>
+        <a class="a2" href="javascript:;"><img src="../Images/activity01.jpg" alt="" /></a>
+    </div>
+    <div class="activityBox">
+    	<div class="activityTop">
+            <h2>超值优惠 纵情狂欢</h2>
+            <p>活动时间:2014年7月26日</p>
+            <a class="a1" href="javascript:;"></a>
+        </div>
+         <a class="a2" href="javascript:;"><img src="../Images/activity01.jpg" alt="" /></a>
+    </div>
+    <p class="hint">没有更多了</p>
+</section>
+ <!--//版权信息-->
+<!--#include file="/taizhou/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

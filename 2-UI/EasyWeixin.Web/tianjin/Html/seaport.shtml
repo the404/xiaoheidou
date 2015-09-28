@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>维京海港|天津欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"  ></script>
+<script src="../Js/ccjspack.js" type="text/javascript"  ></script>
+</head>
+<body>
+<!--//页面头部-->
+	<!--#include file="/tianjin/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="scrollWrap"> 
+        	<div id="content01">
+                <ul id="scrollPic">
+                	<a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaportPic_01.jpg" alt="5D影院(小锡兵历险记)" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaportPic_02.jpg" alt="雷神之锤" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaportPic_03.jpg" alt="凌霄飞舞" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaportPic_04.jpg" alt="滑板冲浪" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaportPic_05.jpg" alt="维京船" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaportPic_06.jpg" alt="翻江倒海" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/seaportPic_07.jpg" alt="大风车" />
+                    </a>
+                </ul>
+                <ul id="scrollCon">
+                    <div id="scrollIcon">
+                    </div>
+                    <li style="display:block;" >
+                        <h2>5D影院(小锡兵历险记)</h2>
+                        <p>中国首个倾情上演奥斯卡经典动画的三屏5D体验影院。创新融合影视节目表演、故事场景仿真装饰与声光电炫丽特技，将震动、坠落、吹风、喷水等特技引入影院，并根据影片的情景精心设计出烟雾、雨、光电、气泡、气味等独特体验。高清立体视听效果，紧张刺激的动感爆发，让您仿佛身临其境，走进故事魔幻时空，体验视觉、听觉、触觉与心理的多维快感与震憾！</p>
+                    </li>
+                    <li >
+                        <h2>雷神之锤</h2>
+                        <p>雷神之锤造型美观，结构科学，气势磅礴。游客乘坐在高速旋转的摆锤上来回摆荡，连带锤体旋转360°。大摆锤的威力无穷让您在高空体验旋转、滑行、失重的三重刺激，感受真正的惊心动魄！</p>
+                    </li>
+                    <li >
+                        <h2>凌霄飞舞</h2>
+                        <p>新世纪发明的驱动机械手臂开始高速摆动，伴随着360°旋转，带来高空与速度的双重体验，而勇敢的舞者却在高空之上迎风起舞，尽情地摇摆。</p>
+                    </li>
+                    <li >
+                        <h2>滑板冲浪</h2>
+                        <p>想体验一下在大海上只身乘风破浪的感觉吗？想秀一秀您的水中前滚翻冲浪绝技吗？挑战您勇气与智慧的时候到了，闯过一轮又一轮的激情碰撞，克服水域种种困难的纵情咆哮，才能成为欢乐津城里一名优秀的冲浪者！</p>
+                    </li>
+                    <li >
+                        <h2>维京船</h2>
+                        <p>尖叫声、欢呼声，这就是维京船，波涛汹涌的巨浪带来高速升降的真实失重体验，当一端达到高峰，没有矜持、没有顾虑，高声尖叫。北欧海盗的战船正要扬帆远航，挑战自我的航程即将开始，你准备好了吗？</p>
+                    </li>
+                    <li >
+                        <h2>翻江倒海</h2>
+                        <p>瞬间提升、跌落、停止，加上360°的疯狂翻滚，上下颠倒间的绝顶刺激和急速心跳，让你真正体会天旋地转的眩晕快感。你，敢不敢来挑战！</p>
+                    </li>
+                    <li >
+                        <h2>大风车</h2>
+                        <p>坐上维京海港独有的大风车，听风声在耳边呼啸，让你体验离心力给你带来的刺激、惊险，仿佛你即将要被甩出地球。</p>
+                    </li>
+                    <div id="top" class="top top2"></div>
+                 </ul>
+            </div>
+        </div>
+     	<div class="rich_media_tool" style="padding:10px 0 30px 0;">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+     </section>
+      <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+     <!--//版权信息-->
+	<!--#include file="/tianjin/Include/foot.htm"-->
+    <!--End版权信息--> 
+</body>
+</html>
+<script src="../Js/iScroll.js" type="text/javascript" ></script>
+<script src="../Js/scrollBox.js" type="text/javascript"></script>
+<script src="../Js/focusPic.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){		
+        $("#top").click(function(){
+            var obottom=parseInt($("#scrollCon").css("bottom"));
+            if(obottom==-64){
+                $("#scrollCon").animate({bottom:0},700);
+                $("#top").addClass("top2");
+                }else{
+                    $("#scrollCon").animate({bottom:-64},700);
+                    $("#top").removeClass("top2");
+                    }
+            
+            })
+        })
+</script>

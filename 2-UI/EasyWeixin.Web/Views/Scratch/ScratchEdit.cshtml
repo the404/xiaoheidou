@@ -1,0 +1,190 @@
+﻿@{
+    ViewBag.Title = "ScratchEdit";
+    Layout = "~/Views/Shared/_ScratchLayout.cshtml";
+}
+@model EasyWeixin.Web.Models.ScratchViewModel
+<script type="text/javascript" src="~/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+    //
+    //自定义编辑器
+    //设置图片可以上传
+    KindEditor.ready(function (K) {
+        var editor1 = K.create('#Content', {
+            cssPath: '../plugins/code/prettify.css',
+            uploadJson: '/ResponseImageText/upload_json',
+            fileManagerJson: '/ResponseImageText/file_manager_json',
+            allowFileManager: true,
+            allowImageUpload: true,
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist', '|', 'emoticons', 'image', 'link'],
+            afterCreate: function () {
+                var self = this;
+                K.ctrl(document, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+                K.ctrl(self.edit.doc, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+            }
+        });
+        prettyPrint();
+    });
+    //
+    //自定义编辑器
+    //设置图片可以上传
+    KindEditor.ready(function (K) {
+        var editor1 = K.create('#ScratchDesc', {
+            cssPath: '../plugins/code/prettify.css',
+            uploadJson: '/ResponseImageText/upload_json',
+            fileManagerJson: '/ResponseImageText/file_manager_json',
+            allowFileManager: true,
+            allowImageUpload: true,
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist'],
+            afterCreate: function () {
+                var self = this;
+                K.ctrl(document, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+                K.ctrl(self.edit.doc, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+            }
+        });
+        prettyPrint();
+    });
+</script>
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">刮刮乐</h3>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="/Scratch/ScratchIndex">刮刮乐</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">活动创建</li>
+                </ul>
+            </div>
+        </div>
+        @{
+            using (Html.BeginForm("ScratchEdit", "Scratch"))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                @Html.HiddenFor(model => model.ID)
+                @Html.HiddenFor(model => model.ScratchID)
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="content-widgets gray">
+                            <div class="widget-head bondi-blue">
+                                <h3>活动创建</h3>
+                            </div>
+                            <div class="widget-container">
+                                <div class="form-container grid-form form-background">
+                                    <!-- our error container -->
+                                    <div class="control-group">
+                                        <label class="control-label">活动标题</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(model => model.ScratchTitle, new {@placeholder = "输入权限名称", @class = "span7"}) @Html.ValidationMessageFor(model => model.ScratchTitle, "", new {@style = "color:red"})
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">活动开始时间</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(model => model.StartDate, new {@Value = Model.StartDate.ToString("yyyy年M月d日 H时m分s秒"), @placeholder = "输入开始时间", @class = "span7", @onClick = "WdatePicker({dateFmt:'yyyy年M月d日 H时m分s秒'})"})
+                                            @Html.ValidationMessageFor(model => model.StartDate, "", new {@style = "color:red"})
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">活动结束时间</label>
+                                        <div class="controls">
+
+                                            @Html.TextBoxFor(model => model.EndDate, new {@Value = Model.EndDate.ToString("yyyy年M月d日 H时m分s秒"), @placeholder = "输入结束时间", @class = "span7", @onClick = "WdatePicker({dateFmt:'yyyy年M月d日 H时m分s秒'})"})
+                                            @Html.ValidationMessageFor(model => model.EndDate, "", new {@style = "color:red"})
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">概率容量设置(请确保该数字大于等于所有奖项的中奖名额之和)</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(model => model.ScratchScale, new {@placeholder = "概率容量设置", @class = "span7"}) @Html.ValidationMessageFor(model => model.ScratchScale, "", new {@style = "color:red"})
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">每天玩的次数</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(model => model.EveryDayTimes, new {@placeholder = "每天玩的次数", @class = "span7"}) @Html.ValidationMessageFor(model => model.EveryDayTimes, "", new {@style = "color:red"})
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">活动说明</label>
+                                        <div class="controls">
+                                            @Html.TextAreaFor(model => model.ScratchDesc, new {@style = "width: 700px; height: 200px;", @id = "ScratchDesc",})@Html.ValidationMessageFor(model => model.ScratchDesc, "", new {@style = "color:red"})
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label">创建图文内容</label>
+                                        <div class="controls">
+                                            @Html.TextAreaFor(model => model.ResponseImageTextViewModel.Content, new {@style = "width: 700px; height: 200px;", @id = "Content",}) @Html.ValidationMessageFor(model => model.ResponseImageTextViewModel.Content, "", new {@style = "color:red"})
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">活动页图标</label>
+                                        <button type="button" class="UpLoadImage" style="bottom: 0">上传图片</button>
+                                        <div class="controls">
+                                            @{ var PicUrl = Model.PicUrl == "" ? "http://www.placehold.it/360x200/EFEFEF/AAAAAA" : Model.PicUrl;}
+                                            <img class="Pic" src="@PicUrl" width="360px" height="200px" />
+                                            @Html.HiddenFor(model => model.PicUrl, new {@placeholder = "输入图文链接，建议为360*200", @class = "span7"})
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-extend">提交</button>
+                                        @Html.ActionLink("返回列表", "ScratchIndex", new {}, new {@class = "btn btn-extend"})
+                                    </div>
+                                    <div class="error-container">
+                                        <h4></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".UpLoadImage").click(function () {
+            var title = "上传图片";
+            var upLoadImageSrc = $("#PicUrl").val();
+            art.dialog.open('/UpLoadImage/Index?UpLoadImageSrc=' + upLoadImageSrc, {
+                title: title,
+                width: '633px',
+                height: '407px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var input = d.document.getElementById('UpLoadImageSrc');
+                    $("#PicUrl").val(input.src);
+                    $(".Pic").attr("src", input.src);
+                },
+                cancel: true
+            });
+        });
+    });
+</script>

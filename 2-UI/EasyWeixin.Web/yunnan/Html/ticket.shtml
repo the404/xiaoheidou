@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="华侨城,云南华侨城,云南华侨城微信,华侨城微信,云南华侨城官方微信,云南华侨城微信公众平台,云南度假旅游景区,温泉水公园,云南铁路主题旅游,艺术文化乐园,生态花谷旅游,湿地自然景观,度假高端首选,生态旅游小镇,休闲度假胜地,主题公园,运动休闲度假,温泉泡浴,水上乐园,异国文化旅游,互动力,ipow;" />
+<meta name="description" content='云南华侨城一个融旅游、观光、娱乐、度假为一体的高标准的国际化旅游度假胜地。云南旅游的高端首选，引领昆明乃至云南旅游产业从观光旅游型向休闲度假型转变。一个国际化的休闲度假胜地，包括滇越铁路主题旅游、生态旅游小镇、体育公园、国际会议中心、顶级温泉SPA、温泉水公园、生态湿地及森林休闲公园等旅游项目；同时涵盖康体运动休闲区、滨水休闲度假区、山谷生态旅游区、主题文化与艺术旅游区四大分区；' />
+<title>价格查询|云南华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+    <h3 class="ticketTitle"><span></span>温泉水公园</h3>
+    <ul class="ticketBox">
+        <li>全票（1.5米以上儿童及成人）</li>
+        <li>
+        	<p class="borderR">星期一 至 星期五</p>
+            <p>周末及节假日</p>
+        </li>
+        <li>
+        	<p class="borderR">170元/人</p>
+            <p>200元/人</p>
+        </li>
+    </ul>
+    <!--<ul class="ticketBox">
+        <li>半价（1.2米—1.5米儿童半价）</li>
+        <li>
+        	<p class="borderR">星期一 至 星期五</p>
+            <p>周末及节假日</p>
+       </li>
+       <li>
+        	<p class="borderR">85</p>
+            <p>100</p>
+       </li>
+    </ul>
+    <ul class="ticketBox">
+        <li>免费（1.2米以下儿童免门票）</li>
+        <li>
+        	<p class="borderR">星期一 至 星期五</p>
+            <p>周末及节假日</p>
+        </li>
+        <li>
+        	<p class="borderR">0</p>
+            <p>0</p>
+        </li>
+    </ul>-->
+    <div class="beizhu">
+    <p>备注：</p>
+    <p>1、免票：1.2米以下儿童</p>
+    <p>2、半价票：1.2-1.5米儿童</p>
+    </div>
+    <div class="rich_media_tool">
+        <div class="meta_primary">阅读 <span id="rp">0</span></div>
+        <a class="meta_primary meta_praise" href="javascript:;" id="like">
+            <i class="icon_praise_gray"></i>
+            <span class="praise_num">0</span>
+        </a>
+    </div>
+</section>
+<!--//设备横屏提醒-->
+<section id="transverse"></section>
+<!--End设备横置提醒//-->
+<!--//版权信息-->
+<!--#include file="/yunnan/Include/foot.htm"-->
+
+<!--End版权信息-->
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,武汉欢乐谷,武汉欢乐谷微信,武汉欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='武汉欢乐谷是华侨城集团新一代大型主题乐园，武汉欢乐谷占地约35万平方米，预计2012年5月开园迎宾，其由梦想大道、卡通工厂、欢乐时光、极速世界、渔光岛、羽落天堂、飓风湾、欢乐江城等八大主题区域组成，全新设置了 100多项娱乐体验项目，包括30多项游乐体验设备、40多处生态人文景观、10多台文化演艺精品和20多项主题娱乐游戏，精彩诠释多元欢乐。木翼双龙—亚洲首座双龙木质过山车。极速飞车—全球最高最快弹射过山车武汉欢乐谷。摩天塔—120米全球最高观光塔。蒙地卡罗赛道—中国弯道最多的巷道式矿山车。,ipow,互动力' />
+<title>飓风湾|武汉欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"  ></script>
+<script src="../Js/ccjspack.js" type="text/javascript"  ></script>
+</head>
+
+<body>
+<!--//页面头部-->
+	<!--#include file="/wuhan/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="scrollWrap">
+    		<div id="content01">
+                <ul id="scrollPic">
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/jfw01.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/jfw02.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/jfw03.jpg" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/jfw04.jpg" />
+                    </a>
+                </ul>
+                <ul id="scrollCon">
+                    <div id="scrollIcon">
+                    </div>
+                    <li style="display:block;" >
+                        <h2>激流勇进</h2>
+                        <p>怀揣梦想,水手们将开始最惊险的海上之旅！船只一会儿被巨浪卷起,一会儿又坠入深不见底的深渊,只有经过激流勇进的考验,才是一名真正的水手！</p>
+                    </li>
+                    <li >
+                        <h2>完美风暴</h2>
+                        <p>随着风暴掀起一波又一波巨浪回转颠簸,海洋之心的秘密已不再遥远。在漩涡中和翻转中挑战自我,你就已经通过了大自然的考验！</p>
+                    </li>
+                    <li >
+                        <h2>4D影院</h2>
+                        <p>Jellystone公园正在开办他们的百年纪念派对,许多家庭都来到这里享受难得的时光,不过,他们不知道的是,这里还是棕熊瑜伽和Boo Boo的家,瑜伽喜欢搞怪、出风头,坚信自己比一般的熊都要聪明,Boo Boo则是他忠实的搭档和伙伴。他们最大的乐趣就是想出各种办法从游客的午餐篮中偷取食物,比如趁人不备时,用滑索或者在游客餐桌上动脑,又或是从空中跳伞突降……。让我们一起身临其境去感受快乐的冒险之旅吧！</p>
+                    </li>
+                    <li >
+                        <h2>异灵归来</h2>
+                        <p>飓风湾码头被灵异控制的一群疯狂海盗占领，他们残忍无比，把抓来的人质进行残酷惩罚，并让他们交出赎身的财宝与金钱，勇敢的斗士们混到人质当中，勇闯海盗巢穴，混入宝藏船，展开了一场惊心动魄，腥风血雨的惊险旅程……</p>
+                    </li>
+                    <div id="top" class="top top2"></div>
+                </ul>
+        	</div>
+        </div>
+        <div class="rich_media_tool" style="padding:10px 0 30px 0;">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+     </section>
+     <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+     <!--//版权信息-->
+	<!--#include file="/wuhan/Include/foot.htm"-->
+    <!--End版权信息--> 
+</body>
+</html>
+<script src="../Js/iScroll.js" type="text/javascript" ></script>
+<script src="../Js/scrollBox.js" type="text/javascript"></script>
+<script src="../Js/focusPic.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){		
+        $("#top").click(function(){
+            var obottom=parseInt($("#scrollCon").css("bottom"));
+            if(obottom==-64){
+                $("#scrollCon").animate({bottom:0},700);
+                $("#top").addClass("top2");
+                }else{
+                    $("#scrollCon").animate({bottom:-64},700);
+                    $("#top").removeClass("top2");
+                    }
+            
+            })
+        })
+</script>

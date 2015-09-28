@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷微信,上海欢乐谷周边住宿,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>周边住宿|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="content02">
+        	<div class="navBox02">
+                <div class="quickNav02">
+                    <a href="/shanghai/Html/stay1.shtml" >五星级</a>
+                    <a href="/shanghai/Html/stay2.shtml" >四星级</a>
+                    <a href="/shanghai/Html/stay3.shtml" >三星级</a>
+                    <a class="active" href="/shanghai/Html/stay4.shtml" >经济型</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+           <!-- <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star1_01.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>星程美司豪酒店</h3>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dhIcon"></span>021-67815818，<br />13818569030</p>
+                </div>
+                <div class="clear"></div>
+            </div>-->
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star1_02.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>汉庭快捷上海松江店</h3>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>松江区荣乐东路1599号</p>
+                    <p><span class="dhIcon"></span>021-61278658</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--<div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star1_03.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>如家快捷酒店松江工业区店</h3>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海松江区松卫北路679号</p>
+                    <p><span class="dhIcon"></span>021-57742626</p>
+                </div>
+                <div class="clear"></div>
+            </div>-->
+            <p class="hint">没有更多了</p>
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span>9999</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">999</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>
+<script type="text/javascript">
+//底部点赞
+var oLike=document.getElementById("like");
+var oLikeIcon=oLike.getElementsByTagName("i")[0];
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_grey";
+	}
+</script>

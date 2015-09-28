@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷微信,上海欢乐谷价格查询,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>价格查询|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <section id="wrap">
+    	<div id="content02">
+        	<div class="navBox">
+                <div class="quickNav">
+                    <a href="/shanghai/Html/ticket.shtml" >门票价格</a>
+                    <a class="active" href="/shanghai/Html/card.shtml" >年卡价格</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card01.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>欢乐谷年卡/兑换卡</h2>
+                        <p class="cardP1">￥<strong>468</strong>/张</p>
+                        <!--<p class="cardP2" style="color:#F00F00;">(特惠价<span>365</span>元)</p>-->
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于成人及身高1.5米以上（不含1.5米）儿童；65周岁（不含65周岁）以下长者，未满18周岁者需监护人签订承诺书。</p>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card02.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>水陆两园畅游年卡</h2>
+                        <p class="cardP1">￥<strong>798</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于成人及身高1.5米以上（不含1.5米）儿童；65周岁（不含65周岁）以下长者，未满18周岁者需监护人签订承诺书。</p>
+                </div>
+            </div>
+            <!--<div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card03.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>年卡续卡</h2>
+                        <p class="cardP1">￥<strong>298</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于上海欢乐谷过期年卡用户续办；</p>
+                </div>
+            </div>-->
+            <!--<div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card01.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>园内办理单人行年卡</h2>
+                        <p class="cardP1">￥<strong>268</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于身高1.5米以上（不含1.5米）的游客持欢乐谷当日日场全价门票在园内办理年卡。</p>
+                </div>
+            </div>
+            <div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card02.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>园内办理水陆两园年卡</h2>
+                        <p class="cardP1">￥<strong>598</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>适用于身高1.5米以上（不含1.5米）的游客持欢乐谷当日日场全价门票在园内办理水陆两园卡。</p>
+                </div>
+            </div>-->
+            <!--<div class="cardBox">
+            	<div class="cardTop">
+                	<img src="../Images/card03.jpg" alt="">
+                    <div class="cardType">
+                    	<h2>年卡补办卡</h2>
+                        <p class="cardP1">￥<strong>20</strong>/张</p>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                	<p>年卡丢失后补办。</p>
+                </div>
+            </div>-->
+            <div class="tipBox">
+                <div class="spiritBtn">
+                	<h4>小贴士<span> / TIPS</span></h4>
+                </div>
+                <div class="text">
+                    <ul>
+                        <li><p>退票须知：年卡及门票退票拨打4000691111客服热线电话办理退票手续。</p></li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div class="hotline">
+            	<div class="phone">游客咨询电话：021-33552222<span></span></div>
+            </div>-->
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>
+<script type="text/javascript">
+//底部点赞
+var oLike=document.getElementById("like");
+var oLikeIcon=oLike.getElementsByTagName("i")[0];
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_grey";
+	}
+</script>

@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "EditPermission";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model EasyWeixin.Model.Role
+<h2>配置权限</h2>
+  <div class="center_content">
+        <fieldset>
+            <legend>Role</legend>
+
+            @Html.HiddenFor(model => model.ID, new { @id="hfRoleId" })
+
+            <div class="editor-label">
+               @Html.LabelFor(model => model.RoleName)
+            </div>
+            <div class="editor-field">
+               @Html.TextBoxFor(model => model.RoleName, new { @readonly = "true"})
+            </div>
+
+            <div class="editor-label" style="width: 100%">
+                选择权限<div id="updateMessage" class="float_right" ></div>
+            </div>
+            <div class="clear_both"></div>
+            <div class="editor-field" id="permissionCheck">
+                @Html.DropDownList("permissions", ViewData["PermissionSelectList"] as List<SelectListItem>)
+            </div>
+
+            <p>
+                @Html.ActionLink("返回列表", "Index", new { })
+            </p>
+        </fieldset>
+    </div>

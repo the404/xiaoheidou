@@ -1,0 +1,59 @@
+﻿@Model EasyWeixin.Web.Areas.Activity.Models.MobileErrorResult
+<label>@Model.ErrorResult</label>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="author" content="chenyi">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>手机中的页面</title>
+    <link href="layout.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="lottery">
+        <div class="top-wrap">
+            <div class="tit-icon"></div>
+            <div class="money-icon"></div>
+            <div class="rocket-icon"></div>
+        </div>
+        <div class="lottery-tab">
+            <table border="0" cellpadding="0" cellspacing="2">
+                <tr>
+                    <td class="red tab-0 focus" style="width:25%;">100<br />积分</td>
+                    <td class="pink tab-1" style="width:25%;">一等奖</td>
+                    <td class="green tab-2" style="width:25%;">三等奖</td>
+                    <td class="pink tab-3" style="width:25%;">50<br />积分</td>
+                </tr>
+                <tr>
+                    <td class="pink tab-11" style="border-bottom:0;">50<br />积分</td>
+                    <td colspan="2" rowspan="2" style="background:#fbb647;">
+                        <img src="" alt="" id="scanImg" width="120px" height="120px">
+                    </td>
+                    <td class="green tab-4" style="border-bottom:0;">100<br />积分</td>
+                </tr>
+                <tr>
+                    <td class="red tab-10" style="border-bottom:0;">二等奖</td>
+                    <td class="pink tab-5" style="border-bottom:0;">二等奖</td>
+                </tr>
+                <tr>
+                    <td class="green tab-9">三等奖</td>
+                    <td class="red tab-8">50<br />积分</td>
+                    <td class="pink tab-7">三等奖</td>
+                    <td class="red tab-6">150<br />积分</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="award-wrap">
+        <div class="award-info">
+            恭喜中奖了！！
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+<script type="text/javascript" src="mobile.js"></script>

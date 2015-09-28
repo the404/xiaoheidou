@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="2d2f516b-cbde-47a0-b42a-d223fb41f38b" name="EasyWeixin" linkedPackageId="28880d00-9595-4664-86d5-b3a17d822de8" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="a872f1ef-7264-431f-8787-2aac77973256" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d73ea87d-9577-482e-a57c-71fd97b87180" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="e42dc210-7519-4de6-940d-b095ee13c813">
+          <propertyInstance Id="5cb1822d-71a3-4fef-ab69-2413cecdb048" name="BaseName">
+            <elementDefinition Id="d997f61b-a513-4a6e-af87-74417348bfed" />
+          </propertyInstance>
+          <elementDefinition Id="a27c267b-7ea0-4064-bd25-8c5cc5b99c9e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="318b40f1-6a80-488e-b255-e952e5512129">
+          <propertyInstance Id="b4975e74-5d26-4bb8-b15f-139b63f57654" name="ClrAttributes">
+            <elementDefinition Id="66639a4a-0a02-40ca-b92b-14e5c95eac38" />
+          </propertyInstance>
+          <elementDefinition Id="31bdda9f-d30b-4b5c-b821-3647b6b16892" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="61275ebf-24a5-45d9-be62-a7eba194e883">
+          <propertyInstance Id="4b6e5004-68b3-4c24-bbc8-d438686bb9f8" name="Usings">
+            <elementDefinition Id="95122077-33d6-43a1-985b-2d75e4355567" />
+          </propertyInstance>
+          <elementDefinition Id="08697e3f-126a-46b8-a7c7-16989610beff" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="00bbec2d-99a4-4012-8f6f-1573da6aa8cb" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="ed8f8f2f-e0ad-413c-8e45-77afbd161149" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b1b03d18-95ff-4251-81e0-66c31ce596b1">
+          <propertyInstance Id="e23bbc25-a094-4621-9a52-986cd5911e7a" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="0ff62aaf-12ab-4257-aaac-19eccad69599" />
+          </propertyInstance>
+          <elementDefinition Id="f5c7bd54-249d-43db-aa2f-c77ae1385bc2" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="bcc47623-443e-4eb4-8fc5-a7c6cb66950f">
+          <propertyInstance Id="42ee9399-186c-426e-bc22-d751269091db" name="TemplateFilePath" value="ClassTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="fc270aa7-1bff-4ebc-8868-6ca1bebde196" />
+          </propertyInstance>
+          <elementDefinition Id="3ca64a3e-c216-4daf-b153-dabfbad94cc7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9f40c32d-f870-44b3-971d-737c5ed9b3f8">
+          <propertyInstance Id="9d3582f6-5a19-459c-9541-44bc49d83228" name="ProjectPath" value="ClassTemplate=..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj|EnumTemplate=..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj|InterfaceTemplate=..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj|StructTemplate=..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj">
+            <elementDefinition Id="37591391-4140-4ba7-af9e-355a46f4d229" />
+          </propertyInstance>
+          <elementDefinition Id="86ce9960-a93b-49d4-a6f1-263f2a6afbf1" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="dfd4d02e-793a-4fcf-9ea3-2bd093b713d8">
+          <propertyInstance Id="c8eb10fd-6e7e-4fdb-ae3d-c1fe00258ed3" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="f077371c-10a3-4b46-bcbf-6c0dd2491876" />
+          </propertyInstance>
+          <elementDefinition Id="daf45b5e-43ff-4d41-b8b8-bd733725fe94" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="7eebce2e-c7e8-4ed6-be64-14c78592ae8b">
+          <propertyInstance Id="0a09d145-42d3-4325-a755-017246c50a69" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="d283bc8a-30af-4f4a-915c-5f8d01a3691c" />
+          </propertyInstance>
+          <elementDefinition Id="645c2042-3b9e-452e-9e99-ccc009e4da95" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="121e3d00-e126-4eec-adb3-d88f186ec077">
+          <propertyInstance Id="fe9b2e43-52dd-4e58-9912-90318e5e53dc" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="5069e78e-dcd4-41e1-bc87-0c548d37e950" />
+          </propertyInstance>
+          <elementDefinition Id="0798b37f-9717-46ff-862c-b593d6bfe360" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="7d48dc17-ec19-42d0-b597-bbe6d4961ffa">
+          <propertyInstance Id="b2e0ee97-9aa8-4658-9983-b0b32900b40d" name="Parameters">
+            <elementDefinition Id="b4940a4d-85e0-482c-9139-7e257d896f3d" />
+          </propertyInstance>
+          <elementDefinition Id="6c55a862-942b-4d12-ae7c-66c6358df64b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="c3198ba0-2a27-4120-9939-414abbf92f5c" name="微信用户" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1b37d904-1f07-4047-9aaa-cb8dd301a93a" />
+        <targetEnds>
+          <association Id="5e866833-1f53-44c1-b957-4bfcbef27992" isDerived="false" sourceEndRoleName="微信用户" targetEndRoleName="发送消息" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8da4fd9b-dcee-4bd3-aa45-75c67f871bf0" LastKnownName="发送消息" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5deb6c9d-5e00-47e6-9c1e-2ef10398b4da" name="微信用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="05ac9588-f73e-4597-81b5-fcf83d719a65" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="27168e54-d05d-4510-86e4-6189b60c8d60" name="发送消息" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4b6b19e3-2067-4b76-8f0d-b0d09af78562" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5cca677e-f946-4472-9359-17236220f6d2" />
+          </association>
+          <association Id="26f4c807-b9a8-4939-97d2-7f8d35645191" isDerived="false" sourceEndRoleName="微信用户" targetEndRoleName="自定义菜单" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="640dfe82-122b-423c-b9cb-5442e4bc449d" LastKnownName="自定义菜单" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b9c0b5d2-b0dc-4424-9bf5-44d3c5d5d4d1" name="微信用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b54ecf42-fb39-4cef-b1d6-3fe6ecd04566" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="83a0aaa3-ee22-46f0-a2f0-0979d31e3361" name="自定义菜单" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="149e562e-ae85-42ea-9cf6-f2ad0c52b876" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="59d5cf82-4722-4200-885d-1e70f39a667a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="87fa1983-55b1-4f6a-a4ac-1b70883d8357" name="景区管理员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d3fd42c4-1d26-4868-8b98-a5aea6cd7568" />
+        <targetEnds>
+          <association Id="805a5527-0341-4050-ab53-a6835d0c03af" isDerived="false" sourceEndRoleName="景区管理员" targetEndRoleName="微信公众账户营销系统" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b3fd2313-afd3-4a2b-9d8f-e6cb847ff39d" name="景区管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bc1935ed-d9fe-4dbc-b79e-d26f4ff4c0e0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6c444261-1be1-4c59-827c-dc8f1e2f19f2" name="微信公众账户营销系统" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8d2efc16-61f4-49cf-9a99-a9695eb04a29" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8f46d340-acdf-424e-88d2-6f95faa6ab29" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="606916e2-de3a-4217-8469-d6606c626073" name="互动力管理员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d2a18b36-f6df-44fe-9304-9c9beac1b119" />
+        <targetEnds>
+          <association Id="0bb4e824-9a4a-468f-b082-f6d6be430f64" isDerived="false" sourceEndRoleName="互动力管理员" targetEndRoleName="微信公众账户营销系统" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b29ca4e9-e3a3-4698-afdb-8d4127be866d" name="互动力管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0039fb95-1651-4e98-b5f9-097db95e8b1c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="681a2943-51f0-4188-a440-f98d4d1d170b" name="微信公众账户营销系统" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cedb5d20-d9b6-4f49-9bb2-9dda3b4b45c6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1cdcd600-93eb-404d-b70a-a989a98d8b33" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="7a89df66-93f1-461d-8392-25d8a3dbf543" name="微信APP" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="82a00047-40fc-41c2-95c1-82a925a8b410" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="8da4fd9b-dcee-4bd3-aa45-75c67f871bf0" name="发送消息" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="91d9424e-e773-476e-96c9-16cc84e705be" />
+        <targetEnds>
+          <association Id="a9a70abd-7834-41b1-9dc1-5f80fb04ad92" isDerived="false" sourceEndRoleName="发送消息" targetEndRoleName="微信API" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="fdc20f7b-033d-48d3-8ee5-637152d9008f" LastKnownName="微信API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="15e3c06a-275e-4064-880c-9092b2e3c913" name="发送消息" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="30e335b5-a348-4799-bef0-0ab769cc5f16" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c9ea974-8472-4679-9072-1bb2b894a41b" name="微信API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="86b1f65f-b656-4288-b79b-6c44b984fb3f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0f50d47e-1e88-489f-a3bb-2d7377483a10" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="7a89df66-93f1-461d-8392-25d8a3dbf543" LastKnownName="微信APP" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="640dfe82-122b-423c-b9cb-5442e4bc449d" name="自定义菜单" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="965c8ecc-b5bd-402d-b4db-5da0ae92dd15" />
+        <targetEnds>
+          <association Id="a0d965b1-8266-4b64-8d78-cb8f18c0d383" isDerived="false" sourceEndRoleName="自定义菜单" targetEndRoleName="微信API" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="fdc20f7b-033d-48d3-8ee5-637152d9008f" LastKnownName="微信API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e193e0ad-e3b5-4e09-a219-982ea15252c2" name="自定义菜单" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c047dc52-62f3-4943-8d2b-315b1a343f7d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="95a30306-c86e-46f4-971c-9be697ccddcf" name="微信API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="27bef133-5bc2-4a7e-bd8b-2e13eb3577bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="82fcc786-e16a-45f7-83a8-508a36154c43" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="7a89df66-93f1-461d-8392-25d8a3dbf543" LastKnownName="微信APP" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" name="微信公众账户营销系统" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="82c341ae-e1ea-4818-904c-49e9d9bc6511" />
+        <targetEnds>
+          <association Id="950361f9-2bc1-4863-9061-895c9f1783c9" isDerived="false" sourceEndRoleName="微信公众账户营销系统" targetEndRoleName="微信API" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="fdc20f7b-033d-48d3-8ee5-637152d9008f" LastKnownName="微信API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb36e670-b026-4c49-9ccc-2daeb343aed2" name="微信公众账户营销系统" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f41e348-1ce7-4703-bb2b-1b5186a75d60" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b040579b-e434-42c5-9507-654a1a8ea6d6" name="微信API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4e0635fc-869b-487b-beb9-6dc887693afd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6b097480-7d23-478c-be56-65c9073ebfbd" />
+          </association>
+        </targetEnds>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="ce64240d-ac99-4cbd-9886-7def69636f12" name="微信接口" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d4376a6c-c1a2-4cb2-83bd-336ef257f1ae" />
+        <targetEnds>
+          <association Id="be845eb3-4a6e-46b4-988d-7078e2821261" isDerived="false" sourceEndRoleName="微信接口" targetEndRoleName="微信API" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="fdc20f7b-033d-48d3-8ee5-637152d9008f" LastKnownName="微信API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed40af82-1c5d-44de-8046-4a6432e4bbae" name="微信接口" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8e12011d-5dfe-49b2-8f20-585808939798" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="02506c09-8f5f-41c8-88a1-155ee268f151" name="微信API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="715b266a-a74b-4808-9a5e-0a720430a362" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="03f325c8-ceca-4e77-af60-cc2085393431" />
+          </association>
+          <association Id="c9c74362-569f-4f76-90ec-131d4ae794b1" isDerived="false" sourceEndRoleName="微信接口" targetEndRoleName="微信公众账户营销系统" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ee71bbae-263c-435c-9686-1bad4ce48cf4" name="微信接口" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="988227cc-12c3-4f23-a29c-70683cb4e898" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="55dd32a2-0885-47d7-b182-116cd13111f3" name="微信公众账户营销系统" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="16944c68-9216-42b4-be71-5e5e655e6d0b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e08ae17e-0689-4be5-bb3d-2e6c4f9a6107" />
+          </association>
+        </targetEnds>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="9c641116-233a-410c-9987-0e6a27518a37" name="统一接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="444c583c-4831-4965-a065-7d2891ad9bca" />
+        <subjects>
+          <subsystemMoniker Id="ce64240d-ac99-4cbd-9886-7def69636f12" LastKnownName="微信接口" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d7fe6bcd-0456-4a08-abb6-e9f4f970578b" name="消息推送" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b6073ec-87db-40b9-ab8e-c7d7ae2ca5cb" />
+        <subjects>
+          <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="84944b7d-ba04-4cdd-8574-1bb7132b8f9d" name="统计报表" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="163a6393-b968-4b4a-9c67-51819d1027fd" />
+        <subjects>
+          <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="51a6ac6b-07b5-4609-a087-628011fb71f1" name="关键字自动回复" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="134ab057-b185-47b4-b3fc-4e51e993be10" />
+        <subjects>
+          <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="4b7706e2-8764-4ae9-8aa3-ffad20846336" name="微信会员管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b2afc75-2582-4d9e-bc76-c1fb1d378069" />
+        <subjects>
+          <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="6cbdad72-d2fa-4243-8513-35d7b28251af" name="自定义菜单" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="02a1a08f-660c-4c8c-ab6f-657bb0383e0e" />
+        <subjects>
+          <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="7dc58912-54c0-409f-8666-5e5f217768fc" name="菜单权限设置" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ec8bcc59-4888-4a99-996b-a526b91270d9" />
+        <subjects>
+          <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="fdc20f7b-033d-48d3-8ee5-637152d9008f" name="微信API" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="05858a07-dcb2-4923-901f-1ea3b8846a45" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="6bae8fc3-e14a-47d1-bc93-c3cc7a542718" name="接收API" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5d794df4-b092-4a3e-b2fd-7a0cab313348" />
+        <subjects>
+          <subsystemMoniker Id="fdc20f7b-033d-48d3-8ee5-637152d9008f" LastKnownName="微信API" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="7dd56546-6e9b-47dd-a6db-54d857ea7d21" name="发送API" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dbc544d7-5511-4dd7-9c77-6cc1a33fce30" />
+        <subjects>
+          <subsystemMoniker Id="fdc20f7b-033d-48d3-8ee5-637152d9008f" LastKnownName="微信API" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1e4e7588-319e-4043-a05c-f2d809ce5c5e" name="账户管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="69d2d5b1-49a4-4261-986e-55aa1f046026" />
+        <subjects>
+          <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="10ed6937-6395-4474-9214-9edc71153934" name="功能扩展设置" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26fe2d09-dae6-4d7d-ba17-43fcb8c00ad7" />
+        <subjects>
+          <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2e73cd98-d52f-464a-bf76-95d981851c22" name="活动管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c001f146-0aed-419c-bf48-8fd57f16aa93" />
+        <suppliersInternal>
+          <dependency Id="7beb3fc6-4e84-434f-97ae-91d3eb62efa0">
+            <useCaseMoniker Id="10ed6937-6395-4474-9214-9edc71153934" LastKnownName="功能扩展设置" />
+            <elementDefinition Id="6e6420d4-a93b-4776-84ff-980152cd5298" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="92492ec9-7bbc-4ed1-9f23-8392682fc0e8" LastKnownName="微信公众账户营销系统" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="28880d00-9595-4664-86d5-b3a17d822de8" name="EasyWeixin.Modeling">
+    <elementDefinition Id="af30782f-d420-479c-a8b8-17d8588f7f3d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e5d56fba-5e4a-4c92-9de5-b25412ff1ec2">
+        <profileInstance Id="dabbe56a-eb95-44f1-a297-2328553b3e44" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="6fe0f714-408b-44c4-b619-3703a8ad5abe">
+        <profileInstance Id="225c66c9-8560-4714-86f6-4ba34a2b97d4" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="52de56e2-5872-4eba-b233-bc0269c54334">
+        <profileInstance Id="7caae10c-cbd6-4490-bdbd-d7d43bf44f1b" name="CSharpProfile">
+          <elementDefinition Id="42f890ad-6624-4286-9c31-2042fb714601" />
+        </profileInstance>
+        <elementDefinition Id="8ddaf861-04fe-4cac-a367-971def755f3e" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="eaacd994-538c-40e0-9119-c360517f1387">
+        <profileInstance Id="80d69e5e-934d-4d5d-a6c7-82e80efc3d2f" name="TextTemplateBindings">
+          <elementDefinition Id="4e3e1728-7518-4363-883a-b2b148b01fd1" />
+        </profileInstance>
+        <elementDefinition Id="9cb3c090-375a-47d4-b2c1-495408566b95" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

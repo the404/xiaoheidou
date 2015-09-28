@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="东部华侨城,华侨城,华侨城微信,华侨城官方微信,华侨城微信公众平台,深圳,旅游,深圳旅游,深圳景区,深圳好玩的,深圳好吃的,互动力;" />
+<meta name="description" content="东部华侨城位于中国深圳大梅沙，占地近9平方公里，是由华侨城集团斥资35亿元精心打造的世界级度假旅游目的地，是由国家环境保护部和国家旅游局联合授予的首个“国家生态旅游示范区”。" />
+<title>游玩攻略|东部华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+	<div class="playNav">
+    	<a href="/dongbu/Html/eat.shtml">吃</a>
+        <a href="/dongbu/Html/walk.shtml" class="active">行</a>
+        <a href="/dongbu/Html/play.shtml">玩</a>
+        <a href="/dongbu/Html/live.shtml">住</a>
+    </div>
+    <div class="playBox">
+    	<h1 class="playTitle01">景区交通指南</h1>
+        <div class="play_con">
+        	<h2 class="walk_title01">大侠谷→茶溪谷</h2>
+            <p class="walk_p1">方式1（往返）：丛林缆车1号线/云海索道→丛林缆车2号线→乘坐森林小火车</p>
+            <p class="walk_p1">方式2（往返）：丛林缆车1号线/云海索道→联票接驳车（开通情况以当日公告为准）</p>
+            <p class="walk_p1">方式3（往返）：乘坐909公交车</p>
+            <p class="walk_p1">方式4：自驾车走景观大道→茶溪谷停车场</p>
+            <h2 class="walk_title01">大侠谷→大华兴寺</h2>
+            <p class="walk_p1">方式1（往返）：丛林缆车1号线/云海索道→丛林缆车2号线→步行到大华兴寺牌坊→乘坐电瓶车/步行到大华兴寺入口。</p>
+            <p class="walk_p1">方式2（往返）：乘坐909公交车到大华兴寺牌坊/登山道→乘坐电瓶车/步行到大华兴寺入口。</p>
+            <p class="walk_p1">方式3：自驾车走景观大道→大石头路口→大华兴寺登山道停车场。</p>
+            <h2 class="walk_title01">茶溪谷→大侠谷</h2>
+            <p class="walk_p1">方式1（单程）：茵特拉根火车站坐森林小火车→丛林缆车2号线→丛林缆车1号线/云海索道。</p>
+            <p class="walk_p1">方式2（单程）：联票接驳车（开通情况以当日公告为准）→丛林缆车1号线/云海索道。</p>
+            <p class="walk_p1">方式3（往返）：乘坐909公交车。</p>
+            <p class="walk_p1">方式4：自驾车走景观大道→茶溪谷停车场。</p>
+            <h2 class="walk_title01">茶溪谷→大华兴寺</h2>
+            <p class="walk_p1">方式1（单程）：茵特拉根火车站坐森林小火车→步行到大华兴寺牌坊→乘坐电瓶车/步行到大华兴寺入口</p>
+            <p class="walk_p1">方式2（往返）：乘坐909公交车到大华兴寺牌坊/登山道→乘坐电瓶车/步行到大华兴寺入口</p>
+            <p class="walk_p1">方式3：自驾车到大石头路口→大华兴寺登山道停车场</p>
+            <h2 class="walk_title01">909公交车</h2>
+            <p class="walk_p1">线路1（往返）：大侠谷909公交总站大华兴寺牌坊→登山道→大石头→茶溪谷入口→房车酒店（返程不经过）→黑森林酒店（茶溪谷909公交总站）→茵特拉根酒店。</p>
+            <p class="walk_p1">线路2（往返）：梅沙路口→天麓二区→天麓三区→大华兴寺牌坊→登山道→大石头→茶溪谷入口→黑森林酒店（茶溪谷909公交总站）。</p>
+            <h2 class="walk_title01">酒店穿梭巴士</h2>
+            <p class="walk_p1">线路1（环线-大侠谷区域）：瀑布酒店→咖酷旅馆→大侠谷停车场→大梅沙</p>
+            <p class="walk_p1">线路2（环线-茶溪谷区域）：茵特拉根酒店→黑森林酒店→房车酒店→火车营地</p>
+        </div>
+    </div>
+    <div class="playBox">
+    	<h1 class="playTitle01">东部交通指南</h1>
+        <div class="play_con">
+        	<h2 class="walk_title02">自驾/路线<br />【特别推荐】</h2>
+            <p class="walk_p1">假期出游车辆较多，从市区出发前往东部华侨城，无需进入有可能拥挤的深盐二通道绕行梅沙片区，直接导航至碧岭隧道东，经由碧岭-三洲田公路到达东部华侨城茶溪谷，再到大侠谷。</p>
+            <h2 class="walk_title02">碧三路 路线</h2>
+            <p class="walk_p1">南坪快速路→水官高速→横坪公路→过一个隧道红绿灯右转进入碧三路→东部华侨城茶溪谷→大侠谷</p>
+            <h2 class="walk_title02">其他自驾路线</h2>
+            <p class="walk_p2">① 罗沙公路→深盐二通道→盐排高速北山道出口→盐梅路→海关缉私中心处左转上盐三路→东部华侨城茶溪谷</p>
+            <p class="walk_p2">② 清平高速→水官高速→盐田路→盐梅路→海关缉私中心处左转上盐三路→东部华侨城茶溪谷</p>
+            <p class="walk_p2">③ 罗沙公路→深盐二通道→盐坝高速大梅沙出口→大侠谷</p>
+            <p class="walk_p2">④ 清平高速→水官高速→盐排高速→盐坝高速大梅沙出口→大侠谷</p>
+            <h2 class="walk_title03">公交/路线（市内）</h2>
+            <p class="walk_p1">1、乘坐以下公交车至东部华侨城站，步行200米即可到达东部华侨城旅游度假区入口。<br />
+                                宝安机场方向——可搭乘机场6路<br />
+                                罗湖火车站方向——可搭乘387路<br />
+                                蛇口码头方向——可搭乘J1路<br />
+                                南头检查站方向——可搭乘观光1路<br />
+                                梅林检查站方向——可搭乘M207路<br />
+                                下沙方向——可搭乘103路</p>
+            <p class="walk_p1">2、乘坐以下公交车至梅沙医院站，步行500米即可到达东部华侨城旅游度假区入口。<br />
+                                布吉三联方向——可搭乘308路<br />
+                                龙岗坑梓大窝总站方向——可搭乘380A路<br />
+                                龙岗上岭排村总站方向——可搭乘380B路<br />
+                                下沙方向——可搭乘103B路</p>
+            <h2 class="walk_title04">地铁/路线（市内）</h2>
+            <p class="walk_p1">1、搭乘地铁环中线至怡景站，转乘公交M207\103\机场6路到达东部华侨城站。</p>
+            <p class="walk_p1">2、搭乘地铁环中线或蛇口线至黄贝岭站，转乘公交387\观光1路到达东部华侨城站。</p>
+        </div>
+    </div>
+    <div class="rich_media_tool">
+        <div class="meta_primary">阅读 <span id="rp">0</span></div>
+        <a class="meta_primary meta_praise" href="javascript:;" id="like">
+            <i class="icon_praise_gray"></i>
+            <span class="praise_num">0</span>
+        </a>
+    </div>
+</section>
+
+<!--//设备横屏提醒-->
+<section id="transverse"></section>
+<!--End设备横置提醒//-->
+<!--//版权信息-->
+<!--#include file="/dongbu/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

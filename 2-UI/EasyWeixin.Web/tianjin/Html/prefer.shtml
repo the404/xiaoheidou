@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>优惠信息|天津欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">    
+        <div id="content">
+        	
+            <div class="preferBox">
+            	<a href="javascript:;">
+                    <div class="preferTop">
+                        <img src="../Images/prefer01.jpg" />
+                        <h2>2014国庆节年卡办理优惠</h2>
+                        <span></span>
+                    </div>
+                    <ul class="preferIntro">
+                        <li>现场办理单人行年卡享受438元（约八折）惠； 现场办理亲子卡享受499元（六八折）优惠...</li>
+                    </ul>
+                    <div class="line"></div>
+                    <div class="point"></div>
+                    <div class="pointL"></div>
+                    <div class="pointR"></div>
+                </a>
+            </div>
+            
+            <div class="preferBox">
+            	<a href="javascript:;">
+                    <div class="preferTop">
+                        <img src="../Images/prefer01.jpg" />
+                        <h2>2014国庆节年卡办理优惠</h2>
+                        <span></span>
+                    </div>
+                    <ul class="preferIntro">
+                        <li>现场办理单人行年卡享受438元（约八折）惠； 现场办理亲子卡享受499元（六八折）优惠...</li>
+                    </ul>
+                    <div class="line"></div>
+                    <div class="point"></div>
+                    <div class="pointL"></div>
+                    <div class="pointR"></div>
+                </a>
+            </div>
+            <div class="preferBox">
+            	<a href="javascript:;">
+                    <div class="preferTop">
+                        <img src="../Images/prefer01.jpg" />
+                        <h2>2014国庆节年卡办理优惠</h2>
+                        <span></span>
+                    </div>
+                    <ul class="preferIntro">
+                        <li>现场办理单人行年卡享受438元（约八折）惠； 现场办理亲子卡享受499元（六八折）优惠...</li>
+                    </ul>
+                    <div class="line"></div>
+                    <div class="point"></div>
+                    <div class="pointL"></div>
+                    <div class="pointR"></div>
+                </a>
+            </div>
+            <p class="hint">没有更多了</p>
+        </div>
+    </section>
+    <!--//版权信息-->
+	<!--#include file="/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

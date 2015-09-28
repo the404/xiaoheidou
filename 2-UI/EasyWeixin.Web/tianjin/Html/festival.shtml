@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>全年节庆|天津欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/tianjin/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="content04">
+        	<div class="festivalBox">
+            	<div class="month">1月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop">
+                    	<div class="triangle"></div>
+                        <h4>新春欢乐节<span>送您祝福与欢笑</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival01.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival02.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>春节期间，欢乐谷结合中国人过新年，团圆、喜庆、热闹的特点，推出大型主题活动"新春欢乐节"，邀请国际顶尖的幽默、滑稽大师驻场逗乐，在园区到处能见到红鼻子小丑，能听到爽朗的笑声。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month">4月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop">
+                    	<div class="triangle"></div>
+                        <h4>国际时尚文化节<span>送您动感与时尚</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival03.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival04.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>每年4-6月份，时尚、动感、激情元素兼具的国际时尚文化节，我们将融入时下年轻人较喜爱的cosplay、街舞、极限运动等活动，为大家带来一场独特的试听盛宴。尽情拥抱美丽的春天吧！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month">6月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop">
+                    	<div class="triangle"></div>
+                        <h4>欢乐谷狂欢节<span>送您激情与狂欢</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival05.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival06.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>声色鼎沸，劲舞狂欢，原汁原味的巴西桑巴带你进入激情的南美风情，玛雅水公园化身中国至大的水上露天吧，烟花、美酒、劲舞、狂欢打造夏日狂欢新潮流，狂欢怎能没有你！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month">10月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop">
+                    	<div class="triangle"></div>
+                        <h4>十一国际魔术节<span>送您神秘与梦幻</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival07.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival08.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>欢乐谷国际魔术节是中国规模最大、最高档次的专业魔术盛会，从2000年首届开始，每年十一世界顶尖国际大师汇集在此，已成为世界第二大魔术盛会，经典大型道具魔术、惊险刺激的逃脱魔术、神秘梦幻的心理幻术⋯⋯精彩纷呈，不容错过！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month">11月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop">
+                    	<div class="triangle"></div>
+                        <h4>万圣欢乐节<span>送您惊险与刺激</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival09.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival10.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>惊险主题鬼屋、破胆主题区域、诡异魅惑表演，数百只潜伏厉鬼，搞怪、惊悚、刺激……万圣大狂欢，够胆你就来！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month">12月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop">
+                    	<div class="triangle"></div>
+                        <h4>圣诞欢乐季<span>送您温馨与浪漫</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival11.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival12.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>最温馨的圣诞祝福、最浪漫的圣诞活动……高空烟花，倒数迎新，在快乐和歌声中开启新的一年。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp"></span>0</div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/tianjin/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

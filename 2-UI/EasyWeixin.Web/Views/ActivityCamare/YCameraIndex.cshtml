@@ -1,0 +1,453 @@
+﻿@{
+    Layout = null;
+}
+@model List<EasyWeixin.Web.Models.CameraPhotoViewModel>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <meta name="keywords" content="华侨城,云南华侨城,云南华侨城微信,华侨城微信,云南华侨城官方微信,云南华侨城微信公众平台,云南度假旅游景区,温泉水公园,云南铁路主题旅游,艺术文化乐园,生态花谷旅游,湿地自然景观,度假高端首选,生态旅游小镇,休闲度假胜地,主题公园,运动休闲度假,温泉泡浴,水上乐园,异国文化旅游,互动力,ipow;" />
+    <meta name="description" content='云南华侨城一个融旅游、观光、娱乐、度假为一体的高标准的国际化旅游度假胜地。云南旅游的高端首选，引领昆明乃至云南旅游产业从观光旅游型向休闲度假型转变。一个国际化的休闲度假胜地，包括滇越铁路主题旅游、生态旅游小镇、体育公园、国际会议中心、顶级温泉SPA、温泉水公园、生态湿地及森林休闲公园等旅游项目；同时涵盖康体运动休闲区、滨水休闲度假区、山谷生态旅游区、主题文化与艺术旅游区四大分区；' />
+    <title>照片墙|云南华侨城官方微信</title>
+    <link href="~/yunnan/Css/base.css" rel="stylesheet" />
+    <script src="~/yunnan/Js/jquery.1.4.js"></script>
+    <script src="~/yunnan/Js/ccjspack.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!--//页面头部-->
+    @*@Html.Raw(File.ReadAllText(Server.MapPath("/yunnan/Include/head.htm")))*@
+    <!--End页面头部-->
+    <!--//页面内容-->
+    @* @{
+        if (Model.Count>0)
+        {
+        <input type="hidden" value="@Model.FirstOrDefault().PhotoID" id="hi" />
+        }
+    }*@
+    <input type="hidden" value="@Request["PhotoID"]" id="hi" />
+    <section id="wrap">
+        <div id="content03">
+            @if (Model != null)
+            {
+                <ul class="photoL">
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        if (i % 2 == 0)
+                        {
+
+                        <li>
+                            <div class="photoTop">
+                                <a class="toBig" href="javascript:;">
+                                    <img src="@Model[i].Name" alt="" Yimg="@Model[i].YName" />
+                                </a>
+                                <div class="praise">
+                                    <a href="javascript:void(0)"></a>
+                                    <label class="praiseNum">@Model[i].LoveNum</label>
+                                </div>
+                                <div class="redHeart">
+                                    <a href="javascript:void(0)" onclick="addLoveNum2('@(Model[i].ID)',this)">
+                                        <img src="/yunnan/Images/heart02.png" alt="" />
+                                        <img class="hearted" src="/yunnan/Images/heart03.png" alt="" addZan="@Model[i].IsZan" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mood">
+                                <p>@Model[i].Remark</p>
+                            </div>
+                        </li>
+
+                        }
+                    }
+                </ul>
+                <ul class="photoR">
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        if (i % 2 != 0)
+                        {
+
+                        <li>
+                            <div class="photoTop">
+                                <a class="toBig" href="javascript:;">
+                                    <img src="@Model[i].Name" alt="" Yimg="@Model[i].YName" />
+                                </a>
+                                <div class="praise">
+                                    <a href="javascript:void(0)"></a>
+                                    <label class="praiseNum">@Model[i].LoveNum</label>
+                                </div>
+                                <div class="redHeart">
+                                    <a href="javascript:void(0)" onclick="addLoveNum2('@(Model[i].ID)',this)">
+                                        <img src="/yunnan/Images/heart02.png" alt="" />
+                                        <img class="hearted" src="/yunnan/Images/heart03.png" alt="" addZan="@Model[i].IsZan" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mood">
+                                <p>@Model[i].Remark</p>
+                            </div>
+                        </li>
+                        }
+                    }
+                </ul>
+
+            }
+            <div class="clear"></div>
+        </div>
+        <div id="uploadingBox">
+            <form method="post">
+                <div class="photoBox">
+                    <img src="" alt="" id="improve" />
+                </div>
+                <div class="photoIntroBox">
+                    <textarea class="photoIntro" id="photoIntro" name="photoIntro" placeholder="请输入对照片的描述" onfocus="javascript:ResizeTextarea(this,2);" onkeyup="javascript:ResizeTextarea(this,2);"></textarea>
+                    <input type="button" class="photoSub" value="确定">
+                </div>
+            </form>
+        </div>
+        <div class="rich_media_tool" style="padding: 10px 0 30px 0;">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+    </section>
+    <div style="display: none; width: 0; height: 0; overflow: hidden; line-height: 0px;">
+        <!--//版权信息-->
+        @Html.Raw(File.ReadAllText(Server.MapPath("/yunnan/Include/foot.htm")))
+        <!--End版权信息-->
+    </div>
+    <div class="shareBtn">
+        <a class="moment" href="javascript:;"><span></span>华侨城的欢乐瞬间</a>
+        <a class="shareToo" href="javascript:;" onclick="mc()">我也要分享</a>
+        <input type="file" id="uploadfile" class="file" name="fileField" />
+    </div>
+    <div class="bigPic">
+        <div id="bigPicWrap">
+            <ul id="bigPicBox">
+                <li><span class="load"></span></li>
+                <li><span class="load"></span></li>
+                <li><span class="load"></span></li>
+            </ul>
+        </div>
+        <a id="close_big_pic" href="javascript:;"></a>
+    </div>
+</body>
+</html>
+@*<script src="~/yunnan/Js/iScroll.js" type="text/javascript"></script>
+<script src="~/yunnan/Js/scrollBox2.js" type="text/javascript"></script>*@
+<script src="~/yunnan/Js/photoTab.js" type="text/javascript"></script>
+
+<script>
+    var sFile = "";
+    var newname = "";
+
+    function mc(parameters) {
+        document.getElementById("uploadfile").click();
+    }
+
+    $("#uploadfile").change(function () {
+        showUpload();
+        // get selected file
+        var oFile = $(this)[0].files[0];
+
+        // check for image type (jpg and png are allowed)
+        var rFilter = /^(image\/jpeg|image\/png)$/i;
+
+        // check for file size
+        if (oFile.size > 5000 * 1024) {
+            alert('你传的文件太大了');
+            return;
+        }
+
+        // prepare HTML5 FileReader
+        var oReader = new FileReader();
+        oReader.readAsDataURL(oFile);
+        oReader.onload = function (e) {
+
+            var src = this.result;
+            //alert("是什么?"+src);
+            $("#improve").attr("src", src);
+            sFile = this.result.split("base64,")[1];
+            newname = "";
+
+            $.post('/ActivityCamare/Base64StringToImage', { UpLoadImageSrc: sFile }, function (r) {
+                //newname = r.fliename;
+
+            });
+        };
+    });
+
+    //var reqmsg = "ReqMsg={\"UID\":\"" + sessionID + "\",\"Icon\":\"" + sFile + "\",\"Nickname\":\"" + nickname + "\",\"Age\":\"" + age + "\",\"XZ\":\"" + xz + "\"}";
+    //$.post("/Areas/User/improvedInfo.ashx", reqmsg, function (sreturn) {
+    //    var dataObj = eval("(" + sreturn + ")");
+    //    if (dataObj != null) {
+    //        if (dataObj.Code != 0) {
+    //            alert(dataObj.ErrorDesc);
+    //            return false;
+    //        } else { //上传成功
+    //            alert("上传成功");
+    //            hideUpload();
+    //        }
+    //    }
+    //});    $(function () {
+        $(".photoSub").click(function () {
+
+            var remark = $("#photoIntro").val();
+            var hid = $("#hi").val();            // var form = { Name: newname, Remark: remark, PhotoID: hid }            //uname: newname,            $.post("/ActivityCamare/UploadCamera", { Remark: remark, PhotoID: hid }, function (status) {
+                if (status == "error") {
+                    alert("请刷新重试!")
+
+                }
+                else {
+                    alert("上传成功")
+                }
+                $("#photoIntro").val("");
+                newname = "";
+                hideUpload();
+                location.reload();
+            });
+        });
+    });
+</script>
+<script>
+    var oDefault = function (e) { e.preventDefault(); };
+    //显示上传页面
+    var oPhotoList = $("#content03");
+    var oUploadPage = $("#uploadingBox");
+    var oShareBtn = $(".shareBtn");
+    var oRichBox = $("rich_media_tool");
+    function showUpload() {
+        oPhotoList.hide();
+        oShareBtn.hide();
+        oUploadPage.show();
+        oRichBox.hide();
+    }
+    //隐藏上传页面显示照片列表页
+    function hideUpload() {
+        oUploadPage.hide();
+        oPhotoList.show();
+        oShareBtn.show();
+        oRichBox.show();
+    }
+
+    $(".moment").click(function () {
+        $("html,body").animate({ scrollTop: "0px" });
+    });
+
+    //点击显示照片大图
+    var aToBig = $(".toBig");
+    var oBigPic = $("#bigPicBox li");
+    //预加载loading图片
+    var oImg = new Image();
+    oImg.src = "../Images/loading.gif";
+    //缩略图点击事件
+    aToBig.click(function () {
+        document.addEventListener('touchmove', oDefault, false);
+        var i = $(this).index();
+        var lastSrc, nextSrc;
+        photoIndex = $(this).parents("li").index();
+        var bigSrc = $(this).find("img").attr("Yimg");
+        $(".bigPic").show();
+        if ($(this).parents(".photoL").size() > 0) {
+            lR = 0;
+        } else {
+            lR = 1;
+        }
+        /*lR=$(this).parents(".photoUl").index();*/
+        oBigPic = $("#bigPicBox li");
+        oBigPic.eq(0).css("background-image", "none");
+        oBigPic.eq(1).css("background-image", "none");
+        oBigPic.eq(2).css("background-image", "none");
+        nextSrc = getSrcByNext();
+        lastSrc = getSrcByPre();
+        oBigPic.eq(0).html('<img src="' + lastSrc + '" class="realPic" /><span class="load"></span>');
+        oBigPic.eq(0).find("img")[0].onload = function () {
+            oBigPic.eq(0).find("span").css("opacity", 0);
+            oBigPic.eq(0).css("background-image", "url(" + lastSrc + ")");
+        }
+        oBigPic.eq(1).html('<img src="' + bigSrc + '" class="realPic" /><span class="load"></span>');
+        oBigPic.eq(1).find("img")[0].onload = function () {
+            oBigPic.eq(1).find("span").css("opacity", 0);
+            oBigPic.eq(1).css("background-image", "url(" + bigSrc + ")");
+        }
+        oBigPic.eq(2).html('<img src="' + nextSrc + '" class="realPic" /><span class="load"></span>');
+        oBigPic.eq(2).find("img")[0].onload = function () {
+            oBigPic.eq(2).find("span").css("opacity", 0);
+            oBigPic.eq(2).css("background-image", "url(" + nextSrc + ")");
+        }
+    });
+
+    $(".bigPic").click(function () {
+        document.removeEventListener('touchmove', oDefault, false);
+        $(".bigPic").hide();
+    });
+
+    //照片切换
+    var oBigPicBox = document.getElementById("bigPicBox");
+    var aBigPic = oBigPicBox.getElementsByTagName("li");
+    var lR = 0;  //判断左右
+    var photoIndex = 0;  //图片在列表内的位置
+
+    var iNow = 1;
+    var startX = 0;
+    var startY = 0;
+    var iLeft = 0;
+    var x = 0;
+    var y = 0;
+    var touch = null;
+
+    $("#bigPicWrap").photoTab({ preFn: pre, nextFn: next });
+
+    var tempIndex = 0;
+
+    function next() {
+        var ls = $(".photoL li").size();
+        var rs = $(".photoR li").size();
+        var maxlr = ls > rs ? 0 : 1;
+        var maxIndex = ls > rs ? ls - 1 : rs - 1;
+        if (lR % 2 == maxlr && maxIndex == photoIndex) {
+            photoIndex = 0;
+            lR = 0;
+        } else {
+            if (lR % 2 == 0) {
+            } else {
+                photoIndex++;
+            }
+            lR++;
+        }
+        return getSrcByNext();
+    }
+    function pre() {
+        if (photoIndex == 0 && lR % 2 == 0) {
+            var ls = $(".photoL li").size();
+            var rs = $(".photoR li").size();
+            if (ls > rs) {
+                lR = 0;
+                photoIndex = ls - 1;
+            } else {
+                lR = 1;
+                photoIndex = rs - 1;
+            }
+        } else {
+            if (lR % 2 == 0) {
+                photoIndex--;
+            } else {
+            }
+            lR--;
+        }
+        return getSrcByPre();
+    }
+    function getSrcByNext() {
+        var tempIndex = photoIndex;
+        var tempLR = lR;
+
+        var lastImg;
+        var ls = $(".photoL li").size();
+        var rs = $(".photoR li").size();
+        if (tempLR % 2 == 0) {
+        } else {
+            tempIndex++;
+        }
+        tempLR++;
+
+        var photoSrc = $("#content03 ul").eq(tempLR % 2).children("li").eq(tempIndex).find(".toBig").children("img").attr("Yimg");
+        if (photoSrc == null) {
+            photoSrc = $("#content03 ul").eq(0).children("li").eq(0).find(".toBig").children("img").attr("Yimg");
+        }
+        return photoSrc;
+    }
+    function getSrcByPre() {
+        var tempIndex = photoIndex;
+        var tempLR = lR;
+        if (tempIndex == 0 && tempLR % 2 == 0) {
+            var ls = $(".photoL li").size();
+            var rs = $(".photoR li").size();
+            if (ls > rs) {
+                tempLR = 0;
+                tempIndex = ls - 1;
+            } else {
+                tempLR = 1;
+                tempIndex = rs - 1;
+            }
+        } else {
+            if (tempLR % 2 == 0) {
+                tempIndex--;
+            } else {
+            }
+            tempLR--;
+        }
+        var photoSrc = $("#content03 ul").eq(tempLR % 2).children("li").eq(tempIndex).find(".toBig").children("img").attr("Yimg");
+        return photoSrc;
+    }
+
+    //控制文本域自适应文本高度
+    var agt = navigator.userAgent.toLowerCase();
+    var is_op = (agt.indexOf("opera") != -1);
+    var is_ie = (agt.indexOf("msie") != -1) && document.all && !is_op;
+    function ResizeTextarea(a, row) {
+        if (!a) { return }
+        if (!row)
+            row = 5;
+        var b = a.value.split("\n");
+        var c = is_ie ? 1 : 0;
+        c += b.length;
+        var d = a.cols;
+        if (d <= 20) { d = 40 }
+        for (var e = 0; e < b.length; e++) {
+            if (b[e].length >= d) {
+                c += Math.ceil(b[e].length / d)
+            }
+        }
+        c = Math.max(c, row);
+        if (c != a.rows) {
+            a.rows = c;
+        }
+    }
+    var oPhotoIntro = document.getElementById("photoIntro");
+    oPhotoIntro.onclick = function () {
+        ResizeTextarea(this, 2);
+    }
+</script>
+<script>
+    //点击分享，无刷新
+    //function addLoveNum(id, obj) {
+    //    $.post("/ActivityCamare/AddLoveNum", { cId: id }, function (r) {
+    //        if (r.flag)
+    //        {
+    //            $(obj).next("label").text(r.lovenum);
+    //        }
+    //        else
+    //        {
+    //            alert(r.IsAdd);
+    //        }
+    //    });
+    //}
+
+    //加载来设置点过赞的样式
+    window.onload = function () {
+        $(".hearted").each(function (i, v) {
+            var sb = $(v).attr("addZan");
+            if (sb == "1") {
+                $(v).addClass("liked");
+            }
+        });
+    }
+
+    function addLoveNum2(id, obj) {
+        var at = "";
+        if (!$(obj).find(".hearted").hasClass("liked")) {
+            $(obj).find(".hearted").addClass("liked");
+            at = "1";
+        }
+        else {
+            $(obj).find(".hearted").removeClass("liked");
+            at = "0";
+        }
+
+        $.post("/ActivityCamare/AddOrDeleteLoveNum", { cId: id, act: at }, function (r) {
+            $(obj).parents(".redHeart").prev().children("label").text(r.lovenum);
+        });
+    }
+</script>

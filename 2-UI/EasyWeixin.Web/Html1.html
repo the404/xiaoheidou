@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <script src="Scripts/jquery-1.7.2.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script>
+        var contosoChatHubProxy = $.connection.testHub;
+        contosoChatHubProxy.client.hello = function (message) {
+            console.log(message);
+        };
+        var groupId = '1';
+        $.connection.hub.qs = { "groupId": groupId };
+        $.connection.hub.start()
+            .done(function () {
+                contosoChatHubProxy.server.hello("whatisthefuck")
+                    .done(function () {
+                        console.log('Invocation of NewContosoChatMessage succeeded');
+                    })
+                    .fail(function (error) {
+                        console.log('Invocation of NewContosoChatMessage failed. Error: ' + error);
+                    });
+
+                console.log('Now connected, connection ID=' + $.connection.hub.id);
+            })
+            .fail(function () {
+                console.log('Could not Connect!');
+            });        
+        $.connection.hub.error(function (error) {
+            console.log('SignalR error: ' + error)
+        });
+    </script>
+</body>
+</html>

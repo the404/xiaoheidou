@@ -1,0 +1,96 @@
+/*
+ * Author		:蔡应
+ * Time			:2014年9月11日11:25:42
+ * Abstract		:北京欢乐谷游戏css样式表
+ */
+
+/*Reset*/
+body ,html ,div ,p ,table ,ul ,ol ,li ,dl ,dt ,dd ,h1 ,h2 ,h3 ,h4 ,h5 ,h6 { margin:0; padding:0;}
+ul ,ol ,li ,dl ,dt ,dd { list-style:none; }
+img ,a { border:none; }
+a { text-decoration:none; }
+*:hover { border: none;}
+
+/*base*/
+body,html { width:100%; height:100%; overflow-x: hidden; }
+body { font:normal 12px/18px "微软雅黑",Arail ; color:#fff; background:#ba1718;  }
+.left{ float:left; display:inline;}
+.right{ float:right; display:inline;}
+.clear { width:0; height:0; font-size:0; line-height:0; clear:both; overflow:hidden; }
+.bgSpirit01 { background-image:url(../../images/Activity/AEgg/spirit_01.png); background-repeat:no-repeat; background-size:43px auto; }
+.red { color:#f00!important; }
+.hidden { overflow:hidden; }
+
+/*横屏提醒*/
+#transverse {  position:absolute; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba( 0 , 0 , 0 , 0.8) url(../../images/Activity/AEgg/transvers.png) no-repeat center center; background-size:50% auto; }
+@media all and (orientation : landscape) {  
+	#transverse { display:block; }
+}  
+
+@media all and (orientation : portrait){  
+	#transverse { display:none; }
+} 
+body { overflow-x:hidden;}
+.wrap320 { position: relative; margin: 0 auto; width:320px; }
+.height40 { height: 40px; }
+.height60 { height: 60px; }
+.bg { background:url(../../images/Activity/AEgg/bg.jpg) no-repeat center top; background-size: 320px auto; min-height: 100%; }
+.ele_bg { background: url(../../images/Activity/AEgg/ele_01.png) no-repeat 0px 0px; background-size: 320px auto; }
+#page_wrap { 
+	transform-origin: top; 
+	-webkit-transform-origin: top; 
+}
+
+/*index*/
+.index_bg { background-image: url(../../images/Activity/AEgg/index_bg.jpg) ; }
+#logo { position: absolute; top: 10px; left: 10px; width: 76px; height: 36px; text-indent: -999px; overflow: hidden; background-position: 0px -137px; background-size: 320px auto; }
+.title { padding-top:44px; background-position:0px 44px; margin: 0 auto; width: 290px; height: 137px; text-indent: -999px; overflow: hidden; }
+.egg_list { position: relative; margin-top: 12px; margin-bottom:40px; padding-left: 7px;}
+.egg_list li { float: left; margin-top: 15px; margin-left: 32px; width: 57px; height: 79px; background: url(../../images/Activity/AEgg/ele_01.png) no-repeat 0px -194px; background-size: 320px auto; }
+.egg_list li span { display: block; width: 100%; height: 47px; background: url(../../images/Activity/AEgg/ele_01.png) no-repeat -67px -192px; background-size: 320px auto; 
+	transform-origin: 0 47px ;
+	-webkit-transform-origin: 0 47px ;
+	transform:rotate(5deg);
+	-webkit-transform:rotate(5deg);
+	transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
+}
+#hammer { position: absolute; width: 64px; height: 74px; top: 33px; left: 200px; background-position: -132px -137px; 
+	transform-origin: 100% 100%;
+	-webkit-transform-origin: 100% 100%;
+	animation: hammerAni 2s ease infinite;
+	-webkit-animation: hammerAni 1s ease infinite;
+	-webkit-transform:rotate(-20deg); 
+}
+@keyframes hammerAni {
+	from { transform:rotate(-20deg);  }
+	50%  { transform:rotate(-40deg);  }
+	to { transform:rotate(-20deg);  }
+}
+@-webkit-keyframes hammerAni {
+	from { -webkit-transform:rotate(-20deg);  }
+	50%  { -webkit-transform:rotate(-40deg);  }
+	to { -webkit-transform:rotate(-20deg);  }
+}
+
+.notes_item { margin: 0 auto; padding-bottom:5px; width: 280px; }
+.notes_item h4 { height: 60px; text-align: center; font: normal 15px/60px "微软雅黑"; color: #ffae01; background: url(../../images/Activity/AEgg/ele_01.png) no-repeat 68px -275px; background-size: 320px auto;  }
+
+/*win*/
+.winning_bg { background-image: url(../../images/Activity/AEgg/win_bg.jpg) ; }
+.user_item { margin: 0 auto; position: relative; width:235px;  padding: 20px 15px 15px 15px; border-radius: 5px;  background: rgba(255,255,255,0.5); color: #1c1c1c; }
+.user_item  span { color: #960101; }
+.user_head { position: absolute; top:-21px; left: 50%; margin-left: -21px; border-radius: 50%; width:42px; height: 42px; }
+.win_info { color: #ab0000; text-align: center; }
+.win_info h2 { font: bold 22px/30px "微软雅黑"; padding-top: 10px; }
+.phone_num { position:relative; margin: 0 auto; margin-top:6px; background: #ac0202; width: 200px; height: 24px; border-radius: 5px; text-align: left; line-height: 22px;}
+.phone_num input { background: #ac0202; width: 110px; padding: 0 10px; color: #fff; border: none; } 
+.phone_num input:focus { border-outline:none; }
+.phone_num .in_sure { position:absolute; top:1px; right:1px;  display:block; width: 60px; height: 22px; border-radius: 4px; background: #ffba00; text-align: center; color: #ab0000; }
+.share_item { margin-top: 135px;  font: normal 15px/25px "微软雅黑"; color: #ffb81e; text-align: center; }
+.share_item a { display: block; margin: 0 auto; font: bold 17px/55px "微软雅黑"; color: #9d0000; width:200px; height: 55px;  background: url(../../images/Activity/AEgg/ele_01.png) no-repeat 0px -341px; background-size: 320px auto; }
+
+/*no_win*/
+.no_win_bg { background-image: url(../../images/Activity/AEgg/no_win_bg.jpg) ; }
+.no_win_bg .win_info h2 { padding-top: 50px; }
+.no_win_bg .share_item { margin-top: 80px; }

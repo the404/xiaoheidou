@@ -1,0 +1,175 @@
+﻿@{
+    ViewBag.Title = "FruitItemIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using EasyWeixin.Core.MvcPager
+@model List<EasyWeixin.Model.SnowItem>
+<link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")"  type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript" ></script>
+<script type="text/javascript">
+    //自定义编辑器
+    //设置图片可以上传
+    $(document).ready(function () {
+        $(".table").on("click", ".SnowItemEdit", function () {
+            var title = "水果切切切子项编辑";
+            var ID = $(this).parent().find(".ID").val();
+            var SnowID = $(this).parent().find(".SnowID").val();
+            var tr = $(this).parent().parent();
+            art.dialog.open('/Fruit/FruitItemEdit?ID=' + ID + '&SnowID=' + SnowID, {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var SnowItemName = d.document.getElementById('SnowItemName').value;
+                    var SnowItemScale = d.document.getElementById('SnowItemScale').value;
+                    var SnowScore = d.document.getElementById('SnowScore').value;
+                    var SnowItemID = d.document.getElementById('SnowItemID').value;
+                   var SnowScale = d.document.getElementById('SnowScale').value;
+                    var SnowID = d.document.getElementById('SnowID').value;
+                    $.post('/Fruit/FruitItemEdit', { SnowItemName: SnowItemName, SnowItemScale: SnowItemScale, SnowScore: SnowScore, SnowID: SnowID, SnowItemID: SnowItemID })
+                    tr.find("td:eq(0)").html(SnowItemName);
+                    tr.find("td:eq(1)").html(SnowItemScale + "/" + SnowScale);
+                    tr.find("td:eq(2)").html(SnowScore);
+                },
+                cancel: true
+            });
+
+        })
+        $(".SnowItemAdd").click(function () {
+            var title = "水果切切切子项添加";
+            var table = $(".table tbody");
+            var SnowID =@(Request["SnowID"])
+            art.dialog.open('/Fruit/FruitItemEdit?SnowID=' + SnowID, {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var SnowItemName = d.document.getElementById('SnowItemName').value;
+                    var SnowItemScale = d.document.getElementById('SnowItemScale').value;
+                    var SnowScore = d.document.getElementById('SnowScore').value;
+                    var SnowScale = d.document.getElementById('SnowScale').value;
+
+                    $.post('/Fruit/FruitItemEdit', { SnowItemName: SnowItemName, SnowItemScale: SnowItemScale, SnowScore: SnowScore, SnowID: SnowID }, function (data) {
+                        var html = "<tr><td>" + data.SnowItemName + "</td><td>" + data.SnowItemScale + "/" + SnowScale + "</td>";
+                        html += "<td>" + data.SnowScore + "</td><td>" + ChangeDateFormat(data.AddDate) + "</td><td>";
+                        html += "<input type='hidden' value='" + data.ID + "'  class='ID' />"
+                        html += "<input type='hidden' value='" + data.SnowID + "'  class='SnowID' />";
+                        html += "<a href='javascript:void(0)' class='SnowItemEdit'>修改</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                        html += "<a href='/Fruit/FruitItemDelete/" + data.ID + "' class='SnowItemDelete'>删除</a>";
+                        html += "</td></tr>";
+                        table.append(html);
+                    });
+                },
+                cancel: true
+            });
+
+        })
+        function ChangeDateFormat(cellval) {
+            try {
+                var date = new Date(parseInt(cellval.replace("/Date(", "").replace(")/", ""), 10));
+                var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+                var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+                var hour = date.getHours();
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+                return date.getFullYear() + "/" + month + "/" + currentDate + " " + hour + ":" + minute + ":" + second;
+            } catch (e) {
+                return "";
+            }
+        }
+    });
+</script>
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">水果切切切</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">水果切切切</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li><a href="/Fruit/FruitIndex">活动列表</a> <span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">子项设置</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets light-gray">
+                    <div class="widget-head bondi-blue">
+                        <h3>大分值列表</h3>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-horizontal">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <a id="SnowItemAdd" class="btn SnowItemAdd" href="javascript:viod(0)"><i class="icon-upload-alt"></i>添加</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-container">
+                        <table class="table table-hover responsive">
+                            <thead>
+                                <tr>
+                                    <th>分值名
+                                    </th>
+                                    <th>几率
+                                    </th>
+                                    <th>分值
+                                    </th>
+                                    <th>添加时间
+                                    </th>
+                                    <th>编辑
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{foreach (var item in Model)
+                                  {
+                                    <tr>
+                                        <td>
+                                            @item.SnowItemName
+                                        </td>
+                                        <td>
+                                            @(item.SnowItemScale + "/" + item.Snow.SnowScale)
+                                        </td>
+                                        <td>
+                                            @item.SnowScore
+                                        </td>
+                                        <td>
+                                            @item.AddDate
+                                        </td>
+                                        <td>
+                                            <input type="hidden" value="@item.ID" class="ID" />
+                                            <input type="hidden" value="@item.SnowID"  class="SnowID" />
+                                            <a href="javascript:void(0)" class="SnowItemEdit">修改</a>
+                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            @Html.ActionLink("删除", "FruitItemDelete", new { id = item.ID })
+                                        </td>
+                                    </tr>
+                                  }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

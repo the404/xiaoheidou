@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>营业时间|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--//页面头部-->
+    <!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">    
+        <div id="content02">
+        	<div class="navBox03">
+                <div class="quickNav03">
+                    <a class="active" href="/shanghai/Html/time.shtml" >营业时间</a>
+                    <a href="/shanghai/Html/showTime.shtml" >演出时间</a>
+                    <a href="/shanghai/Html/project.shtml" >项目运行时间</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="timeBox">
+            	<div class="timeTop">
+                	<h4 class="repeatX">开闭园时间（2015.3.6-4.30）</h4>
+                    <div class="graphL"></div>
+                    <div class="graphR"></div>
+                </div>
+                <div class="timeInfoBox">
+                    <div class="timeInfo">
+                        <div class="timeL day">
+                        	<p>全天</p>
+                            <p><strong>9:00-18:00</strong></p>
+                        </div>
+                        <div class="timeR night">
+                           	<p>夜场</p>
+                            <p><strong>--</strong></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="timeBg02"></div>
+                    <div class="timeBgL01"></div>
+                    <div class="timeBgR01"></div>
+                </div>
+            </div>
+            <div class="tipBox">
+                <div class="spiritBtn">
+                	<h4>小贴士<span> / TIPS</span></h4>
+                </div>
+                <div class="text">
+                    <ul>
+                        <li><p>日场入园可游玩至闭园；</p></li>
+                        <li><p>如遇特殊情况需调整时间另行通知；</p></li>
+                        <li><p>具体开放时间以公园园区内公布为准。</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                	<i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

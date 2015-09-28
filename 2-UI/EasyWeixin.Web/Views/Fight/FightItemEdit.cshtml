@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "FightItemEdit";
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" href="/js/kindeditor-4.1.7/plugins/code/prettify.css" />
+    <script charset="utf-8" src="/js/kindeditor-4.1.7/plugins/code/prettify.js"></script>
+    <script charset="utf-8" src="/js/kindeditor-4.1.7/kindeditor.js"></script>
+    <script charset="utf-8" src="/js/kindeditor-4.1.7/lang/zh_CN.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Panel Template">
+    <meta name="author" content="Westilian: Kamrujaman Shohel">
+    <!-- styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/jquery.gritter.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link href="/css/tablecloth.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        @model EasyWeixin.Model.FightItem
+        <input type="hidden" id="FightItemID" value="@Model.FightItemID" />
+        <input type="hidden" id="FightID" value="@Model.FightID" />
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets">
+
+                    <div class="widget-container">
+                        <form class="form-horizontal">
+                            <div class="control-group">
+                                <label class="control-label">问题名称</label>
+                                <div class="controls">
+                                    <input type="text" id="FightItemName" class="span3" value="@Model.FightItemName" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">问题答案</label>
+                                <div class="controls">
+                                    <input type="text" id="FightItemAnswers" class="span12" value="@Model.FightItemAnswers" />
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">正确答案</label>
+                                <div class="controls">
+                                    <input type="text" id="FightItemTrueAnswer" class="span12" value="@Model.FightItemTrueAnswer" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

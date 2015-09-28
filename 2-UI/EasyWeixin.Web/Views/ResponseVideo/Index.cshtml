@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<EasyWeixin.Model.ResponseVideo>
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">视频管理</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">视频管理</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">视频列表 </li>
+                </ul>
+            </div>
+        </div>
+        @* @Html.ActionLink("添加权限", "Create", new { }, new { @class = "btn btn-extend" })*@
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets light-gray">
+                    <div class="widget-head bondi-blue">
+                        <h3>图片列表</h3>
+                    </div>
+                    <div class="widget-container">
+
+                        <table class="table table-hover responsive">
+                            <thead>
+                                <tr>
+
+                                    <th>视频名称
+                                    </th>
+                                    <th>视频
+                                    </th>
+                                    <th>修改
+                                    </th>
+                                    <th>删除
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{foreach (var item in Model)
+                                  {
+                                    <tr>
+                                        <td>
+                                          @item.VideoName
+                                        </td>
+                                        <td>
+                                           @item.VideoUrl
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("修改", "Edit", new { id = item.ID })
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("删除", "Delete", new { id = item.ID },new { onclick="return confirm('确认删除?')"})
+                                        </td>
+                                    </tr>
+                                  }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

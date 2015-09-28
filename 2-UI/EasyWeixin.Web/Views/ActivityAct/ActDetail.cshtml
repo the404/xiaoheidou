@@ -1,0 +1,213 @@
+﻿@model EasyWeixin.Model.Act
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.Name</title>
+    <link href="/shanghai/Css/base.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            padding: 15px 10px 0;
+            position: relative;
+            height: 100%;
+            color: #222;
+            /*font-family: Microsoft YaHei, Helvetica, STHeiti STXihei, Microsoft JhengHei,Tohoma, Arial;*/
+            font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+            background: #f6f6f6;
+        }
+
+        .ahover {
+            display: block;
+            color: #222;
+            text-decoration: none;
+            -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #fcfcfc;
+            margin: 15px 0;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .icons {
+            position: relative;
+            border-radius: 5px;
+            width: 25px;
+            height: 25px;
+            overflow: hidden;
+        }
+
+            .icons.arrow-r {
+                background: url(/images/News/imgbg.png) no-repeat center center;
+                width: 12px;
+                height: 16px;
+                background-size: 100%;
+            }
+
+        #title_name {
+            font-size: 20px;
+            color: #000;
+            font-weight: 200;
+            word-break: normal;
+            word-wrap: break-word;
+        }
+
+        #post-date {
+            font-size: 11px;
+            color: #8c8c8c;
+            margin: 0;
+        }
+
+        #body_id .body_title .header span {
+            color: #999;
+            font: 12px/30px microsoft yahei;
+        }
+
+        .body_title {
+            margin: 0 8px;
+            padding: 10px 0 15px 0;
+        }
+
+        #biz-link {
+            background: url(/images/News/imgbg.png) no-repeat center center;
+            background-size: 100% 100%;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            height: 42px;
+            position: relative;
+            text-align: left;
+            padding: 12px;
+            padding-left: 62px;
+        }
+
+            #biz-link .arrow {
+                position: absolute;
+                top: 25px;
+                right: 15px;
+            }
+
+            #biz-link .logo {
+                position: absolute;
+                padding: 6px;
+                width: 42px;
+                height: 42px;
+                overflow: hidden;
+                top: 6px;
+                left: 5px;
+            }
+
+                #biz-link .logo img {
+                    width: 42px;
+                    height: 42px;
+                    position: relative;
+                    z-index: 10;
+                    border-radius: 15px;
+                    -webkit-border-radius: 15px;
+                    -moz-border-radius: 15px;
+                }
+
+                #biz-link .logo .circle {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 54px;
+                    height: 54px;
+                    background: url(http://t2.qpic.cn/mblogpic/9d348430a143c680b1e4/2000) no-repeat center center;
+                    z-index: 100;
+                    background-size: 100% 100%;
+                }
+
+        #nickname {
+            font-size: 15px;
+            color: #454545;
+            text-shadow: 0 1px 1px white;
+        }
+
+        #weixinid {
+            font-size: 12px;
+            color: #a3a3a3;
+            line-height: 20px;
+            text-shadow: 0 1px 1px white;
+        }
+
+        #body_id .body_content {
+            margin: 15px 0;
+        }
+
+            #body_id .body_content .media {
+                margin: 18px 0;
+            }
+
+                #body_id .body_content .media img, #body_id .body_content .text img {
+                    width: 100%;
+                }
+
+            #body_id .body_content .text {
+                font-size: 12px;
+                line-height: 20px;
+                color: #3e3e3e;
+                word-break: normal;
+                word-wrap: word-break;
+            }
+
+        div#content {
+            overflow: hidden;
+            width: 100%;
+        }
+
+            div#content p {
+                line-height: 25px;
+            }
+
+                div#content p a {
+                    color: #222222;
+                    text-decoration: none;
+                }
+
+            div#content img {
+                max-width: 100%;
+                height: auto;
+            }
+    </style>
+    <link href="~/shanghai/Css/base.css" rel="stylesheet" />
+</head>
+<body id="body_id">
+    <section id="wrap">
+        <div class="body_title">
+            <div>
+                <strong style="font-size: 20px; font-weight: 700; color: black;">@Model.Name</strong>
+                <p style="color: #8c8c8c">@DateTime.Now.ToString("yyyy-MM-dd") &nbsp;&nbsp;<a href="@Model.WURL" style="color:#6D7C8C;text-decoration:none;">@Model.ClubName</a></p>
+                <p style="text-align: center;">
+                    <img src="@Model.ImageUrl" />
+                </p>
+            </div>
+            <div class="text content" id="content">
+                @Html.Raw(Model.Content)
+            </div>
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    @Html.Raw(File.ReadAllText(Server.MapPath("/shanghai/Include/foot.htm")))
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+</body>
+</html>

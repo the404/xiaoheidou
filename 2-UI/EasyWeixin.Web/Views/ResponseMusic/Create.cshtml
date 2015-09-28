@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+ <div class="main-wrapper">
+     <div class="container-fluid">
+			<div class="row-fluid ">
+				<div class="span12">
+					<div class="primary-head">
+						<h3 class="page-header">语音管理</h3>
+						<ul class="top-right-toolbar">
+							<li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+							</li>
+							<li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+							<li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+						</ul>
+					</div>
+					<ul class="breadcrumb">
+						<li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+						<li><a href="#">语音管理</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+						<li class="active">语音创建</li>
+					</ul>
+				</div>
+			</div>
+
+        @{ using (Html.BeginForm("UpLoadMusic", "ResponseMusic", FormMethod.Post, new { enctype = "multipart/form-data" }))
+           {
+               	<div class="row-fluid">
+				<div class="span12">
+					<div class="content-widgets gray">
+						<div class="widget-head bondi-blue">
+							<h3>编辑语音</h3>
+						</div>
+						<div class="widget-container">
+							<div class="form-container grid-form form-background">
+								<!-- our error container -->
+								<div class="control-group">
+									<label class="control-label">上传语音<label class="error">（语音大小限制：5M，   长度限制：60s，    支持格式：mp3, wma, wav, amr）</label> </label>
+									<div class="controls">
+										<input name="fileName" type="file" class="file-uniform" />
+									</div>
+                                      <label class="error">@TempData["ErrorMessage"] </label>
+								</div>
+									<div class="form-actions">
+										<button type="submit" class="btn btn-extend">提交</button>
+                                        @Html.ActionLink("返回列表", "Index",new {}, new {@class="btn btn-extend" })
+									</div>
+								<div class="error-container">
+									<h4>@TempData["ErrorMessage"] </h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        }
+     }
+</div></div>

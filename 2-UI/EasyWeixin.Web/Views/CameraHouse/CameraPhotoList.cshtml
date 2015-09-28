@@ -1,0 +1,221 @@
+﻿@{
+    ViewBag.Title = "照片集";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    bool flag = false;
+    if (WebSecurity.CurrentUserId == 28 && WebSecurity.CurrentUserId == 100)
+    {
+        flag = true;
+    }
+}
+
+@using EasyWeixin.Core.MvcPager
+@model EasyWeixin.Core.MvcPager.PagedList<EasyWeixin.Model.CameraPhoto>
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">照片集</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">照片集</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li><a href="/CameraHouse/CameraIndex">活动列表</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">数据列表 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets light-gray">
+                    <div class="widget-head bondi-blue">
+                        <h3>数据列表</h3>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-horizontal">
+                            <div class="control-group">
+                                @{ string dt1, dt2;
+                                   dt1 = Request["dt1"] != null ? Request["dt1"] : System.DateTime.Now.ToString("yyyy-MM-dd");
+                                   dt2 = Request["dt2"] != null ? Request["dt2"] : System.DateTime.Now.ToString("yyyy-MM-dd");
+                                }
+                                <div class="controls">
+                                    开始时间
+                                    <div id="datetimepicker1" class="input-append">
+                                        <input data-format="yyyy-MM-dd" type="text" value="@dt1" id="dt1"><span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar"></i></span>
+                                    </div>
+                                    结束时间
+                                    <div id="datetimepicker2" class="input-append">
+                                        <input data-format="yyyy-MM-dd" type="text" value="@dt2" id="dt2"><span class="add-on"><i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar"></i></span>
+                                    </div>
+                                    <a class="btn btn-primary" href="javascript:void(0)"><i class="icon-upload-alt"></i>查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-container">
+                        <table class="table table-hover responsive">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input id="CheckAll" type="checkbox" class="CheckAll" />
+                                    </th>
+                                    <th>图片描述
+                                    </th>
+                                    <th>图片
+                                    </th>
+                                    <th>点赞数
+                                    </th>
+                                    <th>提交日期
+                                    </th>
+                                    @if (@flag)
+                                    {
+                                        <th>审核
+                                        </th>
+                                    }
+
+                                    <th>编辑
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{foreach (var item in Model)
+                                  {
+                                      string check = "";
+                                      if (item.IsCheck)
+                                      {
+                                          check = "已审核";
+                                      }
+                                      else
+                                      {
+                                          check = "未审核";
+                                      }
+                                    <tr>
+                                        <input type="hidden" value="@item.PhotoID" id="pId" />
+                                        <td>
+                                            <input type="checkbox" value="@item.ID" class="CheckChild" />
+                                        </td>
+                                        <td>
+                                            <a title="@item.Remark">@(item.Remark.Length > 10 ? item.Remark.Substring(0, 10) : item.Remark)</a>
+                                        </td>
+                                        <td>
+                                            <img title="@item.Remark" alt="@(item.Remark.Length > 10 ? item.Remark.Substring(0, 10) : item.Remark)" src="@item.Name" />
+                                        </td>
+                                        <td>
+                                            @item.LoveNum
+                                        </td>
+                                        <td>
+                                            @item.AddTime.Value.ToString("yyyy-MM-dd HH:MM")
+                                        </td>
+                                        @if (@flag)
+                                        {
+                                            <td>
+                                                <a href="#" tp="checkphoto" photoId="@item.ID">@check</a>
+                                            </td>
+                                        }
+                                        <td>
+                                            @Html.ActionLink("删除", "DeleteCameraPhoto", new { id = item.ID }, new { onclick = "return confirm('确认删除？')" })
+                                        </td>
+                                    </tr>
+                                  }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-horizontal">
+                            <div class="control-group">
+                                <div style="width: 50px; float: left; margin: 20px 0"><a href="javascript:void(0)" class="DeleteAll" style="display: block;">删除选中</a></div>
+                                <div style="width: 500px; float: right">
+                                    @Html.Pager(Model, new PagerOptions { PageIndexParameterName = "pageid", CssClass = "pagination dataTables_paginate" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.9.1.js"></script>
+<script src="/js/bootstrap-colorpicker.js"></script>
+<script src="/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/js/date.js"></script>
+<script src="/js/daterangepicker.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".CheckAll").change(function () {
+            if ($(".CheckAll").prop("checked")) {
+                $(".CheckChild").prop("checked", true);
+            }
+            else {
+                $(".CheckChild").prop("checked", false);
+            }
+        });
+        $(".DeleteAll").click(function () {
+            var IDlist = "";
+            $(".CheckChild").each(function () {
+                if ($(this).prop("checked")) {
+                    IDlist += "|" + $(this).val();
+                }
+            });
+            if (IDlist == "") {
+                alert("请选择要删除的数据");
+            }
+            else {
+                $.post("/CameraHouse/DeleteAll", { IDlist: IDlist.substring(1), PhotoID: $("#pId").val() }, function (datas) {
+                    location.href = location.href;
+                });
+            }
+
+        });
+        $(".btn-primary").click(function () {
+            window.location.href = "/CameraHouse/CameraPhotoList?PhotoID=@(Request["PhotoID"])&pageid=1&dt1=" + $("#dt1").val() + "&dt2=" + $("#dt2").val();
+        });
+
+    });
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            pickTime: false
+        });
+    });
+
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            pickTime: false
+        });
+    });
+</script>
+<script>
+    $('a[tp="checkphoto"]').bind('click', function () {
+        var $this = $(this);
+        $.post('/CameraHouse/CheckCameraPhoto', { id: $this.attr('photoid') }, function (data) {
+            if (data.errorcode === 'success') {
+                if ($this.text() == '已审核')
+                    $this.text('未审核');
+                else {
+                    $this.text('已审核');
+                }
+            } else {
+                location.reload();
+            }
+        }, 'json');
+    });
+    $('#paixu').bind('click', function () {
+        var $this = $(this);
+        var $sort = true;
+        $index = location.href.indexOf('&sort=');
+        $oldstr = "";
+        if ($index > 0) {
+            var $oldstr = location.href.substring($index);
+        }
+        $this.attr('href', location.href.replace($oldstr, '') + '&sort=' + $sort);
+    });
+</script>

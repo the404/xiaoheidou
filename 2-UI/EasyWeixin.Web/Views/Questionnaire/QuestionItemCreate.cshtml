@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "QuestionItemCreate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EasyWeixin.Web.Models.SetQuestionViewModel
+
+<link rel="stylesheet" href="/js/kindeditor-4.1.7/plugins/code/prettify.css" />
+<script charset="utf-8" src="/js/kindeditor-4.1.7/plugins/code/prettify.js"></script>
+<script charset="utf-8" src="/js/kindeditor-4.1.7/kindeditor.js"></script>
+<script charset="utf-8" src="/js/kindeditor-4.1.7/lang/zh_CN.js"></script>
+<link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")"  type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript" ></script>
+<script type="text/javascript" src="~/js/My97DatePicker/WdatePicker.js"></script>
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">问题创建</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="javascript:history.go(-1);">问题列表</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">活动创建</li>
+                </ul>
+            </div>
+        </div>
+
+        @{ using (Html.BeginForm("QuestionItemCreate", "Questionnaire"))
+           {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="content-widgets gray">
+                        <div class="widget-head bondi-blue">
+                            <h3>活动创建</h3>
+                        </div>
+                        <div class="widget-container">
+                            <div class="form-container grid-form form-background">
+                                <!-- our error container -->
+                                <div class="control-group">
+                                    <label class="control-label">类别</label>
+                                    <div class="controls">
+                                        @Html.DropDownListFor(model => model.QuestionCategoryID, ViewBag.Categories as IEnumerable<SelectListItem>)
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">问题名称</label>
+                                    <div class="controls">
+                                        @Html.TextAreaFor(model => model.SetQuestionName, new { @style = "width: 700px; height: 200px;", @id = "Content",@placeholder="输入问题名称" }) @Html.ValidationMessageFor(model => model.SetQuestionName, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">问题类型</label>
+                                    <div class="controls">
+                                        @Html.RadioButtonFor(model => model.Type, 0, new { @id = "Statusradio0", @name = "Type" })单选
+
+                                      @Html.RadioButtonFor(model => model.Type, 1, new { @id = "Statusradio1", @name = "Type" })多选
+
+                                        @Html.RadioButtonFor(model => model.Type, -1, new { @id = "Statusradio1", @name = "Type" })其他
+
+                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue;">若选择<span style="color:red;">"其他”</span>，表示是建议，那么最下面的”问题答案“，请填写“建议”2字</span>
+                                    </div>
+                                </div>
+                                @*<div class="control-group">
+                                    <label class="control-label">是否选择其他</label>
+                                    <div class="controls">
+
+                                        @Html.CheckBoxFor(model => model.IsOther,null))
+                                    </div>
+                                </div>*@
+
+                                <div class="control-group">
+                                    是否发布&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Html.CheckBoxFor(model=>model.Status,null)
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">问题答案</label>
+                                    <div class="controls">
+                                        @Html.TextAreaFor(model => model.Answers, new { @style = "width: 700px; height: 200px;", @id = "Content",@placeholder="请输入答案选项" }) @Html.ValidationMessageFor(model => model.Answers, "", new { @style = "color:red" })
+                                        <span style="color: red;">多个答案用英文逗号隔开</span>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-extend">提交</button>
+                                    <a href="javascript:history.go(-1);" class="btn btn-extend">返回列表</a>
+                                </div>
+                                <div class="error-container">
+                                    <h4></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           }
+        }
+    </div>
+</div>

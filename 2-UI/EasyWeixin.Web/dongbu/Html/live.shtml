@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="东部华侨城,华侨城,华侨城微信,华侨城官方微信,华侨城微信公众平台,深圳,旅游,深圳旅游,深圳景区,深圳好玩的,深圳好吃的,互动力;" />
+<meta name="description" content="东部华侨城位于中国深圳大梅沙，占地近9平方公里，是由华侨城集团斥资35亿元精心打造的世界级度假旅游目的地，是由国家环境保护部和国家旅游局联合授予的首个“国家生态旅游示范区”。" />
+<title>游玩攻略|东部华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+	<div class="playNav">
+    	<a href="/dongbu/Html/eat.shtml">吃</a>
+        <a href="/dongbu/Html/walk.shtml">行</a>
+        <a href="/dongbu/Html/play.shtml">玩</a>
+        <a href="/dongbu/Html/live.shtml" class="active">住</a>
+    </div>
+    <div class="playBox">
+        <div class="play_con">
+        	<p class="live_p1">到东部华侨城度假，如果时间宽裕的话建议安排两天的行程，才能玩遍东部华侨城的全部美景。住一晚是必不可少的，小编推荐几家酒店吧，您可以根据自身需求选择哦。 顺便说一句，以下价格仅供参考，酒店价格会根据节假日有所调整，实际价格以当天电话咨询为主哈。<strong>统一预定热线:400 860 1388</strong></p>
+        	<h2 class="walk_title01">山海之间，瑞士之梦——茵特拉根酒店</h2>
+            <p class="walk_p2">推荐指数：★★★★★<br />
+            地理位置：毗邻茶溪谷主题公园<br />
+            推介理由：茵特拉根酒店以瑞士文化为主题，展现了中欧山地建筑风格与南中国壮美山海景观的完美结合。312间豪华客房，无论是湖景套房还是池畔别墅，抑或商业街公寓、总统堡，都在优雅、尊贵中为你一一呈现山海的浪漫。<br />
+            价位：1500-3000元区间</p>
+            <div class="live_imgBox">
+            	<img src="../Images/play/live01.jpg" />
+            </div> 
+            <h2 class="walk_title01">大乘境界，"心"体验——菩提宾舍</h2>
+            <p class="walk_p2">推荐指数：★★★★<br />
+            地理位置：大华兴寺景区<br />
+            推介理由：菩提宾舍与大华兴寺融为一体，将"禅宗"理念纳入酒店的设计构思，以"闲寂、自然、幽雅、朴素"的精神内涵，创造22间空灵、简朴的禅意空间，从全新的角度诠释"心"生活。<br />
+            价位： 980-2000元区间</p>
+            <div class="live_imgBox">
+            	<img src="../Images/play/live02.jpg" />
+            </div>
+            <h2 class="walk_title01">设计生活，品韵于心——瀑布酒店</h2>
+            <p class="walk_p2">推荐指数：★★★★<br />
+            地理位置：坐落于大侠谷主题公园<br />
+            特色：瀑布酒店由瀑布酒店主楼及瀑布酒店B楼两部分构成，酒店坐落在以"森林、阳光、大地、河流"为主要元素的东部华侨城大侠谷中，设计师以"水"为元素，运用现代高科技，将影像视觉与嗅觉、触觉充分应用在322间客房设计中，艺术质感渗透每个细节。<br />
+            价位： 580-1500元区间</p>
+            <div class="live_imgBox">
+            	<img src="../Images/play/live03.jpg" />
+            </div>
+            <h2 class="walk_title01">黑森林的童话之梦——黑森林酒店</h2>
+            <p class="walk_p2">推荐指数：★★★★★<br />
+            地理位置：毗邻茶溪谷主题公园<br />
+            推介理由：黑森林酒店以德国黑森林咕咕钟为主题，占地20000平方米，拥有321间设备完善的客房，致力为客人，尤其为同行的孩子们，打造一个充满奇趣的度假体验。酒店装饰色调轻松明快，丰富多彩，令人耳目一新。<br />
+            价位："快乐价到"一价畅享吃住玩乐789元/位（平日）</p>
+            <div class="live_imgBox">
+            	<img src="../Images/play/live04.jpg" />
+            </div> 
+            <h2 class="walk_title01">旅行酒店，心随律动——房车酒店</h2>
+            <p class="walk_p2">推荐指数：★★★★<br />
+            地理位置：毗邻云海谷高尔夫球场<br />
+            推介理由：房车酒店以房车文化为主题，装饰风格时尚、简约，拥有180间客房与4辆豪华房车。房车采用环保航空材料设计，内部线条明快流畅，拥有4张床位，可同时容纳9人；厨房里烹饪用具一应俱全，在旅途中享受烹饪的乐趣，带来全新入住体验。<br />
+            价位： 430-1500元区间</p>
+            <div class="live_imgBox">
+            	<img src="../Images/play/live05.jpg" />
+            </div>
+            <h2 class="walk_title01">低碳环保新主张——咖酷旅馆</h2>
+            <p class="walk_p2">推荐指数：★★★★<br />
+            地理位置：坐落于大侠谷主题公园<br />
+            推介理由：咖酷旅馆是以集装箱概念为主题的新型环保旅馆，拥有180间个性客房，全部以集装箱外形打造，每间客房可容纳4位或6位住客。外观饰以不同色彩，风格新颖独特，为环保人士提供了低碳的全新入住体验。<br />
+            价位： 400-800元区间</p>
+            <div class="live_imgBox">
+            	<img src="../Images/play/live06.jpg" />
+            </div>      
+        </div>
+    </div>
+    
+    <div class="rich_media_tool">
+        <div class="meta_primary">阅读 <span id="rp">0</span></div>
+        <a class="meta_primary meta_praise" href="javascript:;" id="like">
+            <i class="icon_praise_gray"></i>
+            <span class="praise_num">0</span>
+        </a>
+    </div>
+</section>
+
+<!--//设备横屏提醒-->
+<section id="transverse"></section>
+<!--End设备横置提醒//-->
+<!--//版权信息-->
+<!--#include file="/dongbu/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

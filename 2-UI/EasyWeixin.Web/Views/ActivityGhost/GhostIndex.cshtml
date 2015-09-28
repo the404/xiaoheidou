@@ -1,0 +1,121 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;">
+    <title>恶鬼快跑|天津欢乐谷</title>
+    <link href="~/css/index.css" rel="stylesheet" />
+</head>
+<body id="index">
+    <div class="wrap" id="indexBg" style="height: 511px;">
+        <h1 id="logo" alt="恶魔快跑|天津欢乐谷">
+            <img src="/images/Activity/Ghost/logo.png"></h1>
+        <ul class="btnList btn">
+            @{
+                if (ViewData["SnowStatus"] == null)
+                {
+                <li><a href="/ActivityGhost/GhostGame?SnowID=@Request["SnowID"]"></a></li>
+                }
+                else
+                {
+                <li><a href="javascript:void(0);" id="a1"></a></li>
+                }
+            }
+            <li><a id="a2" href="javascript:;"></a></li>
+            <li><a href="/ActivityGhost/GhostRank?SnowID=@Request["SnowID"]"></a></li>
+        </ul>
+
+        <div id="rule">
+            <img src="/images/Activity/Ghost/rule_bg.png" alt="">
+            <p class="p1">
+                <strong style="color:red;font-size:large">PS:仅供测试</strong>
+                恶鬼快跑！紧盯屏幕，30秒尽情点击出现的恶鬼，就有机会获得天津欢乐谷为亲提供的大礼！您还在等什么？赶紧加入吧！亲，可别忘了填写信息提交成绩噢！</p>
+            <p class="p2">
+                时间：xx月xx日-xx月xx日<br />
+                奖励设置：xxxxxx<br />
+            </p>
+            <a href="javascript:;" id="rule_close"></a>
+        </div>
+        <div id="act-over">
+            <img src="/images/Activity/Ghost/act_over.png" alt="">
+            <a href="javascript:;" id="act-over-close"></a>
+        </div>
+
+        <div id="transverse">
+        </div>
+    </div>
+
+    @*<script src="~/js/jquery-1.8.2.js"></script>*@
+    <script src="/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/js/Activity/Ghost/christmas.js"></script>
+    <script src="~/js/Activity/Ghost/easing.min.js"></script>
+    <style>
+        #logo {
+            z-index: 1;
+        }
+
+        #act-over {
+            width: 100%;
+            z-index: 100000;
+            position: fixed;
+            top: 0px;
+            opacity: 0;
+            height: auto;
+        }
+
+            #act-over img {
+                width: 60%;
+                height: auto;
+                margin: 0 0 0 20%;
+            }
+
+        #act-over-close {
+            width: 36px;
+            height: 100%;
+            left: 20%;
+            display: block;
+            position: absolute;
+            top: 0px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            //首页
+            var oIndexBg = document.getElementById("indexBg");
+            oIndexBg.style.height = document.documentElement.clientHeight - 8 + "px";
+            window.onresize = function () {
+                oIndexBg.style.height = document.documentElement.clientHeight - 8 + "px";
+            }
+            //弹框
+            var oBtn01 = document.getElementById("a2");
+            var oBtn02 = document.getElementById("rule_close");
+            var oRule = document.getElementById("rule");
+            var oBtn03 = document.getElementById("a1");
+            var oOver = document.getElementById("act-over");
+            var oOverClose = document.getElementById("act-over-close");
+
+            oBtn01.onclick = function () {
+                startMove(oRule, { top: 40, opacity: 100 });
+            }
+            oBtn02.onclick = function () {
+                startMove(oRule, { top: -400, opacity: 0 });
+            }
+
+            oBtn03.onclick = function () {
+                oOver.style.display = "block";
+                startMove(oOver, { top: 120, opacity: 100 });
+            }
+            oOverClose.onclick = function () {
+                oOver.style.display = "none";
+                startMove(oOver, { top: -400, opacity: 0 });
+            }
+        };
+        $(document).ready(function () {
+            $("#logo").animate({ "top": 0 }, "2000", "easeOutBounce");
+        });
+    </script>
+</body>
+</html>

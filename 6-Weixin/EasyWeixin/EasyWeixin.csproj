@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DDB382C-7D2B-4DDF-AB63-C75B94EBEB43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyWeixin</RootNamespace>
+    <AssemblyName>EasyWeixin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedAPIs\QrCode\CreateQrCodeResult.cs" />
+    <Compile Include="AdvancedAPIs\QrCode\QrCodeAPI.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\entity\RedPacket.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\entity\RedPacketSentError.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\entity\RedPacketSentResult.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\Amounter.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\impl\CertFindByFile.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\impl\CertFinderByCertMgr.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\impl\SendCert.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\inter\ICertFinder.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\inter\IRedPacketService.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\inter\ISendCert.cs" />
+    <Compile Include="AdvancedAPIs\RedPack\RedPacketService.cs" />
+    <Compile Include="AdvancedAPIs\TemplateMessage\TemplateAPI.cs" />
+    <Compile Include="AdvancedAPIs\TemplateMessage\TemplateMessageJson\GetTemplateIdResult.cs" />
+    <Compile Include="AdvancedAPIs\TemplateMessage\TemplateMessageJson\SendTemplateMessageResult.cs" />
+    <Compile Include="AdvancedAPIs\TemplateMessage\TemplateMessageJson\TemplateDataItem.cs" />
+    <Compile Include="AdvancedAPIs\TemplateMessage\TemplateMessageJson\TempleteModel.cs" />
+    <Compile Include="AdvancedAPIs\User\UserAPI.cs" />
+    <Compile Include="AdvancedAPIs\User\UserJson\OpenIdResultJson.cs" />
+    <Compile Include="AdvancedAPIs\User\UserJson\UserInfoJson.cs" />
+    <Compile Include="CheckSignature.cs" />
+    <Compile Include="CommonAPIs\AccessTokenContainer.cs" />
+    <Compile Include="CommonAPIs\CommonApi.cs" />
+    <Compile Include="CommonAPIs\CommonApi.Menu.cs" />
+    <Compile Include="CommonAPIs\CommonJsonSend.cs" />
+    <Compile Include="CommonAPIs\JsApiTicketContainer.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Context\MessageContext.cs" />
+    <Compile Include="Context\WeixinContext.cs" />
+    <Compile Include="Entities\GoogleMap\Markers.cs" />
+    <Compile Include="Entities\JsonResult\AccessTokenResult.cs" />
+    <Compile Include="Entities\JsonResult\CheckResult.cs" />
+    <Compile Include="Entities\JsonResult\GetMenuResult.cs" />
+    <Compile Include="Entities\JsonResult\GetMenuResultFull.cs" />
+    <Compile Include="Entities\JsonResult\JsApiTicketResult.cs" />
+    <Compile Include="Entities\JsonResult\OAuthAccessTokenResult.cs" />
+    <Compile Include="Entities\JsonResult\OAuthWeixinUserInfoResult.cs" />
+    <Compile Include="Entities\JsonResult\UploadMediaFileResult.cs" />
+    <Compile Include="Entities\JsonResult\WeixinShortLinkResult.cs" />
+    <Compile Include="Entities\JsonResult\WeixinUserInfoResult.cs" />
+    <Compile Include="Entities\JsonResult\WxConfigResult.cs" />
+    <Compile Include="Entities\JsonResult\WxJsonResult.cs" />
+    <Compile Include="Entities\Menu\BaseButton.cs" />
+    <Compile Include="Entities\Menu\ButtonGroup.cs" />
+    <Compile Include="Entities\Menu\SingleButton.cs" />
+    <Compile Include="Entities\Menu\SingleClickButton.cs" />
+    <Compile Include="Entities\Menu\SingleViewButton.cs" />
+    <Compile Include="Entities\Menu\SubButton.cs" />
+    <Compile Include="Entities\MessageBase.cs" />
+    <Compile Include="Entities\Request\Events\IRequestMessageEventKey.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_MassSendJobFinish.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_Scan.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_Scancode_Push.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_Scancode_Waitmsg.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_TemplateSendJobFinish.cs" />
+    <Compile Include="Entities\Request\Events\ScanCodeInfo.cs" />
+    <Compile Include="Entities\Request\RequestMessageBase.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEventBase.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_Click.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_Enter.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_Location.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_Subscribe.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_Unsubscribe.cs" />
+    <Compile Include="Entities\Request\Events\RequestMessageEvent_View.cs" />
+    <Compile Include="Entities\Request\RequestMessageImage.cs" />
+    <Compile Include="Entities\Request\RequestMessageLink.cs" />
+    <Compile Include="Entities\Request\RequestMessageLocation.cs" />
+    <Compile Include="Entities\Request\RequestMessageShortVideo.cs" />
+    <Compile Include="Entities\Request\RequestMessageText.cs" />
+    <Compile Include="Entities\Request\RequestMessageVideo.cs" />
+    <Compile Include="Entities\Request\RequestMessageVoice.cs" />
+    <Compile Include="Entities\Response\Article.cs" />
+    <Compile Include="Entities\Response\Image.cs" />
+    <Compile Include="Entities\Response\Music.cs" />
+    <Compile Include="Entities\Response\ResponseMessageBase.cs" />
+    <Compile Include="Entities\Response\ResponseMessageImage.cs" />
+    <Compile Include="Entities\Response\ResponseMessageMusic.cs" />
+    <Compile Include="Entities\Response\ResponseMessageNews.cs" />
+    <Compile Include="Entities\Response\ResponseMessageText.cs" />
+    <Compile Include="Entities\Response\ResponseMessageVideo.cs" />
+    <Compile Include="Entities\Response\Video.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Exceptions\ErrorJsonResultException.cs" />
+    <Compile Include="Exceptions\UnknownRequestMsgTypeException.cs" />
+    <Compile Include="Exceptions\WeixinException.cs" />
+    <Compile Include="Exceptions\WeixinMenuException.cs" />
+    <Compile Include="Helpers\CommonHelper.cs" />
+    <Compile Include="Helpers\CookieHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelper.cs" />
+    <Compile Include="Helpers\EntityHelper.cs" />
+    <Compile Include="Helpers\EventHelper.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\GoogleMapHelper.cs" />
+    <Compile Include="Helpers\GpsHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\MsgTypeHelper.cs" />
+    <Compile Include="Helpers\NetworkHelperAll.cs" />
+    <Compile Include="Helpers\PicHelper.cs" />
+    <Compile Include="Helpers\SerializerHelper.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Helpers\XMLHelper.cs" />
+    <Compile Include="HttpUtility\Get.cs" />
+    <Compile Include="HttpUtility\HttpHelper.cs" />
+    <Compile Include="HttpUtility\Post.cs" />
+    <Compile Include="HttpUtility\RequestUtility.cs" />
+    <Compile Include="MessageHandlers\IMessageHandler.cs" />
+    <Compile Include="MessageHandlers\MessageHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestMessageFactory.cs" />
+    <Compile Include="ResponseMessageFactory.cs" />
+    <Compile Include="ShortUrl\ShortUrlhelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdvancedAPIs\WxPay\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷微信,上海欢乐谷照片墙,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>照片墙|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <form method="post">
+        <section id="wrap">
+            <div class="photoBox">
+                <img src="../Images/img/photo01.jpg" alt="" />
+            </div>
+        <div class="photoIntroBox">
+            <textarea class="photoIntro" id="photoIntro" name="photoIntro" placeHolder="请输入对照片的描述" onfocus="javascript:ResizeTextarea(this,2);" onkeyup="javascript:ResizeTextarea(this,2);"></textarea>
+            <input type="submit" class="photoSub" value="确定">
+        </div>
+        </section>
+    </form>
+</body>
+</html>
+<script>
+var agt = navigator.userAgent.toLowerCase();
+var is_op = (agt.indexOf("opera") != -1);
+var is_ie = (agt.indexOf("msie") != -1) && document.all && !is_op;
+function ResizeTextarea(a,row){
+    if(!a){return}
+    if(!row)
+        row=5;
+    var b=a.value.split("\n");
+    var c=is_ie?1:0;
+    c+=b.length;
+    var d=a.cols;
+    if(d<=20){d=40}
+    for(var e=0;e<b.length;e++){
+        if(b[e].length>=d){
+            c+=Math.ceil(b[e].length/d)
+        }
+    }
+    c=Math.max(c,row);
+    if(c!=a.rows){
+        a.rows=c;
+    }
+}
+var oPhotoIntro=document.getElementById("photoIntro");
+oPhotoIntro.onclick=function(){
+	ResizeTextarea(this,2);
+	}
+</script>

@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <title>疯狂砸金蛋|上海欢乐谷</title>
+    <link href="/Content/Snow/layout.css" rel="stylesheet" />
+    <meta name="keywords" content="疯狂砸金蛋|上海欢乐谷" />
+    <meta name="description" content="疯狂砸金蛋|上海欢乐谷" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0" />
+</head>
+<body id="index">
+    <link href="/Content/Snow/Egg_layout.css" rel="stylesheet" />
+    <div class="wrap" id="indexBg">
+
+        <h1 id="logo" alt="疯狂砸金蛋|上海欢乐谷">
+            <img src="/images/Activity/Egg/logo.png" /></h1>
+        <ul class="btnList btn">
+            <li><a  href="/ActivitySnowTest/SnowGame?SnowID=@Request["SnowID"]" >开始游戏</a></li>
+            <li><a id="a2" href="javascript:;">游戏规则</a></li>
+            <li><a  href="/ActivitySnowTest/SnowRank?SnowID=@Request["SnowID"]" >游戏排名</a></li>
+        </ul>
+        <div id="rule">
+            <h2 class="repeatBg">游戏规则</h2>
+            <div class="info">
+                <p><span>游戏规则：</span><br />
+                    亲，注意力集中啰！锁定屏幕金蛋，30秒尽情点击，就有机会获得多重好礼!还在等神马！畅快点击！记得完善个人信息噢！</p>
+                <p><span>奖品说明：</span><br />
+                    每周排行的前3名可获得上海欢乐谷指定日日夜场通玩名额，3~6名可获得上海欢乐谷指定日夜场通玩名额。</p>
+                <p><span>圣诞礼物：</span><br />
+                    年度报纸订阅卡，欢乐谷纪念马克杯或指定日免费入园名额。</p>
+            </div>
+            <div id="ruleClose" class="btn"></div>
+        </div>
+    </div>
+    <footer class="repeatBg"></footer>
+</body>
+</html>
+<script src="/js/Activity/christmas_egg.js" type="text/javascript"></script>
+<script>
+    window.onload = function () {
+        //首页
+        var oIndexBg = document.getElementById("indexBg");
+        oIndexBg.style.height = document.documentElement.clientHeight - 8 + "px";
+        window.onresize = function () {
+            oIndexBg.style.height = document.documentElement.clientHeight - 8 + "px";
+        }
+        //弹框
+        var oBtn01 = document.getElementById("a2");
+        var oBtn02 = document.getElementById("ruleClose");
+        var oRule = document.getElementById("rule");
+
+        oBtn01.onclick = function () {
+            startMove(oRule, { top: 80, opacity: 100 });
+        }
+        oBtn02.onclick = function () {
+            startMove(oRule, { top: -400, opacity: 0 });
+        }
+    }
+</script>

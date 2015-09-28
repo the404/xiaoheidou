@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<title>恶鬼快跑|天津欢乐谷</title>
+<link href="~/css/index.css" rel="stylesheet" />
+</head>
+<body id="game">
+     <div style="display: none">
+        <input type="hidden" id="SnowID" value="@Request["SnowID"]" />
+        <input hidden="hidden" id="Datas" value="@ViewData["SnowDatas"]" />
+    </div>
+    <div class="gameInfo">
+        <div id="count">0</div>
+        <div id="time">00:30</div>
+    </div>
+    <ul id="snowBox">
+        <li></li>
+    </ul>
+    <div id="gameOver">
+        <div id="totalP">0分</div>
+        <div class="btnWrap">
+            <a href="/ActivityGhost/GhostGame?SnowID=@Request["SnowID"]" id="continue">继续</a>
+            <a id="submit" href="javascript:;">提交成绩</a>
+        </div>
+    </div>
+    <div id="submitInfo">
+        <div class="userInfo">
+           <div class="user_Item">姓名：<input type="text" id="UserName" /></div>
+           <div class="user_Item">电话：<input type="text" id="Phone" /></div>
+        </div>
+        <div class="btnWrap">
+            <a href="javascript:;" id="yes">确认</a>
+            <a  href="/ActivityGhost/GhostGame?SnowID=@Request["SnowID"]" id="no" >取消</a>
+        </div>
+    </div>
+    <div id="transverse">
+    </div>
+    <a href="/ActivityGhost/GhostIndex?SnowID=@Request["SnowID"]" class="back"></a>
+</body>
+</html>
+<script src="/Scripts/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    });
+</script>
+<script src="~/js/Activity/Ghost/christmas.js"></script>

@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+@model List<EasyWeixin.Model.Act>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <meta name="keywords" content="东部华侨城,华侨城,华侨城微信,华侨城官方微信,华侨城微信公众平台,江南旅游,深圳度假,深圳,旅游,深圳景区,深圳好玩的,深圳好吃的,互动力;" />
+    <meta name="description" content="东部华侨城位于中国深圳大梅沙，占地近9平方公里，是由华侨城集团斥资35亿元精心打造的世界级度假旅游目的地，是由国家环境保护部和国家旅游局联合授予的首个“国家生态旅游示范区”。" />
+    <title>景区动态|东部华侨城官方微信</title>
+    <link href="~/dongbu/Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="wrap">
+        <div id="content">
+
+            @if (Model != null)
+            {
+                for (int i = 0; i < Model.Count; i++)
+                {
+                <div class="preferBox">
+                    <a href="/ActivityAct/DActDetail?ActID=@Model[i].ID">
+                        <div class="preferTop">
+                            <h2>@Model[i].Name</h2>
+                            <span></span>
+                        </div>
+                        <ul class="preferIntro">
+                            <li>@Convert.ToDateTime(Model[i].StartDate).ToString("yyyy.MM.dd")</li>
+                            <li>
+                                @Html.Raw(EasyWeixin.Helpers.StringHelper.ParseHtml(Model[i].Content))
+                            </li>
+                        </ul>
+                        <div class="line"></div>
+                        <div class="point"></div>
+                        <div class="pointL"></div>
+                        <div class="pointR"></div>
+                    </a>
+                </div>
+                }
+            }
+
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+    @Html.Raw(File.ReadAllText(Server.MapPath("/dongbu/Include/foot.htm")))
+    <!--End版权信息-->
+</body>
+</html>

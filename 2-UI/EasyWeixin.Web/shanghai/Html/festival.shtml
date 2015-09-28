@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷微信,全年节庆,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>全年节庆|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="content04">
+        	<div class="festivalBox">
+            	<div class="month month01">1月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop01">
+                    	<div class="triangle triangle01"></div>
+                        <h4>新春滑稽节<span>新春喜洋洋 欢乐好白相</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival01.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival02.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>新春佳节，一场无与伦比、精彩绝伦的闹新春！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month month02">3月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop02">
+                    	<div class="triangle triangle02"></div>
+                        <h4>女人月<span>美丽女人月  三月欢乐行</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival13.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival14.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>做快乐女人，快乐女人最美丽</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month month03">3月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop03">
+                    	<div class="triangle triangle03"></div>
+                        <h4>踏青季<span>转动风车"趣"春游</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival15.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival16.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>春游去哪儿?当然上海欢乐谷！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month month04">6月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop04">
+                    	<div class="triangle triangle04"></div>
+                        <h4>欢乐毕业季<span>翻滚少年  最嗨毕业季</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival19.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival20.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>终于毕业啦！毕业首站上海欢乐谷，挑战，呐喊，迎接更美好的未来，少年！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month month03">6月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop03">
+                    	<div class="triangle triangle03"></div>
+                        <h4>欢乐谷狂欢节<span>狂欢热浪  飓风来袭</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival06.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival05.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>狂欢怎能没有你！百余位中外优秀演员激情上演夏日狂欢盛宴！还有一年一度的七夕过山车婚礼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month month06">7月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop06" style="height:50px;">
+                    	<div class="triangle triangle06"></div>
+                        <h4 style="line-height:24px; width:100%;">&nbsp;&nbsp;&nbsp;&nbsp;夏浪音乐节<br />（玛雅水公园）<span style="line-height:24px; display:block; position:absolute; top:10px; left:100px;">激爽夏日，水与我狂欢</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival17.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival18.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>音乐一夏，激爽一夏，美女宝贝与你一齐相约玛雅海滩水公园！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month month01">9月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop01">
+                    	<div class="triangle triangle01"></div>
+                        <h4>粉丝欢乐节<span>粉丝惠 尽情爽 放肆玩</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival03.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival04.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>幸运粉丝汇，乐享粉丝惠！让粉丝拥有自己的节日，成为节日的主角。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month month02">10月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop02">
+                    	<div class="triangle triangle02"></div>
+                        <h4>国际魔术节<span>魔法奇迹  巅峰聚首</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival07.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival08.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>中国最大规模，最高档次的世界级魔术盛会。世界各地的魔术大师在国庆黄金周期间为游客献上最精彩的魔幻盛典。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month month05">11月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop05">
+                    	<div class="triangle triangle05"></div>
+                        <h4>万圣欢乐节<span>华东至大HALLOWEEN盛典</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival09.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival10.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>"够胆你就来"，上海欢乐谷打造沪上最惊悚好玩的万圣欢乐节。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="festivalBox">
+            	<div class="month month04">12月</div>
+                <div class="festivalInfo">
+                	<div class="festivalTop festivalTop04">
+                    	<div class="triangle triangle04"></div>
+                        <h4>跨年欢乐季<span>缤纷圣诞  红动新年</span></h4>
+                    </div>
+                    <div class="festival">
+                    	<ul class="festivalImg">
+                        	<li><img src="../Images/img/festival11.jpg" alt=""/></li>
+                            <li><img src="../Images/img/festival12.jpg" alt=""/></li>
+                        </ul>
+                        <div class="festivalText">
+                        	<p>多彩冬日，最炫圣诞风，最唯美最浪漫最梦幻的圣诞嘉年华！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="rich_media_tool">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>
+<script type="text/javascript">
+//底部点赞
+var oLike=document.getElementById("like");
+var oLikeIcon=oLike.getElementsByTagName("i")[0];
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_grey";
+	}
+</script>

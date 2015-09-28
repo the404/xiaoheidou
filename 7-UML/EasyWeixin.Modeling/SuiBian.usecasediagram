@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="8d3a2eac-8aa3-464e-8439-1f06a9c221f6" name="UMLUseCaseDiagram1" linkedPackageId="5e20df57-98b6-4fa0-bc0f-eeea88f78f8a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="d4484e09-2372-4825-a02d-c514bb0826ba" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="d73ea87d-9577-482e-a57c-71fd97b87180" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2e176dd6-ad05-48a0-b06b-44a2c2158883">
+          <propertyInstance Id="08d0f441-2a3c-4f81-8354-267d80c126cf" name="BaseName">
+            <elementDefinition Id="d997f61b-a513-4a6e-af87-74417348bfed" />
+          </propertyInstance>
+          <elementDefinition Id="a27c267b-7ea0-4064-bd25-8c5cc5b99c9e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="338239c8-4651-4384-9ad3-6a0bd39bd0c1">
+          <propertyInstance Id="373205ff-ba25-414f-9c29-1bc43fafa4ed" name="ClrAttributes">
+            <elementDefinition Id="66639a4a-0a02-40ca-b92b-14e5c95eac38" />
+          </propertyInstance>
+          <elementDefinition Id="31bdda9f-d30b-4b5c-b821-3647b6b16892" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="085f2a6c-b55f-44dc-811a-a78bf80fe10f">
+          <propertyInstance Id="b521925d-187c-439f-bb71-3383eecefee1" name="Usings">
+            <elementDefinition Id="95122077-33d6-43a1-985b-2d75e4355567" />
+          </propertyInstance>
+          <elementDefinition Id="08697e3f-126a-46b8-a7c7-16989610beff" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="9110caf8-ed0d-4367-b084-2bbf53f8651c" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="ed8f8f2f-e0ad-413c-8e45-77afbd161149" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="2cac6315-d8fc-465a-82b7-cacc6d3f7043">
+          <propertyInstance Id="ec0a42e7-e97a-4406-9267-c0c0b0377bb0" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="0ff62aaf-12ab-4257-aaac-19eccad69599" />
+          </propertyInstance>
+          <elementDefinition Id="f5c7bd54-249d-43db-aa2f-c77ae1385bc2" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="44e21001-ae1c-4b57-b836-acc75a57bf4e">
+          <propertyInstance Id="767b6b9e-0b31-4219-9438-4c2a3cc8d14e" name="TemplateFilePath" value="ClassTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="fc270aa7-1bff-4ebc-8868-6ca1bebde196" />
+          </propertyInstance>
+          <elementDefinition Id="3ca64a3e-c216-4daf-b153-dabfbad94cc7" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9559d9ab-4173-4e69-8cce-9b762182c0a1">
+          <propertyInstance Id="8c43d7bc-c5f8-4612-b799-d4a865f5cdac" name="ProjectPath" value="ClassTemplate=..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj|EnumTemplate=..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj|InterfaceTemplate=..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj|StructTemplate=..\EasyWeixin.ModelingLib\EasyWeixin.ModelingLib.csproj">
+            <elementDefinition Id="37591391-4140-4ba7-af9e-355a46f4d229" />
+          </propertyInstance>
+          <elementDefinition Id="86ce9960-a93b-49d4-a6f1-263f2a6afbf1" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f69c738d-7996-432c-bc9a-48ba6d6a6c6d">
+          <propertyInstance Id="01426061-7d3f-4285-87aa-346d2d274cec" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="f077371c-10a3-4b46-bcbf-6c0dd2491876" />
+          </propertyInstance>
+          <elementDefinition Id="daf45b5e-43ff-4d41-b8b8-bd733725fe94" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ba71b9ae-6c1e-4460-a75c-2838ed18e4eb">
+          <propertyInstance Id="0c68f555-a087-4ce3-a6c4-e9f60066af89" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="d283bc8a-30af-4f4a-915c-5f8d01a3691c" />
+          </propertyInstance>
+          <elementDefinition Id="645c2042-3b9e-452e-9e99-ccc009e4da95" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="58c47c8d-18dd-4b32-bef8-8d950ebaf38f">
+          <propertyInstance Id="ab5f0f03-2e28-43f2-9079-865c6789eadb" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="5069e78e-dcd4-41e1-bc87-0c548d37e950" />
+          </propertyInstance>
+          <elementDefinition Id="0798b37f-9717-46ff-862c-b593d6bfe360" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f6872271-e968-452e-beba-8d404da38e12">
+          <propertyInstance Id="bf95e144-b798-4b43-be44-c9210e7f7d5d" name="Parameters">
+            <elementDefinition Id="b4940a4d-85e0-482c-9139-7e257d896f3d" />
+          </propertyInstance>
+          <elementDefinition Id="6c55a862-942b-4d12-ae7c-66c6358df64b" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="8f4446b6-5cb8-403c-aff9-b5c41dd973b1" name="后台管理员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a86ffbb6-c5fd-4565-91de-9040bdccdc53" />
+        <targetEnds>
+          <association Id="24da4110-affa-4b0e-a79f-f518808f63db" isDerived="false" sourceEndRoleName="后台管理员" targetEndRoleName="随便走总后台" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="ff158c52-f6a4-4786-8cb5-24710fa4bdef" LastKnownName="随便走总后台" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7e969b82-e71e-43e7-aa74-cf57a52cb954" name="后台管理员" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="690a6ade-b6e3-4b78-8bf5-70f392557c41" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="03fbf783-cfa9-427b-a4cf-3592fb12af73" name="随便走总后台" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3992f1ff-0cf1-4399-8232-575d9d238558" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a8eb70a9-7964-420e-b4a1-263685f71604" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="c4e494a9-ed76-437a-ae94-c604a514e0ff" name="随便走普通用户" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c0730c40-8eff-444b-a2e8-11ee654cd6d5" />
+        <targetEnds>
+          <association Id="4bcdcff1-41e1-4039-aa18-d25425cff88d" isDerived="false" sourceEndRoleName="随便走普通用户" targetEndRoleName="鸡毛信游戏" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c6f288b9-e3e3-4bf4-8136-7bf80e82a473" LastKnownName="鸡毛信游戏" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b64160fe-2746-4849-9a29-89d5af9c7621" name="随便走普通用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ce5a3865-4e39-4cef-98f5-48a4ab5ee219" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f8c26d3b-7f27-40f4-9d1d-ff296c615313" name="鸡毛信游戏" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f084f1d3-4d7d-477c-ba2d-1cbc56c46ee8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cd519dd7-0eb2-4462-8e9d-faf3c557a52d" />
+          </association>
+          <association Id="c44eb520-17aa-48a1-a816-84902dda1881" isDerived="false" sourceEndRoleName="随便走普通用户" targetEndRoleName="用户信息" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c34e4b06-dea2-48e1-8968-d02ffa1277b0" LastKnownName="用户信息" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e5e788c3-a121-4ce4-b632-31eb8cb2641d" name="随便走普通用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ba2a8acd-6cc4-4ad4-8e6e-3b43b9ac79b3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="06ccbe66-72ed-4869-9ee3-84cba692a8c9" name="用户信息" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="81538aeb-3248-485b-addb-3c99e96369f2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="39027882-312d-4a55-a049-4df184401eac" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="cedbf9e7-321e-4650-8303-8435bc6014dd" name="随便走企业用户" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="85ce3873-864d-4cf9-802a-e5ae66615c82" />
+        <targetEnds>
+          <association Id="63f9126c-d56b-47db-873c-6d5897b1f800" isDerived="false" sourceEndRoleName="随便走企业用户" targetEndRoleName="随便走企业用户后台" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="71469fcd-003e-4433-a10f-7d4ab68442c0" LastKnownName="随便走企业用户后台" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d6d75e1-e42a-4e9b-8096-0d2bc89a20be" name="随便走企业用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6d6fd829-84d1-4cb6-8ee2-c1c3b29078be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1c4234ba-cf1c-430d-8f3f-42776186607d" name="随便走企业用户后台" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="32fc8332-c848-4971-a206-f1bda04688d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8fe9aa85-1122-4c9a-85fe-4af71ee0a5cd" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="192180db-a5fd-4fdc-b5af-43533667b994" name="随便走开发者" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b353f196-67de-4581-8527-2d51e1ad0b38" />
+        <targetEnds>
+          <association Id="ffc9637c-8900-4851-9cde-1e3ea23484db" isDerived="false" sourceEndRoleName="随便走开发者" targetEndRoleName="随便手机端开发" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="3add7176-faa3-4c7d-bf78-7efe8bc6ed9d" LastKnownName="随便手机端开发" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9ec5fe19-3f67-4c32-8345-d5008992efee" name="随便走开发者" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="86b18a28-9f2a-4c3f-8713-81b789537ac2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="004509f8-4d0e-416e-a792-f7c6e419f848" name="随便手机端开发" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5fea20e2-57f4-40a1-94ab-e8f49c0e0c02" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="78c5b2c7-2104-48aa-a3c9-dc59a8fc7255" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="ff158c52-f6a4-4786-8cb5-24710fa4bdef" name="随便走总后台" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="56c2c899-30a2-4525-a596-d28544345c3f" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="5815fd4e-bd84-48ab-9d2d-48ddcbf5ad7c" name="随便走API接口" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e50da96f-af4c-4976-ade9-59724b88d1a2" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="3add7176-faa3-4c7d-bf78-7efe8bc6ed9d" name="随便手机端开发" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="25476ca6-5824-4268-955a-a533d7ac77e8" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="71469fcd-003e-4433-a10f-7d4ab68442c0" name="随便走企业用户后台" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="16a18b15-ebed-4d92-ba69-2fdae1376547" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b1a18ad5-0325-43f0-90df-4474cbfe4668" name="百度地图API" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="91c65b4c-2da3-48fa-8a3e-44781e6ddd0f" />
+        <targetEnds>
+          <association Id="8c3b2fe9-cd7c-491f-8120-1818029bbd7d" isDerived="false" sourceEndRoleName="百度地图API" targetEndRoleName="景点API接口" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="beb7ae89-73e8-40a8-a1f5-1ecc89dab542" LastKnownName="景点API接口" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="818b4255-b2e3-40ca-a8d3-51f4b072eb1a" name="百度地图API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="00528a52-750f-46c7-b06e-23af9ff3af90" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5c959c0a-58c5-4db4-bb2a-bca01b2c2344" name="景点API接口" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="674bb79c-127c-404c-89d9-57f1d7470996" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="63832fad-dfe3-4722-909c-73d727063dce" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="a9fcd5ba-d527-4402-9e4e-7d77ffbcce51" name="个人中心" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="908bbff3-7ca0-480c-89e3-d9e8c4ef67f7" />
+        <targetEnds>
+          <association Id="d6e5781c-b1fb-477d-aac3-cec004a116a7" isDerived="false" sourceEndRoleName="个人中心" targetEndRoleName="随便走总后台" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="ff158c52-f6a4-4786-8cb5-24710fa4bdef" LastKnownName="随便走总后台" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d7c75039-ac11-4a74-a110-1e472f4efaee" name="个人中心" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="99babe93-45b4-496d-a49a-2f98ab75d054" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b6821008-71bf-409b-839b-1975826b42c7" name="随便走总后台" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8a5b56c4-94f9-4616-8ce8-122955a2b13b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2e53c0bc-9432-4e3a-95fb-a6c0e09de099" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="71469fcd-003e-4433-a10f-7d4ab68442c0" LastKnownName="随便走企业用户后台" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f7eb5e90-63b8-4921-adf1-3eb612d1f995" name="添加景点" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8b774811-3fc5-4c9c-a367-c0ac22eae5c5" />
+        <targetEnds>
+          <association Id="36e46322-52ad-49d4-afd1-97af687b40ab" isDerived="false" sourceEndRoleName="添加景点" targetEndRoleName="百度地图API" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9fb73d47-65eb-48e9-b830-cb99b5eebda4" LastKnownName="百度地图API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6622cefd-f900-46ac-8c22-cd05664a1c8a" name="添加景点" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="79bb95ac-6be5-4baa-8cfb-51d81d9f870c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0719105a-473c-4fd0-b563-d1cbf8340d09" name="百度地图API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="484d06ad-3a33-4c58-8fa7-15fc961dcd50" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="742dfdb5-edff-4ad3-bcd4-62b1b0fe1008" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="71469fcd-003e-4433-a10f-7d4ab68442c0" LastKnownName="随便走企业用户后台" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9fb73d47-65eb-48e9-b830-cb99b5eebda4" name="百度地图API" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5cae7703-0335-43e5-9efa-c6010fd6d706" />
+        <targetEnds>
+          <association Id="cfec1659-2314-4d2a-815c-5b806bbc0874" isDerived="false" sourceEndRoleName="百度地图API" targetEndRoleName="随便走总后台" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="ff158c52-f6a4-4786-8cb5-24710fa4bdef" LastKnownName="随便走总后台" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e7215562-adb8-4209-8114-0286c46d4131" name="百度地图API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7632a2fc-5253-46cd-bbec-883c068a5b76" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a4254c23-895f-4c1e-ade1-1b3e1a6ecba5" name="随便走总后台" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="84c4ea1e-713b-4993-bfbd-1abeeac128c8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bf71b577-2c8b-40a3-ae1b-c7c9962e6e9d" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="e78a339e-a167-4098-91b0-a6e5897e1e45" name="鸡毛信管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a7ac9e8b-c5d7-42e4-93bf-0d43aacbcce5" />
+        <targetEnds>
+          <association Id="ed193ccb-730e-4d7e-8202-324585c65401" isDerived="false" sourceEndRoleName="鸡毛信管理" targetEndRoleName="鸡毛信API" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b8db7c11-86c7-4814-8be3-c2f205e50828" LastKnownName="鸡毛信API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="60e1fbf8-0e12-4b86-8098-092dccb67875" name="鸡毛信管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4a8af0ff-b456-493a-b90b-18c0650ac67e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="939273bd-c165-40e2-880c-cb2908e53610" name="鸡毛信API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="81ace0a0-b6ec-43fe-9f35-ff6f680dd8d2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e3b505f4-42b5-47c4-9faf-8d870bb11aac" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="ff158c52-f6a4-4786-8cb5-24710fa4bdef" LastKnownName="随便走总后台" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="417aac28-a260-4f65-9c2c-31d4c048f163" name="景点管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aecfdec2-6da5-4f87-a3e3-63099907c38f" />
+        <targetEnds>
+          <association Id="9deecd04-f61d-479a-8ecc-c6436f438913" isDerived="false" sourceEndRoleName="景点管理" targetEndRoleName="百度地图API" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b1a18ad5-0325-43f0-90df-4474cbfe4668" LastKnownName="百度地图API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1221349f-ebac-472e-853b-a683f7301b1d" name="景点管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9a305600-31ef-45d6-b83c-827e54d0a1ef" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="84d3f65f-fe60-4b42-b151-aaec53b7900e" name="百度地图API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8ebde6ea-7fdc-4e64-8958-9831ac60941a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d949b351-39c3-446f-9f3b-4332efd2bc7e" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="ff158c52-f6a4-4786-8cb5-24710fa4bdef" LastKnownName="随便走总后台" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="beb7ae89-73e8-40a8-a1f5-1ecc89dab542" name="景点API接口" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a9246cfb-2b34-4a47-a977-52c7619bea48" />
+        <targetEnds>
+          <association Id="fb1b6d93-3f4b-4395-885a-69915a66f88d" isDerived="false" sourceEndRoleName="景点API接口" targetEndRoleName="随便走地图" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="96982a85-7329-4328-a793-1637978a5cc4" LastKnownName="随便走" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="904d95f9-adc0-4b18-b78d-3e0a4a4fa48a" name="景点API接口" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="17f184ac-b63e-46d2-8116-d2c4b0017946" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a07d2629-5e77-47e1-b49d-3740496ea577" name="随便走地图" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fa09b9a7-ec3a-42c9-af47-6b7f1d3bba69" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e0c11ccf-7252-410d-b4df-69fef9e1f182" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="5815fd4e-bd84-48ab-9d2d-48ddcbf5ad7c" LastKnownName="随便走API接口" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b8db7c11-86c7-4814-8be3-c2f205e50828" name="鸡毛信API" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e196ba42-6af2-4a14-899d-53921c306590" />
+        <targetEnds>
+          <association Id="bc44fd22-d602-4086-8094-064b5a546b7f" isDerived="false" sourceEndRoleName="鸡毛信API" targetEndRoleName="鸡毛信游戏" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c6f288b9-e3e3-4bf4-8136-7bf80e82a473" LastKnownName="鸡毛信游戏" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="770bc71a-bc43-4f8b-8a5b-311d1e31c9c2" name="鸡毛信API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="01c9fd06-a940-4fca-b2cd-b813c0f72f06" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f924e76-54c2-458d-b9ff-044806bad0ea" name="鸡毛信游戏" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9aa4f7b6-5ae3-40ee-b34a-f009be7250e5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4be654c7-2ef8-40f1-87aa-2147210faa8b" />
+          </association>
+          <association Id="609827f7-9dc6-4b55-9b17-a6ce889916b8" isDerived="false" sourceEndRoleName="鸡毛信API" targetEndRoleName="鸡毛信管理" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e78a339e-a167-4098-91b0-a6e5897e1e45" LastKnownName="鸡毛信管理" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="98f882d1-d087-42f6-a9c6-d3943c8be4e7" name="鸡毛信API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b48aecd3-7afe-4cc1-8708-bd2af12fbdb6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b2eafce-a4ed-45d8-b08c-f8a806f6138e" name="鸡毛信管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9ebdeb1a-7bc8-4d74-b4ee-4253bdb5d445" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="82ac4c8d-3c55-4b04-b173-0bd226917fc0" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="5815fd4e-bd84-48ab-9d2d-48ddcbf5ad7c" LastKnownName="随便走API接口" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="96982a85-7329-4328-a793-1637978a5cc4" name="随便走" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d1f504a2-a160-45a7-bf87-2d2570de123c" />
+        <targetEnds>
+          <association Id="ece5a4f3-1e54-4b7b-a932-2bc45c0b55d8" isDerived="false" sourceEndRoleName="随便走地图" targetEndRoleName="随便走普通用户" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="c4e494a9-ed76-437a-ae94-c604a514e0ff" LastKnownName="随便走普通用户" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fa101b1b-9e85-40a7-acf0-32bbf5047f2a" name="随便走地图" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2ab5711b-09f0-41b7-93f0-b159c7e773d8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bf8bdb99-90c0-4a52-8430-111d3ba7d972" name="随便走普通用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="28fdfeb0-bdc0-4389-bb16-4933db364868" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8b1bd288-df9d-4983-871c-3ea0ee28c509" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="3add7176-faa3-4c7d-bf78-7efe8bc6ed9d" LastKnownName="随便手机端开发" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c6f288b9-e3e3-4bf4-8136-7bf80e82a473" name="鸡毛信游戏" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f49f45ae-1ac5-475d-ab77-2d5268769f89" />
+        <targetEnds>
+          <association Id="20184986-5202-41ee-b633-83dd6e1fd78f" isDerived="false" sourceEndRoleName="鸡毛信游戏" targetEndRoleName="鸡毛信API" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b8db7c11-86c7-4814-8be3-c2f205e50828" LastKnownName="鸡毛信API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="df64f9be-3500-45ba-9c14-b25ebfe0ebb6" name="鸡毛信游戏" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a7586266-cb47-4659-a3a8-311207ecc311" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="beb115a9-9599-4956-90d0-051ceac155fc" name="鸡毛信API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b056ae52-8235-4c0d-94f3-35c081de5593" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a3f3bf10-b974-43d4-8b34-7f15bd4284f5" />
+          </association>
+          <association Id="a9619715-3454-4f58-a054-5bc8c632f433" isDerived="false" sourceEndRoleName="鸡毛信游戏" targetEndRoleName="随便走普通用户" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="c4e494a9-ed76-437a-ae94-c604a514e0ff" LastKnownName="随便走普通用户" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13931634-7d63-4f74-8e6c-2ecf23974688" name="鸡毛信游戏" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="14d2ec63-91f5-46d0-b56f-ac0406433632" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b53f5e79-ba89-4709-b0d1-82f9a8c923a1" name="随便走普通用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="18923a22-95d4-4388-ba32-4d7d3019eb12" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1df283eb-af08-4c80-9378-4f9f5f8f5f47" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="3add7176-faa3-4c7d-bf78-7efe8bc6ed9d" LastKnownName="随便手机端开发" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="06dae0f1-1c79-4605-ab5f-f7737976e524" name="系统管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="109f24ed-3896-4dcb-aa7e-5dc3142f1d4d" />
+        <subjects>
+          <subsystemMoniker Id="ff158c52-f6a4-4786-8cb5-24710fa4bdef" LastKnownName="随便走总后台" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="43c1ff55-f685-4326-a27c-591fe9bc94aa" name="企业会员管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f1f34217-7dc9-4ce0-9e70-208d790cdefe" />
+        <subjects>
+          <subsystemMoniker Id="ff158c52-f6a4-4786-8cb5-24710fa4bdef" LastKnownName="随便走总后台" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="78d0de1d-7cb9-4655-aa41-41a7108adaa5" name="普通用户管理" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="107294f0-882b-4284-8ae7-c6f0363cd3e3" />
+        <targetEnds>
+          <association Id="f79ebb4d-0d6d-4e0e-a99b-c3627fbba10a" isDerived="false" sourceEndRoleName="普通用户管理" targetEndRoleName="用户信息API" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="29b23a14-f248-4330-9781-9f7e524a12cb" LastKnownName="用户信息API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e03622d7-44bc-4068-9a85-e1e478935b18" name="普通用户管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="342721d3-1542-4111-b33f-209368a1bfb8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0a3414f-b544-433f-9f06-8689b9484512" name="用户信息API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ee53e6b0-c5a7-4cff-a506-dde3c06668ad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0318933a-26a7-4f8d-a183-079919c3dc8a" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="ff158c52-f6a4-4786-8cb5-24710fa4bdef" LastKnownName="随便走总后台" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="29b23a14-f248-4330-9781-9f7e524a12cb" name="用户信息API" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3243197-d2ab-4c94-9a24-57899d479d98" />
+        <targetEnds>
+          <association Id="1e78408e-4cbc-4b8b-97e3-dbda6ee76a27" isDerived="false" sourceEndRoleName="用户信息API" targetEndRoleName="用户信息" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c34e4b06-dea2-48e1-8968-d02ffa1277b0" LastKnownName="用户信息" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9948f9aa-25be-4105-a7a8-fed0deebbccf" name="用户信息API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9b34240c-237e-4487-8647-14a081d65c4c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ca827c85-6a59-4607-87b8-ad79905ca86f" name="用户信息" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="778e044a-0804-4e40-b9ce-e01d94da6f52" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="38eac3de-f83b-4384-953e-d839081b9cf0" />
+          </association>
+          <association Id="ff06e7a6-6ffd-45ea-a4a5-803dd4079300" isDerived="false" sourceEndRoleName="用户信息API" targetEndRoleName="普通用户管理" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="78d0de1d-7cb9-4655-aa41-41a7108adaa5" LastKnownName="普通用户管理" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a24efa8-e5b8-4c48-9fbe-e5bc312a203c" name="用户信息API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cb75eae1-0849-41ca-bac1-ba03dd63bec1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6637200a-4baa-4812-a192-bc5e78d3773b" name="普通用户管理" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="76dab07c-7380-49b2-94ba-d9ac9240b456" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f4bbed8b-7a16-4787-b973-bff5a4f2cbe2" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="5815fd4e-bd84-48ab-9d2d-48ddcbf5ad7c" LastKnownName="随便走API接口" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c34e4b06-dea2-48e1-8968-d02ffa1277b0" name="用户信息" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4787028e-8b69-4367-8bec-90b4bd5394ff" />
+        <targetEnds>
+          <association Id="9bf50c7b-3117-494a-968c-d9f94e8a33fd" isDerived="false" sourceEndRoleName="用户信息" targetEndRoleName="随便走普通用户" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="c4e494a9-ed76-437a-ae94-c604a514e0ff" LastKnownName="随便走普通用户" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f05cee0-a8d7-4ded-bb10-541538b70c81" name="用户信息" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="32bb738f-4b22-4345-9ad3-2c49566e89a8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a8d20d6-25e0-46ab-ac03-6c41f901a859" name="随便走普通用户" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6c2bbddd-593f-443e-92c2-b67bb17bb7b2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="700c1868-576c-4589-bed3-07f36da67eb8" />
+          </association>
+          <association Id="043a1586-18da-4846-a97f-02810f7b734e" isDerived="false" sourceEndRoleName="用户信息" targetEndRoleName="用户信息API" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="29b23a14-f248-4330-9781-9f7e524a12cb" LastKnownName="用户信息API" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7bd014d6-c804-45f6-aa27-ab9ec5c34f80" name="用户信息" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="372f68b8-6aa5-4415-84d9-7ba06c72dfa4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2fdc354c-42ed-4876-b960-568dfc5fe38a" name="用户信息API" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fb29e81f-3c54-4f94-8153-bf9b0d5baf09" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c5b94fa2-758d-4936-985b-5e3c800701c0" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="3add7176-faa3-4c7d-bf78-7efe8bc6ed9d" LastKnownName="随便手机端开发" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="5e20df57-98b6-4fa0-bc0f-eeea88f78f8a" name="EasyWeixin.Modeling">
+    <elementDefinition Id="af30782f-d420-479c-a8b8-17d8588f7f3d" />
+    <profileInstances>
+      <packageHasProfileInstances Id="9bb4b154-0f75-4981-905d-24fc590965fd">
+        <profileInstance Id="7c3a19e8-37d6-4e4f-9003-3b580ab08efb" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="efcc0c1b-b74f-4f5f-954b-94db6e3cfc32">
+        <profileInstance Id="0a348811-391c-4570-a310-9035b754d3d8" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d8f72142-c00e-4aad-b6af-e4c240df785f">
+        <profileInstance Id="de5f518e-28a2-495a-883c-4d301a9f45f7" name="CSharpProfile">
+          <elementDefinition Id="42f890ad-6624-4286-9c31-2042fb714601" />
+        </profileInstance>
+        <elementDefinition Id="8ddaf861-04fe-4cac-a367-971def755f3e" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="190f9336-80ad-48be-8623-09aa0b639367">
+        <profileInstance Id="9afe26d5-d47d-4c11-b598-ece342078f9e" name="TextTemplateBindings">
+          <elementDefinition Id="4e3e1728-7518-4363-883a-b2b148b01fd1" />
+        </profileInstance>
+        <elementDefinition Id="9cb3c090-375a-47d4-b2c1-495408566b95" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

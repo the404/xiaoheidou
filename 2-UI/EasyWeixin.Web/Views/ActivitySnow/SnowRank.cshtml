@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+@model List<EasyWeixin.Model.SnowUser>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <title>游戏排名|疯狂砸金蛋|上海欢乐谷</title>
+    <link href="/Content/Snow/Egg_layout.css" type="text/css" rel="stylesheet" />
+</head>
+<body id="rank">
+    <div class="rankTitle repeatBg">
+        金蛋游戏大战排行榜
+    </div>
+    <ul id="rankList">
+        @{for (int i = 0; i < Model.Count; i++)
+          {
+              if (i < 3)
+              {
+            <li class="@("li" + i.ToString())"><span class="ranking">@(i + 1)</span><img src="/images/Activity/Egg/userHead.jpg" />@Model[i].SnowUserName<span class="count">@(Model[i].Score.ToString() + "分")</span></li>
+              }
+              else
+              {
+            <li><span class="ranking">@(i + 1)</span><img src="/images/Activity/Egg/userHead.jpg" />@Model[i].SnowUserName<span class="count">@(Model[i].Score.ToString() + "分")</span></li>
+
+              }
+          }
+        }
+    </ul>
+    <div class="wrap01"></div>
+    <div class="wrap02">
+        <div class="rankBtn">
+            <a class="a1 btn" href="/ActivitySnow/SnowIndex?SnowID=@Request["SnowID"]" >回到首页</a>
+            <a class="a2 btn" href="/ActivitySnow/SnowGame?SnowID=@Request["SnowID"]" >再玩一次</a>
+        </div>
+    </div>
+    <footer class="repeatBg rankFix"></footer>
+</body>
+</html>

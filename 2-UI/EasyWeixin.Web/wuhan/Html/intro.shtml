@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,武汉欢乐谷,武汉欢乐谷微信,武汉欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='武汉欢乐谷是华侨城集团新一代大型主题乐园，武汉欢乐谷占地约35万平方米，预计2012年5月开园迎宾，其由梦想大道、卡通工厂、欢乐时光、极速世界、渔光岛、羽落天堂、飓风湾、欢乐江城等八大主题区域组成，全新设置了 100多项娱乐体验项目，包括30多项游乐体验设备、40多处生态人文景观、10多台文化演艺精品和20多项主题娱乐游戏，精彩诠释多元欢乐。木翼双龙—亚洲首座双龙木质过山车。极速飞车—全球最高最快弹射过山车武汉欢乐谷。摩天塔—120米全球最高观光塔。蒙地卡罗赛道—中国弯道最多的巷道式矿山车。,ipow,互动力' />
+<title>园区概况|武汉欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/ccjspack.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!--//页面头部-->
+	<!--#include file="/wuhan/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap"> 
+    	<div id="content05">
+        	<div class="focPicWrap">
+            	<div class="focPicBox">
+                    <ul id="focPic">
+                        <a href="javascript:;"><img src="../Images/focusImg/focus01.jpg" /></a>
+                        <a href="javascript:;"><img src="../Images/focusImg/focus02.jpg" /></a>
+                        <a href="javascript:;"><img src="../Images/focusImg/focus03.jpg" /></a>
+                        <a href="javascript:;"><img src="../Images/focusImg/focus04.jpg" /></a>
+                    </ul>
+                </div>
+                <ul id="focPicIcon">
+                    <li class="active" ></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="introBox">
+            	<p>欢乐谷—中国文化公园第一连锁品牌,创立于1998年,以"打造世界一流的连锁文化公园"为愿景,旨在为不同的城市,带来同样的欢乐, 创建繁华都市开心地。"时尚、动感、激情"的武汉欢乐谷,是华侨城集团全新打造的复合型、生态型和创新型的大型文化公园。作为欢乐谷"东西南北中,欢乐大中国"全国战略布局的第五站,武汉欢乐谷承袭华侨城的创想文化内核,凝聚深圳、北京、成都、上海等四地欢乐谷的成功积累,以全球顶尖的高科技游乐设备、精彩纷呈的文化演艺精品、优美生动的自然生态景观、深具人文魅力的主题娱乐体验,向现代都市人提供愉悦身心的多元化休闲方式和都市娱乐产品,并将成为华中城市旅游新名片。</p>
+                <p>武汉欢乐谷，是华中地区唯一的大型文化主题公园，由华侨城集团倾力打造，于2012年4月29日开园迎宾。世界一流的游乐设备、丰富多彩的演艺项目、精彩纷呈的主题文化节庆活动让武汉欢乐谷成为"时尚、动感、激情"的繁华都市开心地。园区创新设置了100多项娱乐体验项目，包括亚洲首座双龙木质过山车"木翼双龙"、720度圆环过山车"凤舞九天"、中国最高的弹射过山车"极速飞车"等30多项游乐体验设备，以及40多处生态人文景观、10多台文化演艺精品和20多项主题娱乐游戏，精彩诠释多元欢乐。</p>
+            </div>
+        	<p class="hint">没有更多了</p>
+             <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+        </div>
+    </section>
+      <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+     <!--//版权信息-->
+	<!--#include file="/wuhan/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>
+<script>
+//焦点图
+var oFocPic = document.getElementById("focPic");
+var aFocPic = oFocPic.getElementsByTagName("a");
+var ofocPicIcon = document.getElementById("focPicIcon");
+var afocPicIcon = ofocPicIcon.getElementsByTagName("li");
+
+var iNow = 0; 
+var startX = 0;
+var startY = 0;
+var iLeft = 0; 
+var x=0;
+var y=0;
+var touch = null; 
+
+for( var i=0; i<aFocPic.length ; i++){
+	
+	aFocPic[i].addEventListener('touchstart',function(event){
+		if (event.targetTouches.length == 1){
+			touch = event.targetTouches[0];
+			startX = touch.clientX ;
+			startY = touch.clientY ;
+			iLeft = oFocPic.offsetLeft ;
+		}
+	},false);
+	
+	aFocPic[i].addEventListener('touchmove', function(event) {
+	  // 如果这个元素的位置内只有一个手指的话
+	  if (event.targetTouches.length == 1) {
+		touch = event.targetTouches[0];
+		x = Number(touch.pageX); //页面触点X坐标  
+		y = Number(touch.pageY); //页面触点Y坐标
+		oFocPic.style.left = iLeft+x-startX+"px" ; 
+	  }
+	}, false);
+	
+	aFocPic[i].addEventListener('touchend',function(event){
+			//运动
+			if( x-startX > 50){
+				if( iNow >0 ){
+					iNow-- ;
+				}
+				startMove ( oFocPic , { "left" : -(iNow*parseInt(aFocPic[0].offsetWidth)) } ,5 ) ;
+				fnIcon(iNow);
+			}else if( x-startX < -50){
+				if( iNow < aFocPic.length-1 ){
+					iNow++ ;
+				}
+				startMove ( oFocPic , { "left" : -(iNow*parseInt(aFocPic[0].offsetWidth)) } ,5 ) ;
+				fnIcon(iNow);
+			}else {
+				startMove ( oFocPic , { "left" : iLeft } ,5 ) ;
+			}
+	},false);
+	
+	function fnIcon(a){
+		for( var j=0; j<aFocPic.length ; j++ ){
+			afocPicIcon[j].className = "" ;
+		}
+		afocPicIcon[a].className = "active" ;
+	}
+	
+}
+</script>

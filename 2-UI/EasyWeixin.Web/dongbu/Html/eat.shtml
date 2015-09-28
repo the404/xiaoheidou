@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="东部华侨城,华侨城,华侨城微信,华侨城官方微信,华侨城微信公众平台,深圳,旅游,深圳旅游,深圳景区,深圳好玩的,深圳好吃的,互动力;" />
+<meta name="description" content="东部华侨城位于中国深圳大梅沙，占地近9平方公里，是由华侨城集团斥资35亿元精心打造的世界级度假旅游目的地，是由国家环境保护部和国家旅游局联合授予的首个“国家生态旅游示范区”。" />
+<title>游玩攻略|东部华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+	<div class="playNav">
+    	<a href="/dongbu/Html/eat.shtml" class="active">吃</a>
+        <a href="/dongbu/Html/walk.shtml">行</a>
+        <a href="/dongbu/Html/play.shtml">玩</a>
+        <a href="/dongbu/Html/live.shtml">住</a>
+    </div>
+    <div class="playBox">
+    	<h1 class="playTitle01">景区美食</h1>
+        <div class="play_con">
+            <p class="play_p1">在东部华侨城景区，不用为吃饭的问题担心，大侠谷和茶溪谷都有很多餐饮选择哦！</p>
+            <h2 class="play_h2">【大峡谷】</h2>
+            <p class="play_p2">位于海菲德小镇旁有美食一条街，木桶饭、煲仔饭、土耳其烤肉等等小吃应有尽有，但是价格跟外面相比会比较贵！如果不想吃这些，在大侠谷索道底下，还有一家KFC，价格会比园外稍稍高一些，但是也是属于比较经济实惠的了。如果想享受更好的用餐环境,海菲德小镇还有一家必胜客欢乐餐厅,可供选择~</p>
+            <h2 class="play_h2">【茶溪谷】</h2>
+            <p class="play_p2">茶溪谷广场往湿地花园方向走，会经过一条小街道，这边也有KFC。还有一家卖粉面的店哦，有酸辣粉之类的小吃，10块钱一份，逛饿了的同学们也不妨考虑一下这里哦！要是想尝尝粤菜的话, 茶溪谷有一家丹桂轩,主要经营高档粤菜（围餐和自助餐），亲们也可以考虑下哦~</p>
+            <p class="play_p2">另外在茶溪谷广场通往茶溪古镇的小街道上，还有一些西餐吧以及意大利手工冰激凌可以解馋哦~~</p>
+            <ul class="eatImg_box">
+            	<li><img src="../Images/play/eat_01.jpg" /></li>
+                <li><img src="../Images/play/eat_02.jpg" /></li>
+                <li><img src="../Images/play/eat_03.jpg" /></li>
+                <li><img src="../Images/play/eat_04.jpg" /></li>
+                <li><img src="../Images/play/eat_05.jpg" /></li>
+                <li><img src="../Images/play/eat_06.jpg" /></li>
+                <li><img src="../Images/play/eat_07.jpg" /></li>
+                <li><img src="../Images/play/eat_08.jpg" /></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="playBox">
+    	<h1 class="playTitle02">酒店美食</h1>
+        <div class="play_con">
+            <p class="play_p1">东部华侨城<strong>茵特拉根酒店六大主题餐厅,</strong>各种中西美食带你寻味世界！</p>
+            <p>① 意大利花园餐厅（酒店一楼，提供经典意大利美食及各国名贵葡萄酒）</p>
+            <p>② 湖逸轩中餐厅（酒店六楼，以地道的粤菜美食闻名）</p>
+            <p>③ 秋叶日本餐厅（酒店六楼，齐集铁板烧、寿司、刺身等日本料理）</p>
+            <p>④ 茵特拉根咖啡厅（茵特拉根湖畔，全天候提供饮品、美味糕点等餐饮服务）</p>
+            <p>⑤ 哥特吧（酒店一楼，有各种特色茶点、甜品、特制鸡尾酒和藏于酒窖的佳酿）</p>
+            <p>⑥ 湖畔酒吧（茵特拉根湖畔，充满异国情调的鸡尾酒及经典小食 ）</p>
+            <div class="eatImg_box2">
+            	<img src="../Images/play/jdms01.jpg" />
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="playBox">
+    	<h1 class="playTitle03">古镇美食</h1>
+        <div class="play_con">
+            <p class="play_p1">依山傍水、古色古香的茶翁古镇有最原汁原味的茶园美食：茶园三宝、茶香鸡、泉水豆腐、现磨鲜豆浆等。假期来一场古镇之行，用原生态犒劳你的胃！</p>
+            <p>① 聚茗楼（特色农家菜）</p>
+            <p>② 豆花坊（特色豆花、豆浆等）</p>
+            <p>③ 古镇面馆（特色面食）</p>
+            <p>④ 古镇茶馆（品茶）</p>
+            <div class="eatImg_box2">
+            	<img src="../Images/play/gzms01.jpg" />
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="playBox">
+    	<h1 class="playTitle04">大华兴寺美食</h1>
+        <div class="play_con">
+            <p class="play_p1">到大华兴寺祈福的朋友们，别忘了到香积斋品尝一下清新可口的素宴哦！这里别具特色的菜肴名字也非常具有禅意："仙风道骨"、"无尘素包"、"礼敬诸佛诵心经"等。</p>
+            <div class="eatImg_box2">
+            	<img src="../Images/play/dhxsms01.jpg" />
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="rich_media_tool">
+        <div class="meta_primary">阅读 <span id="rp">0</span></div>
+        <a class="meta_primary meta_praise" href="javascript:;" id="like">
+            <i class="icon_praise_gray"></i>
+            <span class="praise_num">0</span>
+        </a>
+    </div>
+</section>
+
+<!--//设备横屏提醒-->
+<section id="transverse"></section>
+<!--End设备横置提醒//-->
+<!--//版权信息-->
+<!--#include file="/dongbu/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

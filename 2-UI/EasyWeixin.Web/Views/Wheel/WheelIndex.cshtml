@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "WheelIndex";
+    Layout = "~/Views/Shared/_WheelLayout.cshtml";
+}
+@using EasyWeixin.Core.MvcPager
+@model EasyWeixin.Core.MvcPager.PagedList<EasyWeixin.Model.Wheel>
+
+    <div class="main-wrapper">
+        <div class="container-fluid">
+            <div class="row-fluid ">
+                <div class="span12">
+                    <div class="primary-head">
+                        <h3 class="page-header">大转盘</h3>
+                    </div>
+                    <ul class="breadcrumb">
+                        <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                        <li><a href="#">大转盘</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                        <li class="active">活动列表 </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="content-widgets light-gray">
+                        <div class="widget-head bondi-blue">
+                            <h3>数据列表</h3>
+                        </div>
+
+                        <div class="widget-container">
+                            <table class="table table-hover responsive">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            标题
+                                        </th>
+                                        <th>
+                                            开始时间
+                                        </th>
+                                        <th>
+                                            结束时间
+                                        </th>
+                                        <th>
+                                            添加日期
+                                        </th>
+                                        <th>
+                                            状态
+                                        </th>
+                                        <th>
+                                            查看链接
+                                        </th>
+                                        <th>
+                                            编辑奖励
+                                        </th>
+                                        <th>
+                                            查看数据
+                                        </th>
+                                        <th>
+                                            编辑
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{foreach (var item in Model)
+                                    {
+                                    <tr>
+                                        <td>
+                                            @item.WheelTitle
+                                        </td>
+                                        <td>
+                                            @item.StartDate.ToString("yyyy-MM-dd")
+                                        </td>
+
+                                        <td>
+                                            @item.EndDate.ToString("yyyy-MM-dd")
+                                        </td>
+
+                                        <td>
+                                            @item.AddDate.ToString("yyyy-MM-dd")
+                                        </td>
+                                        @{
+                                        var status = "";
+                                        if (System.DateTime.Now >= item.StartDate || System.DateTime.Now <= item.EndDate.AddDays(1))
+                                        {
+                                        status = "进行中";
+                                        }
+                                        if (System.DateTime.Now < item.StartDate)
+                                        {
+                                        status = "未进行";
+                                        }
+                                        if (System.DateTime.Now > item.EndDate.AddDays(1))
+                                        {
+                                        status = "已结束";
+                                        }
+                                        }
+                                        <td>
+                                            @status
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("查看链接", "GetLink", new {id = item.ID})
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("编辑奖励", "WheelItemIndex", new { WheelID = item.WheelID })
+                                        </td>
+                                        <td>
+
+                                            @Html.ActionLink("查看数据", "WheelUserList", new { WheelID = item.ID })
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("修改", "WheelEdit", new { id = item.ID })
+
+                                            @if (item.WheelUsers.ToList().Count < 300 && status == "未进行")
+                                            {
+                                            @Html.ActionLink("删除", "WheelDelete", new { id = item.ID }, new { onclick="return confirm('确认删除?')"})
+                                            }
+                                        </td>
+                                    </tr>
+                                    }
+                                    }
+                                </tbody>
+                            </table>
+                            <div>
+                                <div style="width: 500px; float: right">
+                                    @Html.Pager(Model, new PagerOptions { PageIndexParameterName = "pageid", CssClass = "pagination dataTables_paginate" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

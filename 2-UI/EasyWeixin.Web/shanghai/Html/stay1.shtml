@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,上海欢乐谷微信,上海欢乐谷周边住宿,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>周边住宿|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div id="content02">
+        	<div class="navBox02">
+                <div class="quickNav02">
+                    <a class="active" href="/shanghai/Html/stay1.shtml" >五星级</a>
+                    <a href="/shanghai/Html/stay2.shtml" >四星级</a>
+                    <a href="/shanghai/Html/stay3.shtml" >三星级</a>
+                    <a href="/shanghai/Html/stay4.shtml" >经济型</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star5_01.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>开元名都酒店</h3>
+                        <div class="star">★★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>松江区人民北路1799号</p>
+                    <p><span class="dhIcon"></span>021-37668888</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star5_02.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>佘山世茂艾美酒店</h3>
+                        <div class="star">★★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>松江区佘山林荫新路1288号</p>
+                    <p><span class="dhIcon"></span>021-57799999</p>
+                </div>
+                <div class="clear"></div>
+                <!--<div class="stayIntro">
+                	<h3>欢乐谷游客协议优惠：</h3>
+                    <p>上海欢乐谷年卡会员前台最惠房价15%的折扣，餐饮消费20%的折扣（不含客房送餐及客房内小冰箱），此优惠政策仅限会员本人，需出示会员卡。</p>
+                </div>-->
+            </div>
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star5_03.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>佘山索菲特大酒店</h3>
+                        <div class="star">★★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海松江区泗泾镇泗陈公路3388弄</p>
+                    <p><span class="dhIcon"></span>021-37618888</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--<div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star5_04.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>立诗顿酒店</h3>
+                        <div class="star">★★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海松江区三新北路900弄610号（泰晤士小镇）</p>
+                    <p><span class="dhIcon"></span>021-37721998</p>
+                </div>
+                <div class="clear"></div>
+            </div>-->
+            <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star5_05.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>上海宝隆花园酒店</h3>
+                        <div class="star">★★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>上海松江区玉树北路6号</p>
+                    <p><span class="dhIcon"></span>021-37702333、37702332</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+             <div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star5_07.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>月湖会馆</h3>
+                        <div class="star">★★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                    <p><span class="dzIcon"></span>佘北路158号</p>
+                    <p><span class="dhIcon"></span>021-33558888</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--<div class="stayBox">
+            	<div class="stayImgBox">
+                	<img src="../Images/stay/star5_06.jpg" alt="" />
+                </div>
+                <div class="stayInfoBox">
+                	<div class="stayTitle">
+                        <h3>太阳岛度假村</h3>
+                        <div class="star">★★★★★</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="stayIntro">
+                	<h3>欢乐谷游客协议优惠：</h3>
+                    <p>凡持有在使用有效期内的上海欢乐谷门票票根以及欢乐谷单人行年卡的游客来太阳岛度假消费（平日周末均可），可抵扣50元的沙滩造波泳场或温泉养生馆室内温泉泳池门票和50元的度假村客房费用。</p>
+                </div>
+            </div>-->
+            <p class="hint">没有更多了</p>
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span>9999</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">999</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>
+<script type="text/javascript">
+//底部点赞
+var oLike=document.getElementById("like");
+var oLikeIcon=oLike.getElementsByTagName("i")[0];
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_grey";
+	}
+</script>

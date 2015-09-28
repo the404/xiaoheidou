@@ -1,0 +1,103 @@
+﻿@{
+    Layout = null;
+}
+@model  EasyWeixin.Web.Models.GuessNewsViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <meta name="keywords" content="@Model.CompanyName" />
+    <meta name="description" content="@Model.CompanyName" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0" />
+    <title>@Model.GuessTitle</title>
+    <link href="/Content/Guess/@Model.GuessStyle" rel="stylesheet" />
+</head>
+<body>
+    <input type="hidden" value="@Model.User_ID" id="User_ID" />
+    <div class="top">
+ <!--ballwarp-->
+	<div class="ballwarp">
+    	<!--排行榜-->
+        <div class="paihangbang">
+        	<a href="/News/LeaderBoard?User_ID=@(Model.User_ID)&ImageTextID=@(Model.ImageTextID)&UserWexinID=@(Model.GuessUserWexinID)">排行榜</a>
+        </div>
+
+    	<!--排行榜-->
+
+    	<!--ball-->
+		<div class="ball"></div>
+         <!--ball-->
+         <!--ball_nr-->
+        <div class="ball_nr">
+        	<div class="number">?</div>
+            <div class="gao">@(Model.Message)</div>
+            <div class="cishu">第<a>@(Model.GuessTimes)</a>次</div>
+        </div>
+        <!--ball_nr-->
+    </div>
+    <!--ballwarp-->
+     <!--按钮-->
+        <div class="btn_box">
+        	<div class="shuru"><input type="text" class="shurus" name="CurrentAnswer" /></div>
+            <div class="tijiao"><a>提交</a></div>
+
+            <!--答对答案后出现的按钮-->
+            <!--<div class="chengji"><a href="">提交成绩</a></div>
+            <div class="paihang"><a href="paihang.shtml">排行榜</a></div>-->
+            <!--答对答案后出现的按钮-->
+        </div>
+        <!--按钮-->
+</div>
+
+    <script src="~/js/jquery.1.6.4.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var Message, GuessTimes, CurrentAnswer, GuessProcess, Answer
+            GuessTimes = 0;
+            $(".tijiao a").click(function () {
+                CurrentAnswer = $("[name=CurrentAnswer]").val()
+                Message = $(".gao").html();
+                GuessTimes += 1;
+                $.post("/News/GuessNewsCompare", { CurrentAnswer: CurrentAnswer }, function (datas) {
+
+                    if (datas.Message == "无数据") {
+                        //location.href = "/News/GuessNews?User_ID=" + datas.User_ID + "&ImageTextID=" + datas.ImageTextID + "&UserWexinID=" + datas.GuessUserWexinID;
+                        location.href = location.href;
+                    }
+                    if (datas.Message == "猜中了!") {
+                        var html = "<div class='chengji'><a href='/News/GuessNewsUserInfo'>提交成绩</a></div>";
+                        //html += "<div class='paihang'><a href='/News/LeaderBoard?User_ID=" + $("#User_ID").val() + "'>排行榜</a></div>";
+                        $(".btn_box").html(html);
+                    }
+                    if (datas.Message == "您已经猜中") {
+                        location.href = "/News/GuessNewsUserInfo";
+                        //location.href = "/News/GuessNews?User_ID=" + datas.User_ID + "&ImageTextID=" + datas.ImageTextID + "&UserWexinID=" + datas.GuessUserWexinID;
+                    }
+                    $(".gao").html(datas.Message);
+                    $(".cishu a").text(datas.GuessTimes);
+                    $(".number").text(datas.CurrentAnswer);
+                    $(".gao").css({ color: "red" });
+                    setTimeout(function () {
+                        $(".gao").css({ color: "#fff" });
+                    }, 500)
+                    $("html,body").stop(true,true).animate({scrollTop : 0},500);
+                });
+            });
+        });
+    </script>
+    <div class="foot">
+        <p style="color: #900500; font-size: 18px; font-weight: 700;">活动说明：</p>
+        @Html.Raw(Model.GuessDesc)
+       @* <p>活动时间：9月23日至10月7日 </p>
+        <p>你猜我猜大家猜！！输入任意魔法数（1-999数值间） </p>
+        <p> 心灵感应，触电魔法，系统随机匹配魔法正确率！ </p>
+        <p>猜得越多，概率越大！ </p>
+        <p>猜中数值后别忘了填写资料提交系统哦！  </p>
+        <p style="color: #7b0500;">注：每周排行榜前3，每位可获得上海欢乐谷免费门票两张！</p>
+        <p>速度告诉小伙伴，一起魔法猜猜猜！</p>*@
+    </div>
+</body>
+</html>

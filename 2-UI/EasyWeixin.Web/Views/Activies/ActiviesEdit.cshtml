@@ -1,0 +1,200 @@
+﻿@{
+    ViewBag.Title = "活动修改";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EasyWeixin.Web.Models.ActModels
+<link rel="stylesheet" href="/js/kindeditor-4.1.7/plugins/code/prettify.css" />
+<script charset="utf-8" src="/js/kindeditor-4.1.7/plugins/code/prettify.js"></script>
+<script charset="utf-8" src="/js/kindeditor-4.1.7/kindeditor.js"></script>
+<script charset="utf-8" src="/js/kindeditor-4.1.7/lang/zh_CN.js"></script>
+<link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")"  type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript" ></script>
+<script type="text/javascript" src="~/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+
+    //自定义编辑器
+    //设置图片可以上传
+    KindEditor.ready(function (K) {
+        var editor1 = K.create('#Content', {
+            cssPath: '../plugins/code/prettify.css',
+            uploadJson: '/Activies/upload_json',
+            fileManagerJson: '/Activies/file_manager_json',
+            allowFileManager: true,
+            allowImageUpload: true,
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist', '|', 'emoticons', 'image', 'link'],
+            afterCreate: function () {
+                var self = this;
+                K.ctrl(document, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+                K.ctrl(self.edit.doc, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+            }
+        });
+        prettyPrint();
+    });
+    //
+    //自定义编辑器
+    //设置图片可以上传
+    KindEditor.ready(function (K) {
+        var editor1 = K.create('#Explanation', {
+            cssPath: '../plugins/code/prettify.css',
+            uploadJson: '/Activies/upload_json',
+            fileManagerJson: '/Activies/file_manager_json',
+            allowFileManager: true,
+            allowImageUpload: true,
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist'],
+            afterCreate: function () {
+                var self = this;
+                K.ctrl(document, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+                K.ctrl(self.edit.doc, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+            }
+        });
+        prettyPrint();
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".UpLoadImage").click(function () {
+            var title = "上传图片";
+            var UpLoadImageSrc = $("#ImageUrl").val();
+            art.dialog.open('/UpLoadImage/Index?UpLoadImageSrc=' + UpLoadImageSrc, {
+                title: title,
+                width: '633px',
+                height: '407px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var input = d.document.getElementById('UpLoadImageSrc');
+                    $("#ImageUrl").val(input.src);
+                    $(".Pic").attr("src", input.src);
+                },
+                cancel: true
+            });
+        });
+    });
+        </script>
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">精彩活动</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">精彩活动</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">活动创建</li>
+                </ul>
+            </div>
+        </div>
+
+        @{ using (Html.BeginForm("ActiviesEdit", "Activies"))
+           {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.ID)
+            @Html.HiddenFor(model => model.ActID)
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="content-widgets gray">
+                        <div class="widget-head bondi-blue">
+                            <h3>活动创建</h3>
+                        </div>
+                        <div class="widget-container">
+                            <div class="form-container grid-form form-background">
+                                <!-- our error container -->
+                                <div class="control-group">
+                                    <label class="control-label">活动标题</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Name, new { @placeholder = "输入名称", @class = "span7" })   @Html.ValidationMessageFor(model => model.Name, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">活动开始时间</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.StartDate, new { @Value = Convert.ToDateTime(Model.StartDate).ToString("yyyy-MM-dd"), @placeholder = "输入开始时间", @class = "span7", @onClick = "WdatePicker({startDate:'%y-%M-01',dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true})" })   @Html.ValidationMessageFor(model => model.StartDate, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">活动结束时间</label>
+                                    <div class="controls">
+
+                                        @Html.TextBoxFor(model => model.EndDate, new { @Value = Convert.ToDateTime(Model.EndDate).ToString("yyyy-MM-dd"), @placeholder = "输入结束时间", @class = "span7", @onClick = "WdatePicker({startDate:'%y-%M-01',dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true})" })   @Html.ValidationMessageFor(model => model.EndDate, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                 <div class="control-group">
+                                    <button type="button" class="UpLoadImage" style="bottom: 0">上传图片</button>
+                                    <div class="controls">
+                                         @{ var ImageUrl = Model.ImageUrl == "" ? "http://www.placehold.it/360x200/EFEFEF/AAAAAA" : Model.ImageUrl;}
+
+                                           <img class="Pic" src="@ImageUrl" width="360px" height="200px" />
+                                        @Html.HiddenFor(model => model.ImageUrl, new { @placeholder = "建议为360*200", @class = "span7" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">公众号链接</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.WURL, new { @placeholder = "输入公众号链接", @class = "span7" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">公众号名称</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.ClubName, new { @placeholder = "输入名称", @class = "span7" })   @Html.ValidationMessageFor(model => model.ClubName, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">活动说明</label>
+                                    <div class="controls">
+                                        @Html.TextAreaFor(model => model.Explanation, new {  @placeholder = "输入说明",@style = "width: 700px; height: 200px;", @id = "Explanation", })@Html.ValidationMessageFor(model => model.Explanation,"", new { @style = "color:red" })
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">创建活动内容</label>
+                                    <div class="controls">
+                                        @Html.TextAreaFor(model => model.Content, new {  @placeholder = "输入内容",@style = "width: 700px; height: 200px;", @id = "Content", }) @Html.ValidationMessageFor(model => model.Content,"", new { @style = "color:red" })
+                                        <span style="color:red;">必填</span>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-extend">提交</button>
+                                    @Html.ActionLink("返回列表", "ActiviesIndex", new { }, new { @class = "btn btn-extend" })
+                                </div>
+                                <div class="error-container">
+                                    <h4></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           }
+        }
+    </div>
+</div>

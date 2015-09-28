@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="华侨城,云南华侨城,云南华侨城微信,华侨城微信,云南华侨城官方微信,云南华侨城微信公众平台,云南度假旅游景区,温泉水公园,云南铁路主题旅游,艺术文化乐园,生态花谷旅游,湿地自然景观,度假高端首选,生态旅游小镇,休闲度假胜地,主题公园,运动休闲度假,温泉泡浴,水上乐园,异国文化旅游,互动力,ipow;" />
+<meta name="description" content='云南华侨城一个融旅游、观光、娱乐、度假为一体的高标准的国际化旅游度假胜地。云南旅游的高端首选，引领昆明乃至云南旅游产业从观光旅游型向休闲度假型转变。一个国际化的休闲度假胜地，包括滇越铁路主题旅游、生态旅游小镇、体育公园、国际会议中心、顶级温泉SPA、温泉水公园、生态湿地及森林休闲公园等旅游项目；同时涵盖康体运动休闲区、滨水休闲度假区、山谷生态旅游区、主题文化与艺术旅游区四大分区；' />
+<title>微调查|云南华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"></script>
+</head>
+
+<body>
+<section id="wrap">
+    <form method="post" action="succeed.shtml">
+        <div class="surveyTips">
+            <h3>尊敬的游客朋友：</h3>
+            <p>非常希望能花费您宝贵的1分钟时间参与我们的调查。您的宝贵意见将能促使我们提供更好的服务。非常感谢您的支持，祝您生活愉快。</p>
+        </div>
+        <div class="surveyWrap">
+            <div class="surveyBox" topicId="1" optionType="0" style="display:block;">
+                <div class="topicNumBox">
+                    <label class="topicNumL">1</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来云南华侨城游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="2" optionType="1">
+                <div class="topicNumBox">
+                    <label class="topicNumL">2</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您一般会陪同谁来游玩？（多选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">情侣/爱人</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">同学/同事/朋友</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">家人/亲戚</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">团队旅游</div>
+                    </li>
+                    <li>
+                        <div class="option">E</div>
+                        <div class="optionText">独自前来</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="3" optionType="0">
+                <div class="topicNumBox">
+                    <label class="topicNumL">3</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来上海欢乐谷游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="4" optionType="0">
+                <div class="topicNumBox">
+                    <label class="topicNumL">4</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来上海欢乐谷游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="5" optionType="0">
+                <div class="topicNumBox">
+                    <label class="topicNumL">5</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来上海欢乐谷游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="6" optionType="0">
+                <div class="topicNumBox">
+                    <label class="topicNumL">6</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来上海欢乐谷游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="7" optionType="0">
+                <div class="topicNumBox">
+                    <label class="topicNumL">7</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来上海欢乐谷游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="8" optionType="0">
+                <div class="topicNumBox">
+                    <label class="topicNumL">8</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来上海欢乐谷游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="9" optionType="0">
+                <div class="topicNumBox">
+                    <label class="topicNumL">9</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来上海欢乐谷游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="10" optionType="0">
+                <div class="topicNumBox">
+                    <label class="topicNumL">10</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来上海欢乐谷游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="11" optionType="0">
+                <div class="topicNumBox">
+                    <label class="topicNumL">11</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您曾经几次来上海欢乐谷游玩？（单选）</h4>
+                <div class="clear"></div>
+                <ul class="options">
+                    <li>
+                        <div class="option">A</div>
+                        <div class="optionText">还没去过</div>
+                    </li>
+                    <li>
+                        <div class="option">B</div>
+                        <div class="optionText">一次</div>
+                    </li>
+                    <li>
+                        <div class="option">C</div>
+                        <div class="optionText">二次</div>
+                    </li>
+                    <li>
+                        <div class="option">D</div>
+                        <div class="optionText">三次以上</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="surveyBox" topicId="12" >
+                <div class="topicNumBox">
+                    <label class="topicNumL">12</label>/<label class="topicNumR">12</label>
+                </div>
+                <h4>您对欢乐谷的意见和建议：</h4>
+                <div class="clear"></div>
+                <textarea optionType="text" class="suggest" name="suggest" placeHolder="您对欢乐谷的意见和建议..." ></textarea>
+            </div>
+        </div>
+        <div class="topicBtnBox">
+            <a class="preTopic" href="javascript:;">上一题</a>
+            <a class="nextTopic" href="javascript:;">下一题</a>
+            <input class="topicSub" style="display:none;" type="button" value="提交问卷">
+        </div>
+    </form>
+</section>
+ <!--//版权信息-->
+<!--#include file="/yunnan/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>
+<script src="../Js/surveySub.js" type="text/javascript"></script>

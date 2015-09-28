@@ -1,0 +1,168 @@
+﻿@{
+    ViewBag.Title = "CouponEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EasyWeixin.Web.Models.CouponViewModel
+<script type="text/javascript" src="~/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+    //
+    //自定义编辑器
+    //设置图片可以上传
+    KindEditor.ready(function (K) {
+        var editor1 = K.create('#Content', {
+            cssPath: '../plugins/code/prettify.css',
+            uploadJson: '/ResponseImageText/upload_json',
+            fileManagerJson: '/ResponseImageText/file_manager_json',
+            allowFileManager: true,
+            allowImageUpload: true,
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist', '|', 'emoticons', 'image', 'link'],
+            afterCreate: function () {
+                var self = this;
+                K.ctrl(document, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+                K.ctrl(self.edit.doc, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+            }
+        });
+        prettyPrint();
+    });
+    //
+    //自定义编辑器
+    //设置图片可以上传
+    KindEditor.ready(function (K) {
+        var editor1 = K.create('#CouponDesc', {
+            cssPath: '../plugins/code/prettify.css',
+            uploadJson: '/ResponseImageText/upload_json',
+            fileManagerJson: '/ResponseImageText/file_manager_json',
+            allowFileManager: true,
+            allowImageUpload: true,
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist'],
+            afterCreate: function () {
+                var self = this;
+                K.ctrl(document, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+                K.ctrl(self.edit.doc, 13, function () {
+                    self.sync();
+                    K('form')[0].submit();
+                });
+            }
+        });
+        prettyPrint();
+    });
+</script>
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">优惠劵</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">优惠劵</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">活动创建</li>
+                </ul>
+            </div>
+        </div>
+
+        @{ using (Html.BeginForm("CouponEdit", "Coupon"))
+           {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.ID)
+            @Html.HiddenFor(model => model.CouponID)
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="content-widgets gray">
+                        <div class="widget-head bondi-blue">
+                            <h3>活动创建</h3>
+                        </div>
+                        <div class="widget-container">
+                            <div class="form-container grid-form form-background">
+                                <!-- our error container -->
+                                <div class="control-group">
+                                    <label class="control-label">活动标题</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.CouponTitle, new { @placeholder = "输入权限名称", @class = "span7" })   @Html.ValidationMessageFor(model => model.CouponTitle, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">活动开始时间</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.StartDate, new {  @Value = Model.StartDate.ToString("yyyy-MM-dd"),@placeholder = "输入开始时间", @class = "span7", @onClick = "WdatePicker()" })   @Html.ValidationMessageFor(model => model.StartDate, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">活动结束时间</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.EndDate, new { @Value = Model.EndDate.ToString("yyyy-MM-dd"),@placeholder = "输入结束时间", @class = "span7", @onClick = "WdatePicker()" })   @Html.ValidationMessageFor(model => model.EndDate, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+
+                               @*     <div class="control-group">
+                                    <label class="control-label">优惠劵名额</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.CouponCount, new { @placeholder = "投票答案设置", @class = "span7" })   @Html.ValidationMessageFor(model => model.CouponCount, "", new { @style = "color:red" })
+                                    </div>
+                                </div>*@
+                                <div class="control-group">
+                                    <label class="control-label">概率容量设置</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.CouponScale, new { @placeholder = "概率容量设置", @class = "span7" })   @Html.ValidationMessageFor(model => model.CouponScale, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                   <div class="control-group">
+                                    <label class="control-label">每日次数</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.EveryDayTimes
+, new { @placeholder = "每日次数", @class = "span7" })   @Html.ValidationMessageFor(model => model.EveryDayTimes, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">活动说明</label>
+                                    <div class="controls">
+                                        @Html.TextAreaFor(model => model.CouponDesc, new { @style = "width: 700px; height: 200px;", @id = "CouponDesc", })@Html.ValidationMessageFor(model => model.CouponDesc, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+
+                               <div class="control-group">
+                                    <label class="control-label">创建图文内容</label>
+                                    <div class="controls">
+                                        @Html.TextAreaFor(model => model.ResponseImageTextViewModel.Content, new { @style = "width: 700px; height: 200px;", @id = "Content", }) @Html.ValidationMessageFor(model => model.ResponseImageTextViewModel.Content, "", new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-extend">提交</button>
+                                    @Html.ActionLink("返回列表", "CouponIndex", new { }, new { @class = "btn btn-extend" })
+                                </div>
+                                <div class="error-container">
+                                    <h4></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           }
+        }
+    </div>
+</div>

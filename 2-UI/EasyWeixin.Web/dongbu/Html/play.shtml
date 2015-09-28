@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="东部华侨城,华侨城,华侨城微信,华侨城官方微信,华侨城微信公众平台,深圳,旅游,深圳旅游,深圳景区,深圳好玩的,深圳好吃的,互动力;" />
+<meta name="description" content="东部华侨城位于中国深圳大梅沙，占地近9平方公里，是由华侨城集团斥资35亿元精心打造的世界级度假旅游目的地，是由国家环境保护部和国家旅游局联合授予的首个“国家生态旅游示范区”。" />
+<title>游玩攻略|东部华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+	<div class="playNav">
+    	<a href="/dongbu/Html/eat.shtml">吃</a>
+        <a href="/dongbu/Html/walk.shtml">行</a>
+        <a href="/dongbu/Html/play.shtml" class="active">玩</a>
+        <a href="/dongbu/Html/live.shtml">住</a>
+    </div>
+    <div class="playBox">
+    	<h1 class="playTitle01">大侠谷</h1>
+        <div class="play_con">
+        	<h2 class="walk_title01">水公园</h2>
+            <p class="walk_p2">两万平方米恒温世界，1900平米开启扇连接起室内、室外两个亲水戏水世界。水公园、震撼三米巨浪，U型滑道、室内漂流河等精彩项目和演出，享受海上划浪的动感，体验海洋极限运动的激情。拥有7000平米室内水上戏水天地，滑板冲浪、大碗和U型滑道、风压造浪和漂流河、室外滑道等全方位的水上游乐设施，让你不亦乐乎！</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play01.jpg" /></li>
+                <li><img src="../Images/play/play02.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">峡湾森林</h2>
+            <p class="walk_p2">在原始丛林中穿行飞跃，感受返璞归真的乐趣。中国海滨第一瀑的大侠谷瀑布，宽300米，水流落差42米高，蔚然壮观。峡湾花园中万紫千红的花圃和水组成别具一格的水花园景观，多级阶梯弯转向上，奇妙的移步换景让心情一片大好。惬意地行走于峡湾栈道上，倾听大自然的天籁之音。</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play03.jpg" /></li>
+                <li><img src="../Images/play/play04.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">海菲德小镇</h2>
+            <p class="walk_p2">海菲德小镇以葡萄酒文化为主题的美洲风情小镇，原木与砖石相结合的建筑温馨质朴，系列铜雕展示了从葡萄采摘到红酒酿造的全过程，演绎了19世纪美国加州纳帕山谷的红酒小镇风情。主要包括天幕、海布伦宫、红酒体验馆、自酿啤酒屋、湖畔美食廊、小镇客栈、海菲德漂流（激流勇进）等特色项目，为游客精心打造了一处与红酒约会的陶醉之乡。</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play05.jpg" /></li>
+                <li><img src="../Images/play/play06.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">生态峡谷</h2>
+            <p class="walk_p2">以生态探险为主题，通过全方位的视听觉仿真体验营造各种地球自然环境与生态的虚拟实境，让游客化身"生态侠"，进入大自然未知世界接受各种挑战。包括木质过山车、地心 4 千哩、深海探奇、飓风营救、丛林穿梭、咆哮山洪、探险广场、XD空间-幻影旋风（6D影院）、童趣乐园等项目，让游客在惊险刺激的体验中探索地球奥秘，亲身感受自然原力的强大。</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play07.jpg" /></li>
+                <li><img src="../Images/play/play08.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">云海高地</h2>
+            <p class="walk_p2">大侠谷的云顶观光区，海拔480米，是总览东部华侨城的至佳观景台，包括拥有亚洲唯一云上山顶极速转轮的云霄飞轮、110米高的自然之眼观光塔、全透明的玻璃延伸至悬崖之外的登峰造极、跨越山脉的云中走廊以及云海索道、丛林缆车等项目。</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play11.jpg" /></li>
+                <li><img src="../Images/play/play12.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">演艺：咆哮山洪</h2>
+            <p class="walk_p2">咆哮山洪是一个现代科技打造的集声光电火，水等于一体的大型水上表演。有中外演员数10人在水上以及陆地上表演的一场故事。故事是一个小镇上原本洪水泛滥，后来全靠一个有法力的权杖镇守着，但是由于贪婪的船长想得到神仗，导致了山魔苏醒，一场山洪爆发就这样产生了(用现代可以演绎的当年山洪爆发的场景),正义的镇长打败了山魔,小镇又恢复了往日的宁静，2000立方水在瞬间爆发，烟火特技，场面十分壮观。</p>
+            <ul class="play_imgBox">
+            	<li class="playImg_li02"><img src="../Images/play/play23.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="playBox">
+    	<h1 class="playTitle01">茶溪谷</h1>
+        <div class="play_con">
+        	<h2 class="walk_title01">茵特拉根</h2>
+            <p class="walk_p2">美得令人遐想的瑞士小镇Interlaken，无处不散发出浪漫优雅的气息，因此许多新人都选择来这里拍摄婚纱照。该景点包括：古朴的茵特拉根廊桥、清幽的茵特拉根湖畔、典雅的茵特拉根酒店、充满怀旧味道的咕咕钟舞台、融于森林的茵特拉根温泉、透露着异国浪漫情怀的茵特拉根街景公寓。</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play13.jpg" /></li>
+                <li><img src="../Images/play/play14.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">湿地花园</h2>
+            <p class="walk_p2">在花香中悠游，人与自然和谐共处，感受大地的艺术描绘，更有昆虫、蜘蛛、蝴蝶、蛙、蟾蜍、鱼类和鸟类等湿地动物，共同繁衍成的一个热闹居所，是都市之外的另一种活力。该景点包括：四季植物馆、花桥广场、湿地长廊、湿地廊桥、茵特拉根兰花园、四季花田、向日葵园、花钟教堂。</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play15.jpg" /></li>
+                <li><img src="../Images/play/play16.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">茶翁古镇</h2>
+            <p class="walk_p2">闲雅的氛围，山风柔柔地吹过，看端庄儒雅的茶艺师娴熟的茶道表演；看绿绿的茶叶在杯中沉浮；看身旁青竹摇翠，远处云雾缭绕，耳边水声敲石，诗情画意难以言说。该景点包括：半坡街、百茶屏、铁观音、古镇广场（古镇戏台）、醍醐灌顶。</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play17.jpg" /></li>
+                <li><img src="../Images/play/play18.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">三洲茶园</h2>
+            <p class="walk_p2">徜徉在茶田、丛林里，游走于栈道、吊桥上，走累了，随处小坐，全身心地体验天然氧吧的气息。该景点包括： 竹乐谷、茶溪栈桥、热带雨林、栖霞回廊、竹溪索桥、丹枫拱桥、枫溪藤桥、无忧廊桥、林溪云桥、茶岭长廊、闻香长廊、竹溪栈道、红羽栈道、药草亭、问茶亭、卧虹桥、望湖亭、风语亭、秋千荡、魔棋阵、九曲十八弯、茶马古道、跃马坪。</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play19.jpg" /></li>
+                <li><img src="../Images/play/play20.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">演艺：新版《天禅》</h2>
+            <p class="walk_p2">一场惊心动魄的奢华演出，耗资近1亿打造超前高科技舞台设备。全新《天禅》演出，茶禅文化的演艺盛典，历时三月潜心改造， 2014年初华丽转身，巅峰回归！不变的禅茶文化主题，将用更创新多维的表演空间组合，呈现令人震撼的视听效果和精美绝伦的艺术画面。</p>
+            <ul class="play_imgBox">
+            	<li><img src="../Images/play/play21.jpg" /></li>
+                <li><img src="../Images/play/play22.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+            <h2 class="walk_title01">茵特拉根温泉</h2>
+            <p class="walk_p2">茵特拉根温泉座落于风光旖旎的茶溪谷茵特拉根湖畔，占地2万平方米，是中国最大的温泉度假庄园之一由国土资源部审批的三洲田天然温泉水，富含丰富的偏硅酸、锌、钙、硒、镁、硼酸等多种矿物质和微量元素。包括山林温泉、活力温泉、若石足道、亚洲风尚疗程、欧洲风尚疗程、温泉厨艺、经典影吧等。</p>
+            <ul class="play_imgBox">
+            	<li class="playImg_li02"><img src="../Images/play/play24.jpg" /></li>
+            </ul> 
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <div class="rich_media_tool">
+        <div class="meta_primary">阅读 <span id="rp">0</span></div>
+        <a class="meta_primary meta_praise" href="javascript:;" id="like">
+            <i class="icon_praise_gray"></i>
+            <span class="praise_num">0</span>
+        </a>
+    </div>
+</section>
+
+<!--//设备横屏提醒-->
+<section id="transverse"></section>
+<!--End设备横置提醒//-->
+<!--//版权信息-->
+<!--#include file="/dongbu/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

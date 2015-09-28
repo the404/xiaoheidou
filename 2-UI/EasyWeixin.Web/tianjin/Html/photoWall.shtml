@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>照片墙|天津欢乐谷官方微信</title>
+<link href="/Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"></script>
+<script src="../Js/ccjspack.js" type="text/javascript"></script>
+<script src="../Js/photoTab.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+        <div id="content03">
+            <ul class="photoL">
+                <li>
+                    <div class="photoTop">
+                    	<a class="toBig" href="javascript:;">
+                        	<img src="../Images/photo01.jpg" alt="" />
+                        </a>
+                        <div class="praise">
+                            <a href="javascript:;"></a>
+                            <label class="praiseNum">9999</label>
+                        </div>
+                        <div class="redHeart">
+                        	<a href="javascript:;">
+                            	<img src="../Images/heart02.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mood">
+                        <p>今天很开心。到欢乐谷居然碰到了3个可爱的公仔，好萌有没有！</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="photoTop">
+                    	<a class="toBig" href="javascript:;">
+                      		<img src="../Images/photo02.jpg" alt="" />
+                      	</a>
+                        <div class="praise">
+                            <a href="javascript:;"></a>
+                            <label class="praiseNum">9999</label>
+                        </div>
+                    </div>
+                    <div class="mood">
+                        <p>今天很开心。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="photoTop">
+                      	<a class="toBig" href="javascript:;">
+                      		<img src="../Images/photo02.jpg" alt="" />
+                      	</a>
+                        <div class="praise">
+                            <a href="javascript:;"></a>
+                            <label class="praiseNum">9999</label>
+                        </div>
+                    </div>
+                    <div class="mood">
+                        <p>今天很开心。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="photoTop">
+                     	<a class="toBig" href="javascript:;">
+                      		<img src="../Images/photo02.jpg" alt="" />
+                      	</a>
+                        <div class="praise">
+                            <a href="javascript:;"></a>
+                            <label class="praiseNum">9999</label>
+                        </div>
+                    </div>
+                    <div class="mood">
+                        <p>今天很开心。</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="photoR">
+                <li>
+                    <div class="photoTop">
+                    	<a class="toBig" href="javascript:;">
+                        	<img src="../Images/photo03.jpg" alt="" />
+                        </a>
+                        <div class="praise">
+                            <a href="javascript:;"></a>
+                            <label class="praiseNum">9999</label>
+                        </div>
+                        <div class="redHeart">
+                        	<a href="javascript:;">
+                        		<img src="../Images/heart02.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mood">
+                        <p>今天很开心。今天很开心。今天很开心。今天很开心。今天很开心。今天很开心。今天很开心。</p>
+                    </div>
+            </li>
+                <li>
+                    <div class="photoTop">
+                    	<a class="toBig" href="javascript:;">
+                        	<img src="../Images/photo03.jpg" alt="" />
+                        </a>
+                        <div class="praise">
+                            <a href="javascript:;"></a>
+                            <label class="praiseNum">9999</label>
+                        </div>
+                    </div>
+                    <div class="mood">
+                        <p>今天很开心。今天很开心。今天很开心。今天很开心。今天很开心。今天很开心。今天很开心。</p>
+                    </div>
+              </li>
+              <li>
+                    <div class="photoTop">
+                    	<a class="toBig" href="javascript:;">
+                        	<img src="../Images/photo01.jpg" alt="" />
+                        </a>
+                        <div class="praise">
+                            <a href="javascript:;"></a>
+                            <label class="praiseNum">9999</label>
+                        </div>
+                        <div class="redHeart">
+                        	<a href="javascript:;">
+                            	<img src="../Images/heart02.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mood">
+                        <p>今天很开心。到欢乐谷居然碰到了3个可爱的公仔，好萌有没有！</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div id="uploadingBox">
+        	<form method="post">
+            <div class="photoBox">
+                <img src="../Images/img/photo01.jpg" alt="" />
+            </div>
+            <div class="photoIntroBox">
+                <textarea class="photoIntro" id="photoIntro" name="photoIntro" placeHolder="请输入对照片的描述" onfocus="javascript:ResizeTextarea(this,2);" onkeyup="javascript:ResizeTextarea(this,2);"></textarea>
+                <input type="submit" class="photoSub" value="确定">
+            </div>
+    </form>
+        </div>
+    </section>
+    <div class="shareBtn">
+        <a class="moment" href="javascript:;"><span></span>欢乐谷的欢乐瞬间</a>
+        <a class="shareToo" href="javascript:;">我也要分享</a>
+        <input type="file" class="file" name="fileField" onchange="javascript:window.location.href='photo.shtml'"  id="file1" />
+    </div>
+    <div class="bigPic">
+    	<div class="bigPicWrap">
+            <ul id="bigPicBox">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+//显示上传页面
+var oPhotoList=$("#content03");
+var oUploadPage=$("#uploadingBox");
+var oShareBtn=$(".shareBtn");
+function showUpload(){
+	oPhotoList.hide();
+	oShareBtn.hide();
+	oUploadPage.show();
+	}
+//隐藏上传页面显示照片列表页
+function hideUpload(){
+	oUploadPage.hide();
+	oPhotoList.show();
+	oShareBtn.show();
+	}
+
+$(".moment").click(function(){
+	$("html,body").animate({scrollTop:"0px"});
+	});
+
+//点击显示照片大图
+var aToBig=$(".toBig");
+var oBigPic=$("#bigPicBox li");
+aToBig.click(function(){
+	var i=$(this).index();
+	var lastSrc,nextSrc;
+	photoIndex=$(this).parents("li").index();
+	var bigSrc=$(this).find("img").attr("src");
+	$(".bigPic").show();
+	if($(this).parents(".photoL").size()>0){
+		lR=0;
+		}else{
+			lR=1;
+			}
+		nextSrc=getSrcByNext();
+		lastSrc=getSrcByPre();
+	oBigPic.eq(0).css("background-image","url("+lastSrc+")");
+	oBigPic.eq(1).css("background-image","url("+bigSrc+")");
+	oBigPic.eq(2).css("background-image","url("+nextSrc+")");
+	});
+$(".bigPic").click(function(){
+	$(".bigPic").hide();
+	});
+	
+//照片切换
+var oBigPicBox = document.getElementById("bigPicBox");
+var aBigPic = oBigPicBox.getElementsByTagName("li");
+var lR=0;  //判断左右
+var photoIndex=0;  //图片在列表内的位置
+
+var iNow = 1; 
+var startX = 0;
+var startY = 0;
+var iLeft = 0; 
+var x=0;
+var y=0;
+var touch = null; 
+
+$(".bigPicWrap").photoTab({preFn:pre,nextFn:next});
+
+var tempIndex=0;
+
+function next(){
+	var lastImg;
+	var ls=$(".photoL li").size();
+	var rs=$(".photoR li").size();
+	if(ls>rs){
+		lastImg=ls-1;
+		}else{
+			lastImg=rs-1;
+			}
+	if(photoIndex==lastImg){
+		lR=0;
+		photoIndex=0;
+		}else{
+	if(lR%2==0){
+	}else{
+		photoIndex++;
+	}
+	lR++;
+	}
+	return getSrcByNext();
+	}
+function pre(){
+	if(photoIndex==0&&lR%2==0){
+		var ls=$(".photoL li").size();
+		var rs=$(".photoR li").size();
+		if(ls>rs){
+			lR=0;
+			photoIndex=ls-1;
+			}else{
+			lR=1;
+			photoIndex=rs-1;
+			}
+		}else{
+	if(lR%2==0){
+		photoIndex--;
+	}else{
+	}
+	lR--;
+	}
+	return getSrcByPre();
+	}
+function getSrcByNext(){
+	var tempIndex=photoIndex;
+	var tempLR=lR;
+	
+	var lastImg;
+	var ls=$(".photoL li").size();
+	var rs=$(".photoR li").size();
+	if(ls>rs){
+		lastImg=ls-1;
+		}else{
+			lastImg=rs-1;
+			}
+	if(tempIndex==lastImg){
+		tempLR=0;
+		tempIndex=0;
+		}else{
+	if(tempLR%2==0){
+	}else{
+		tempIndex++;
+	}
+	tempLR++;
+	}
+
+	var photoSrc=$("#content03 ul").eq(tempLR%2).children("li").eq(tempIndex).find(".toBig").children("img").attr("src");
+	return photoSrc;
+	}
+function getSrcByPre(){
+	var tempIndex=photoIndex;
+	var tempLR=lR;
+	if(tempIndex==0&&tempLR%2==0){
+		var ls=$(".photoL li").size();
+		var rs=$(".photoR li").size();
+		if(ls>rs){
+			tempLR=0;
+			tempIndex=ls-1;
+			}else{
+			tempLR=1;
+			tempIndex=rs-1;
+			}
+		}else{
+	if(tempLR%2==0){
+		tempIndex--;
+	}else{
+	}
+	tempLR--;
+		}
+	var photoSrc=$("#content03 ul").eq(tempLR%2).children("li").eq(tempIndex).find(".toBig").children("img").attr("src");
+	return photoSrc;
+	}
+
+//控制文本域自适应文本高度
+var agt = navigator.userAgent.toLowerCase();
+var is_op = (agt.indexOf("opera") != -1);
+var is_ie = (agt.indexOf("msie") != -1) && document.all && !is_op;
+function ResizeTextarea(a,row){
+    if(!a){return}
+    if(!row)
+        row=5;
+    var b=a.value.split("\n");
+    var c=is_ie?1:0;
+    c+=b.length;
+    var d=a.cols;
+    if(d<=20){d=40}
+    for(var e=0;e<b.length;e++){
+        if(b[e].length>=d){
+            c+=Math.ceil(b[e].length/d)
+        }
+    }
+    c=Math.max(c,row);
+    if(c!=a.rows){
+        a.rows=c;
+    }
+}
+var oPhotoIntro=document.getElementById("photoIntro");
+oPhotoIntro.onclick=function(){
+	ResizeTextarea(this,2);
+	}
+</script>

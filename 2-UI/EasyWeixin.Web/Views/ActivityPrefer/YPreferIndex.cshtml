@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+@model List<EasyWeixin.Model.Prefer>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <meta name="keywords" content="华侨城,云南华侨城,云南华侨城微信,华侨城微信,云南华侨城官方微信,云南华侨城微信公众平台,云南度假旅游景区,温泉水公园,云南铁路主题旅游,艺术文化乐园,生态花谷旅游,湿地自然景观,度假高端首选,生态旅游小镇,休闲度假胜地,主题公园,运动休闲度假,温泉泡浴,水上乐园,异国文化旅游,互动力,ipow;" />
+    <meta name="description" content='云南华侨城一个融旅游、观光、娱乐、度假为一体的高标准的国际化旅游度假胜地。云南旅游的高端首选，引领昆明乃至云南旅游产业从观光旅游型向休闲度假型转变。一个国际化的休闲度假胜地，包括滇越铁路主题旅游、生态旅游小镇、体育公园、国际会议中心、顶级温泉SPA、温泉水公园、生态湿地及森林休闲公园等旅游项目；同时涵盖康体运动休闲区、滨水休闲度假区、山谷生态旅游区、主题文化与艺术旅游区四大分区；' />
+    <title>优惠信息|云南华侨城官方微信</title>
+    <link href="~/yunnan/Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="wrap">
+        <div id="content">
+           @if (Model != null)
+            {
+                for (int i = 0; i < Model.Count; i++)
+                {
+                <div class="preferBox">
+                    <a href="/ActivityPrefer/YPreferDetail?PreID=@Model[i].ID">
+                        <div class="preferTop">
+                            <img src="@Model[i].ImageUrl" />
+                            <h2>@Model[i].Name</h2>
+                            <span></span>
+                        </div>
+                        <ul class="preferIntro">
+                            <li>@Html.Raw(Model[i].Explanation)</li>
+                        </ul>
+                        <div class="line"></div>
+                        <div class="point"></div>
+                        <div class="pointL"></div>
+                        <div class="pointR"></div>
+                    </a>
+                </div>
+                }
+            }
+
+            <p class="hint">没有更多了</p>
+             <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--//版权信息-->
+    @Html.Raw(File.ReadAllText(Server.MapPath("/yunnan/Include/foot.htm")))
+    <!--End版权信息-->
+     <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+</body>
+</html>

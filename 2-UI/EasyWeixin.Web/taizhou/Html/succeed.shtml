@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="泰州华侨城,华侨城,华侨城微信,华侨城官方微信,华侨城微信公众平台,江南旅游,江南度假,泰州,旅游,泰州旅游,泰州景区,泰州好玩的,泰州好吃的,长三角,中国湿地,长三角湿地,江南度假,长三角度假,长三角温泉,江南温泉,江苏温泉,泰州温泉,江苏度假酒店,泰州酒店,长三角养生,江苏拜佛,泰州佛寺,华东高尔夫,长三角高尔夫,泰州高尔夫,互动力;" />
+<meta name="description" content="泰州华侨城是华侨城集团区外大型发展项目之一，总投资25亿元，占地3000多亩，坐落于国家5A级风景区——江苏省泰州市溱湖湿地公园西侧。泰州华侨城，在苏中大地，犹如一幅天地之间的水墨画，徐徐铺延在溱湖岸边。2010年4月28日，泰州华侨城在姜堰溱潼开业。这是'中国旅游第一品牌'的华侨城集团在第二轮全国布局的点睛之作，泰州华侨城的发力点则是打造'中国湿地生态温泉第一城'。" />
+<title>微调查|泰州华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"></script>
+</head>
+
+<body>
+<section id="wrap">
+    <div class="surveyTips">
+        <h3>尊敬的游客朋友：</h3>
+        <p>非常希望能花费您宝贵的1分钟时间参与我们的调查。您的宝贵意见将能促使我们提供更好的服务。非常感谢您的支持，祝您生活愉快。</p>
+    </div>
+    <div class="surveySucceed">
+        <h2>提交成功</h2>
+        <p>再次感谢您对我们的支持</p>
+    </div>
+</section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+ <!--//版权信息-->
+<!--#include file="/taizhou/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

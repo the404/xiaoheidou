@@ -1,0 +1,115 @@
+﻿<link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")"  type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript" ></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if ($("#ButtonType").val() === "") {
+            $("#ButtonType").val("0");
+        }
+        var index = parseInt($("#ButtonType").val());
+        $("div.message-type-content .tab-pane:eq(" + index + ")").addClass("active").siblings().removeClass("active");
+
+    });
+</script>
+@model List<EasyWeixin.Model.ResponseMessage>
+@{
+    var message = new EasyWeixin.Model.ResponseMessage();
+    if (Model != null && Model.Count != 0)
+    {
+        message = Model[0];
+    }
+}
+
+<input type="hidden" value="@message.ButtonType" name="ButtonType" id="ButtonType" />
+<input type="hidden" value="@message.ResponseType" name="ResponseType" />
+<input type="hidden" value="@message.ResponseMessageID" name="ResponseMessageID" />
+<input type="hidden" value="@message.ID" name="ID" />
+<input type="hidden" value="@message.SubButtonID" name="SubButtonID" />
+<input type="hidden" value="@message.ButtonID" name="ButtonID" />
+<div class="tab-pane active" id="text">
+    @*<div style="height: 300px;" class="message-edit message-text">*@
+    <textarea cols="20" id="Content_id" name="message.Content" rows="2" style="width: 700px; height: 300px;" readonly="readonly">@message.Content</textarea>
+</div>
+<div class="tab-pane" id="music">
+    <div style="height: 300px;" class="message-edit  message-music">
+        <div>
+            <audio controls='controls' autoplay='autoplay' loop='loop' width="400" height="300">
+                @if (Model != null && message.ResponseMusic != null)
+                {
+                    <source src='@message.ResponseMusic.MusicUrl' type='audio/mp3' />
+                }
+                else
+                {  <source src='~/images/ResponseMusic/1/经典老歌(米线发烧版).mp3' type='audio/mp3' />
+                }
+            </audio>
+        </div>
+    </div>
+    @Html.HiddenFor(model => message.ResponseMusicID)
+    @* <input type="hidden" name="ResponseMusicID" />*@
+</div>
+<div class="tab-pane" id="image">
+    <div style="height: 300px;" class="message-edit message-image">
+        <input type="hidden" name="ResponseImageID" />
+        @Html.HiddenFor(model => message.ResponseImageID)
+        @if (Model != null && message.ResponseImage != null)
+        {
+            <img src="@message.ResponseImage.ImageUrl" alt="img" style="height: 300px;">
+        }
+        else
+        {
+            <img src="http://www.placehold.it/400x300/EFEFEF/AAAAAA" alt="img" style="height: 300px;">
+        }
+    </div>
+</div>
+<div class="tab-pane" id="video">
+    @Html.HiddenFor(model => message.ResponseVideoID)
+    @* <input type="hidden" name="ResponseVideoID" />*@
+    <div style="height: 300px;" class="message-edit message-video">
+        <video width="400" height="300" controls="controls">
+
+            @if (Model != null && message.ResponseVideo != null)
+            {
+                <source src="@message.ResponseVideo.VideoUrl" type="video/mp4" />
+            }
+            else
+            {
+                <source src="movie.ogg" type="video/mp4" />
+            }
+        </video>
+    </div>
+</div>
+<div class="tab-pane" id="imagetext">
+    <div style="height: 300px;" class="message-edit message-imagetext">
+
+        <table class="table responsive table-bordered table-striped response-table">
+            <tbody>
+                @{
+                    if (Model != null && message.ResponseImageText != null)
+                    {
+                        foreach (var item in Model)
+                        {                              <tr>
+                            <td style="height: 100px; width: 180px">
+                                <img src="@item.ResponseImageText.PicUrl" style="height: 100px;width: 180px" />
+                            </td>
+                            <td>
+                                @Html.HiddenFor(model => item.ResponseImageTextID)
+                                @item.ResponseImageText.ImageTextName
+                            </td>
+                            <td>
+                                @item.ResponseImageText.AddTime
+                            </td>
+                        </tr>
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="tab-pane" id="link">
+    <div style="height: 300px;" class="message-edit message-link">
+        @message.Link
+    </div>
+</div>

@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>项目运行时间|天津欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--//页面头部-->
+    <!--#include file="/tianjin/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">    
+        <div id="content02">
+        	<div class="navBox03">
+                <div class="quickNav03">
+                    <a href="/tianjin/Html/time.shtml" >营业时间</a>
+                    <a href="/tianjin/Html/showTime.shtml" >演出时间</a>
+                    <a class="active" href="/tianjin/Html/project.shtml" >项目运行时间</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="opera_time"  >
+                <h2>项目运行时间表12月8日至12月31日（除12月24日）</h2>     
+                <table cellpadding="0" cellspacing="0" border="medium" style="border-color:#ccc">
+                     <tr>
+                        <th>序号</th>
+                        <th>区域</th>
+                        <th>项目名称</th>
+                        <th>开机时间 </th>
+                        <th>关机时间 </th>
+                        <th>运营时长 </th>
+                      </tr>
+                      <tr >
+                        <td>1 </td>
+                        <td rowspan="22" >欢乐时光 </td>
+                        <td>炫舞大草帽 </td>
+                        <td>10:00 </td>
+                        <td>17:30 </td>
+                        <td>7.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>2 </td>
+                        <td>椰树攀爬 </td>
+                        <td>9:30 </td>
+                        <td>17:00 </td>
+                        <td>7.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>3 </td>
+                        <td>欢乐转马 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>4 </td>
+                        <td>翻滚音乐船 </td>
+                        <td>10:00 </td>
+                        <td>17:30 </td>
+                        <td>7.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>5 </td>
+                        <td>醉酒桶 </td>
+                        <td>10:30 </td>
+                        <td>17:30 </td>
+                        <td>7&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>6 </td>
+                        <td>激流勇进 </td>
+                        <td>10:30 </td>
+                        <td>17:30 </td>
+                        <td>7&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>7 </td>
+                        <td>火山探险 </td>
+                        <td>10:30 </td>
+                        <td>17:30 </td>
+                        <td>7&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>8 </td>
+                        <td>迷你过山车 </td>
+                        <td colspan="3" >暂无法开放 </td>
+                      </tr>
+                      <tr >
+                        <td>9 </td>
+                        <td>疯狂甲壳虫 </td>
+                        <td>10:00 </td>
+                        <td>17:30 </td>
+                        <td>7.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>10 </td>
+                        <td>淘气的章鱼 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>11 </td>
+                        <td>愤怒的小鸟 </td>
+                        <td>10:00 </td>
+                        <td>17:30 </td>
+                        <td>7.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>12 </td>
+                        <td>疯狂巴士 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>13 </td>
+                        <td>开心转转杯 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>14 </td>
+                        <td>昆虫大战 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>15 </td>
+                        <td>泡球大战 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>16 </td>
+                        <td>小精灵乐园 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>17 </td>
+                        <td>勇敢消防员 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>18 </td>
+                        <td>魔幻剧场 </td>
+                        <td>11:30 </td>
+                        <td>17:30 </td>
+                        <td>6&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>19 </td>
+                        <td>丛林小火车 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>20 </td>
+                        <td>青蛙跳 </td>
+                        <td>9:30 </td>
+                        <td>17:30 </td>
+                        <td>8&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>21 </td>
+                        <td>巴伐利亚动物救援 </td>
+                        <td>10:30 </td>
+                        <td>17:30 </td>
+                        <td>7&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>22 </td>
+                        <td>热浪滚滚 </td>
+                        <td>10:30 </td>
+                        <td>17:30 </td>
+                        <td>7&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>23 </td>
+                        <td rowspan="7" >维京海港 </td>
+                        <td>滑板冲浪 </td>
+                        <td colspan="3" >暂无法开放 </td>
+                      </tr>
+                      <tr >
+                        <td>24 </td>
+                        <td>凌霄飞舞 </td>
+                        <td colspan="3" rowspan="5" >因天气原因，暂停开放 </td>
+                      </tr>
+                      <tr >
+                        <td>25 </td>
+                        <td>雷神之锤 </td>
+                      </tr>
+                      <tr >
+                        <td>26 </td>
+                        <td>维京船 </td>
+                      </tr>
+                      <tr >
+                        <td>27 </td>
+                        <td>翻江倒海 </td>
+                      </tr>
+                      <tr >
+                        <td>28 </td>
+                        <td>大风车 </td>
+                      </tr>
+                      <tr >
+                        <td>29 </td>
+                        <td>5D影院 </td>
+                        <td>12:00 </td>
+                        <td>17:00 </td>
+                        <td>5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>30 </td>
+                        <td rowspan="7" >圣诞村 </td>
+                        <td>北极风暴 </td>
+                        <td colspan="3" rowspan="2" >因天气原因，暂停开放 </td>
+                      </tr>
+                      <tr >
+                        <td>31 </td>
+                        <td>峡湾飞龙 </td>
+                      </tr>
+                      <tr >
+                        <td>32 </td>
+                        <td>飞行圣诞树 </td>
+                        <td>11:00 </td>
+                        <td>17:00 </td>
+                        <td>6&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>33 </td>
+                        <td>豪华转马 </td>
+                        <td>11:00 </td>
+                        <td>17:00 </td>
+                        <td>6&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>34 </td>
+                        <td>圣诞塔 </td>
+                        <td>11:00 </td>
+                        <td>17:30 </td>
+                        <td>6.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>35 </td>
+                        <td>惊险圣诞夜 </td>
+                        <td>10:00 </td>
+                        <td>17:30 </td>
+                        <td>7.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>36 </td>
+                        <td>灵异古堡 </td>
+                        <td>10:30 </td>
+                        <td>17:30 </td>
+                        <td>7&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>37 </td>
+                        <td rowspan="11" >海洋之心 </td>
+                        <td>儿童翻江倒海 </td>
+                        <td>平日12:00 
+                          周末11:00 </td>
+                        <td>17:30 </td>
+                        <td>平日5.5&nbsp;H 
+                          周末6.5H </td>
+                      </tr>
+                      <tr >
+                        <td>38 </td>
+                        <td>儿童迷你滑道</td>
+                        <td>平日12:00 
+                          周末11:00 </td>
+                        <td>17:30 </td>
+                        <td>平日5.5&nbsp;H 
+                          周末6.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>39 </td>
+                        <td>儿童竞速滑道</td>
+                        <td>平日12:00 
+                          周末11:00 </td>
+                        <td>17:30 </td>
+                        <td>平日5.5&nbsp;H 
+                          周末6.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>40 </td>
+                        <td>欢乐水屋 
+                          &nbsp;</td>
+                        <td>平日12:00 
+                          周末11:00 </td>
+                        <td>17:30 </td>
+                        <td>平日5.5&nbsp;H 
+                          周末6.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>41 </td>
+                        <td>漩涡巨碗 
+                          &nbsp;</td>
+                        <td>平日12:00 
+                          周末11:00 </td>
+                        <td>17:30 </td>
+                        <td>平日5.5&nbsp;H 
+                          周末6.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>42 </td>
+                        <td>疯狂海啸 
+                          &nbsp;</td>
+                        <td>平日12:00 
+                          周末11:00 </td>
+                        <td>17:30 </td>
+                        <td>平日5.5&nbsp;H 
+                          周末6.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>43 </td>
+                        <td>蛇形滑道 
+                          &nbsp;</td>
+                        <td>平日12:00 
+                          周末11:00 </td>
+                        <td>17:30 </td>
+                        <td>平日5.5&nbsp;H 
+                          周末6.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>44 </td>
+                        <td>极速鲨吻 
+                          &nbsp;</td>
+                        <td>平日12:00 
+                          周末11:00 </td>
+                        <td>17:30 </td>
+                        <td>平日5.5&nbsp;H 
+                          周末6.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>45 </td>
+                        <td>棕榈海滩 
+                          &nbsp;</td>
+                        <td>平日12:00 
+                          周末11:00 </td>
+                        <td>17:30 </td>
+                        <td>平日5.5&nbsp;H 
+                          周末6.5&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>46 </td>
+                        <td>懒人河 </td>
+                        <td>13:00 </td>
+                        <td>17:00 </td>
+                        <td>4&nbsp;H </td>
+                      </tr>
+                      <tr >
+                        <td>47 </td>
+                        <td>蛇形穿越 </td>
+                        <td colspan="3" rowspan="10" >暂停开放 </td>
+                      </tr>
+                      <tr >
+                        <td>48 </td>
+                        <td rowspan="9" >飞跃加勒比 </td>
+                        <td>尖叫大水环 </td>
+                      </tr>
+                      <tr >
+                        <td>49 </td>
+                        <td>疯狂麻花 </td>
+                      </tr>
+                      <tr >
+                        <td>50 </td>
+                        <td>狂欢水寨 </td>
+                      </tr>
+                      <tr >
+                        <td>51 </td>
+                        <td>巨人冒险筏 </td>
+                      </tr>
+                      <tr >
+                        <td>52 </td>
+                        <td>加勒比漂流 </td>
+                      </tr>
+                      <tr >
+                        <td>53 </td>
+                        <td>飓风大喇叭 </td>
+                      </tr>
+                      <tr >
+                        <td>54 </td>
+                        <td>旋风大浪 </td>
+                      </tr>
+                      <tr >
+                        <td>55 </td>
+                        <td>加勒比海滩 </td>
+                      </tr>
+                      <tr >
+                        <td>56 </td>
+                        <td>漂流河 </td>
+                      </tr>
+                </table>
+                <div class="beizhu">
+                    <P style="font-weight:bold;">备注：</P>
+                    <p>1.暂无法开放项目：迷你过山车、滑板冲浪。</p>
+                    <p>2.暂停开放区域：飞跃加勒比。</p>
+                    <p>3.如遇大风、雨雪等恶劣天气，具体开放时间将以当天公告为准</p>
+                </div>
+            </div>
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                	<i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--版权信息-->
+	<!--#include file="/tianjin/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>
+<script type="text/javascript">
+//底部点赞
+var oLike=document.getElementById("like");
+var oLikeIcon=oLike.getElementsByTagName("i")[0];
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_grey";
+	}
+//底部取消点赞
+oLike.onclick=function(){
+	oLikeIcon.className="icon_praise_gray";
+	}
+</script>

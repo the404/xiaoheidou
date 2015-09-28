@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>欢乐时光|天津欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"  ></script>
+<script src="../Js/ccjspack.js" type="text/javascript"  ></script>
+</head>
+<body>
+	<!--//页面头部-->
+	<!--#include file="/tianjin/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+        <div id="scrollWrap">
+        	<!--//页面内容-->     
+        	<div id="content01">
+                <ul id="scrollPic">
+                	<a href="javascript:;" >
+                    	<img src="../Images/focusImg/happyPic_01.jpg" alt="炫舞大草帽" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/happyPic_02.jpg" alt="椰树攀爬" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/happyPic_03.jpg" alt="欢乐转马" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/happyPic_04.jpg" alt="愤怒的小鸟" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/happyPic_05.jpg" alt="疯狂巴士" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/happyPic_06.jpg" alt="青蛙跳" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/happyPic_07.jpg" alt="开心转转杯" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/happyPic_08.jpg" alt="丛林小火车" />
+                    </a>
+                    <a href="javascript:;" >
+                    	<img src="../Images/focusImg/happyPic_09.jpg" alt="淘气的章鱼" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_10.jpg" alt="热浪滚滚" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_11.jpg" alt="迷你过山车" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_12.jpg" alt="昆虫大战" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_13.jpg" alt="疯狂甲壳虫" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_14.jpg" alt="泡球大战" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_15.jpg" alt="小精灵乐园" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_16.jpg" alt="巴伐利亚动物救援" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_17.jpg" alt="魔幻剧场" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_18.jpg" alt="醉酒桶" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_19.jpg" alt="勇敢消防员" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_20.jpg" alt="激流勇进" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_21.jpg" alt="火山探险" />
+                    </a>
+                    <a href="javascript:;" >
+                        <img src="../Images/focusImg/happyPic_22.jpg" alt="翻滚音乐船" />
+                    </a>
+                </ul>
+                <ul id="scrollCon">
+                    <div id="scrollIcon">
+                    </div>
+                    <li style="display:block;" >
+                        <h2>炫舞大草帽</h2>
+                        <p>传统的加勒比海舞蹈者会随着音乐敲击乐器并丢掷帽子，坐上炫舞大草帽，让你享受六种不同的旋转魔力：中心旋转、座舱旋转、臂的提升、偏心圆旋转以及旋转座舱交替上升和下降，让人疯狂愉悦。</p>
+                    </li>
+                    <li >
+                        <h2>椰树攀爬</h2>
+                        <p>森林里最大的椰树，占地面积250平米，想试试它纯正天然诱人的椰果吗,在你爬到椰树的顶端时，刹那间极速落到地面，让你感受高度与加速度的双重冒险，体验别样的攀爬乐趣！</p>
+                    </li>
+                    <li >
+                        <h2>欢乐转马</h2>
+                        <p>欢乐谷最梦幻的转马将童话色彩渲染至极。一座座造型独特缤纷多彩的马车，美轮美奂的外表，如梦如幻的音乐，情侣们可并排牵手骑马，在彼此关怀的眼神中，温暖的掌心中，共同绘制美好的爱情蓝图。</p>
+                    </li>
+                    <li >
+                        <h2>愤怒的小鸟</h2>
+                        <p>亚洲唯一的Elloco过山车,高空之上120°极速俯冲， 180°倾斜边缘转弯，感受风驰电掣、心悬一线的反离心力，刺激体验有惊无险，高度与速度的双重冒险，刹那间极速往返高空和地面之间，领略天旋地转的快感。这一秒钟，辽阔的天空仿佛就在您身旁，转眼之间，水平线倒转倾斜，飞车又从半空之中翻腾滑落，在一轮惊险的呼叫声之中，淋漓畅享最痛快的体验！</p>
+                    </li>
+                    <li >
+                        <h2>疯狂巴士</h2>
+                        <p>疯狂的巴士开始在道路上狂飙了，这是一辆古怪的巴士，它会突然顺时针或逆时针疯狂转动，带您体验瞬间升降和摇摆的疯狂快感！</p>
+                    </li>
+                    <li >
+                        <h2>青蛙跳</h2>
+                        <p>当“青蛙”慢慢启动，不断往上攀爬高升，当你还在欣赏蓝天海水时，瞬间，你就从20几米的高空中猛然落下来，玩的就是心跳，也让您在不断变化的风景里，感受童年的纯真与惊喜！</p>
+                    </li>
+                    <li >
+                        <h2>开心转转杯</h2>
+                        <p>打开的精美茶杯将变成一个个坐舱，随着欢乐时光里浪漫的音乐旋律翩翩起舞，坐在美丽的转转杯中，以快乐为圆心，公转与自转同时运转，开心将飞向宇宙外太空！</p>
+                    </li>
+                    <li >
+                        <h2>丛林小火车</h2>
+                        <p>葡萄园里的小火车，承载着浪漫与欢乐，穿行在翠绿藤蔓之中。沿途您可欣赏到大自然赋予的俏丽风光，听到鸟儿的叫声与人们的欢声笑语，定会令您留连忘返，惬意非凡。</p>
+                    </li>
+                    <li >
+                        <h2>淘气的章鱼</h2>
+                        <p>淘气的章鱼由机械、气动和油压电气系统组成，是一种绕垂直轴中心旋转、升降和旋转自由的升降自控飞机类游乐设备。飞机围绕中心火箭旋转，并自由控制上升和下降，您可以在飞行中紧握飞机操作杆随意升降，互相追逐、射击，欢乐无限。</p>
+                    </li>
+                    <li >
+                        <h2>热浪滚滚</h2>
+                        <p>伴随着音乐的旋律，身体跟着节拍不停地扭动、旋转，让您在热浪滚滚中，尽情捕捉音乐精灵，欢乐从心出发。</p>
+                    </li>
+                    <li >
+                        <h2>迷你过山车</h2>
+                        <p>长175米的迷你过山车，一台齿轮电机驱使神车自身旋转，冲上云霄，迎风前进，瞬时一个俯冲加翻转，天地之间独有一番惊心动魄。和家人朋友们一起坐上疾驰的过山车，让心情跌宕起伏吧！</p>
+                    </li>
+                    <li >
+                        <h2>昆虫大战</h2>
+                        <p>这是一片希腊及土耳其古城遗迹，精灵们在这聚集，嬉笑、玩耍、游戏，快乐风暴袭卷整片乐园，赶紧来参加昆虫大战吧！</p>
+                    </li>
+                    <li >
+                        <h2>疯狂甲壳虫</h2>
+                        <p>在无处躲藏的战场上，有一群疯狂的甲壳虫，驾驭甲壳虫的勇者要争取最快时间在场内完成绕圈，选手们在战场上横冲直撞不畏惧任何对手，每一次激情的相遇都会碰撞出无限的欢乐。</p>
+                    </li>
+                    <li >
+                        <h2>泡球大战</h2>
+                        <p>放入泡泡球，按下按钮，泡球像流星一般射入对方的防线，对手也会不甘示弱，连连射击。您必须机灵地躲闪四面飞来的泡弹，用五彩的泡泡球给攻击者还以“颜色”。</p>
+                    </li>
+                    <li >
+                        <h2>小精灵乐园</h2>
+                        <p>这是一片希腊及土耳其古城遗迹，精灵们在这聚集，嬉笑、玩耍、游戏，快乐风暴袭卷整片乐园，赶紧来参加精灵王国的聚会吧！</p>
+                    </li>
+                    <li >
+                        <h2>巴伐利亚动物救援</h2>
+                        <p>巴伐利亚山区火山大爆发，惊慌的动物们误闯入了人类聚居地,为了保护动物们并把他们重新放归自然，保育专家进入巴伐利亚半山小镇捕捉四处逃窜的动物，朋友们快跟专家一起找出这些躲藏的动物吧！</p>
+                    </li>
+                    <li >
+                        <h2>魔幻剧场</h2>
+                        <p>中国首个运用“全息幻影成像技术”演绎安徒生童话故事的魔幻剧场，创新高科技专项打造，综合运用舞台灯光、幻影成像、影视互动、环境特效等最新技术，营造充满迷离惊险的魔幻时空。</p>
+                    </li>
+                    <li >
+                        <h2>醉酒桶</h2>
+                        <p>在传统葡萄丰收庆典上，采收工人在大木桶里踩着葡萄制造葡萄酒，当您坐上这些木桶时，欢庆的音乐响起，让您在醉酒桶里不断旋转，体验醉酒的眩晕、摇晃、天旋地转，够刺激。心动不如行动，快跟随木桶一起摇摆！</p>
+                    </li>
+                    <li >
+                        <h2>勇敢消防员</h2>
+                        <p>紧急的火警信号响起，英勇的小消防队员们，请立即赶往现场，依靠智慧和勇气，拿起喷水枪，与伙伴们齐心合力扑灭熊熊火焰！</p>
+                    </li>
+                    <li >
+                        <h2>激流勇进</h2>
+                        <p>激流勇进，经典刺激的水上游乐项目，乘船轻缓逆流而上，攀登高峰站台，瞬间极速俯冲，强烈失重，心脉刺激，巨浪依势而起，让您体验畅快淋漓的勇者之旅！</p>
+                    </li>
+                    <li >
+                        <h2>火山探险</h2>
+                        <p>在环太平洋中，随时都面临火山喷发的危险，赶紧乘坐速度快、提升高、回转多矿山火车，一个飞速滑行，突然转向，又一次高速侧滑！直到安全境地。火山探险，给您带来历险般滑行体验。</p>
+                    </li>
+                    <li >
+                        <h2>翻滚音乐船</h2>
+                        <p>在飓风协奏曲中搭上行驶在飓风中的大船，座舱随之翻滚，带来一波接一波的眩晕，与音乐喷泉水幕完美结合一起在空中飞舞。瞬间提升、跌落、停止、翻滚，让你真正体会天旋地转的眩晕快感。</p>
+                    </li>
+                    <div id="top" class="top top2"></div>
+                </ul>
+            </div>
+        </div>
+    	<div class="rich_media_tool" style="padding:10px 0 30px 0;">
+            <div class="meta_primary">阅读 <span id="rp">0</span></div>
+            <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                <i class="icon_praise_gray"></i>
+                <span class="praise_num">0</span>
+            </a>
+        </div>
+     </section>
+      <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+     <!--//版权信息-->
+	<!--#include file="/tianjin/Include/foot.htm"-->
+    <!--End版权信息--> 
+</body>
+</html>
+<script src="../Js/iScroll.js" type="text/javascript" ></script>
+<script src="../Js/scrollBox.js" type="text/javascript"></script>
+<script src="../Js/focusPic.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){		
+        $("#top").click(function(){
+            var obottom=parseInt($("#scrollCon").css("bottom"));
+            if(obottom==-64){
+                $("#scrollCon").animate({bottom:0},700);
+                $("#top").addClass("top2");
+                }else{
+                    $("#scrollCon").animate({bottom:-64},700);
+                    $("#top").removeClass("top2");
+                    }
+            
+            })
+        })
+</script>

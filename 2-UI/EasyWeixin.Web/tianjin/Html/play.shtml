@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,天津欢乐谷,天津欢乐谷微信,天津欢乐谷官方微信,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='天津欢乐谷主题公园位于天津东丽湖，占地总面积35万平方米，总投资规模逾27亿元，是由华侨城集团浓缩二十六年创新发展精髓，浪漫演绎欧陆风情，以国际视角创新理念，重磅倾情打造的中国北方首个全天候都市生态主题公园，并致力于成为北中国文化旅游新地标。天津欢乐谷在创新和丰富陆地公园与水公园传统的室外娱乐模式的同时，融合了北方气候特征及东丽湖地域资源优势，实现了室内四季文化娱乐和全民游玩的全新场馆的创新构建—水公园室内大馆、陆地公园室内大馆，以及大型文化演艺中心，独具创新地引领了中国北方四季欢乐畅游新主张，颠覆了北方冬季出行游玩规避的常规模式，实现了室内与室外双重场馆构建的全新娱乐模式。' />
+<title>游玩攻略|天津欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!--//页面头部-->
+	<!--#include file="/tianjin/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">
+    	<div class="playTips">
+        	<div class="playImgBox">
+            	<img src="../Images/play.png" alt="" />
+            </div>
+            <div class="playTipsText">
+            	<h3>欢迎各位朋友来到天津欢乐谷！</h3>
+                <p>我们特意整理"入谷"五大"秘籍"与您分享，希望他们能帮你在谷内大展拳脚、尽享happy！</p>
+            </div>
+        </div>
+        <div class="playBox">
+        	<div class="playTop playTop01">
+            	<span class="cheats01">秘籍1</span>
+                <h3>欢乐STYLE ,走起！</h3>
+            </div>
+            <div class="playText">
+            	<p>既然走进了欢乐谷，就应该忘掉所有的烦恼和不快，以一颗平常之心、宽容之情，演绎自己的欢乐历程，探索欢乐的真谛。欢乐在那里？ 欢乐就在当下的体悟，在花红草绿中，在人们的笑脸上，在梦幻般的景观中，在刺激的尖叫里，在经典的童话和传说中，在优美的旋律和动感的节拍上。欢乐就在你我的心里！不管遇到什么情况，永远以笑脸面对你我他！这，就是欢乐的密码！</p>
+            </div>
+        </div>
+        <div class="playBox">
+        	<div class="playTop playTop02">
+            	<span class="cheats02">秘籍2</span>
+                <h3>取你所需，不急！</h3>
+            </div>
+            <div class="playText">
+            	<p>怎样才能在有限的时间里体验无限的欢乐？根据您不同的喜好，我们建议：</p>
+                <p>1、喜爱大型设施的朋友，可以选择非节假日进谷游玩，这几天排队的人相对较少，可以在较短的时间内更多地体验自己喜爱的游乐项目。</p>
+                <p>2、倾向观赏人文景观和艺术表演的朋友，建议选择周末或者节假日游园。这样，人以你为景，你在景中游，能充分体验天津欢乐谷致力打造的人文休闲新方式！</p>
+                <p>3、喜欢大型活动的朋友，可以选择节假日，特别是黄金周进入天津欢乐谷。在这里你可以畅享狂欢的饕餮盛宴，无限释放你的活力与激情！</p>
+            </div>
+        </div>
+        <div class="playBox">
+        	<div class="playTop playTop03">
+            	<span class="cheats03">秘籍3</span>
+                <h3>嘛是王道，省钱！</h3>
+            </div>
+            <div class="playText">
+            	<p>天津欢乐谷是"快乐"的加油站，是"正能量"的补给点，希望自己时时好心情，全身散发正能量的朋友们，可以选择购买年卡，省钱省精力，全年不限次玩转欢乐谷，让好心情伴随365，让正能量满格每一天！</p>
+            </div>
+        </div>
+        <div class="playBox">
+        	<div class="playTop playTop04">
+            	<span class="cheats04">秘籍4</span>
+                <h3>文武相济，舒坦！</h3>
+            </div>
+            <div class="playText">
+            	<p>天津欢乐谷是主题公园，更是文化集散地！在天津欢乐谷，除了56项先进的娱乐设备外，每天还有近90场超炫的各类表演。创意十足、乐趣横生的花车巡游，惊险刺激，冲击你视觉极限的跑酷、极限运动表演，以及棕榈海滩上那散发着浓浓异国风情的乡村乐队，滑稽秀、欧美风情歌舞等等，无处不在的欢乐分子，时时刺激着你的感官神经，让你high乐享不停! 因此，建议您将脚步稍作停留，放松身心，感受这瑰丽多姿的文化魅力吧！</p>
+            </div>
+        </div>
+        <div class="playBox">
+        	<div class="playTop playTop05">
+            	<span class="cheats05">秘籍5</span>
+                <h3>介是你家，甭客气！</h3>
+            </div>
+            <div class="playText">
+            	<p>从将世界文化浓缩汇集于一园的"世界之窗"，到包含五十六个民族文化、艺术等的"锦绣中华"，再到如今遍布中国"东西南北中"的欢乐谷，华侨城集团秉承"优质生活创想家"的品牌理念，在繁华的都市中再次构建强大的娱乐王国。天津欢乐谷是一座充满欢乐、创想、激情的开心地，更是一个充满"正能量"的理想国，在这你完全可以把自己当做一个主人，尽情享受欢乐谷带给你的一切。融入这里，你会感受到非同寻常的松弛和愉悦，更会体验到在其他地方无法体验的畅快淋漓！</p>
+            </div>
+        </div>
+        <p class="hint">没有更多了</p>
+         <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+    </section>
+      <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+    <!--//版权信息-->
+	<!--#include file="/tianjin/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

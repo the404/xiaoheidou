@@ -1,0 +1,37 @@
+/*
+Powered by ly200.com		http://www.ly200.com
+广州联雅网络科技有限公司		020-83226791
+*/
+
+body{background:url(/images/Activity/Wheel/bg.jpg) center top no-repeat #ec9801;}
+
+#turntable_success{display:none; width:80%; height:80px; line-height:80px; margin:0 auto; position:fixed; bottom:0; left:0; right:0; z-index:10000; border:1px solid #0B8E00; border-radius:8px; filter:alpha(opacity=0); -moz-opacity:0; -khtml-opacity:0; opacity:0; text-align:center; font-weight:bold; background:#1EA400; font-size:20px; color:#fff;}
+
+#turntable{width:100%; margin:8px auto;}
+#turntable .demo{position: relative; width: 300px; height: 300px; z-index:1; margin:0 auto;}
+#turntable #disk {width: 300px; background: url(/images/Activity/Wheel/wheel_bg.png) no-repeat; height: 300px;}
+#turntable #start {position: absolute; width: 142px; height: 300px; top:3px; left: 78px;}
+#turntable #start img{cursor:pointer;}
+
+#turntable .none{display:none;}
+#turntable .refer{border:1px solid #ddd; width:95%; margin:8px auto; box-sizing:border-box; border-radius:5px; background:#fff; padding:8px;}
+#turntable .refer>span{display:block; font-size:16px; border-bottom:1px dotted #ddd; line-height:150%; padding-bottom:5px; text-indent:2px; font-weight:bold;}
+#turntable .refer>span>font{color:#FF0000; font-size:16px;}
+#turntable .refer>div{font-size:14px; color:#666; line-height:150%; padding-top:5px; padding-left:2px; zoom:1; min-height:80px;}
+#turntable .refer>div>h3{float:left; width:50%; height:26px; line-height:26px; overflow:hidden; color:#888; text-indent:20px;}
+#turntable .refer>div>h3 a{color:#888;}
+#turntable .refer .input{padding-bottom:5px; padding-top:3px;}
+#turntable .refer .input .form_input{border:1px solid #ddd; border-radius:5px; width:99%; height:32px; line-height:32px;}
+#turntable .refer .submit{width:100%; margin:5px auto; margin-bottom:12px; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; background-color:#F30; padding:8px; font-size:18px; border:1px solid #F00; background-image:linear-gradient(bottom, #F30 0, #F93 100%); background-image:-moz-linear-gradient(bottom, #F30 0, #F93 100%); background-image:-webkit-linear-gradient(bottom, #F30 0, #F93 100%); box-shadow:0 1px 0 #F96 inset, 0 1px 2px rgba(0,0,0,0.5); border-radius:5px; color:#fff; text-shadow:0 1px rgba(0,0,0,0.2);}
+#turntable .refer .use .submit{width:60%; float:left;}
+#turntable .refer .use .close{width:39%; margin:5px auto; margin-bottom:12px; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; background-color:#666; padding:8px; font-size:18px; border:1px solid #333; background-image:linear-gradient(bottom, #666 0, #bbb 100%); background-image:-moz-linear-gradient(bottom, #666 0, #bbb 100%); background-image:-webkit-linear-gradient(bottom, #666 0, #bbb 100%); box-shadow:0 1px 0 #e0e0e0 inset, 0 1px 2px rgba(0,0,0,0.5); border-radius:5px; color:#fff; text-shadow:0 1px rgba(0,0,0,0.2); float:right;}
+
+#turntable .refer>div.prize_list{ width:100%;}
+#turntable .refer>div.prize_list ul{ width:100%; margin:0; padding:0;}
+#turntable .refer>div.prize_list li{list-style:none; padding:5px 0; border-top:1px dotted #bbb; font-size:14px;}
+#turntable .refer>div.prize_list li.bn{border:none;}
+#turntable .refer>div.prize_list li label{display:block; width:20px; height:21px; line-height:21px; float:left; overflow:hidden; font-size:14px;}
+#turntable .refer>div.prize_list li span{display:block; width:80%; line-height:21px; float:left; overflow:hidden; font-size:14px;}
+#turntable .refer>div.prize_list li span .sn{font-size:14px; color:#F00;}
+#turntable .refer>div.prize_list li span .time{font-size:14px; color:#F60; text-decoration:underline;}
+#turntable .refer>div.prize_list li span a{margin-left:12px; text-decoration:underline; color:#06F; font-size:14px;}

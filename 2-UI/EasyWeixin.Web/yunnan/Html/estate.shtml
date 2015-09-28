@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="华侨城,云南华侨城,云南华侨城微信,华侨城微信,云南华侨城官方微信,云南华侨城微信公众平台,云南度假旅游景区,温泉水公园,云南铁路主题旅游,艺术文化乐园,生态花谷旅游,湿地自然景观,度假高端首选,生态旅游小镇,休闲度假胜地,主题公园,运动休闲度假,温泉泡浴,水上乐园,异国文化旅游,互动力,ipow;" />
+<meta name="description" content='云南华侨城一个融旅游、观光、娱乐、度假为一体的高标准的国际化旅游度假胜地。云南旅游的高端首选，引领昆明乃至云南旅游产业从观光旅游型向休闲度假型转变。一个国际化的休闲度假胜地，包括滇越铁路主题旅游、生态旅游小镇、体育公园、国际会议中心、顶级温泉SPA、温泉水公园、生态湿地及森林休闲公园等旅游项目；同时涵盖康体运动休闲区、滨水休闲度假区、山谷生态旅游区、主题文化与艺术旅游区四大分区；' />
+<title>旅游地产|云南华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+<script src="../Js/jquery.1.4.js" type="text/javascript"></script>
+</head>
+
+<body>
+<section id="wrap">
+	<div class="estateNav">
+    	<a href="javascript:;" class="active">天麓</a>
+        <a href="javascript:;">馨香园</a>
+    </div>
+    <div class="introBox">
+    	<img src="../Images/img/estate01.jpg" alt="" />
+        <p>天麓山海大宅，传承中国十大豪宅品牌、深圳东部华侨城天麓的纯正血统。以"生态大于天"的原则为核心理念，尽最大可能去实现建筑与原始环境的和谐共生。2011年，天麓一区实现开盘一小时即宣告售罄，创造了当年昆明地产界的奇迹。</p>
+        <p>天麓二区，坐拥云南华侨城项目制高点，西瞰生态花谷，南望阳宗海、群樱荟，私享超星级配套，占据最佳观景视野。二区占地12.72万平米，拥有0.24超低容积率，绿地率更是高达56%，为您带来近乎天然的舒适享受。天麓二区涵括200-251平米独栋别墅，以坡地双首层设计，实现格局舒适、空间开阔、居住私密的尊崇体验。独创吊脚楼空间形态，极大增加可使用的空间面积，并且配以地下室、星空露台附赠，为您的尊贵体验锦上添花。天麓二区采用天然气、太阳能及空气源热泵双系统供热水、地暖使用，为您带来舒适便捷的养生度假生活。</p> 
+        <ul class="cantact">
+        	<li>群樱荟会所咨询热线：0871-68389222</li>
+            <li>温泉水公园咨询热线：0871-68389333</li>
+            <li>地产置业咨询热线：0871-68389666</li>
+        </ul>
+    </div>
+    <div class="introBox" style="display:none;">
+    	<img src="../Images/img/estate02.jpg" alt="" />
+        <p>馨香园位于华侨城昆明阳宗海度假区西门，毗邻温泉水公园，项目规划用地近7万平米，容积率仅为1.45，楼间开阔，享受更多阳光里的自由空间。所售产品均为4-10层板式洋房，大部分为1梯两户，属于目前昆明市场稀缺产品，同时也是云南华侨城首次推出的洋房产品，为具有度假意愿的中产阶层量身打造的70年产权经济型度假物业，在满足您度假需求的同时，依托快速发展的阳宗海周边旅游资源，未来物业升值可期。</p> 
+        <ul class="cantact">
+        	<li>群樱荟会所咨询热线：0871-68389222</li>
+            <li>温泉水公园咨询热线：0871-68389333</li>
+            <li>地产置业咨询热线：0871-68389666</li>
+        </ul>
+    </div>
+     <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+</section>
+    <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+ <!--//版权信息-->
+<!--#include file="/yunnan/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>
+<script>
+$(".estateNav a").click(function(){
+	var i=$(this).index();
+	$(this).addClass("active").siblings().removeClass("active");
+	$(".introBox").eq(i).show().siblings(".introBox").hide();
+	});
+</script>

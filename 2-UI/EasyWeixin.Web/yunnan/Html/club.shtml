@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="华侨城,云南华侨城,云南华侨城微信,华侨城微信,云南华侨城官方微信,云南华侨城微信公众平台,云南度假旅游景区,温泉水公园,云南铁路主题旅游,艺术文化乐园,生态花谷旅游,湿地自然景观,度假高端首选,生态旅游小镇,休闲度假胜地,主题公园,运动休闲度假,温泉泡浴,水上乐园,异国文化旅游,互动力,ipow;" />
+<meta name="description" content='云南华侨城一个融旅游、观光、娱乐、度假为一体的高标准的国际化旅游度假胜地。云南旅游的高端首选，引领昆明乃至云南旅游产业从观光旅游型向休闲度假型转变。一个国际化的休闲度假胜地，包括滇越铁路主题旅游、生态旅游小镇、体育公园、国际会议中心、顶级温泉SPA、温泉水公园、生态湿地及森林休闲公园等旅游项目；同时涵盖康体运动休闲区、滨水休闲度假区、山谷生态旅游区、主题文化与艺术旅游区四大分区；' />
+<title>云海谷俱乐部|云南华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+    <div class="introBox">
+    	<img src="../Images/img/club01.jpg" alt="" />
+        <p>云海谷俱乐部为杰克·尼克劳斯父子联袂担纲设计的锦标赛球场。湖景球场为杰克•尼克劳斯签名设计，几乎每一个球洞都可以一览阳宗海全景。杰克•尼克劳斯的设计充分利用项目地的壮美风景、连绵起伏的地势和自然植被，为球手打造一个中国最为激动人心的高尔夫体验地。</p>
+        <p>山景球场为杰克•尼克劳斯二世签名设计，位于项目地海拔较高处，将为您带来令人难忘且富有挑战性的高尔夫体验。不论差点高低，您都将享受到该度假球场的壮丽景色、浑然天成的沙坑、具备可打性的宽阔球道落球区和果岭边切杆区。</p>
+		<p>36洞的锦标赛球场充分利用项目地连绵起伏的地势，打球时不仅可以充分享受高尔夫运动的挑战性，还可以欣赏壮美的山海景观。湖景球场几乎每一洞都能欣赏阳宗海全景，山景球场则需要在大气磅礴的山谷间挥杆。</p> 
+        <ul class="cantact">
+        	<li>群樱荟会所咨询热线：0871-68389222</li>
+            <li>温泉水公园咨询热线：0871-68389333</li>
+            <li>地产置业咨询热线：0871-68389666</li>
+        </ul>
+    </div>
+     <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+</section>
+
+ <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+ <!--//版权信息-->
+<!--#include file="/yunnan/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

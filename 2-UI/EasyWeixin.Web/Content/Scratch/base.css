@@ -1,0 +1,370 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*Reset*/
+*{-webkit-tap-highlight-color: transparent;}
+body ,html ,div ,p ,table ,ul ,ol ,li ,dl ,dt ,dd ,h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,canvas{ 
+	margin:0; 
+	padding:0;
+}
+ul ,ol ,li ,dl ,dt ,dd { list-style:none; }
+img ,a { border:none; }
+a { text-decoration:none; }
+input[type=button]{-webkit-appearance:none;}
+input[type=submit]{-webkit-appearance:none;}
+/*base*/
+body { 
+	font:normal 16px/24px "宋体","微软雅黑",Arail ; 
+	color:#FFFFFF; 
+	background:#90150d;
+}
+.left{ 
+	float:left; 
+	display:inline;
+}
+.right{ 
+	float:right; 
+	display:inline;
+}
+.clear { 
+	width:0; 
+	height:0; 
+	font-size:0; 
+	line-height:0; 
+	clear:both; 
+	overflow:hidden; 
+}
+.hidden { overflow:hidden; }
+
+/*横屏提醒*/
+/*#transverse {  
+	position:fixed; 
+	z-index:9999; 
+	top:0; 
+	left:0; 
+	width:100%; 
+	height:100%; 
+	background:rgba( 0 , 0 , 0 , 0.8) url(/images/Activity/Scratch/transvers.png) no-repeat center center; 
+	background-size:50% auto; 
+}
+@media all and (orientation : landscape) {  
+	#transverse { display:block; }
+}  
+@media all and (orientation : portrait){  
+	#transverse { display:none; }
+} */
+#transverse {  
+	position:fixed; 
+	z-index:9999; 
+	top:0; 
+	left:0; 
+	width:100%; 
+	height:100%; 
+	background:rgba( 0 , 0 , 0 , 0.8) url(/images/Activity/Scratch/transvers.png) no-repeat center center; 
+	background-size:50% auto;
+	display:none; 
+}
+/*  页面内容  */
+.shadow{ 
+	width:100%; 
+	height:100%; 
+	position:absolute; 
+	top:0px; 
+	left:0px; 
+	background:rgba(0,0,0,.7); 
+	display:none; 
+	z-index:5;
+}
+#wrapper{
+	position:relative;
+	margin:0 auto;
+	/*position:absolute;
+	left:50%;*/
+	z-index:2;
+	width:320px;
+	/*margin-left:-160px;*/ 
+	padding-bottom:30px; 
+	transform-origin:top; 
+	-webkit-transform-origin:top;
+}
+.banner{ 
+	width:318px; 
+	height:143px; 
+	position:relative; 
+	margin:10px auto; 
+	background:url(/images/Activity/Scratch/banner.png) no-repeat center top; 
+	background-size:100%;
+}
+#scratchCard{
+	width:281px; 
+	height:167px; 
+	position:relative; 
+	margin:10px auto 0 auto;
+}
+#scratchCard .card_bg{ 
+	width:100%; 
+	height:100%; 
+	position:absolute; 
+	top:0px; 
+	left:0px; 
+	z-index:1;
+}
+#scratchCard p{ 
+	position:absolute; 
+	top:50px; 
+	left:50%; 
+	width:254px;
+	margin-left:-177px;
+	text-align:center; 
+	font:normal 20px/24px "黑体"; 
+	color:#434343; 
+	z-index:2;
+	display:none;
+}
+#scratchCard canvas{ 
+	width:281px; 
+	height:167px; 
+	position:absolute; 
+	top:0px; 
+	left:0px; 
+	z-index:3;
+}
+#lamp{ 
+	width:255px; 
+	height:148px; 
+	margin:10px 14px;
+}
+.start{ 
+	display:block; 
+	width:147px; 
+	height:43px; 
+	background:url(/images/Activity/Scratch/scrape_btn.png) no-repeat center center; 
+	background-size:100%; 
+	position:absolute; 
+	top:50%; 
+	left:50%; 
+	margin-left:-73px; 
+	margin-top:-21px; 
+	z-index:4;
+}
+.info{ 
+	width:100%; 
+	margin:10px auto;
+}
+.info p{ 
+	text-align:center; 
+	font-family:"微软雅黑"; 
+	color:#FFFFFF; 
+	line-height:20px;
+}
+.info p label{
+	margin:0 4px; 
+	padding:2px 10px; 
+	background-color:#550000;
+}
+.info p:nth-child(1){ 
+	font-size:16px; 
+	margin-bottom:6px;
+}
+.info p:nth-child(2){ 
+	font-size:14px; 
+	margin-bottom:2px;
+}
+.info p:nth-child(3){ 
+	font-size:14px;
+}
+.invite_btn{ 
+	display:block; 
+	width:125px; 
+	height:40px; 
+	position:relative; 
+	margin-left:24px; 
+	margin-top:15px; 
+	float:left; 
+	font:normal 12px/34px "微软雅黑"; 
+	color:#FFFFFF; 
+	text-align:center; 
+	background:url(/images/Activity/Scratch/invite_btn.png) no-repeat center top; 
+	background-size:100%;
+}
+.rule_btn{ 
+	display:block; 
+	width:125px; 
+	height:40px; 
+	position:relative; 
+	margin-left:24px; 
+	margin-top:15px; 
+	float:left; 
+	font:normal 12px/34px "微软雅黑"; 
+	color:#FFFFFF; 
+	text-align:center; 
+	background:url(/images/Activity/Scratch/rule_btn.png) no-repeat center top; 
+	background-size:100%;
+}
+.line{ 
+	width:100%; 
+	height:12px; 
+	margin-top:2px; 
+	background:url(/images/Activity/Scratch/line.png) no-repeat center top; 
+	background-size:100%;
+}
+.rule_box{ 
+	width:280px; 
+	margin:20px auto;
+}
+.rule_box h1{ 
+	width:149px; 
+	height:23px; 
+	margin:0 auto; 
+	background:url(/images/Activity/Scratch/rule.png) no-repeat center center; 
+	background-size:100%;
+}
+.rule_box p{ 
+	font:normal 14px/24px "黑体"; 
+	padding-left:18px;
+}
+.rule_box p span{ 
+	display:inline-block; 
+	width:14px; 
+	height:14px; 
+	margin-left:-18px; 
+	background:url(/images/Activity/Scratch/star03.png) no-repeat center center; 
+	background-size:100%;
+}
+.rule_box p.rule_p1{ 
+	margin-top:20px; 
+	margin-bottom:10px;
+}
+.rule_box p.rule_p1 span{ 
+	height:17px; 
+	background:url(/images/Activity/Scratch/star02.png) no-repeat center center; 
+	background-size:100%;
+}
+.invite{ 
+	width:272px; 
+	height:149px; 
+	position:absolute; 
+	top:0px; 
+	right:20px; 
+	background:url(/images/Activity/Scratch/invite.png) no-repeat center center; 
+	background-size:100%; 
+	display:none; 
+	z-index:6;
+}
+
+/*  获奖用户信息  */
+.awards_box{ 
+	width:292px; 
+	height:344px; 
+	position:absolute; 
+	top:60px; 
+	left:50%; 
+	margin-left:-146px; 
+	background-color:#FFFFFF; 
+	border-radius:10px; 
+	box-shadow:0 0 2px #ccc; 
+	display:none; 
+	z-index:7;
+}
+.awards_top{ 
+	width:292px; 
+	height:81px; 
+	position:absolute; 
+	top:0px; 
+	left:0px; 
+	border-radius:10px 10px 0 0; 
+	background-color:#ff9d00;
+}
+.awards_top img{ 
+	width:69px; 
+	height:50px; 
+	position:absolute; 
+	top:15px; 
+	left:10px;
+}
+.awards_top p{ 
+	font:normal 18px/24px "微软雅黑"; 
+	color:#FFFFFF; 
+	position:absolute; 
+	top:15px; 
+	left:94px;
+}
+.awards_box .tips{ 
+	width:256px; 
+	font:normal 0.8em/1.6em "微软雅黑"; 
+	color:#595959; 
+	position:absolute; 
+	top:91px; 
+	left:50%; 
+	margin-left:-128px;
+}
+.awards_line{ 
+	width:270px; 
+	height:1px; 
+	position:absolute; 
+	top:140px; 
+	left:50%; 
+	margin-left:-135px; 
+	border-bottom:1px dashed #979797;
+}
+.personal_box{ 
+	width:264px; 
+	position:absolute; 
+	top:156px; 
+	left:50%; 
+	margin-left:-130px;
+}
+.personal_box li{ 
+	width:100%; 
+	margin-bottom:8px;
+}
+.personal_box li label{ 
+	display:inline-block; 
+	width:50px; 
+	font:normal 0.9em/2.4em "微软雅黑"; 
+	color:#747474;
+}
+.personal_box li input[type=text]{ 
+	width:180px; 
+	height:30px; 
+	margin-left:4px; 
+	background-color:#eeeeee; 
+	border:1px solid #d2d2d2;
+}
+.submit{ 
+	width:158px; 
+	height:36px; 
+	position:absolute; 
+	top:292px; 
+	left:24px; 
+	font:normal 0.9em/2em "微软雅黑"; 
+	color:#FFFFFF; 
+	text-align:center; 
+	border:none; 
+	background:url(/images/Activity/Scratch/confirm.png) no-repeat center center; 
+	background-size:100%;
+}
+.giveUp{ 
+	width:77px; 
+	height:35px; 
+	position:absolute; 
+	top:292px; 
+	left:198px; 
+	font:normal 0.9em/2em "微软雅黑"; 
+	color:#FFFFFF; 
+	text-align:center; 
+	border:none; 
+	background:url(/images/Activity/Scratch/giveup.png) no-repeat center center; 
+	background-size:100%;
+}
+.popWrap{width:100%; height:100%; position:absolute; top:0px; left:0; text-align:center;background:rgba(0,0,0,0.8); display:none; z-index:100;}
+#myawarddiv{width:300px; position:absolute; top:100px; left:50%; margin-left:-150px; z-index:101;display:none;}
+#myawarddiv table{ border-right:1px solid #FFF; border-bottom:1px solid #fff;width:300px; }
+#myawarddiv th,#myawarddiv td{font-size:0.8em; line-height:2.6em; border-left:1px solid #FFF; border-top:1px solid #fff; color:#fff; text-align:center; padding:2px;}
+#myawarddiv th{background:#C00;}
+#myawarddiv td{background:#F90;}
+.account{width:320px; height:38px; background:#480a06;}
+.account img{width:30px; height:30px; float:left; margin-left:12px; margin-top:4px;display:inline-block;}
+.account p,.account a{font-size:0.8em; line-height:38px; float:left;display:inline-block; width:180px; text-indent:6px; overflow:hidden;white-space:nowrap;text-overflow:ellipsis; color:#fff;}
+.account a{width:5em; float:right; margin-right:6px;text-indent:0px;}
+.account a:hover{color:#fff; text-decoration:underline;}

@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "EditPersonalWeiXin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model EasyWeixin.Web.Models.PersonalWeiXinViewModel
+
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">个人中心</h3>
+                    <ul class="top-right-toolbar">
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">个人中心</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">微信信息更改</li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-horizontal">
+            @{ using (Html.BeginForm("EditPersonalWeiXin", "PersonalCenter"))
+               {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                @Html.HiddenFor(model => model.ID)
+                @Html.HiddenFor(model => model.UserId)
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="content-widgets gray">
+                            <div class="widget-head bondi-blue">
+                                <h3>微信信息更改</h3>
+                            </div>
+                            <div class="widget-container">
+                                <div class="form-container grid-form form-background">
+                                    <!-- our error container -->
+                                    <div class="control-group">
+                                        <label class="control-label">微信平台账号</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(model => model.WeixinUser, new { @placeholder = "输入微信平台账号", @class = "span7" })                                              @Html.ValidationMessageFor(model => model.WeixinUser, "", new { @style = "color:red" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">微信平台密码</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(model => model.Md5Password, new { @placeholder = "输入微信平台密码", @class = "span7" })
+                                            @Html.ValidationMessageFor(model => model.Md5Password, "", new { @style = "color:red" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">AppId号码</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(model => model.AppId, new { @placeholder = "输入AppId号码", @class = "span7" })                                                           @Html.ValidationMessageFor(model => model.AppId, "", new { @style = "color:red" })
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label">AppSecret号码</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(model => model.AppSecret, new { @placeholder = "输入AppSecret号码", @class = "span7" })
+                                            @Html.ValidationMessageFor(model => model.AppSecret, "", new { @style = "color:red" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">获取的Url为</label>
+                                        <div class="controls">
+                                            @{var UserCode = "http://" + Request.Url.Authority + "/weixinapi/" + Model.UserCode;}
+                                            @UserCode
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">获取的Token为</label>
+                                        <div class="controls">
+                                            @Model.WeixinToken
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-extend">提交</button>
+                                        <a style="color: red;">@ViewData["SuccessMessage"]</a>
+                                    </div>
+                                    <div class="error-container">
+                                        <h4></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               }
+            }
+        </div>
+    </div>
+</div>

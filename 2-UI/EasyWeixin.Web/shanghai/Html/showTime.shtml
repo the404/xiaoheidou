@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="欢乐谷,上海欢乐谷,旅游,主题公园,探险,时尚,动感,互动力,ipow;" />
+<meta name="description" content='上海欢乐谷是继深圳欢乐谷、北京欢乐谷、成都欢乐谷之后，欢乐谷品牌全国连锁发展的重要布点，一期项目投资40余亿元，于2009年暑期建成开放。致力于打造目前中国规模最大，项目最多，景色最美，科技含量最高的主题公园。' />
+<title>演出时间|上海欢乐谷官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--//页面头部-->
+    <!--#include file="/shanghai/Include/head.htm"-->
+    <!--End页面头部-->
+    <!--//页面内容--> 
+    <section id="wrap">    
+        <div id="content02">
+        	<div class="navBox03">
+                <div class="quickNav03">
+                    <a href="/shanghai/Html/time.shtml" >营业时间</a>
+                    <a class="active" href="/shanghai/Html/showTime.shtml" >演出时间</a>
+                    <a href="/shanghai/Html/project.shtml" >项目运行时间</a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+           <div class="opera_time"  >
+                <h2 style="font-size:14px; line-height:24px; margin:10px auto;">上海欢乐谷表演时间表2015.3.6—4.3（白天）</h2>                       
+                <table cellspacing="0" cellpadding="0" border="medium" style="border-color:#ccc">
+                    <tr>
+                      <th width="6%">序号</th>
+                      <th width="26%">表演内容</th>
+                      <th width="24%">表演时间</th>
+                      <th width="24%">表演地点</th>
+                      <th width="20%">停演</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>卡通迎宾互动</td>
+                      <td>9:00</td>
+                      <td rowspan="2">维多利亚风情街</td>
+                      <td>星期三</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4">2</td>
+                      <td rowspan="4">苏格兰风笛</td>
+                      <td>9:30</td>
+                      <td rowspan="4">星期二（3月21日上演）</td>
+                    </tr>
+                    <tr>
+                      <td>10:30</td>
+                      <td>欢乐广场</td>
+                    </tr>
+                    <tr>
+                      <td>13:40</td>
+                      <td rowspan="2">维多利亚风情街</td>
+                    </tr>
+                    <tr>
+                      <td>15:00</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>幽默杂耍秀  </td>
+                      <td>10:00</td>
+                      <td rowspan="8">欢乐时光高空舞台</td>
+                      <td rowspan="3">星期二</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>诙谐滑稽秀  </td>
+                      <td>11:00</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>百变气球秀  </td>
+                      <td>13:30</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3">6</td>
+                      <td rowspan="3">绽放奇迹</td>
+                      <td>10:30</td>
+                      <td rowspan="3">星期一</td>
+                    </tr>
+                    <tr>
+                      <td>11:30</td>
+                    </tr>
+                    <tr>
+                      <td>14:30</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">7</td>
+                      <td rowspan="2">《林湖路888号》</td>
+                      <td>13:00</td>
+                      <td rowspan="2">星期一（3月21日上演）</td>
+                    </tr>
+                    <tr>
+                      <td>15:00</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>欢乐互动秀</td>
+                      <td>13:30</td>
+                      <td>维多利亚风情街</td>
+                      <td>星期二</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">9</td>
+                      <td rowspan="2">上海滩风情</td>
+                      <td>11:00</td>
+                      <td rowspan="2">上海滩主环道</td>
+                      <td rowspan="4">星期一</td>
+                    </tr>
+                    <tr>
+                      <td>13:30</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"00>10</td>
+                      <td rowspan="2">《新上海滩风云》<br />
+                        影视特技实景表演</td>
+                      <td>11:30</td>
+                      <td rowspan="2">上海滩影视特技表演场</td>
+                    </tr>
+                    <tr>
+                      <td>14:00</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"00>11</td>
+                      <td rowspan="2">《满江红》影视特技马术表演</td>
+                      <td>13:00</td>
+                      <td rowspan="2">香格里拉</td>
+                      <td rowspan="2">星期四（3月15日上演）</td>
+                    </tr>
+                    <tr>
+                      <td>15:00</td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>土著风情</td>
+                      <td>13:00</td>
+                      <td>香格里拉主环道</td>
+                      <td rowspan="3">星期三</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"00>13</td>
+                      <td rowspan="2">《狂野部落》</td>
+                      <td>13:40</td>
+                      <td rowspan="2">香格里拉东巴舞台</td>
+                    </tr>
+                    <tr>
+                      <td>15:30</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="4"00>14</td>
+                      <td rowspan="4">海狮秀表演</td>
+                      <td>10:00</td>
+                      <td rowspan="4">欢乐海洋区海上明珠舞台</td>
+                      <td rowspan="4">星期二</td>
+                    </tr>
+                    <tr>
+                      <td>11:30</td>
+                    </tr>
+                    <tr>
+                      <td>13:30</td>
+                    </tr>
+                    <tr>
+                      <td>15:00</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3"00>15</td>
+                      <td rowspan="3">海洋总动员</td>
+                      <td>10:30</td>
+                      <td rowspan="6">欢乐海洋馆</td>
+                      <td rowspan="6">星期三</td>
+                    </tr>
+                    <tr>
+                      <td>11:30</td>
+                    </tr>
+                    <tr>
+                      <td>13:00</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3"00>16</td>
+                      <td rowspan="3">炫彩泡泡秀</td>
+                      <td>10:30</td>
+                    </tr>
+                    <tr>
+                      <td>13:00</td>
+                    </tr>
+                    <tr>
+                      <td>14:00</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"00>17</td>
+                      <td rowspan="2">破铜烂铁打击乐</td>
+                      <td>11:00</td>
+                      <td rowspan="2">金矿镇</td>
+                      <td rowspan="2">星期三</td>
+                    </tr>
+                    <tr>
+                      <td>13:00</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"00>18</td>
+                      <td rowspan="2">《奇幻之门》</td>
+                      <td rowspan="2">13:00</td>
+                      <td rowspan="2">亚瑟宫</td>
+                      <td rowspan="2">星期一    </td>
+                    </tr>
+                </table>
+                                                
+				<!--<h2 style="font-size:14px; line-height:24px; margin:10px auto;">2015上海欢乐谷新春滑稽节夜场表演时间表<br />正月初一至正月十五（2015.2.19—3.5）</h2>
+                <table cellspacing="0" cellpadding="0" border="medium" style="border-color:#ccc">
+                    <tr>
+                      <th width="6%">序号</th>
+                      <th width="26%">表演内容</th>
+                      <th width="24%">表演时间<br />
+                        （正月初一至正月初六）</th>
+                      <th width="24%">表演时间<br />
+                        （正月初七至正月十五）</th>
+                      <th width="20%">表演地点</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>★*《童话欢乐世界》——鲍利斯组合<br />
+                        （俄罗斯）</td>
+                      <td>17:35</td>
+                      <td>——</td>
+                      <td>欢乐广场</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>《林湖路888号》 摇滚乐队</td>
+                      <td colspan="2">18:40   19:40</td>
+                      <td rowspan="6">欢乐时光区高空舞台</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>*《任性的大力士》——伊格尔<br />
+                        （白俄罗斯） </td>
+                      <td>18:00</td>
+                      <td>——</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>★*《奇妙的&ldquo;灰机&rdquo;》——李春来<br />
+                        （中国）</td>
+                      <td>18:20</td>
+                      <td>——</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>诙谐滑稽秀</td>
+                      <td colspan="2">19:00</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td> 绽放奇迹   </td>
+                      <td colspan="2">19:15</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>百变气球秀</td>
+                      <td colspan="2">19:30</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>海狮秀表演</td>
+                      <td colspan="2">18:00</td>
+                      <td>欢乐海洋区<br />
+                        海上明珠舞台</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>欢乐魔法秀</td>
+                      <td colspan="2">18:00</td>
+                      <td rowspan="3">欢乐广场</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>幽默杂耍秀</td>
+                      <td colspan="2">18:15</td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>嘻哈街舞秀</td>
+                      <td colspan="2">18:30</td>
+                    </tr>
+                </table>-->
+                
+                <div class="beizhu">
+                    <P style="font-weight:bold;">备注：</P>
+                    <p>1、以上表演时间均以当日公告时间为准；</p>
+                    <p>2、若因天气影响（雨、雷电、台风等），表演场地不符合演出条件的，该表演将会取消；</p>
+                    <!--<p>3、标*的表演项目为滑稽节特别推荐的滑稽表演，标★的表演项目为特别推荐演出。</p>-->
+                </div>
+            </div>
+            <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                	<i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--版权信息-->
+	<!--#include file="/shanghai/Include/foot.htm"-->
+    <!--End版权信息-->
+</body>
+</html>

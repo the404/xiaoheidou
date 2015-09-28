@@ -1,0 +1,501 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<EasyWeixin.Model.Button>
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">自定义菜单管理</h3>
+                    <ul class="top-right-toolbar"></ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">自定义菜单管理</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">菜单列表</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">自定义菜单设置 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="content-widgets" style="min-height: 500px">
+                    <div class="widget-head bondi-blue">
+
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="container">
+                                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                                        <ul class="nav">
+                                            <li class="add-menu">
+                                                <button href="#" class="btn btn-extend" style="padding: 5px 10px 5px">添加菜单</button>
+                                            </li>
+                                            <li class="divider-vertical"></li>
+                                            <li><a href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.nav-collapse -->
+                                </div>
+                            </div>
+                            <!-- /navbar-inner -->
+                        </div>
+                    </div>
+                    <div class="widget-container">
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <ul id="button" class="accordion-nav button">
+                                    @{ foreach (var item in Model)
+                                     {
+                                        <li>
+                                            <input value="@item.ID" type="hidden" id="ID" />
+                                            <input value="@item.ButtonID" type="hidden" id="ButtonID" />
+                                            @*  <input value="@item.ResponseMessageID" type="hidden" id="ResponseMessageID" name="ResponseMessageID" />*@
+                                            <a href="javascript:void(0)" class="button">
+                                                <i class="icon-list-alt"></i>@item.name
+                                                <span class="notify-tip-add" style="top: 12px">添加</span>
+                                                <span class="notify-tip-edit" style="top: 12px">编辑</span>
+                                                @if (item.SubButtons.Count == 0)
+                                                {
+                                                    <span class="notify-tip-del" style="top: 12px">删除</span>
+                                                }
+                                            </a>
+
+                                            @if (item.SubButtons.Count > 0)
+                                            {
+                                                <ul>
+                                                    @foreach (var subButton in item.SubButtons)
+                                                    {
+                                                        <li style="list-style-type: none;">
+                                                            @*  <input value="@SubButton.ResponseMessageID" type="hidden" id="subResponseMessageID" name="ResponseMessageID"/>*@
+                                                            <input value="@subButton.ID" type="hidden" id="subID" />
+                                                            <input value="@subButton.SubButtonID" type="hidden" id="subButtonID" /><a href="javascript:void(0)"><i class=" icon-file-alt"></i>@subButton.name<span class="notify-tip-edit">编辑</span><span class="notify-tip-del">删除</span></a>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            }
+                                        </li>
+                                     }
+                                    }
+
+                                </ul>
+                            </div>
+                        </div>
+                        <label id="errorMessage" style="color: red"></label>
+                    </div>
+                    <div class="widget-head bondi-blue">
+
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="container">
+                                    <div class="nav-collapse collapse navbar-responsive-collapse">
+                                        <ul class="nav">
+                                            <li class="add-to-weixin">
+                                                <button href="javascript:viod(0)" class="btn" style="padding: 5px 10px 5px 10px">将内容更新至微信</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.nav-collapse -->
+                                </div>
+                            </div>
+                            <!-- /navbar-inner -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="/js/bootbox.js"></script>
+            <link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+            <script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")" type="text/javascript"></script>
+            <script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript"></script>
+            <script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript"></script>
+            <link rel="stylesheet" href="/js/kindeditor-4.1.7/plugins/code/prettify.css" />
+            <script charset="utf-8" src="/js/kindeditor-4.1.7/plugins/code/prettify.js"></script>
+            <script charset="utf-8" src="/js/kindeditor-4.1.7/kindeditor.js"></script>
+            <script charset="utf-8" src="/js/kindeditor-4.1.7/lang/zh_CN.js"></script>
+
+            @* 以下是菜单设置 *@
+            <script type="text/javascript">
+
+                $(document).ready(function () {
+                    $(".add-to-weixin").click(function () {
+                        $("#errorMessage").html('提交中...');
+                        $.post("/SelfDefiningMenu/UpdateMenu", {}, function (data) {
+                            $("#errorMessage").html(data.ErrorMessage);
+                        }).error(function () {
+                            $("#errorMessage").html('发生未知错误,请联系管理员!!!');
+                        });
+
+                    });
+                    //添加主菜单
+                    $(".add-menu").click(function () {
+                        var title = "添加主菜单";
+                        art.dialog.open('/SelfDefiningMenu/Create', {
+                            title: title,
+                            width: '300px',
+                            height: '120px',
+                            lock: true,
+                            ok: function () {
+                                var d = this.iframe.contentWindow;
+                                var input = d.document.getElementById('MenuName');
+                                var result = input.value;
+                                $.post("/SelfDefiningMenu/CreateButton", { name: result }, function (data) {
+                                    if (JSON.stringify(data).indexOf("name") != -1) {
+                                        var html = "<li>  <input value=" + data.ID + " type='hidden' id='ID' /><input value=" + data.ButtonID + " type='hidden' id='ButtonID' /> <a href='javascript:void(0)'><i class='icon-list-alt'></i>" + data.name + "<span class='notify-tip-add' style='top: 12px'>添加</span><span class='notify-tip-edit' style='top: 12px'>编辑</span><span class='notify-tip-del' style='top: 12px'>删除</span></a></li>";
+                                        $(".accordion-nav.button").append(html);
+                                        $("#errorMessage").html("");
+                                    } else {
+                                        $("#errorMessage").html(data.ErrorMessage);
+                                    }
+                                });
+                            },
+                            cancel: true
+                        });
+                    });
+                    //编辑菜单
+                    $("ul.accordion-nav").on("click", ".notify-tip-edit", function () {
+                        var id = $(this).parent().siblings("#ID");
+                        var subId = $(this).parent().siblings("#subID");
+                        var buttonId = $(this).parent().siblings("#ButtonID");
+                        var subButtonId = $(this).parent().siblings("#subButtonID");
+                        var editButton = $(this);
+                        //主菜单
+                        if (buttonId.length) {
+                            var title = "编辑主菜单";
+                            art.dialog.open('/SelfDefiningMenu/EditButton?id=' + id.val(), {
+                                title: title,
+                                width: '300px',
+                                height: '120px',
+                                lock: true,
+                                ok: function () {
+                                    var d = this.iframe.contentWindow;
+                                    var input = d.document.getElementById('MenuName');
+                                    var result = input.value;
+                                    $.post("/SelfDefiningMenu/EditButton", { name: result, ID: id.val(), ButtonID: buttonId.val() }, function (data) {
+                                        if (JSON.stringify(data).indexOf("name") != -1) {
+                                            var html = "<i class='icon-list-alt'></i>" + data.name + "<span class='notify-tip-add' style='top: 12px'>添加</span><span class='notify-tip-edit' style='top: 12px'>编辑</span>";
+                                            if (editButton.parent().find(".notify-tip-del").length) {
+                                                html += "<span class='notify-tip-del' style='top: 12px'>删除</span>";
+                                            }
+                                            editButton.parent().html(html);
+                                            $("#errorMessage").html("");
+                                        } else {
+                                            $("#errorMessage").html(data.ErrorMessage);
+                                        }
+                                    });
+                                },
+                                cancel: true
+                            });
+                        }
+                        //子菜单
+                        if (subButtonId.length) {
+                            var title = "编辑子菜单";
+                            art.dialog.open('/SelfDefiningMenu/EditSubButton?id=' + subId.val(), {
+                                title: title,
+                                width: '300px',
+                                height: '120px',
+                                lock: true,
+                                ok: function () {
+                                    var d = this.iframe.contentWindow;
+                                    var input = d.document.getElementById('MenuName');
+                                    var ButtonID = d.document.getElementById('MenuID').value;
+                                    var result = input.value;
+
+                                    $.post("/SelfDefiningMenu/EditSubButton", { name: result, ID: subId.val(), SubButtonID: subButtonId.val() }, function (data) {
+                                        if (JSON.stringify(data).indexOf("name") != -1) {
+                                            var html = "<i class='icon-list-alt'></i>" + data.name + "<span class='notify-tip-edit'>编辑</span><span class='notify-tip-del'>删除</span>";
+                                            editButton.parent().html(html);
+
+                                            $("#errorMessage").html("");
+                                        } else {
+                                            $("#errorMessage").html(data.ErrorMessage);
+                                        }
+                                    });
+                                },
+                                cancel: true
+                            });
+                        }
+                    });
+                    //添加子菜单
+                    $("ul.accordion-nav").on("click", ".notify-tip-add", function () {
+                        var ButtonID = $(this).parent().siblings("#ButtonID");
+                        var addButton = $(this);
+                        var title = "添加子菜单";
+                        art.dialog.open('/SelfDefiningMenu/Create', {
+                            title: title,
+                            width: '300px',
+                            height: '120px',
+                            lock: true,
+                            ok: function () {
+                                var d = this.iframe.contentWindow;
+                                var input = d.document.getElementById('MenuName');
+                                var result = input.value;
+                                $.post("/SelfDefiningMenu/CreateSubButton", { name: result, ButtonID: ButtonID.val() }, function (data) {
+                                    if (JSON.stringify(data).indexOf("name") != -1) {
+                                        var html = "<li style='list-style-type: none;'><input value=" + data.ID + " type='hidden' id='subID' /><input value=" + data.SubButtonID + " type='hidden' id='subButtonID' /><a href='javascript:void(0)'><i class='icon-list-alt'></i>" + data.name + "<span class='notify-tip-edit'>编辑</span><span class='notify-tip-del'>删除</span></a></li>";
+                                        if (addButton.parent().parent().find("ul").length) {
+                                            addButton.parent().parent().find("ul").append(html);
+                                        } else {
+                                            html = "<ul>" + html + "</ul>";
+                                            addButton.parent().parent().append(html);
+                                        }
+                                        addButton.parents('li').children('ul').show();
+                                        addButton.parents('ul').show();
+                                        if (addButton.parent().parent().children('ul').length > 0) {
+                                            if (addButton.parent().parent().children('ul').is(":visible")) {
+                                                addButton.siblings(".notify-tip-del").remove();
+                                                addButton.parent().parent().prepend('<img src="/images/imgOnOpen.png" />');
+                                            } else {
+                                                addButton.parent().parent().prepend('<img src="/images/imgOffClosed.png" />');
+                                            }
+                                        }
+                                        $("#errorMessage").html("");
+                                    } else {
+                                        $("#errorMessage").html(data.ErrorMessage);
+                                    }
+                                });
+                            },
+                            cancel: true
+                        });
+                    });
+                    function hideRight() {
+                        $("li.edit-button-content").hide();
+                        $("#MessageContent").html('');
+                    }
+                    //删除
+                    $("ul.accordion-nav").on("click", ".notify-tip-del", function () {
+                        var ID = $(this).parent().siblings("#ID");
+                        var subID = $(this).parent().siblings("#subID");
+                        var li = $(this).parent().parent();
+                        if (ID.length) {
+                            $.post("/SelfDefiningMenu/DeleteButton", { id: ID.val() }, function (data) {
+                                li.remove();
+                                hideRight();
+                                //  $("#errorMessage").html(data.ErrorMessage);
+
+                            });
+                        }
+                        if (subID.length) {
+                            $.post("/SelfDefiningMenu/DeleteSubButton", { id: subID.val() }, function (data) {
+                                if (li.parent().children("li").length == 1) {
+                                    li.parent().siblings("a").find("img").remove();
+                                    li.parent().siblings("a").prepend("<span class='notify-tip-del' style='top: 12px'>删除</span>");
+                                    li.parent().remove();
+                                } else {
+                                    li.remove();
+                                    hideRight();
+                                }
+                                //   $("#errorMessage").html(data.ErrorMessage);
+
+                            })
+                        }
+                    });
+                });
+            </script>
+            @* 以下是右侧编辑 *@
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    //重写了点击img时间,所以开始时取消click事件
+                    $(".accordion-nav.button").off('click', 'img');
+                    function hideRight() {
+                        $("li.edit-button-content").hide();
+                        $("#MessageContent").html('');
+                    }
+                    var Ajax = {
+                        call: function (buttonId, subButtonId) {
+                            if (typeof this.xhr !== 'undefined')
+                                this.xhr.abort();
+                            this.xhr = $.get("/SelfDefiningMenu/ResponseMessageIndex", { ButtonID: buttonId, SubButtonID: subButtonId }, function (data) {
+                                $("#MessageContent").html(data);
+                            });
+                        }
+                    };
+                    function goMessageIndex($this) {
+                        $("#MessageContent").html('加载中...');
+                        $("li.edit-button-content").show();
+                        var subButtonId = $this.siblings("#subButtonID").val() === "" || $this.siblings("#subButtonID").val() == undefined ? "0" : $this.siblings("#subButtonID").val();
+                        var buttonId = $this.siblings("#ButtonID").val() === "" || $this.siblings("#ButtonID").val() == undefined ? "0" : $this.siblings("#ButtonID").val();
+
+                        $("[name=SubButtonIDEdit]").val(subButtonId);
+                        $("[name=ButtonIDEdit]").val(buttonId);
+
+                        $('#button a ').css('color', 'black');
+                        $this.css('color', 'red');
+                        var $text = $this.text();
+                        $('#title_shezhi').css('color', 'red').text();
+                        var spans = $this.find('span');
+                        for (var i = 0; i < spans.length; i++) {
+                            $text = $text.replace($(spans[i]).text(), '');
+                        }
+                        $('#title_shezhi').text($text.trim());
+                        Ajax.call(buttonId, subButtonId);
+                    };
+
+                    //点击菜单某项 展示某项的具体内容
+                    $(".accordion-nav.button").on("click", 'a', function () {
+                        //如果点击的有子项
+                        if ($(this).siblings("ul").length) {
+                            $('#button ul').hide(slideSpeed);
+                            $('#button img').attr('src', '/images/imgOffClosed.png');
+                            //点击隐藏的时候
+                            if ($(this).parent('li').children('ul').css('display') === "block") {
+                                hideRight();
+                                $(this).parent('li').children('ul').hide(slideSpeed);
+                                $(this).siblings('img').attr('src', '/images/imgOffClosed.png');
+                            } else {
+                                $(this).parent('li').children('ul').show(slideSpeed);
+                                $(this).siblings('img').attr('src', '/images/imgOnOpen.png');
+                                var $this = $(this).parent('li').children('ul').find('a').eq(0);
+                                setTimeout(function () {
+                                    goMessageIndex($this);
+                                }, 800);
+                            }
+                        }
+                        else {
+                            $this = $(this);
+                            goMessageIndex($this);
+                            return false;
+                        }
+                        
+                    })
+                    //点击展开关闭图片
+                    $('.accordion-nav.button').on("click", "img", function () {
+                        if ($(this).parent('li').children('ul').html() != null) {
+                            $(this).parent('li').parent('ul').children('li').children('ul').hide(slideSpeed);
+                            $(this).parent('li').parent('ul').children('li').children('img').attr('src', '/images/imgOffClosed.png');
+                            $(this).delay(100).is(':hidden');
+                            if ($(this).parent('li').children('ul').css('display') === "block") {
+                                hideRight();
+                                $(this).parent('li').children('ul').hide(slideSpeed);
+                                $(this).attr('src', '/images/imgOffClosed.png');
+                            } else {
+                                $(this).parent('li').children('ul').show(slideSpeed);
+                                $(this).attr('src', '/images/imgOnOpen.png');
+                                var $this = $(this).parent('li').find('ul a:eq(0)');
+                                setTimeout(function () {
+                                    goMessageIndex($this);
+                                }, 800);
+                            }
+                            return false;
+                        }
+                        return false;
+                    });
+
+                    ///点击设置进入编辑页面
+                    $(".content-widgets").on("click", ".edit-button-content", function () {
+                        //如果value是""或undifined就替换成0
+                        var subButtonId = $("[name=SubButtonIDEdit]").val() === "" || $("[name=SubButtonIDEdit]").val() == undefined ? 0 : $("[name=SubButtonIDEdit]").val();
+                        var buttonId = $("[name=ButtonIDEdit]").val() === "" || $("[name=ButtonIDEdit]").val() == undefined ? 0 : $("[name=ButtonIDEdit]").val();
+
+                        $.post("/SelfDefiningMenu/ResponseMessageEdit", { ButtonID: buttonId, SubButtonID: subButtonId }, function (data) {
+                            $("#MessageContent").html(data);
+                        });
+                    });
+                    //右侧点击取消
+                    $(".content-widgets").on("click", ".clear", function () {
+                        var subButtonId = $("[name=SubButtonIDEdit]").val() === "" || $("[name=SubButtonIDEdit]").val() == undefined ? 0 : $("[name=SubButtonIDEdit]").val();
+                        var buttonId = $("[name=ButtonIDEdit]").val() === "" || $("[name=ButtonIDEdit]").val() == undefined ? 0 : $("[name=ButtonIDEdit]").val();
+
+                        Ajax.call(buttonId, subButtonId);
+                    });
+                    ///右侧编辑提交数据
+                    $(".content-widgets").on("click", ".submit", function () {
+                        var ButtonType, ResponseType, ResponseMessageID, ID, Content, ResponseMusicID, ResponseImageID, ResponseVideoID, ResponseImageTextID, Link, ButtonID, SubButtonID, datas
+                        datas = [];
+                        ButtonType = $("#MessageContent").find("[name=ButtonType]").val();
+                        ResponseType = $("#MessageContent").find("[name=ResponseType]").val();
+                        ResponseMessageID = $("#MessageContent").find("[name=ResponseMessageID]").val();
+                        Content = $("#MessageContent").find("#Content_id").val();
+                        ResponseMusicID = $("#MessageContent").find("[name=ResponseMusicID]").val();
+                        ResponseImageID = $("#MessageContent").find("[name=ResponseImageID]").val();
+                        ResponseVideoID = $("#MessageContent").find("[name=ResponseVideoID]").val();
+                        Link = $("#MessageContent").find("#Linkid").val();
+                        SubButtonID = $("[name=SubButtonIDEdit]").val();
+                        ButtonID = $("[name=ButtonIDEdit]").val();
+                        ID = $("#MessageContent").find("[name=ID]").val();
+
+                        if (parseInt(ButtonType) !== 4) {
+                            datas = [
+                                {
+                                    ButtonType: ButtonType,
+                                    ResponseType: ResponseType,
+                                    ResponseMessageID: ResponseMessageID,
+                                    ID: ID,
+                                    Content: Content,
+                                    ResponseMusicID: ResponseMusicID,
+                                    ResponseImageID: ResponseImageID,
+                                    ResponseVideoID: ResponseVideoID,
+                                    ResponseImageTextID: null,
+                                    Link: Link,
+                                    ButtonID: ButtonID,
+                                    SubButtonID: SubButtonID
+                                }
+                            ];
+                        } else {//图文的区别是有多个并且有一个外键id
+                            $(".message-imagetext input").each(function () {
+                                var data = {
+                                    ButtonType: ButtonType,
+                                    ResponseType: ResponseType,
+                                    ResponseMessageID: ResponseMessageID,
+                                    ID: ID,
+                                    Content: Content,
+                                    ResponseMusicID: ResponseMusicID,
+                                    ResponseImageID: ResponseImageID,
+                                    ResponseVideoID: ResponseVideoID,
+                                    ResponseImageTextID: $(this).val(),
+                                    Link: Link,
+                                    ButtonID: ButtonID,
+                                    SubButtonID: SubButtonID
+                                }
+                                //插入数据
+                                datas.splice(datas.length, 0, data);
+                            });
+                        }
+
+                        if (ResponseMessageID !== "") {
+                            //传递json字符串作为参数
+                            $.post("/SelfDefiningMenu/ResponseMessageSubmit", { datas: JSON.stringify(datas) }, function (data) {
+                                $("#MessageContent").html(data);
+                            });
+                        }
+                    });
+                });
+            </script>
+            <div class="span8">
+                <div class="content-widgets" style="min-height: 500px">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="container">
+                                <div class="nav-collapse collapse navbar-responsive-collapse">
+                                    <ul class="nav">
+                                        <li class="edit-button-content" style="display: none">
+                                            <button href="javascript:void(0)" class="btn btn-extend" style="padding: 5px 10px 5px">设置内容</button>
+                                            <label id="title_shezhi"></label>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!-- /.nav-collapse -->
+                            </div>
+                        </div>
+                        <!-- /navbar-inner -->
+                    </div>
+
+                    <div class="widget-container">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="tab-widget">
+                                    <input value="" type="hidden" id="SubButtonIDEdit" name="SubButtonIDEdit" />
+                                    <input value="" type="hidden" id="ButtonIDEdit" name="ButtonIDEdit" />
+                                    <div class="tab-content message-type-content" id="MessageContent" style="min-height: 300px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

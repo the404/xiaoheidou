@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "问题列表";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using EasyWeixin.Core.MvcPager
+@model EasyWeixin.Core.MvcPager.PagedList<EasyWeixin.Model.SetQuestion>
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid ">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">问题列表</h3>
+                    <ul class="top-right-toolbar">
+                        <li><a data-toggle="dropdown" class="dropdown-toggle blue-violate" href="#" title="Users"><i class="icon-user"></i></a>
+                        </li>
+                        <li><a href="#" class="green" title="Upload"><i class=" icon-upload-alt"></i></a></li>
+                        <li><a href="#" class="bondi-blue" title="Settings"><i class="icon-cogs"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="/Questionnaire/QuestionIndex">调查问卷列表</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">活动列表 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="content-widgets light-gray">
+                    <div class="widget-head bondi-blue">
+                        <h3>数据列表</h3>
+                    </div>
+                    <div class="widget-container">
+                        <div class="form-horizontal">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <a class="btn btn-primary" href="/Questionnaire/QuestionItemCreate"><i class="icon-upload-alt"></i>添加</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-container">
+                        <table class="table table-hover responsive">
+                            <thead>
+                                <tr>
+                                    <th>问题名称
+                                    </th>
+                                    <th>问题类型
+                                    </th>
+                                    <th>是否发布
+                                    </th>
+                                    <th>排序
+                                    </th>
+                                    <th>添加日期
+                                    </th>
+                                    <th>编辑
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{foreach (var item in Model)
+                                  {
+                                    <tr>
+                                        <td>
+                                            @item.SetQuestionName
+                                        </td>
+                                        <td>
+                                            @{
+                                              var isType = "";
+                                              if (item.Type == 1)
+                                              {
+                                                  isType = "多选题";
+                                              }
+                                              else if (item.Type == 0)
+                                              {
+                                                  isType = "单选题";
+                                              }
+                                              else
+                                              {
+                                                  isType = "建议";
+                                              }
+                                             }
+                                            @isType
+                                        </td>
+                                        <td>
+                                            @{
+                                              var isStatus = "";
+                                              if (item.Status == true)
+                                              {
+                                                  isStatus = "已发布";
+                                              }
+                                              else
+                                              {
+                                                  isStatus = "未发布";
+                                              }
+                                             }
+                                            @isStatus
+                                        </td>
+                                         <td>
+                                               @Html.ActionLink("↑", "OrderIndexOperation", new { PId = item.ID,act="up"})
+                                               @Html.ActionLink("↓", "OrderIndexOperation", new { PId = item.ID,act="down"})
+                                        </td>
+                                         <td>
+                                            @Convert.ToDateTime(item.AddDate).ToString("yyyy-MM-dd")
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("修改", "QuestionItemEdit", new { id = item.ID })
+                                            @Html.ActionLink("调查结果", "SetQuestionDrawing", new { id = item.ID })
+                                            @Html.ActionLink("删除", "QuestionItemDelete", new { id = item.ID },new { onclick = "return confirm('确认删除？')" })
+                                        </td>
+                                    </tr>
+                                  }
+                                }
+                            </tbody>
+                        </table>
+                        <div>
+                            <div style="width: 500px; float: right">
+                                @Html.Pager(Model, new PagerOptions { PageIndexParameterName = "pageid", CssClass = "pagination dataTables_paginate" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

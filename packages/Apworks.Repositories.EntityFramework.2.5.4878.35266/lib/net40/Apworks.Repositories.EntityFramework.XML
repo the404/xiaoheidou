@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apworks.Repositories.EntityFramework</name>
+    </assembly>
+    <members>
+        <member name="T:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1">
+            <summary>
+            Represents the Entity Framework repository.
+            </summary>
+            <typeparam name="TAggregateRoot">The type of the aggregate root.</typeparam>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.#ctor(Apworks.Repositories.IRepositoryContext)">
+            <summary>
+            Initializes a new instace of <c>EntityFrameworkRepository</c> class.
+            </summary>
+            <param name="context">The repository context.</param>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoAdd(`0)">
+            <summary>
+            Adds an aggregate root to the repository.
+            </summary>
+            <param name="aggregateRoot">The aggregate root to be added to the repository.</param>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoGetByKey(System.Object)">
+            <summary>
+            Gets the aggregate root instance from repository by a given key.
+            </summary>
+            <param name="key">The key of the aggregate root.</param>
+            <returns>The instance of the aggregate root.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoGetAll(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},Apworks.Storage.SortOrder)">
+            <summary>
+            Gets all the aggregate roots from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate roots should match.</param>
+            <param name="sortPredicate">The sort predicate which is used for sorting.</param>
+            <param name="sortOrder">The <see cref="T:Apworks.Storage.SortOrder"/> enumeration which specifies the sort order.</param>
+            <returns>All the aggregate roots that match the given specification and were sorted by using the given sort predicate and the sort order.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoGetAll(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},Apworks.Storage.SortOrder,System.Int32,System.Int32)">
+            <summary>
+            Gets all the aggregate roots from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate roots should match.</param>
+            <param name="sortPredicate">The sort predicate which is used for sorting.</param>
+            <param name="sortOrder">The <see cref="T:Apworks.Storage.SortOrder"/> enumeration which specifies the sort order.</param>
+            <param name="pageNumber">The page number.</param>
+            <param name="pageSize">The number of objects per page.</param>
+            <returns>All the aggregate roots that match the given specification and were sorted by using the given sort predicate and the sort order.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoGetAll(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},Apworks.Storage.SortOrder,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Gets all the aggregate roots from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate roots should match.</param>
+            <param name="sortPredicate">The sort predicate which is used for sorting.</param>
+            <param name="sortOrder">The <see cref="T:Apworks.Storage.SortOrder"/> enumeration which specifies the sort order.</param>
+            <param name="eagerLoadingProperties">The properties for the aggregated objects that need to be loaded.</param>
+            <returns>The aggregate roots.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoGetAll(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},Apworks.Storage.SortOrder,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Gets all the aggregate roots from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate roots should match.</param>
+            <param name="sortPredicate">The sort predicate which is used for sorting.</param>
+            <param name="sortOrder">The <see cref="T:Apworks.Storage.SortOrder"/> enumeration which specifies the sort order.</param>
+            <param name="pageNumber">The page number.</param>
+            <param name="pageSize">The number of objects per page.</param>
+            <param name="eagerLoadingProperties">The properties for the aggregated objects that need to be loaded.</param>
+            <returns>The aggregate roots.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoFindAll(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},Apworks.Storage.SortOrder)">
+            <summary>
+            Finds all the aggregate roots from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate roots should match.</param>
+            <param name="sortPredicate">The sort predicate which is used for sorting.</param>
+            <param name="sortOrder">The <see cref="T:Apworks.Storage.SortOrder"/> enumeration which specifies the sort order.</param>
+            <returns>The aggregate roots.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoFindAll(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},Apworks.Storage.SortOrder,System.Int32,System.Int32)">
+            <summary>
+            Finds all the aggregate roots from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate roots should match.</param>
+            <param name="sortPredicate">The sort predicate which is used for sorting.</param>
+            <param name="sortOrder">The <see cref="T:Apworks.Storage.SortOrder"/> enumeration which specifies the sort order.</param>
+            <param name="pageNumber">The number of objects per page.</param>
+            <param name="pageSize">The number of objects per page.</param>
+            <returns>The aggregate roots.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoFindAll(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},Apworks.Storage.SortOrder,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Finds all the aggregate roots from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate roots should match.</param>
+            <param name="sortPredicate">The sort predicate which is used for sorting.</param>
+            <param name="sortOrder">The <see cref="T:Apworks.Storage.SortOrder"/> enumeration which specifies the sort order.</param>
+            <param name="eagerLoadingProperties">The properties for the aggregated objects that need to be loaded.</param>
+            <returns>The aggregate root.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoFindAll(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},Apworks.Storage.SortOrder,System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Finds all the aggregate roots from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate roots should match.</param>
+            <param name="sortPredicate">The sort predicate which is used for sorting.</param>
+            <param name="sortOrder">The <see cref="T:Apworks.Storage.SortOrder"/> enumeration which specifies the sort order.</param>
+            <param name="pageNumber">The page number.</param>
+            <param name="pageSize">The number of objects per page.</param>
+            <param name="eagerLoadingProperties">The properties for the aggregated objects that need to be loaded.</param>
+            <returns>The aggregate root.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoGet(Apworks.Specifications.ISpecification{`0})">
+            <summary>
+            Gets a single aggregate root from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate root should match.</param>
+            <returns>The aggregate root.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoGet(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Gets a single aggregate root from repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate root should match.</param>
+            <param name="eagerLoadingProperties">The properties for the aggregated objects that need to be loaded.</param>
+            <returns>The aggregate root.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoFind(Apworks.Specifications.ISpecification{`0})">
+            <summary>
+            Finds a single aggregate root from the repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate root should match.</param>
+            <returns>The instance of the aggregate root.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoFind(Apworks.Specifications.ISpecification{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Finds a single aggregate root from the repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate root should match.</param>
+            <param name="eagerLoadingProperties">The properties for the aggregated objects that need to be loaded.</param>
+            <returns>The aggregate root.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoExists(Apworks.Specifications.ISpecification{`0})">
+            <summary>
+            Checkes whether the aggregate root, which matches the given specification, exists in the repository.
+            </summary>
+            <param name="specification">The specification with which the aggregate root should match.</param>
+            <returns>True if the aggregate root exists, otherwise false.</returns>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoRemove(`0)">
+            <summary>
+            Removes the aggregate root from current repository.
+            </summary>
+            <param name="aggregateRoot">The aggregate root to be removed.</param>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.DoUpdate(`0)">
+            <summary>
+            Updates the aggregate root in the current repository.
+            </summary>
+            <param name="aggregateRoot">The aggregate root to be updated.</param>
+        </member>
+        <member name="P:Apworks.Repositories.EntityFramework.EntityFrameworkRepository`1.EFContext">
+            <summary>
+            Gets the instance of the <see cref="T:Apworks.Repositories.EntityFramework.IEntityFrameworkRepositoryContext"/>.
+            </summary>
+        </member>
+        <member name="T:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext">
+            <summary>
+            Represents the Entity Framework repository context.
+            </summary>
+        </member>
+        <member name="T:Apworks.Repositories.EntityFramework.IEntityFrameworkRepositoryContext">
+            <summary>
+            Represents that the implemented classes are repository contexts that utilize
+            the functionality provided by Entity Framework.
+            </summary>
+        </member>
+        <member name="P:Apworks.Repositories.EntityFramework.IEntityFrameworkRepositoryContext.Context">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.DbContext"/> instance handled by Entity Framework.
+            </summary>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+            Initializes a new instance of <c>EntityFrameworkRepositoryContext</c> class.
+            </summary>
+            <param name="efContext">The <see cref="T:System.Data.Entity.DbContext"/> object that is used when initializing the <c>EntityFrameworkRepositoryContext</c> class.</param>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext.Dispose(System.Boolean)">
+            <summary>
+            Disposes the object.
+            </summary>
+            <param name="disposing">A <see cref="T:System.Boolean"/> value which indicates whether
+            the object should be disposed explicitly.</param>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext.RegisterNew(System.Object)">
+            <summary>
+            Registers a new object to the repository context.
+            </summary>
+            <param name="obj">The object to be registered.</param>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext.RegisterModified(System.Object)">
+            <summary>
+            Registers a modified object to the repository context.
+            </summary>
+            <param name="obj">The object to be registered.</param>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext.RegisterDeleted(System.Object)">
+            <summary>
+            Registers a deleted object to the repository context.
+            </summary>
+            <param name="obj">The object to be registered.</param>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext.Commit">
+            <summary>
+            Commits the transaction.
+            </summary>
+        </member>
+        <member name="M:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext.Rollback">
+            <summary>
+            Rollback the transaction.
+            </summary>
+        </member>
+        <member name="P:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext.Context">
+            <summary>
+            Gets the <see cref="T:System.Data.Entity.DbContext"/> instance handled by Entity Framework.
+            </summary>
+        </member>
+        <member name="P:Apworks.Repositories.EntityFramework.EntityFrameworkRepositoryContext.DistributedTransactionSupported">
+            <summary>
+            Gets a <see cref="T:System.Boolean"/> value which indicates
+            whether the Unit of Work could support Microsoft Distributed
+            Transaction Coordinator (MS-DTC).
+            </summary>
+        </member>
+        <member name="T:Apworks.Repositories.EntityFramework.SortByExtension">
+            <summary>
+            Represents the method extension for the sorting of entity framework repository.
+            </summary>
+        </member>
+    </members>
+</doc>

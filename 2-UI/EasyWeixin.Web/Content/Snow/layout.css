@@ -1,0 +1,125 @@
+/*
+ * Author   :蔡应
+ * Time		:2013年11月28日10:09:16
+ * Abstract	:上海欢乐谷微信游戏——魔幻雪花
+ */
+
+/*Reset*/
+body,div,p,h1,h2,h3,h4,ul,li,ol { margin:0; padding:0; }
+ul , li { list-style:none; }
+a {text-decoration:none;}
+img { border:none; }
+body { font-size:1em; background:#ff0;  }
+footer { height:8px; background-position:0 -94px; }
+.btn { background-image:url(/images/Activity/Snow/icon_spirit.png) ; background-size:150px auto; background-repeat:no-repeat;  color:#fff;}
+.repeatBg{ background-image:url(/images/Activity/Snow/bg_spirit.png) ; background-size:12px auto; background-repeat:repeat-x;}
+
+/*首页*/
+#index .wrap { position:relative; width:100%; height:410px; background:#960000 url(/images/Activity/Snow/bg_01.jpg) no-repeat bottom center; background-size: 100% auto; }
+#index .bg { display:block; position:absolute; top:0 ; left:0; z-index:-1;  width:100%; height:410px; }
+#logo {display:block;  margin:0 auto; width:284px; height:auto; }
+#logo img { width:100%; height:auto; }
+#index .btnList { position:fixed; bottom:20px; left:50%; margin-left:-66px;  width:132px; height:132px; background-position:0px -142px; }
+#index .btnList li { height:44px; }
+#index .btnList li a{ display:block; height:44px; padding-left:40px; font:bold 1em/44px "微软雅黑"; color:#fff; }
+#rule {  position:fixed; top:-400px; opacity:0;  left:5%; width:90%; height:auto; overflow:hidden; background:#fff; border-radius:14px; box-shadow:0 0 20px #ccc;}
+#rule h2 { height:34px; background-position:0 -154px; background-size:24px auto; font:bold 1.1em/34px "微软雅黑"; border-radius: 14px 14px 0px 0px; color:#fff; text-align:center; }
+#rule .info { width:90%; margin:20px auto; color:#5c5f5c; font:normal 0.8em/20px "微软雅黑";  }
+#rule .info span { color:#a40000; }
+#rule .info p { padding-left:24px; background:url(/images/Activity/Snow/icon_spirit.png) no-repeat -129px -34px ; background-size:150px auto; }
+#ruleClose { cursor:pointer; position:absolute; top:0px; right:4px; width:35px; height:35px; background-position: -46px 0px;  }
+
+
+
+/*游戏*/
+.gameInfo { position:relative; height:40px; background:url(/images/Activity/Snow/gameInfo_bg.jpg) repeat-x; background-size:8px auto; }
+.gameInfo div { position:absolute; top:4px; height:35px; font:bold 1.4em/34px "Arial";color:#fff; }
+#count { left:10px; padding-left:35px; width:80px;  background:url(/images/Activity/Snow/snow.png) no-repeat 0 3px; background-size:30px auto; }
+#time { right:55px; }
+#pause { cursor:pointer; right:8px; width:35px; height:35px; background:url(/images/Activity/Snow/icon_spirit.png) no-repeat -46px 0px; background-size:150px auto;  }
+#snowBox { position:relative; width:100%; overflow:hidden;height:370px; background:#960000  url(/images/Activity/Snow/game_bg.jpg) no-repeat bottom center; background-size:100% auto; }
+#snowBox li { position:absolute; top:-100px;  background:url(/images/Activity/Snow/snow.png) no-repeat 0 0; background-size: 100% auto; text-align:center; color:#fff; font:bold 1em/20px "Arial"; }
+@-webkit-keyframes 'fontChange' {
+  0% {
+	font-size:1em ; 
+  }
+  50% {
+	font-size:2em ; 
+  }
+  100% {
+	font-size:0em;
+  }
+}
+#snowBox li.active { 
+	  -webkit-animation-name: 'fontChange'; /*动画名称*/
+	  -webkit-animation-duration: 2s;/*播放一次所持续时间*/
+	  -webkit-animation-timing-function: ease-in-out;/*动画播放频率*/
+	  -webkit-animation-iteration-count: 1;/*动画播放次涒为无限次*/
+	font-size:0em;
+}
+@-webkit-keyframes 'dis' {
+  0% {
+	opacity:100;
+  }
+  50% {
+	opactiy:50; 
+  }
+  100% {
+	opacity:0;
+  }
+}
+#snowBox li.disImg { 
+	-webkit-animation-name: 'dis'; /*动画名称*/
+	  -webkit-animation-duration: 2s;/*播放一次所持续时间*/
+	  -webkit-animation-timing-function: ease-in-out;/*动画播放频率*/
+	  -webkit-animation-iteration-count: 1;/*动画播放次涒为无限次*/
+	opacity:0;
+	display:none;
+}
+
+#gameOver {  position:fixed; top:-400px; opacity:0;  left:5%; width:90%; height:auto; overflow:hidden; background:#fff; border-radius:14px; box-shadow:0 0 20px #ccc;}
+#gameOver h2 { height:34px; background:url(/images/Activity/Snow/h2_bg.jpg) repeat-x; font:bold 1.1em/34px "微软雅黑"; color:#fff; text-align:center;  border-radius: 14px 14px 0px 0px ; }
+#totalP { padding-top:10px; text-align:center; height:40px; font:bold 2em/36px "微软雅黑" ; color:#70961d; }
+#gameOver p { padding-bottom:10px; text-align:center; height:16px; font:bold 0.8em/16px "微软雅黑" ; color:#c75a66; }
+.btnWrap { height:46px; width:220px; margin:0 auto; }
+#continue { display:block; margin-top:6px; float:left; width:100px; height:30px; text-align:center; background-image:url(/images/Activity/Snow/icon_spirit.png) ; background-size:150px auto;    font:bold 1em/30px "微软雅黑"; color:#fff;  background-position: 0px -49px;  margin-right:20px;  }
+#submit { display:block; margin-top:6px; float:left; width:100px; height:30px; text-align:center; background-image:url(/images/Activity/Snow/icon_spirit.png) ; background-size:150px auto;    font:bold 1em/30px "微软雅黑"; color:#fff;  background-position: 0px -97px;  }
+
+
+
+#submitInfo {  position:fixed; top:-400px; opacity:0;  left:5%; width:90%; height:auto; overflow:hidden; background:#fff; border-radius:14px; box-shadow:0 0 20px #ccc;}
+#submitInfo h2 { height:34px; background:url(/images/Activity/Snow/h2_bg.jpg) repeat-x; font:bold 1.1em/34px "微软雅黑"; color:#fff; text-align:center; border-radius: 14px 14px 0px 0px;  }
+#submitInfo p { padding-bottom:10px; text-align:center; height:16px; font:bold 0.8em/16px "微软雅黑" ; color:#004e77; }
+#yes{ display:block; margin-top:6px; float:left; width:100px; height:30px; text-align:center; background-image:url(/images/Activity/Snow/icon_spirit.png) ; background-size:150px auto;    font:bold 1em/30px "微软雅黑"; color:#fff;  background-position: 0px -49px;  margin-right:20px;  }
+#no { display:block; margin-top:6px; float:left; width:100px; height:30px; text-align:center; background-image:url(/images/Activity/Snow/icon_spirit.png) ; background-size:150px auto;    font:bold 1em/30px "微软雅黑"; color:#fff;  background-position: 0px -97px;  }
+.userInfo {  height:60px; width:220px; margin:0 auto; font:normal 1em/30px "微软雅黑";  color:#666966;  }
+.userInfo input { width:160px; border:1px solid #666966; border-radius:4px; padding:2px 4px;}
+
+
+#giftBox {  position:fixed; top:-400px; opacity:0;  left:5%; width:90%; height:auto; overflow:hidden; background:#f3f3f3; border-radius:14px; box-shadow:0 0 20px #ccc;}
+#giftBox h2 { height:34px; background:url(/images/Activity/Snow/h2_bg.jpg) repeat-x; font:bold 1.1em/34px "微软雅黑"; color:#fff; text-align:center; border-radius: 14px 14px 0px 0px;  }
+#giftBox p { padding-bottom:10px; text-align:center; height:16px; font:bold 0.8em/16px "微软雅黑" ; color:#004e77; }
+#giftBox img { display:block; margin: 10px auto; width:112px; height:auto; }
+#sure{ display:block; margin:10px auto;  width:100px; height:30px; text-align:center; background-image:url(/images/Activity/Snow/icon_spirit.png) ; background-size:150px auto;    font:bold 1em/30px "微软雅黑"; color:#fff;  background-position: 0px -49px;    }
+
+
+
+/*排名*/
+#rank {background:#960000; }
+.rankTitle { position:relative; height:40px;  background-position:0 0; font:bold 1.2em/36px "微软雅黑"; color:#fff; text-align:center; }
+#rankList {  width:92%;  margin:30px auto; margin-bottom:76px; box-shadow:0 0 10px #ccc;  overflow:hidden; }
+#rankList li { border-top:1px solid #d7a600; height:36px; background:url(/images/Activity/Snow/rank_bg.png) repeat-x ; background-size: 8px 36px; color:#734121; font:normal 1em/36px "微软雅黑"; }
+#rankList span { font:bold 1.2em/36px "Arial"; display:block;  }
+#rankList span.ranking { float:left; width:30px; padding-left:10px; }
+#rankList span.count { float:right; width:80px; padding-right:10px; }
+#rankList li img { display:block; float:left;  width:30px; margin-top:3px; margin-right:8px;   height:auto; }
+#rankList li.li1 { color:#f39800; }
+#rankList li.li2 { color:#8fc31f; }
+#rankList li.li3 { color:#00b7ee; }
+ .wrap01{ background:#960000;  position:fixed; bottom:54px; height:20px; margin:0 auto; width:100%;   }
+ .wrap02{ background:#fff;  position:fixed; bottom:8px; margin:0 auto; width:100%;   }
+ .rankBtn { height:46px; width:220px; margin:0 auto;  }
+ .rankBtn a { display:block; margin-top:6px; float:left; width:100px; height:30px; text-align:center;  font:bold 1em/30px "微软雅黑"; }
+ .rankBtn a.a1 { background-position: 0px -49px;  margin-right:20px;  }
+ .rankBtn a.a2 { background-position: 0px -97px;  }
+.rankFix { position:fixed; bottom:0px; width:100%;  }

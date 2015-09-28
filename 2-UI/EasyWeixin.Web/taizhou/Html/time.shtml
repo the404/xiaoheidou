@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="泰州华侨城,华侨城,华侨城微信,华侨城官方微信,华侨城微信公众平台,江南旅游,江南度假,泰州,旅游,泰州旅游,泰州景区,泰州好玩的,泰州好吃的,长三角,中国湿地,长三角湿地,江南度假,长三角度假,长三角温泉,江南温泉,江苏温泉,泰州温泉,江苏度假酒店,泰州酒店,长三角养生,江苏拜佛,泰州佛寺,华东高尔夫,长三角高尔夫,泰州高尔夫,互动力;" />
+<meta name="description" content="泰州华侨城是华侨城集团区外大型发展项目之一，总投资25亿元，占地3000多亩，坐落于国家5A级风景区——江苏省泰州市溱湖湿地公园西侧。泰州华侨城，在苏中大地，犹如一幅天地之间的水墨画，徐徐铺延在溱湖岸边。2010年4月28日，泰州华侨城在姜堰溱潼开业。这是'中国旅游第一品牌'的华侨城集团在第二轮全国布局的点睛之作，泰州华侨城的发力点则是打造'中国湿地生态温泉第一城'。" />
+<title>营业时间|泰州华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">
+	<h3 class="timeTitle"><span></span>泰州华侨城云海温泉营业时间</h3>
+    <div class="timeBox">
+        <div class="timeTop">
+            <h4 class="repeatX">开闭园时间</h4>
+        </div>
+        <div class="timeInfoBox">
+            <div class="timeInfo">
+            	<div class="timeInfoL" style="float:left; width:50%; border-right:1px dashed #88a189;">
+                    <p>平日</p>
+                    <p><strong>10:30-24:00</strong></p>
+                </div>
+                <div class="timeInfoR" style="float:left; width:49%;">
+                	<p>周末</p>
+                    <p><strong>11:30-24:00</strong></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <h3 class="timeTitle"><span></span>泰州华侨城古寿圣寺营业时间</h3>
+    <div class="timeBox">
+        <div class="timeTop">
+            <h4 class="repeatX">开闭园时间</h4>
+        </div>
+        <div class="timeInfoBox">
+            <div class="timeInfo">
+                <p>全天</p>
+                <p><strong>8:30-17:00</strong></p>
+            </div>
+        </div>
+    </div>
+    <h3 class="timeTitle"><span></span>泰州华侨城湿地高尔夫营业时间</h3>
+    <div class="timeBox">
+        <div class="timeTop">
+            <h4 class="repeatX">开闭园时间</h4>
+        </div>
+        <div class="timeInfoBox">
+            <div class="timeInfo">
+                <p>可根据客人要求适当调整</p>
+                <p><strong>5:30-17:30</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="rich_media_tool">
+                <div class="meta_primary">阅读 <span id="rp">0</span></div>
+                <a class="meta_primary meta_praise" href="javascript:;" id="like">
+                    <i class="icon_praise_gray"></i>
+                    <span class="praise_num">0</span>
+                </a>
+        </div>
+</section>
+     <!--//设备横屏提醒-->
+    <section id="transverse"></section>
+    <!--End设备横置提醒//-->
+<!--//版权信息-->
+<!--#include file="/taizhou/Include/foot.htm"-->
+<!--End版权信息-->
+</body>
+</html>

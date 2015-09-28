@@ -1,0 +1,244 @@
+﻿@model List<EasyWeixin.Model.ResponseMessage>
+@{
+    var message = new EasyWeixin.Model.ResponseMessage();
+    if (Model != null && Model.Count != 0)
+    {
+        message = Model[0];
+    }
+}
+
+<input type="hidden" value="@message.ButtonType" name="ButtonType" id="ButtonType" />
+<input type="hidden" value="@message.ResponseType" name="ResponseType" />
+<input type="hidden" value="@message.ResponseMessageID" name="ResponseMessageID" />
+<input type="hidden" value="@message.ID" name="ID" />
+<input type="hidden" value="@message.SubButtonID" name="SubButtonID" />
+<input type="hidden" value="@message.ButtonID" name="ButtonID" />
+
+<div class="row-fluid">
+    <div class="span12">
+        <div class="tab-widget">
+            <ul class="nav nav-tabs message-type-button" id="myTab1">
+                <li class="active message-text" id="#text"><a href="javascript:viod(0)"><i class="icon-user"></i>文字</a></li>
+                <li class="message-music" id="#music" style="display: none"><a href="javascript:viod(0)"><i class="icon-file"></i>语音</a></li>
+                <li class="message-image" id="#image" style="display: none"><a href="javascript:viod(0)"><i class="icon-tasks"></i>图片</a></li>
+                <li class="message-video" id="#video" style="display: none"><a href="javascript:viod(0)"><i class="icon-tasks"></i>视频</a></li>
+                <li class="message-imagetext" id="#imagetext"><a href="javascript:viod(0)"><i class="icon-tasks"></i>图文</a></li>
+                <li class="message-link" id="#link"><a href="javascript:viod(0)"><i class="icon-tasks"></i>链接</a></li>
+            </ul>
+            <div class="tab-content message-type-content">
+                <div class="tab-pane active" id="text">
+                    <div style="height: 300px;" class="message-edit message-text">
+                        @Html.TextAreaFor(model => message.Content, new { @style = "width: 700px; height: 300px;", @id = "Content_id" })
+                    </div>
+                </div>
+                <div class="tab-pane" id="music">
+                    <div style="height: 300px;" class="message-edit  message-music">
+                        <div>
+                            <audio controls='controls' autoplay='autoplay' loop='loop' width="400" height="300">
+                                @if (Model != null && message.ResponseMusic != null)
+                                {
+                                    <source src='@message.ResponseMusic.MusicUrl' type='audio/mp3' />
+                                }
+                                else
+                                {  <source src='~/images/ResponseMusic/1/经典老歌(米线发烧版).mp3' type='audio/mp3' />
+                                }
+                            </audio>
+                        </div>
+                    </div>
+                    @Html.HiddenFor(model => message.ResponseMusicID)
+                    @* <input type="hidden" name="ResponseMusicID" />*@
+                </div>
+                <div class="tab-pane" id="image">
+                    <div style="height: 300px;" class="message-edit message-image">
+                        <input type="hidden" name="ResponseImageID" />
+                        @Html.HiddenFor(model => message.ResponseImageID)
+                        @if (Model != null && message.ResponseImage != null)
+                        {
+                            <img src="@message.ResponseImage.ImageUrl" alt="img" style="height: 300px;">
+                        }
+                        else
+                        {
+                            <img src="http://www.placehold.it/400x300/EFEFEF/AAAAAA" alt="img" style="height: 300px;">
+                        }
+                    </div>
+                </div>
+                <div class="tab-pane" id="video">
+                    @Html.HiddenFor(model => message.ResponseVideoID)
+                    @* <input type="hidden" name="ResponseVideoID" />*@
+                    <div style="height: 300px;" class="message-edit message-video">
+                        <video width="400" height="300" controls="controls">
+
+                            @if (Model != null && message.ResponseVideo != null)
+                            {
+                                <source src="@message.ResponseVideo.VideoUrl" type="video/mp4" />
+                            }
+                            else
+                            {
+                                <source src="movie.ogg" type="video/mp4" />
+                            }
+                        </video>
+                    </div>
+                </div>
+                <div class="tab-pane" id="imagetext">
+
+                    <div style="height: 300px;" class="message-edit message-imagetext">
+
+                        <table class="table responsive table-bordered table-striped response-table">
+                            <tbody>
+                                @{
+                                    if (Model != null && message.ResponseImageText != null)
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                    <tr>
+
+                                        <td style="height: 100px; width: 180px">
+                                            <img src="@item.ResponseImageText.PicUrl" style="height: 100px; width: 180px" />
+                                        </td>
+
+                                        <td>
+                                            @Html.HiddenFor(model => item.ResponseImageTextID)
+                                            @item.ResponseImageText.ImageTextName
+                                        </td>
+                                        <td>
+                                            @item.ResponseImageText.AddTime
+                                        </td>
+                                        <td>
+                                            <a href="javascript:viod(0)" class="delImageText">[删除] </a></td>
+                                    </tr>
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane" id="link">
+                    <div style="height: 300px;" class="message-edit message-link">
+                        @Html.TextAreaFor(model => message.Link, new { @style = "width: 700px; height: 300px;", @id = "Linkid" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="btn btn-extend submit">提交</button>
+            <button type="button" class="btn btn-extend clear">返回</button>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="/js/kindeditor-4.1.7/plugins/code/prettify.css" />
+<script charset="utf-8" src="/js/kindeditor-4.1.7/plugins/code/prettify.js"></script>
+<script charset="utf-8" src="/js/kindeditor-4.1.7/kindeditor.js"></script>
+<script charset="utf-8" src="/js/kindeditor-4.1.7/lang/zh_CN.js"></script>
+<script type="text/javascript">
+    //自定义编辑器
+    //设置图片可以上传
+    $(document).ready(function () {
+        if ($("#ButtonType").val() === "") {
+            $("#ButtonType").val("0");
+        }
+        var index = parseInt($("#ButtonType").val());
+        $("div.message-type-content .tab-pane:eq(0)").show();
+        $("div.message-type-content .tab-pane:eq(" + index + ")").addClass("active").siblings().removeClass("active");
+        $("ul.message-type-button li:eq(" + index + ")").addClass("active").siblings().removeClass("active");
+        $("ul.message-type-button li").click(function () {
+            var id = $(this).attr("id");
+            $(this).addClass("active").siblings().removeClass("active");
+            $(id).addClass("active").siblings().removeClass("active");
+        });
+        $("ul.message-type-button .message-text").click(function () {
+            $("#ButtonType").val("0");
+        });
+        //$("ul.message-type-button .message-music").click(function () {
+        //    $("#ButtonType").val("1");
+        //    var title = "语音列表";
+        //    art.dialog.open('/ResponseMusic/DialogSelectList', {
+        //        title: title,
+        //        width: '650px',
+        //        height: '280px',
+        //        lock: true,
+        //        ok: function () {
+        //            var d = this.iframe.contentWindow;
+        //            var Url = d.document.getElementById('ResponseMusicUrl').value;
+        //            var id = d.document.getElementById('ResponseMusicID').value;
+
+        //            $("div#music").find("input").val(id);
+        //            $("div.message-music").find("source").attr("src", Url);
+        //        },
+        //        cancel: true
+        //    });
+
+        //})
+        //$("ul.message-type-button .message-image").click(function () {
+        //    $("#ButtonType").val("2");
+        //    var title = "图片列表";
+        //    art.dialog.open('/ResponseImage/DialogSelectList', {
+        //        title: title,
+        //        width: '650px',
+        //        height: '280px',
+        //        lock: true,
+        //        ok: function () {
+        //            var d = this.iframe.contentWindow;
+        //            var src = d.document.getElementById('ResponseImageSrc').value;
+        //            var id = d.document.getElementById('ResponseImageID').value;
+
+        //            $("div#image").find("input").val(id);
+        //            $("div.message-image").find("img").attr("src", src);
+        //        },
+        //        cancel: true
+        //    });
+        //})
+        //$("ul.message-type-button .message-video").click(function () {
+        //    $("#ButtonType").val("3");
+        //    var title = "视频列表";
+        //    art.dialog.open('/ResponseVideo/DialogSelectList', {
+        //        title: title,
+        //        width: '650px',
+        //        height: '280px',
+        //        lock: true,
+        //        ok: function () {
+        //            var d = this.iframe.contentWindow;
+        //            var Url = d.document.getElementById('ResponseVideoUrl').value;
+        //            var id = d.document.getElementById('ResponseVideoID').value;
+
+        //            $("div#video").find("input").val(id);
+        //            $("div.message-video").find("source").attr("src", Url);
+        //        },
+        //        cancel: true
+        //    });
+        //})
+        $("ul.message-type-button .message-imagetext").click(function () {
+            $("#ButtonType").val("4");
+            var title = "图文列表";
+            art.dialog.open('/ResponseImageText/DialogSelectList', {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    //将从iframe中获取的json数据追加到table中
+                    var d = this.iframe.contentWindow;
+                    var responseImageData = d.document.getElementById('ResponseImageData').value;
+                    var datas = JSON.parse(responseImageData);
+                    var html = "";
+                    for (var i = 0; i < datas.length; i++) {
+                        html += "<tr><td style='height: 100px;width: 180px' ><img src='" + datas[i].ResponseImagePicUrl + "' style='height: 100px;width: 180px' /></td><td> ";
+                        html += "<input type='hidden' name='ResponseImageTextID' value='" + datas[i].ResponseImageTextID + "' />";
+                        html += datas[i].ResponseImageTextName + "</td><td>" + datas[i].ResponseImageAddTime + "</td><td><a href='javascript:viod(0)' class='delImageText'>[删除]</a></td></tr>";
+
+                    }
+                    $("div.message-imagetext table").append(html);
+                },
+                cancel: true
+            });
+
+        });
+
+        $("ul.message-type-button .message-link").click(function () {
+            $("#ButtonType").val("5");
+        });
+        $("div.message-imagetext").on("click", ".delImageText", function () {
+            $(this).parents("tr").remove();
+        });
+    });
+</script>

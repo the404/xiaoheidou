@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "AddedMessageAutoResponse";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="@Url.Content("~/js/jquery.artDialog/skins/blue.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.js")"  type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/jquery.artDialog.source.js")" type="text/javascript" ></script>
+<script src="@Url.Content("~/js/jquery.artDialog/artDialog.iframeTools.js")" type="text/javascript" ></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if ($("#ButtonType").val() == "") {
+            $("#ButtonType").val("0");
+        }
+        var index = parseInt($("#ButtonType").val());
+        $("div.message-type-content .tab-pane:eq(" + index + ")").addClass("active").siblings().removeClass("active");
+        $("ul.message-type-button li:eq(" + index + ")").addClass("active").siblings().removeClass("active");
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("ul.message-type-button .message-text").click(function () {
+            $("#ButtonType").val("0");
+        })
+        $("ul.message-type-button .message-music").click(function () {
+            $("#ButtonType").val("1");
+            var title = "语音列表";
+            art.dialog.open('/ResponseMusic/DialogSelectList', {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var Url = d.document.getElementById('ResponseMusicUrl').value;
+                    var id = d.document.getElementById('ResponseMusicID').value;
+
+                    $("div.message-music").find("input").val(id);
+                    $("div.message-music").find("source").attr("src", Url);
+                },
+                cancel: true
+            });
+
+        })
+        $("ul.message-type-button .message-image").click(function () {
+            $("#ButtonType").val("2");
+
+            var title = "图片列表";
+            art.dialog.open('/ResponseImage/DialogSelectList', {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var src = d.document.getElementById('ResponseImageSrc').value;
+                    var id = d.document.getElementById('ResponseImageID').value;
+
+                    $("div.message-image").find("input").val(id);
+                    $("div.message-image").find("img").attr("src", src);
+                },
+                cancel: true
+            });
+        })
+        $("ul.message-type-button .message-video").click(function () {
+            $("#ButtonType").val("3");
+            var title = "视频列表";
+            art.dialog.open('/ResponseVideo/DialogSelectList', {
+                title: title,
+                width: '650px',
+                height: '280px',
+                lock: true,
+                ok: function () {
+                    var d = this.iframe.contentWindow;
+                    var Url = d.document.getElementById('ResponseVideoUrl').value;
+                    var id = d.document.getElementById('ResponseVideoID').value;
+
+                    $("div.message-video").find("input").val(id);
+                    $("div.message-video").find("source").attr("src", Url);
+                },
+                cancel: true
+            });
+        })
+
+    });
+</script>
+@model EasyWeixin.Web.Models.ResponseMessageViewModel
+<div class="main-wrapper">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="primary-head">
+                    <h3 class="page-header">关注时信息回复</h3>
+                    <ul class="top-right-toolbar">
+                    </ul>
+                </div>
+                <ul class="breadcrumb">
+                    <li><a href="#" class="icon-home"></a><span class="divider "><i class="icon-angle-right"></i></span></li>
+                    <li><a href="#">信息回复管理</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">关注时信息回复 </li>
+                </ul>
+            </div>
+        </div>
+        @{ using (Html.BeginForm("AddedMessageAutoResponse", "ResponseMessage"))
+           {
+            @Html.HiddenFor(model => model.ButtonType)
+            @Html.HiddenFor(model => model.ResponseType)
+            @Html.HiddenFor(model => model.ResponseMessageID)
+            @Html.HiddenFor(model => model.ID)
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="tab-widget">
+                        <ul class="nav nav-tabs message-type-button" id="myTab1">
+                            <li class="active message-text"><a href="#text"><i class="icon-user"></i>文字</a></li>
+                          @*  <li class="message-music"><a href="#music"><i class="icon-file"></i>语音</a></li>*@
+                        @*    <li class="message-image"><a href="#image"><i class="icon-tasks"></i>图片</a></li>*@
+                       @*     <li class="message-video"><a href="#video"><i class="icon-tasks"></i>视频</a></li>*@
+                        </ul>
+                        <div class="tab-content message-type-content">
+                            <div class="tab-pane active" id="text">
+                                <div style="height: 300px;" class="message-edit message-text">
+                                    @Html.TextAreaFor(model => model.Content, new { @style = "width: 700px; height: 300px;", @id = "editor_id", })
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="music">
+                                <div style="height: 300px;" class="message-edit  message-music">
+                                    <div>
+                                        <audio controls='controls' autoplay='autoplay' loop='loop' width="400" height="300">
+                                            @if (Model != null && Model.ResponseMusic != null)
+                                            {
+                                                <source src='@Model.ResponseMusic.MusicUrl' type='audio/mp3' />
+                                            }
+                                            else
+                                            {  <source src='~/images/ResponseMusic/1/经典老歌(米线发烧版).mp3' type='audio/mp3' />
+                                            }
+                                        </audio>
+                                    </div>
+                                </div>
+                                @Html.HiddenFor(model => model.ResponseMusicID)
+                                @* <input type="hidden" name="ResponseMusicID" />*@
+                            </div>
+                            <div class="tab-pane" id="image">
+                                <div style="height: 300px;" class="message-edit message-image">
+                                    @* <input type="hidden" name="ResponseImageID" />*@
+                                    @Html.HiddenFor(model => model.ResponseImageID)
+                                    @if (Model != null && Model.ResponseImage != null)
+                                    {
+                                        <img src="@Model.ResponseImage.ImageUrl" alt="img" style="height: 300px;">
+                                    }
+                                    else
+                                    {
+                                        <img src="http://www.placehold.it/400x300/EFEFEF/AAAAAA" alt="img" style="height: 300px;">
+                                    }
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="video">
+                                @Html.HiddenFor(model => model.ResponseVideoID)
+                                @* <input type="hidden" name="ResponseVideoID" />*@
+                                <div style="height: 300px;" class="message-edit message-video">
+                                    <video width="400" height="300" controls="controls">
+
+                                        @if (Model != null && Model.ResponseVideo != null)
+                                        {
+                                            <source src="@Model.ResponseVideo.VideoUrl" type="video/mp4" />
+                                        }
+                                        else
+                                        {
+                                            <source src="movie.ogg" type="video/mp4" />
+                                        }
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-extend submit">提交</button>
+                        <button type="button" class="btn btn-extend clear">返回</button>
+                        <a style="color: red;">@ViewData["AddSuccessMessage"]</a>
+                    </div>
+                </div>
+            </div>
+           }}
+    </div>
+</div>

@@ -1,0 +1,198 @@
+﻿@{
+    Layout = null;
+}
+@model EasyWeixin.Web.Models.GuessNewsViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+    <meta name="keywords" content="@Model.CompanyName" />
+    <meta name="description" content="@Model.CompanyName" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0" />
+    <title>@Model.GuessTitle</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: #f3d082;
+        font-size: 0.8em;
+        line-height: 24px;
+        font-family: "微软雅黑";
+        color: #7a7a7a;
+        text-shadow: 1px 1px 1px #ddd;
+    }
+
+    .top {
+        background: url(/images/GuesseImages/bg.jpg) center top no-repeat;
+        background-size: 100% 52px;
+        height: 52px;
+        width: 100%;
+        position: relative;
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        padding-top: 14px;
+    }
+
+    .titles {
+        width: 255px;
+        margin: 0 auto;
+    }
+
+        .titles img {
+            border: 1px solid #bab2a2;
+            width: 48px;
+            float: left;
+        }
+
+    .name {
+        float: left;
+    }
+
+    .number {
+        float: right;
+    }
+
+    .name_and_n {
+        padding-left: 60px;
+        font-size: 18px;
+        padding-top: 12px;
+        color: #000;
+    }
+
+    .fenge {
+        width: 291px;
+        margin: 0 auto;
+    }
+
+    .main {
+        width: 275px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #97562b;
+    }
+
+    .inputs {
+        border-radius: 5px;
+        border: 1px solid #e2cbb5;
+        height: 30px;
+        width: 65%;
+    }
+
+    label {
+        padding-right: 30px;
+    }
+
+    .names {
+        padding: 25px 0;
+    }
+
+    .tijiao {
+        width: 155px;
+        height: 38px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+        .tijiao button {
+            color: #fff;
+            text-decoration: none;
+            height: 38px;
+            display: block;
+            width: 155px;
+            background: url(/images/GuesseImages/btn.png) center center no-repeat;
+            font-size: 16px;
+            border: 0px;
+        }
+
+    .foot {
+        background: url(/images/GuesseImages/foot.jpg) center bottom no-repeat;
+        background-size: 100% 21px;
+        height: 21px;
+        width: 100%;
+        margin-top: 150px;
+    }
+</style>
+
+<body>
+    <!--top-->
+    <div class="top">提交成绩</div>
+    <!--top-->
+    @{ using (Html.BeginForm("GuessNewsUserInfoAdd", "News"))
+       {
+        <!--titles-->
+        <div class="titles">
+            <img src="/images/GuesseImages/renwu.jpg" alt="头像">
+            <!--name_and_n-->
+            <div class="name_and_n">
+                <div class="name"></div>
+                <div class="number">@(Model.GuessTimes)次</div>
+            </div>
+            <!--name_and_n-->
+        </div>
+        <!--titles-->
+
+        <div class="fenge">
+            <img src="/images/GuesseImages/fenge.jpg" alt="">
+        </div>
+        <div class="main">
+            <div class="names">
+                称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;呼&nbsp;&nbsp;&nbsp;
+                @Html.TextBoxFor(o => o.GuessUserName, new { @class = "inputs" })
+                @Html.ValidationMessageFor(o => o.GuessUserName, "", new { @style = "color:red" })
+            </div>
+            <div class="sex">
+                性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别 &nbsp;&nbsp;&nbsp;
+        @*     <label>
+     <input type="radio" name="RadioGroup1" value="0" id="RadioGroup1_0">男</label><label><input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_1">女</label>*@
+
+                <label>@Html.RadioButtonFor(o => o.Sex, 0) 男</label>
+                <label>@Html.RadioButtonFor(o => o.Sex, 1) 女</label>
+            </div>
+            <div class="names">
+                手机号码&nbsp;&nbsp;&nbsp;
+                @Html.TextBoxFor(o => o.GuessUserPhone, new { @class = "inputs" })
+                @Html.ValidationMessageFor(o => o.GuessUserPhone, "", new { @style = "color:red" })
+            </div>
+        </div>
+        <div class="tijiao">
+            <button type="submit" onclick="return validate();">提交</button>
+        </div>
+       }
+    }
+    <div class="foot"></div>
+    <script src="~/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        function validate() {
+            if ($("[name=GuessUserName]").val() == "") {
+                $("[name=GuessUserName]").parent().find("span").text("用户名不得为空");
+                return false;
+            }
+            if ($("[name=GuessUserPhone]").val() == "") {
+                $("[name=GuessUserPhone]").parent().find("span").text("联系电话不得为空");
+                return false;
+            }
+            if (!(/^1[3|4|5|8][0-9]\d{8}$/.test($("[name=GuessUserPhone]").val()))) {
+                $("[name=GuessUserPhone]").parent().find("span").text("不是完整的11位手机号");
+                return false;
+            }
+        }
+        $(document).ready(function () {
+            $("[name=GuessUserName]").keyup(function () {
+                $("[name=GuessUserName]").parent().find("span").text("");
+            });
+            $("[name=GuessUserPhone]").keyup(function () {
+                $("[name=GuessUserPhone]").parent().find("span").text("");
+            });
+        })
+    </script>
+</body>
+</html>

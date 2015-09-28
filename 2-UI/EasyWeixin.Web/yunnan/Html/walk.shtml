@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no;" />
+<meta name="keywords" content="华侨城,云南华侨城,云南华侨城微信,华侨城微信,云南华侨城官方微信,云南华侨城微信公众平台,云南度假旅游景区,温泉水公园,云南铁路主题旅游,艺术文化乐园,生态花谷旅游,湿地自然景观,度假高端首选,生态旅游小镇,休闲度假胜地,主题公园,运动休闲度假,温泉泡浴,水上乐园,异国文化旅游,互动力,ipow;" />
+<meta name="description" content='云南华侨城一个融旅游、观光、娱乐、度假为一体的高标准的国际化旅游度假胜地。云南旅游的高端首选，引领昆明乃至云南旅游产业从观光旅游型向休闲度假型转变。一个国际化的休闲度假胜地，包括滇越铁路主题旅游、生态旅游小镇、体育公园、国际会议中心、顶级温泉SPA、温泉水公园、生态湿地及森林休闲公园等旅游项目；同时涵盖康体运动休闲区、滨水休闲度假区、山谷生态旅游区、主题文化与艺术旅游区四大分区；' />
+<title>交通指南|云南华侨城官方微信</title>
+<link href="../Css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+<section id="wrap">   
+    <div id="content01" style="overflow:hidden; ">
+        <div id="bdMap" ></div>
+        <div id="pathBox">
+            <div id="results"></div>
+            <div id="pathBtn"></div>
+        </div>
+        <div id="location">正在查询您的位置和路线……</div>
+    </div>
+</section>
+</body>
+</html>
+<script type="text/javascript" >
+/*获取页面的高度*/
+var oIScrollBox = document.getElementById("wrap");
+	oIScrollBox.style.height = (document.documentElement.clientHeight - 53)+"px" ;
+	window.onresize = function(){
+		oIScrollBox.style.height = (document.documentElement.clientHeight - 53)+"px" ;		
+	}
+</script>
+<!--//百度地图-->
+<script src="http://api.map.baidu.com/api?v=1.5&ak=t1C5vbu1SfWI7Hm2jsnOeLma" type="text/javascript"></script>
+<script type="text/javascript">  
+var oLocation = document.getElementById("location");
+var oBtn = document.getElementById("pathBtn");
+var oPath = document.getElementById("pathBox");
+	
+	
+	//导航路线滑动
+	function fnSlidePath(){
+		//按钮点击
+		oBtn.onclick = function(){
+			if( parseInt(getStyle( oPath , "right" )) == -222 ){
+				startMove( oPath , { right : 0 } ,5 );	
+			}else if(  parseInt(getStyle( oPath , "right" )) == 0  ) {
+				startMove( oPath , { right : -222 } ,5 );
+			}
+				
+		}
+		
+		//手指滑动
+		var iRight = 0;
+		var x = 0 ;
+		var y = 0 ;
+		var touch = null; 
+		oPath.addEventListener('touchstart',function(event){
+			if (event.targetTouches.length == 1){
+				touch = event.targetTouches[0];
+				startX = touch.clientX ;
+				iRight = parseInt(getStyle( oPath , "right" )) ;
+			}
+		},false);
+		oPath.addEventListener('touchmove', function(event) {
+			if (event.targetTouches.length == 1) {
+				touch = event.targetTouches[0];
+				x = Number(touch.pageX); //页面触点X坐标  
+				//oPath.style.right = iRight-x+startX+"px" ; 
+			}
+		}, false);
+		oPath.addEventListener('touchend',function(event){
+			if( x-startX > 50){
+				startMove( oPath , { right : -200 } ,5 );
+			}else if( x-startX < -50){
+				startMove( oPath , { right : 0 } ,5 );
+			}else {
+				startMove( oPath , { right : iRight } ,5 );
+			}
+		},false);
+		
+	}
+	fnSlidePath();
+	
+var map = new BMap.Map("bdMap");   							// 创建地图实例  
+var point = new BMap.Point(103.009014,24.96487);  				// 创建点坐标  
+	map.centerAndZoom(point, 16);  							// 初始化地图，设置中心点坐标和地图级别 
+	
+	//两秒后地图移动到新的中心点
+	/*window.setTimeout(function(){    
+		map.panTo(new BMap.Point(116.409, 39.918));    
+	}, 4000);  */
+	
+	map.addControl(new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT}));  			//添加地图缩放控件
+	//map.addControl(new BMap.GeolocationControl({offset: new BMap.Size(0, 20)} ));			//添加定位控件
+	
+	//获取当前位置
+	var geolocation = new BMap.Geolocation();
+	geolocation.getCurrentPosition(function(r){
+		if(this.getStatus() == BMAP_STATUS_SUCCESS){
+			var mk = new BMap.Marker(r.point);
+			map.addOverlay(mk);
+			map.panTo(r.point);
+			setTimeout(function(){
+				oLocation.style.display = "none" ;
+			},3000);
+			walking.search(r.point, point);   
+		}
+		else {
+			alert('failed'+this.getStatus());
+		}        
+	},{enableHighAccuracy: true})
+	//关于状态码
+	//BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
+	//BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。
+	//BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
+	//BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
+	//BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
+	//BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
+	//BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
+	//BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
+	//BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
+	
+	
+	map.addOverlay(new BMap.Marker(point));  //添加标注
+	
+	var walking = new BMap.WalkingRoute(map, {renderOptions:{map: map, autoViewport: true}});
+	
+</script>  

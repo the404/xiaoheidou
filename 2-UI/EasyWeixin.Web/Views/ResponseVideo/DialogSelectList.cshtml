@@ -1,0 +1,81 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" href="/js/kindeditor-4.1.7/plugins/code/prettify.css" />
+    <script charset="utf-8" src="/js/kindeditor-4.1.7/plugins/code/prettify.js"></script>
+    <script charset="utf-8" src="/js/kindeditor-4.1.7/kindeditor.js"></script>
+    <script charset="utf-8" src="/js/kindeditor-4.1.7/lang/zh_CN.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Panel Template">
+    <meta name="author" content="Westilian: Kamrujaman Shohel">
+    <!-- styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/jquery.gritter.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+      <link href="/css/tablecloth.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="~/js/jquery-1.9.1.min.js"></script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $("[name=ResponseVideo]").click(function () {
+                 $("#ResponseVideoID").val($(this).val());
+                 $("#ResponseVideoUrl").val($(this).parent().parent().find("label").text());
+             });
+         });
+     </script>
+</head>
+<body>
+        @model List<EasyWeixin.Model.ResponseVideo>
+        <div class="row-fluid">
+            <input type="hidden" value="" id="ResponseVideoID" />
+              <input type="hidden" value="" id="ResponseVideoUrl" />
+            <div class="span12">
+                <div class="content-widgets light-gray">
+                    <div class="widget-head bondi-blue">
+                        <h3>视频列表</h3>
+                    </div>
+                    <div class="widget-container">
+
+                       <table class="table table-hover responsive">
+                            <thead>
+                                <tr>
+                                    <th>选择
+                                    </th>
+
+                                    <th>名称
+                                    </th>
+                                    <th>路径
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{foreach (var item in Model)
+                                  {
+                                      <tr>
+                                        <td><input type="radio" value="@item.ResponseVideoID" name="ResponseVideo" />
+                                          </td>
+                                        <td>
+                                           @item.VideoName
+                                        </td>
+                                         <td>
+                                          <label> @item.VideoUrl</label>
+                                        </td>
+                                    </tr>
+                                  }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
